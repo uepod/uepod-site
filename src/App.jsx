@@ -241,30 +241,7 @@ export default function UnitEconomics() {
             gap: "12px",
           }}
         >
-          <div style={{
-            fontFamily: "'Anton', sans-serif",
-            fontWeight: 400,
-            fontSize: "18px",
-            lineHeight: 1.05,
-            letterSpacing: "0.02em",
-            textTransform: "uppercase",
-          }}>
-            UNIT<br/>ECONOMICS
-          </div>
-          <div style={{
-            width: "24px",
-            height: "24px",
-            border: "2px solid #fff",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridTemplateRows: "1fr 1fr",
-            gap: "0",
-          }}>
-            <div style={{ background: "#fff" }} />
-            <div style={{ background: "#fff" }} />
-            <div style={{ background: "transparent" }} />
-            <div style={{ background: "#fff" }} />
-          </div>
+          <img src="/logo-white.png" alt="Unit Economics" style={{ height: "32px", width: "auto" }} />
         </div>
 
         <div style={{
@@ -280,9 +257,9 @@ export default function UnitEconomics() {
                 background: "none",
                 border: "none",
                 color: section === s ? "#fff" : "rgba(255,255,255,0.4)",
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "13px",
-                fontWeight: 500,
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "12px",
+                fontWeight: 400,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 cursor: "pointer",
@@ -417,7 +394,7 @@ export default function UnitEconomics() {
                 </button>
               </div>
 
-              {EPISODES.slice(0, 5).map((ep, i) => (
+              {EPISODES.slice(0, 3).map((ep, i) => (
                 <EpisodeCard key={ep.id} ep={ep} index={i} />
               ))}
             </div>
@@ -484,7 +461,7 @@ export default function UnitEconomics() {
 
         {/* ABOUT */}
         {section === "about" && (
-          <div style={{ padding: "80px 40px", maxWidth: "680px", animation: "fadeIn 0.5s ease" }}>
+          <div style={{ padding: "80px 40px", animation: "fadeIn 0.5s ease" }}>
             <h2 style={{
               fontFamily: "'Anton', sans-serif",
               fontWeight: 400,
@@ -497,33 +474,52 @@ export default function UnitEconomics() {
             </h2>
 
             <div style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "24px",
-              fontWeight: 400,
-              lineHeight: 1.45,
-              marginBottom: "40px",
-              color: "rgba(255,255,255,0.85)",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "60px",
+              alignItems: "start",
             }}>
-              Josh Stabinsky lives in San Francisco and spends a lot of time drinking coffee. He loves consumer packaged goods. And dogs.
-            </div>
+              <div>
+                <div style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "24px",
+                  fontWeight: 400,
+                  lineHeight: 1.45,
+                  marginBottom: "40px",
+                  color: "rgba(255,255,255,0.85)",
+                }}>
+                  Josh Stabinsky lives in San Francisco and spends a lot of time drinking coffee. He loves consumer packaged goods. And dogs.
+                </div>
 
-            <div style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "15px",
-              lineHeight: 1.75,
-              color: "rgba(255,255,255,0.45)",
-              marginBottom: "40px",
-            }}>
-              Unit Economics is a long-form interview podcast that digs into how products are actually designed, manufactured, priced, and distributed. Each episode is a conversation with a founder, operator, or builder about the decisions, constraints, and tradeoffs behind their business. The show covers industries from food and beverage to hardware, games, apparel, and beyond.
-            </div>
+                <div style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "15px",
+                  lineHeight: 1.75,
+                  color: "rgba(255,255,255,0.45)",
+                  marginBottom: "40px",
+                }}>
+                  Unit Economics is a long-form interview podcast that digs into how products are actually designed, manufactured, priced, and distributed. Each episode is a conversation with a founder, operator, or builder about the decisions, constraints, and tradeoffs behind their business. The show covers industries from food and beverage to hardware, games, apparel, and beyond.
+                </div>
 
-            <div style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "15px",
-              lineHeight: 1.75,
-              color: "rgba(255,255,255,0.45)",
-            }}>
-              New episodes every week. Available on Spotify, Apple Podcasts, and YouTube.
+                <div style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "15px",
+                  lineHeight: 1.75,
+                  color: "rgba(255,255,255,0.45)",
+                }}>
+                  New episodes every week. Available on Spotify, Apple Podcasts, and YouTube.
+                </div>
+              </div>
+
+              <img
+                src="/josh-about.png"
+                alt="Josh Stabinsky"
+                style={{
+                  width: "100%",
+                  maxWidth: "400px",
+                  height: "auto",
+                }}
+              />
             </div>
           </div>
         )}
