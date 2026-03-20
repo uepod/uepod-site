@@ -1,9 +1,4 @@
-/* ===== FONTS =====
- * Loaded via <link> in _document.js (Google Fonts).
- * Eliminates FOUC that the old @import caused.
- * To self-host later: download .woff2 files, add @font-face here,
- * remove the <link> from _document.js.
- */
+/* Fonts loaded via <link> in _document.js */
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
