@@ -1,16 +1,21 @@
 const Parser = require("rss-parser");
 const episodeOverrides = require("./episodeOverrides");
+const { fetchSheetData } = require("./fetchSheetData");
 
 const RSS_URL = "https://anchor.fm/s/10a3f3bac/podcast/rss";
 
+// Fallback URLs when no per-episode link is available
+const SPOTIFY_SHOW = "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F";
+const APPLE_SHOW = "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735";
+const YOUTUBE_CHANNEL = "https://www.youtube.com/@TheUnitEconomicsPodcast";
+
 /**
  * Convert an RSS title to a slug key for matching overrides.
- * E.g. "[Lottie's Meats] Chelsey & Cassie Maschhoff" â†’ "lotties-meats-chelsey-cassie-maschhoff"
  */
 function titleToSlug(title) {
   return title
     .replace(/[\[\]]/g, "")
-    .replace(/['']/g, "")
+    .replace(/[\u2018\u2019]/g, "")
     .replace(/&/g, "")
     .replace(/[^a-zA-Z0-9\s-]/g, "")
     .trim()
@@ -20,7 +25,6 @@ function titleToSlug(title) {
 
 /**
  * Extract brand name from RSS title.
- * Handles formats like "[Brand] Guest Name" or just "Guest Name"
  */
 function extractBrand(title) {
   const match = title.match(/^\[(.+?)\]\s*(.+)$/);
@@ -29,44 +33,15 @@ function extractBrand(title) {
 }
 
 /**
- * Try to extract Spotify episode URL from RSS item's enclosure or link.
- * Spotify for Creators (formerly Anchor) RSS feeds include episode-specific links.
- */
-function extractSpotifyUrl(item) {
-  // Check for Spotify link in the item
-  if (item.link && item.link.includes("spotify.com/episode")) {
-    return item.link;
-  }
-  // Check enclosure
-  if (item.enclosure && item.enclosure.url && item.enclosure.url.includes("spotify")) {
-    return item.enclosure.url;
-  }
-  // Fallback: show page
-  return "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F";
-}
-
-/**
- * Extract Apple Podcasts episode URL.
- * We construct it from the show ID + episode guid if possible.
- */
-function extractAppleUrl(item) {
-  // Apple Podcasts links are not typically in RSS from Anchor.
-  // Fallback to the show page; the override file can specify per-episode.
-  return "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735";
-}
-
-/**
  * Format duration from seconds or HH:MM:SS to "XX min"
  */
 function formatDuration(dur) {
   if (!dur) return "";
-  // If it's already a string like "00:48:30"
   if (typeof dur === "string" && dur.includes(":")) {
     const parts = dur.split(":").map(Number);
     if (parts.length === 3) return `${parts[0] * 60 + parts[1]} min`;
     if (parts.length === 2) return `${parts[0]} min`;
   }
-  // If it's seconds
   const secs = parseInt(dur, 10);
   if (!isNaN(secs)) return `${Math.round(secs / 60)} min`;
   return dur;
@@ -89,20 +64,51 @@ function formatDate(dateStr) {
  */
 function truncateDesc(html) {
   if (!html) return "";
-  // Strip HTML tags
   const text = html.replace(/<[^>]+>/g, "").trim();
-  // Take first 2 sentences
   const sentences = text.match(/[^.!?]+[.!?]+/g);
   if (sentences && sentences.length > 0) {
     return sentences.slice(0, 2).join(" ").trim();
   }
-  // Fallback: first 200 chars
   return text.slice(0, 200).trim() + (text.length > 200 ? "..." : "");
 }
 
 /**
+ * Find the best matching override for an episode.
+ * Sheet data is primary, JS overrides file is fallback.
+ */
+function findOverride(slug, title, sheetData) {
+  // 1. Exact slug match in sheet
+  if (sheetData[slug]) return sheetData[slug];
+
+  // 2. Exact slug match in JS overrides
+  if (episodeOverrides[slug]) return episodeOverrides[slug];
+
+  // 3. Partial brand match in sheet
+  const titleLower = (title || "").toLowerCase();
+  for (const [key, val] of Object.entries(sheetData)) {
+    const brandLower = (val.brand || "").toLowerCase();
+    if (brandLower && titleLower.includes(brandLower)) return val;
+  }
+
+  // 4. Partial brand match in JS overrides
+  for (const [key, val] of Object.entries(episodeOverrides)) {
+    const brandLower = (val.brand || "").toLowerCase();
+    if (brandLower && titleLower.includes(brandLower)) return val;
+  }
+
+  // 5. Fuzzy key-part match in JS overrides
+  for (const [key, val] of Object.entries(episodeOverrides)) {
+    const keyParts = key.split("-").filter((p) => p.length > 3);
+    const matchCount = keyParts.filter((p) => slug.includes(p)).length;
+    if (matchCount >= 2) return val;
+  }
+
+  return null;
+}
+
+/**
  * Fetch and process all episodes from the RSS feed.
- * Merges with overrides file for custom descriptions and category tags.
+ * Merges with Google Sheet (primary) and JS overrides (fallback).
  */
 async function fetchEpisodes() {
   const parser = new Parser({
@@ -115,37 +121,41 @@ async function fetchEpisodes() {
     },
   });
 
-  let feed;
-  try {
-    feed = await parser.parseURL(RSS_URL);
-  } catch (err) {
-    console.error("Failed to fetch RSS feed:", err.message);
-    return [];
-  }
+  // Fetch sheet data and RSS in parallel
+  const [sheetData, feed] = await Promise.all([
+    fetchSheetData(),
+    parser.parseURL(RSS_URL).catch((err) => {
+      console.error("Failed to fetch RSS feed:", err.message);
+      return null;
+    }),
+  ]);
+
+  if (!feed) return [];
 
   const episodes = feed.items
     .map((item, index) => {
       const slug = titleToSlug(item.title || "");
-      const override = findOverride(slug, item.title);
-      const { brand: rssBrand, guest: rssGuest } = extractBrand(item.title || "");
-
-      const spotifyUrl = extractSpotifyUrl(item);
-      const appleUrl = extractAppleUrl(item);
-      const youtubeUrl = "https://www.youtube.com/@TheUnitEconomicsPodcast";
+      const override = findOverride(slug, item.title, sheetData);
+      const { brand: rssBrand, guest: rssGuest } = extractBrand(
+        item.title || ""
+      );
 
       return {
         id: feed.items.length - index,
         title: item.title || "",
+        slug,
         brand: override?.brand || rssBrand,
         guest: override?.guest || rssGuest,
-        desc: override?.desc || truncateDesc(item.contentSnippet || item.content || ""),
+        desc:
+          override?.desc ||
+          truncateDesc(item.contentSnippet || item.content || ""),
         category: override?.category || "Uncategorized",
         duration: formatDuration(item.duration || item.itunes?.duration),
         date: formatDate(item.pubDate),
         rawDate: item.pubDate,
-        spotify: spotifyUrl,
-        apple: appleUrl,
-        youtube: youtubeUrl,
+        spotify: override?.spotify || SPOTIFY_SHOW,
+        apple: override?.apple || APPLE_SHOW,
+        youtube: override?.youtube || YOUTUBE_CHANNEL,
         website: override?.website || null,
         image: item.itunesImage?.href || item.itunes?.image || null,
       };
@@ -153,33 +163,6 @@ async function fetchEpisodes() {
     .sort((a, b) => new Date(b.rawDate) - new Date(a.rawDate));
 
   return episodes;
-}
-
-/**
- * Find the best matching override for an episode.
- * Tries exact slug match first, then partial matching.
- */
-function findOverride(slug, title) {
-  // Exact match
-  if (episodeOverrides[slug]) return episodeOverrides[slug];
-
-  // Try partial match on brand name
-  const titleLower = (title || "").toLowerCase();
-  for (const [key, val] of Object.entries(episodeOverrides)) {
-    const brandLower = (val.brand || "").toLowerCase();
-    if (brandLower && titleLower.includes(brandLower)) {
-      return val;
-    }
-  }
-
-  // Try matching override key parts against the slug
-  for (const [key, val] of Object.entries(episodeOverrides)) {
-    const keyParts = key.split("-").filter(p => p.length > 3);
-    const matchCount = keyParts.filter(p => slug.includes(p)).length;
-    if (matchCount >= 2) return val;
-  }
-
-  return null;
 }
 
 module.exports = { fetchEpisodes, titleToSlug };
