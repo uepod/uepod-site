@@ -576,12 +576,7 @@ export default function Home({ episodes }) {
                 hello@uepod.com
               </a>
 
-              <div style={{ display: "flex", gap: "20px", marginTop: "48px" }}>
-                <HoverLink href={SOCIAL_LINKS.spotify.url} hoverColor="#1DB954"><SpotifyIcon /></HoverLink>
-                <HoverLink href={SOCIAL_LINKS.apple.url} hoverColor="#9B59B6"><AppleIcon /></HoverLink>
-                <HoverLink href={SOCIAL_LINKS.youtube.url} hoverColor="#FF0000"><YouTubeIcon /></HoverLink>
-              </div>
-            </div>
+              div>
           )}
 
           {/* ===== FOOTER ===== */}
