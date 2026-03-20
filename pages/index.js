@@ -318,7 +318,7 @@ export default function Home({ episodes }) {
             <img
               src="/logo-white.png"
               alt="Unit Economics"
-              style={{ height: "40px", width: "auto" }}
+              style={{ height: "54px", width: "auto" }}
             />
           </div>
 
