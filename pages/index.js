@@ -576,7 +576,7 @@ export default function Home({ episodes }) {
                 hello@uepod.com
               </a>
 
-              div>
+              </div>
           )}
 
           {/* ===== FOOTER ===== */}
