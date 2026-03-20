@@ -2,17 +2,17 @@
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-  background: #000;
-  color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: #000;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar { width: 0; }
@@ -20,146 +20,156 @@ a { color: inherit; }
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* ===== HAMBURGER MENU ===== */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 200;
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
 }
 
 .hamburger span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: #fff;
-  margin: 5px 0;
-  transition: all 0.3s ease;
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
+    transform: translateY(6.5px) rotate(45deg);
 }
 .hamburger.open span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 .hamburger.open span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
+    transform: translateY(-6.5px) rotate(-45deg);
 }
 
 /* Mobile overlay menu */
 .mobile-menu {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.97);
-  z-index: 150;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.97);
+    z-index: 150;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
 }
 
 .mobile-menu.open {
-  display: flex;
+    display: flex;
 }
 
 .mobile-menu button {
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.6);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.2s;
-  padding: 8px 0;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 8px 0;
 }
 
 .mobile-menu button:hover,
 .mobile-menu button.active {
-  color: #fff;
+    color: #fff;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  .nav-links {
-    display: none !important;
-  }
-  .hero-section {
-    padding: 60px 20px 40px !important;
-  }
-  .hero-title {
-    font-size: clamp(36px, 10vw, 56px) !important;
-  }
-  .hero-subtitle {
-    font-size: 15px !important;
-  }
-  .platform-buttons {
-    flex-wrap: wrap !important;
-  }
-  .platform-buttons a {
-    font-size: 12px !important;
-    padding: 10px 14px !important;
-  }
-  .content-section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-  .episode-grid {
-    grid-template-columns: 32px 1fr !important;
-    gap: 12px !important;
-  }
-  .episode-meta {
-    display: none !important;
-  }
-  .episode-meta-inline {
-    display: flex !important;
-  }
-  .about-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
-  }
-  .about-image {
-    order: -1 !important;
-    max-width: 280px !important;
-  }
-  .footer-inner {
-    align-items: flex-start !important;
-  }
-  .footer-follow {
-    align-items: flex-start !important;
-  }
-  .filter-bar {
-    gap: 6px !important;
-  }
-  .filter-bar button {
-    font-size: 11px !important;
-    padding: 5px 10px !important;
-  }
-  .footer-copyright {
-    text-align: left !important;
-  }
+    .hamburger {
+          display: block;
+    }
+    .nav-links {
+          display: none !important;
+    }
+    nav {
+          padding: 14px 20px !important;
+    }
+    nav img {
+          height: 36px !important;
+    }
+    .hero-section {
+          padding: 40px 20px 32px !important;
+    }
+    .hero-title {
+          font-size: clamp(36px, 10vw, 56px) !important;
+    }
+    .hero-subtitle {
+          font-size: 15px !important;
+    }
+    .platform-buttons {
+          flex-wrap: wrap !important;
+          margin-top: 32px !important;
+    }
+    .platform-buttons a {
+          font-size: 12px !important;
+          padding: 10px 14px !important;
+    }
+    .content-section {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+    }
+    .episode-grid {
+          grid-template-columns: 32px 1fr !important;
+          gap: 12px !important;
+    }
+    .episode-meta {
+          display: none !important;
+    }
+    .episode-meta-inline {
+          display: flex !important;
+    }
+    .about-grid {
+          grid-template-columns: 1fr !important;
+          gap: 40px !important;
+    }
+    .about-image {
+          order: -1 !important;
+          max-width: 280px !important;
+    }
+    .footer-inner {
+          align-items: flex-start !important;
+    }
+    .footer-follow {
+          align-items: flex-start !important;
+    }
+    footer {
+          padding: 32px 20px 28px !important;
+    }
+    .filter-bar {
+          gap: 6px !important;
+    }
+    .filter-bar button {
+          font-size: 11px !important;
+          padding: 5px 10px !important;
+    }
+    .footer-copyright {
+          text-align: left !important;
+    }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: clamp(28px, 9vw, 42px) !important;
-  }
+    .hero-title {
+          font-size: clamp(28px, 9vw, 42px) !important;
+    }
 }
