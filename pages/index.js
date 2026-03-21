@@ -28,7 +28,7 @@ const TikTokIcon = () => (
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
 );
-const SearchIcon = ({ size = 16 }) => (
+const SearchIcon = ({ size = 14 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
 );
 
@@ -292,7 +292,7 @@ export default function Home({ episodes }) {
     return a.localeCompare(b);
   });
 
-  // Restore section from URL hash on load
+  // Read hash on mount to determine initial section (no flicker)
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     const valid = ["home", "episodes", "about", "contact"];
@@ -580,61 +580,73 @@ export default function Home({ episodes }) {
                 animation: "fadeIn 0.4s ease",
               }}
             >
-              <h2
-                style={{
-                  fontFamily: "'Anton', sans-serif",
-                  fontWeight: 400,
-                  fontSize: "clamp(32px, 4vw, 48px)",
-                  letterSpacing: "0.01em",
-                  textTransform: "uppercase",
-                  marginBottom: "32px",
-                }}
-              >
-                Episodes
-              </h2>
-
-              {/* Search bar */}
+              {/* Header row: title + search */}
               <div
+                className="episodes-header"
                 style={{
-                  position: "relative",
-                  marginBottom: "20px",
-                  maxWidth: "400px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "24px",
+                  marginBottom: "32px",
+                  flexWrap: "wrap",
                 }}
               >
-                <div
+                <h2
                   style={{
-                    position: "absolute",
-                    left: "14px",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    color: "rgba(255,255,255,0.25)",
-                    lineHeight: 0,
-                    pointerEvents: "none",
+                    fontFamily: "'Anton', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "clamp(32px, 4vw, 48px)",
+                    letterSpacing: "0.01em",
+                    textTransform: "uppercase",
+                    margin: 0,
                   }}
                 >
-                  <SearchIcon />
-                </div>
-                <input
-                  type="text"
-                  value={search}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search episodes..."
+                  Episodes
+                </h2>
+                <div
                   style={{
-                    width: "100%",
-                    padding: "10px 14px 10px 40px",
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.10)",
-                    color: "#fff",
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 400,
-                    outline: "none",
-                    transition: "border-color 0.2s",
-                    boxSizing: "border-box",
+                    position: "relative",
+                    width: "280px",
+                    flexShrink: 0,
                   }}
-                  onFocus={(e) => e.target.style.borderColor = "rgba(255,255,255,0.25)"}
-                  onBlur={(e) => e.target.style.borderColor = "rgba(255,255,255,0.10)"}
-                />
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "12px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      color: "rgba(255,255,255,0.25)",
+                      lineHeight: 0,
+                      pointerEvents: "none",
+                    }}
+                  >
+                    <SearchIcon />
+                  </div>
+                  <input
+                    type="text"
+                    value={search}
+                    onChange={(e) => handleSearch(e.target.value)}
+                    placeholder="Search..."
+                    style={{
+                      width: "100%",
+                      padding: "6px 14px 6px 34px",
+                      background: "transparent",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      color: "#fff",
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "12px",
+                      fontWeight: 500,
+                      letterSpacing: "0.06em",
+                      outline: "none",
+                      transition: "border-color 0.2s",
+                      boxSizing: "border-box",
+                    }}
+                    onFocus={(e) => e.target.style.borderColor = "rgba(255,255,255,0.3)"}
+                    onBlur={(e) => e.target.style.borderColor = "rgba(255,255,255,0.12)"}
+                  />
+                </div>
               </div>
 
               {/* Filter bar */}
