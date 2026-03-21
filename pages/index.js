@@ -275,14 +275,7 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
 
 /* ===== MAIN PAGE ===== */
 export default function Home({ episodes }) {
-  const [section, setSection] = useState(() => {
-  if (typeof window !== "undefined") {
-    const hash = window.location.hash.replace("#", "");
-    const valid = ["home", "episodes", "about", "contact"];
-    if (hash && valid.includes(hash)) return hash;
-  }
-  return "home";
-});
+  const [section, setSection] = useState(null);
   const [filter, setFilter] = useState("All");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -294,13 +287,11 @@ export default function Home({ episodes }) {
     return a.localeCompare(b);
   });
 
-  // Restore section from URL hash on load
+  // Read hash on mount to determine initial section (no flicker)
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     const valid = ["home", "episodes", "about", "contact"];
-    if (hash && valid.includes(hash)) {
-      setSection(hash);
-    }
+    setSection(hash && valid.includes(hash) ? hash : "home");
   }, []);
 
   useEffect(() => {
@@ -331,6 +322,9 @@ export default function Home({ episodes }) {
     setMenuOpen(false);
     window.history.replaceState(null, "", s === "home" ? "/" : `/#${s}`);
   };
+
+  // Don't render until we know which section to show
+  if (!section) return null;
 
   return (
     <>
