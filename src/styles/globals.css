@@ -111,6 +111,7 @@ a { color: inherit; }
     .hero-section {
           padding: 40px 20px 32px !important;
     }
+        .hero-br { display: none; }
     .hero-title {
           font-size: clamp(36px, 10vw, 56px) !important;
     }
