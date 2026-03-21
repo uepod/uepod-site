@@ -387,7 +387,7 @@ export default function Home({ episodes }) {
                     marginBottom: "40px",
                   }}
                 >
-                  The real mechanics behind<br />your favorite brands.
+                  The real mechanics behind<br className="hero-br" />your favorite brands.
                 </h1>
                 <p
                   className="hero-subtitle"
