@@ -2,6 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 
+/* ===== GA4 EVENT HELPER ===== */
+function trackEvent(eventName, params = {}) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", eventName, params);
+  }
+}
+
 /* ===== ICON COMPONENTS ===== */
 const SpotifyIcon = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
@@ -33,7 +40,7 @@ const SOCIAL_LINKS = {
 };
 
 /* ===== HOVERABLE LINK COMPONENT ===== */
-function HoverLink({ href, hoverColor, children, style = {}, ...props }) {
+function HoverLink({ href, hoverColor, children, style = {}, onClick, ...props }) {
   const [hovered, setHovered] = useState(false);
   return (
     <a
@@ -49,6 +56,7 @@ function HoverLink({ href, hoverColor, children, style = {}, ...props }) {
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
       {...props}
     >
       {children}
@@ -59,7 +67,6 @@ function HoverLink({ href, hoverColor, children, style = {}, ...props }) {
 /* ===== EPISODE CARD ===== */
 function EpisodeCard({ ep, index }) {
   const [brandHovered, setBrandHovered] = useState(false);
-
   return (
     <div
       className="episode-grid"
@@ -75,37 +82,43 @@ function EpisodeCard({ ep, index }) {
       }}
     >
       {/* Episode number */}
-      <div style={{
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: "12px",
-        color: "rgba(255,255,255,0.3)",
-        paddingTop: "4px",
-        letterSpacing: "0.05em",
-      }}>
+      <div
+        style={{
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: "12px",
+          color: "rgba(255,255,255,0.3)",
+          paddingTop: "4px",
+          letterSpacing: "0.05em",
+        }}
+      >
         {String(ep.id).padStart(2, "0")}
       </div>
 
       {/* Main content */}
       <div>
-        <div style={{
-          fontFamily: "'Space Grotesk', sans-serif",
-          fontSize: "11px",
-          fontWeight: 500,
-          color: "rgba(255,255,255,0.35)",
-          textTransform: "uppercase",
-          letterSpacing: "0.12em",
-          marginBottom: "6px",
-        }}>
+        <div
+          style={{
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontSize: "11px",
+            fontWeight: 500,
+            color: "rgba(255,255,255,0.35)",
+            textTransform: "uppercase",
+            letterSpacing: "0.12em",
+            marginBottom: "6px",
+          }}
+        >
           {ep.category}
         </div>
-        <div style={{
-          fontFamily: "'Anton', sans-serif",
-          fontSize: "22px",
-          fontWeight: 400,
-          lineHeight: 1.25,
-          marginBottom: "4px",
-          textTransform: "uppercase",
-        }}>
+        <div
+          style={{
+            fontFamily: "'Anton', sans-serif",
+            fontSize: "22px",
+            fontWeight: 400,
+            lineHeight: 1.25,
+            marginBottom: "4px",
+            textTransform: "uppercase",
+          }}
+        >
           <a
             href={ep.spotify}
             target="_blank"
@@ -116,64 +129,77 @@ function EpisodeCard({ ep, index }) {
             }}
             onMouseEnter={() => setBrandHovered(true)}
             onMouseLeave={() => setBrandHovered(false)}
+            onClick={() => trackEvent("episode_brand_click", { episode_name: ep.brand })}
           >
             {ep.brand}
           </a>
         </div>
-        <div style={{
-          fontFamily: "'Space Grotesk', sans-serif",
-          fontSize: "15px",
-          color: "rgba(255,255,255,0.5)",
-          marginBottom: "10px",
-          fontWeight: 400,
-        }}>
+        <div
+          style={{
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontSize: "15px",
+            color: "rgba(255,255,255,0.5)",
+            marginBottom: "10px",
+            fontWeight: 400,
+          }}
+        >
           {ep.guest}
         </div>
-        <div style={{
-          fontFamily: "'Space Grotesk', sans-serif",
-          fontSize: "14px",
-          color: "rgba(255,255,255,0.35)",
-          lineHeight: 1.6,
-          maxWidth: "640px",
-        }}>
+        <div
+          style={{
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontSize: "14px",
+            color: "rgba(255,255,255,0.35)",
+            lineHeight: 1.6,
+            maxWidth: "640px",
+          }}
+        >
           {ep.desc}
         </div>
 
         {/* Inline date/duration for mobile */}
-        <div className="episode-meta-inline" style={{
-          display: "none",
-          gap: "12px",
-          marginTop: "10px",
-          fontFamily: "'JetBrains Mono', monospace",
-          fontSize: "11px",
-          color: "rgba(255,255,255,0.25)",
-        }}>
+        <div
+          className="episode-meta-inline"
+          style={{
+            display: "none",
+            gap: "12px",
+            marginTop: "10px",
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "11px",
+            color: "rgba(255,255,255,0.25)",
+          }}
+        >
           <span>{ep.date}</span>
           <span>{ep.duration}</span>
         </div>
 
         {/* Platform links */}
-        <div style={{
-          display: "flex",
-          gap: "14px",
-          marginTop: "14px",
-          alignItems: "center",
-        }}>
-          <HoverLink href={ep.spotify} hoverColor="#1DB954"><SpotifyIcon /></HoverLink>
-          <HoverLink href={ep.apple} hoverColor="#9B59B6"><AppleIcon /></HoverLink>
-          <HoverLink href={ep.youtube} hoverColor="#FF0000"><YouTubeIcon /></HoverLink>
+        <div
+          style={{
+            display: "flex",
+            gap: "14px",
+            marginTop: "14px",
+            alignItems: "center",
+          }}
+        >
+          <HoverLink href={ep.spotify} hoverColor="#1DB954" onClick={() => trackEvent("episode_platform_click", { platform: "spotify", episode_name: ep.brand })}><SpotifyIcon /></HoverLink>
+          <HoverLink href={ep.apple} hoverColor="#9B59B6" onClick={() => trackEvent("episode_platform_click", { platform: "apple_podcasts", episode_name: ep.brand })}><AppleIcon /></HoverLink>
+          <HoverLink href={ep.youtube} hoverColor="#FF0000" onClick={() => trackEvent("episode_platform_click", { platform: "youtube", episode_name: ep.brand })}><YouTubeIcon /></HoverLink>
         </div>
       </div>
 
       {/* Date/duration — hidden on mobile */}
-      <div className="episode-meta" style={{
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: "12px",
-        color: "rgba(255,255,255,0.25)",
-        textAlign: "right",
-        whiteSpace: "nowrap",
-        paddingTop: "4px",
-      }}>
+      <div
+        className="episode-meta"
+        style={{
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: "12px",
+          color: "rgba(255,255,255,0.25)",
+          textAlign: "right",
+          whiteSpace: "nowrap",
+          paddingTop: "4px",
+        }}
+      >
         <div>{ep.date}</div>
         <div style={{ marginTop: "4px" }}>{ep.duration}</div>
       </div>
@@ -192,7 +218,11 @@ function NavButton({ label, active, onClick }) {
       style={{
         background: "none",
         border: "none",
-        color: active ? "#fff" : hovered ? "rgba(255,255,255,0.75)" : "rgba(255,255,255,0.4)",
+        color: active
+          ? "#fff"
+          : hovered
+          ? "rgba(255,255,255,0.75)"
+          : "rgba(255,255,255,0.4)",
         fontFamily: "'JetBrains Mono', monospace",
         fontSize: "12px",
         fontWeight: 400,
@@ -201,7 +231,9 @@ function NavButton({ label, active, onClick }) {
         cursor: "pointer",
         transition: "color 0.2s",
         padding: "4px 0",
-        borderBottom: active ? "1px solid rgba(255,255,255,0.5)" : "1px solid transparent",
+        borderBottom: active
+          ? "1px solid rgba(255,255,255,0.5)"
+          : "1px solid transparent",
       }}
     >
       {label}
@@ -210,7 +242,7 @@ function NavButton({ label, active, onClick }) {
 }
 
 /* ===== PLATFORM BUTTON WITH HOVER ===== */
-function PlatformButton({ href, hoverColor, icon: Icon, label }) {
+function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
   const [hovered, setHovered] = useState(false);
   return (
     <a
@@ -234,6 +266,7 @@ function PlatformButton({ href, hoverColor, icon: Icon, label }) {
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
     >
       <Icon /> {label}
     </a>
@@ -272,10 +305,12 @@ export default function Home({ episodes }) {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const filtered = filter === "All" ? episodes : episodes.filter(e => e.category === filter);
+  const filtered =
+    filter === "All" ? episodes : episodes.filter(e => e.category === filter);
 
   const navigate = (s) => {
     setSection(s);
+    trackEvent("nav_click", { section: s });
     if (s !== "episodes") setFilter("All");
     setMenuOpen(false);
   };
@@ -286,34 +321,44 @@ export default function Home({ episodes }) {
         <title>Unit Economics — Exploring the hidden complexity behind every industry</title>
       </Head>
 
-      <div style={{
-        background: "#000",
-        color: "#fff",
-        minHeight: "100vh",
-        fontFamily: "'Space Grotesk', sans-serif",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-      }}>
-
-        {/* ===== NAV ===== */}
-        <nav style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
+      <div
+        style={{
+          background: "#000",
+          color: "#fff",
+          minHeight: "100vh",
+          fontFamily: "'Space Grotesk', sans-serif",
+          overflow: "hidden",
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "20px 40px",
-          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "1px solid transparent",
-          transition: "border-color 0.3s, backdrop-filter 0.3s",
-          backdropFilter: scrolled ? "blur(20px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
-          background: scrolled ? "rgba(0,0,0,0.85)" : "transparent",
-        }}>
+          flexDirection: "column",
+        }}
+      >
+        {/* ===== NAV ===== */}
+        <nav
+          style={{
+            position: "sticky",
+            top: 0,
+            zIndex: 100,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "20px 40px",
+            borderBottom: scrolled
+              ? "1px solid rgba(255,255,255,0.06)"
+              : "1px solid transparent",
+            transition: "border-color 0.3s, backdrop-filter 0.3s",
+            backdropFilter: scrolled ? "blur(20px)" : "none",
+            WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
+            background: scrolled ? "rgba(0,0,0,0.85)" : "transparent",
+          }}
+        >
           <div
             onClick={() => navigate("home")}
-            style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "12px" }}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+            }}
           >
             <img
               src="/logo-white.png"
@@ -323,7 +368,10 @@ export default function Home({ episodes }) {
           </div>
 
           {/* Desktop nav */}
-          <div className="nav-links" style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+          <div
+            className="nav-links"
+            style={{ display: "flex", gap: "32px", alignItems: "center" }}
+          >
             {[
               { key: "home", label: "Home" },
               { key: "episodes", label: "Listen" },
@@ -368,13 +416,18 @@ export default function Home({ episodes }) {
         </div>
 
         {/* ===== CONTENT ===== */}
-        <div ref={contentRef} style={{ flex: 1, overflow: "auto", scrollBehavior: "smooth" }}>
-
+        <div
+          ref={contentRef}
+          style={{ flex: 1, overflow: "auto", scrollBehavior: "smooth" }}
+        >
           {/* ===== HOME ===== */}
           {section === "home" && (
             <div style={{ animation: "fadeIn 0.5s ease" }}>
               {/* Hero */}
-              <div className="hero-section" style={{ padding: "120px 40px 56px" }}>
+              <div
+                className="hero-section"
+                style={{ padding: "120px 40px 56px" }}
+              >
                 <h1
                   className="hero-title"
                   style={{
@@ -400,38 +453,77 @@ export default function Home({ episodes }) {
                     maxWidth: "720px",
                   }}
                 >
-                  Conversations with founders on how products are designed, manufactured, priced, and distributed — with a focus on the decisions, economics, and tradeoffs behind the scenes.
+                  Conversations with founders on how products are designed,
+                  manufactured, priced, and distributed — with a focus on the
+                  decisions, economics, and tradeoffs behind the scenes.
                 </p>
-
-                <div className="platform-buttons" style={{ display: "flex", gap: "16px", marginTop: "48px" }}>
-                  <PlatformButton href={SOCIAL_LINKS.spotify.url} hoverColor="#1DB954" icon={SpotifyIcon} label="Spotify" />
-                  <PlatformButton href={SOCIAL_LINKS.apple.url} hoverColor="#9B59B6" icon={AppleIcon} label="Apple Podcasts" />
-                  <PlatformButton href={SOCIAL_LINKS.youtube.url} hoverColor="#FF0000" icon={YouTubeIcon} label="YouTube" />
+                <div
+                  className="platform-buttons"
+                  style={{
+                    display: "flex",
+                    gap: "16px",
+                    marginTop: "48px",
+                  }}
+                >
+                  <PlatformButton
+                    href={SOCIAL_LINKS.spotify.url}
+                    hoverColor="#1DB954"
+                    icon={SpotifyIcon}
+                    label="Spotify"
+                    onClick={() => trackEvent("hero_platform_click", { platform: "spotify" })}
+                  />
+                  <PlatformButton
+                    href={SOCIAL_LINKS.apple.url}
+                    hoverColor="#9B59B6"
+                    icon={AppleIcon}
+                    label="Apple Podcasts"
+                    onClick={() => trackEvent("hero_platform_click", { platform: "apple_podcasts" })}
+                  />
+                  <PlatformButton
+                    href={SOCIAL_LINKS.youtube.url}
+                    hoverColor="#FF0000"
+                    icon={YouTubeIcon}
+                    label="YouTube"
+                    onClick={() => trackEvent("hero_platform_click", { platform: "youtube" })}
+                  />
                 </div>
               </div>
 
               {/* Latest episodes preview */}
-              <div className="content-section" style={{ padding: "0 40px 80px", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <div style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "baseline",
-                  paddingTop: "32px",
-                  marginBottom: "8px",
-                }}>
-                  <h2 style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "13px",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.4)",
-                  }}>
+              <div
+                className="content-section"
+                style={{
+                  padding: "0 40px 80px",
+                  borderTop: "1px solid rgba(255,255,255,0.06)",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "baseline",
+                    paddingTop: "32px",
+                    marginBottom: "8px",
+                  }}
+                >
+                  <h2
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "13px",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "rgba(255,255,255,0.4)",
+                    }}
+                  >
                     Latest Episodes
                   </h2>
-                  <NavButton label="View all →" active={false} onClick={() => navigate("episodes")} />
+                  <NavButton
+                    label="View all →"
+                    active={false}
+                    onClick={() => navigate("episodes")}
+                  />
                 </div>
-
                 {episodes.slice(0, 3).map((ep, i) => (
                   <EpisodeCard key={ep.id} ep={ep} index={i} />
                 ))}
@@ -441,31 +533,57 @@ export default function Home({ episodes }) {
 
           {/* ===== EPISODES ===== */}
           {section === "episodes" && (
-            <div className="content-section" style={{ padding: "48px 40px 80px", animation: "fadeIn 0.4s ease" }}>
-              <h2 style={{
-                fontFamily: "'Anton', sans-serif",
-                fontWeight: 400,
-                fontSize: "clamp(32px, 4vw, 48px)",
-                letterSpacing: "0.01em",
-                textTransform: "uppercase",
-                marginBottom: "32px",
-              }}>
+            <div
+              className="content-section"
+              style={{
+                padding: "48px 40px 80px",
+                animation: "fadeIn 0.4s ease",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: "'Anton', sans-serif",
+                  fontWeight: 400,
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  letterSpacing: "0.01em",
+                  textTransform: "uppercase",
+                  marginBottom: "32px",
+                }}
+              >
                 Episodes
               </h2>
 
               {/* Filter bar */}
-              <div className="filter-bar" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "32px" }}>
+              <div
+                className="filter-bar"
+                style={{
+                  display: "flex",
+                  gap: "8px",
+                  flexWrap: "wrap",
+                  marginBottom: "32px",
+                }}
+              >
                 {categories.map(cat => (
-                  <FilterButton key={cat} label={cat} active={filter === cat} onClick={() => setFilter(cat)} />
+                  <FilterButton
+                    key={cat}
+                    label={cat}
+                    active={filter === cat}
+                    onClick={() => {
+                      setFilter(cat);
+                      trackEvent("filter_click", { category: cat });
+                    }}
+                  />
                 ))}
               </div>
 
-              <div style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: "12px",
-                color: "rgba(255,255,255,0.2)",
-                marginBottom: "16px",
-              }}>
+              <div
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.2)",
+                  marginBottom: "16px",
+                }}
+              >
                 {filtered.length} episode{filtered.length !== 1 ? "s" : ""}
               </div>
 
@@ -477,56 +595,95 @@ export default function Home({ episodes }) {
 
           {/* ===== ABOUT ===== */}
           {section === "about" && (
-            <div className="content-section" style={{ padding: "80px 40px", animation: "fadeIn 0.5s ease" }}>
-              <h2 style={{
-                fontFamily: "'Anton', sans-serif",
-                fontWeight: 400,
-                fontSize: "clamp(32px, 4vw, 48px)",
-                letterSpacing: "0.01em",
-                textTransform: "uppercase",
-                marginBottom: "40px",
-              }}>
+            <div
+              className="content-section"
+              style={{
+                padding: "80px 40px",
+                animation: "fadeIn 0.5s ease",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: "'Anton', sans-serif",
+                  fontWeight: 400,
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  letterSpacing: "0.01em",
+                  textTransform: "uppercase",
+                  marginBottom: "40px",
+                }}
+              >
                 About
               </h2>
-
-              <div className="about-grid" style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "60px",
-                alignItems: "start",
-              }}>
+              <div
+                className="about-grid"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "60px",
+                  alignItems: "start",
+                }}
+              >
                 <div>
-                  <div style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "24px",
-                    fontWeight: 400,
-                    lineHeight: 1.45,
-                    marginBottom: "40px",
-                    color: "rgba(255,255,255,0.85)",
-                  }}>
-                    <a href="https://linkedin.com/in/stabinsky" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "none" }} onMouseEnter={(e) => e.target.style.borderBottom = "1px solid rgba(255,255,255,0.4)"} onMouseLeave={(e) => e.target.style.borderBottom = "none"}>Josh Stabinsky</a> lives in San Francisco and spends a lot of time drinking coffee. He loves consumer packaged goods. And dogs.
+                  <div
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "24px",
+                      fontWeight: 400,
+                      lineHeight: 1.45,
+                      marginBottom: "40px",
+                      color: "rgba(255,255,255,0.85)",
+                    }}
+                  >
+                    <a
+                      href="https://linkedin.com/in/stabinsky"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "rgba(255,255,255,0.85)",
+                        textDecoration: "none",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.target.style.borderBottom =
+                          "1px solid rgba(255,255,255,0.4)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.borderBottom = "none")
+                      }
+                    >
+                      Josh Stabinsky
+                    </a>{" "}
+                    lives in San Francisco and spends a lot of time drinking
+                    coffee. He loves consumer packaged goods. And dogs.
                   </div>
-
-                  <div style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "15px",
-                    lineHeight: 1.75,
-                    color: "rgba(255,255,255,0.45)",
-                    marginBottom: "40px",
-                  }}>
-                    Unit Economics is a long-form interview podcast that digs into how products are actually designed, manufactured, priced, and distributed. Each episode is a conversation with a founder, operator, or builder about the decisions, constraints, and tradeoffs behind their business. The show covers industries from food and beverage to hardware, games, apparel, and beyond.
+                  <div
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "15px",
+                      lineHeight: 1.75,
+                      color: "rgba(255,255,255,0.45)",
+                      marginBottom: "40px",
+                    }}
+                  >
+                    Unit Economics is a long-form interview podcast that digs
+                    into how products are actually designed, manufactured,
+                    priced, and distributed. Each episode is a conversation with
+                    a founder, operator, or builder about the decisions,
+                    constraints, and tradeoffs behind their business. The show
+                    covers industries from food and beverage to hardware, games,
+                    apparel, and beyond.
                   </div>
-
-                  <div style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "15px",
-                    lineHeight: 1.75,
-                    color: "rgba(255,255,255,0.45)",
-                  }}>
-                    New episodes every week. Available on Spotify, Apple Podcasts, and YouTube.
+                  <div
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "15px",
+                      lineHeight: 1.75,
+                      color: "rgba(255,255,255,0.45)",
+                    }}
+                  >
+                    New episodes every week. Available on Spotify, Apple
+                    Podcasts, and YouTube.
                   </div>
                 </div>
-
                 <img
                   className="about-image"
                   src="/josh-about.png"
@@ -539,28 +696,38 @@ export default function Home({ episodes }) {
 
           {/* ===== CONTACT ===== */}
           {section === "contact" && (
-            <div className="content-section" style={{ padding: "80px 40px", maxWidth: "680px", animation: "fadeIn 0.5s ease" }}>
-              <h2 style={{
-                fontFamily: "'Anton', sans-serif",
-                fontWeight: 400,
-                fontSize: "clamp(32px, 4vw, 48px)",
-                letterSpacing: "0.01em",
-                textTransform: "uppercase",
-                marginBottom: "40px",
-              }}>
+            <div
+              className="content-section"
+              style={{
+                padding: "80px 40px",
+                maxWidth: "680px",
+                animation: "fadeIn 0.5s ease",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: "'Anton', sans-serif",
+                  fontWeight: 400,
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  letterSpacing: "0.01em",
+                  textTransform: "uppercase",
+                  marginBottom: "40px",
+                }}
+              >
                 Contact
               </h2>
-
-              <div style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "17px",
-                lineHeight: 1.7,
-                color: "rgba(255,255,255,0.55)",
-                marginBottom: "32px",
-              }}>
-                Guest suggestions, press inquiries, sponsorship, or just want to say hi?
+              <div
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "17px",
+                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.55)",
+                  marginBottom: "32px",
+                }}
+              >
+                Guest suggestions, press inquiries, sponsorship, or just want to
+                say hi?
               </div>
-
               <a
                 href="mailto:hello@uepod.com"
                 style={{
@@ -575,47 +742,65 @@ export default function Home({ episodes }) {
               >
                 hello@uepod.com
               </a>
-
-              </div>
+            </div>
           )}
 
           {/* ===== FOOTER ===== */}
-          <footer style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            padding: "48px 40px 40px",
-          }}>
-            <div className="footer-inner footer-follow" style={{
-              marginBottom: "32px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-            }}>
-              <h3 style={{
-                fontFamily: "'Anton', sans-serif",
-                fontWeight: 400,
-                fontSize: "18px",
-                textTransform: "uppercase",
-                marginBottom: "16px",
-                letterSpacing: "0.02em",
-              }}>Follow</h3>
-              <div style={{ display: "flex", gap: "18px", alignItems: "center" }}>
-                {Object.entries(SOCIAL_LINKS).map(([key, { url, hc, icon: Icon }]) => (
-                  <HoverLink key={key} href={url} hoverColor={hc}>
-                    <Icon />
-                  </HoverLink>
-                ))}
+          <footer
+            style={{
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              padding: "48px 40px 40px",
+            }}
+          >
+            <div
+              className="footer-inner footer-follow"
+              style={{
+                marginBottom: "32px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-end",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "'Anton', sans-serif",
+                  fontWeight: 400,
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Follow
+              </h3>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "18px",
+                  alignItems: "center",
+                }}
+              >
+                {Object.entries(SOCIAL_LINKS).map(
+                  ([key, { url, hc, icon: Icon }]) => (
+                    <HoverLink key={key} href={url} hoverColor={hc} onClick={() => trackEvent("footer_social_click", { platform: key })}>
+                      <Icon />
+                    </HoverLink>
+                  )
+                )}
               </div>
             </div>
-
-            <div className="footer-copyright" style={{
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-              paddingTop: "20px",
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.4)",
-              letterSpacing: "0.04em",
-              textAlign: "right",
-            }}>
+            <div
+              className="footer-copyright"
+              style={{
+                borderTop: "1px solid rgba(255,255,255,0.06)",
+                paddingTop: "20px",
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "11px",
+                color: "rgba(255,255,255,0.4)",
+                letterSpacing: "0.04em",
+                textAlign: "right",
+              }}
+            >
               © 2025–2026 Unit Economics Podcast
             </div>
           </footer>
@@ -634,9 +819,19 @@ function FilterButton({ label, active, onClick }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: active ? "#fff" : hovered ? "rgba(255,255,255,0.06)" : "transparent",
-        color: active ? "#000" : hovered ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.4)",
-        border: active ? "1px solid #fff" : "1px solid rgba(255,255,255,0.12)",
+        background: active
+          ? "#fff"
+          : hovered
+          ? "rgba(255,255,255,0.06)"
+          : "transparent",
+        color: active
+          ? "#000"
+          : hovered
+          ? "rgba(255,255,255,0.6)"
+          : "rgba(255,255,255,0.4)",
+        border: active
+          ? "1px solid #fff"
+          : "1px solid rgba(255,255,255,0.12)",
         padding: "6px 14px",
         fontFamily: "'Space Grotesk', sans-serif",
         fontSize: "12px",
@@ -654,7 +849,6 @@ function FilterButton({ label, active, onClick }) {
 /* ===== BUILD-TIME DATA FETCHING ===== */
 export async function getStaticProps() {
   let episodes;
-
   try {
     episodes = await fetchEpisodes();
   } catch (err) {
