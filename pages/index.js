@@ -275,7 +275,14 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
 
 /* ===== MAIN PAGE ===== */
 export default function Home({ episodes }) {
-  const [section, setSection] = useState("home");
+  const [section, setSection] = useState(() => {
+  if (typeof window !== "undefined") {
+    const hash = window.location.hash.replace("#", "");
+    const valid = ["home", "episodes", "about", "contact"];
+    if (hash && valid.includes(hash)) return hash;
+  }
+  return "home";
+});
   const [filter, setFilter] = useState("All");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
