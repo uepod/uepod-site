@@ -287,6 +287,15 @@ export default function Home({ episodes }) {
     return a.localeCompare(b);
   });
 
+  // Restore section from URL hash on load
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    const valid = ["home", "episodes", "about", "contact"];
+    if (hash && valid.includes(hash)) {
+      setSection(hash);
+    }
+  }, []);
+
   useEffect(() => {
     const el = contentRef.current;
     if (!el) return;
@@ -313,6 +322,7 @@ export default function Home({ episodes }) {
     trackEvent("nav_click", { section: s });
     if (s !== "episodes") setFilter("All");
     setMenuOpen(false);
+    window.history.replaceState(null, "", s === "home" ? "/" : `/#${s}`);
   };
 
   return (
