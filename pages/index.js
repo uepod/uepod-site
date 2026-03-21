@@ -387,7 +387,7 @@ export default function Home({ episodes }) {
                     marginBottom: "40px",
                   }}
                 >
-                  Exploring the<br />hidden complexity<br />behind every industry.
+                  The real mechanics<br />behind your<br />favorite brands.
                 </h1>
                 <p
                   className="hero-subtitle"
@@ -400,7 +400,7 @@ export default function Home({ episodes }) {
                     maxWidth: "720px",
                   }}
                 >
-                  A show investigating familiar brands, the products they make, and the people shaping them — with a focus on the decisions, economics, and mechanics behind the scenes.
+                  Conversations with founders on how products are designed, manufactured, priced, and distributed — with a focus on the decisions, economics, and tradeoffs behind the scenes.
                 </p>
 
                 <div className="platform-buttons" style={{ display: "flex", gap: "16px", marginTop: "48px" }}>
