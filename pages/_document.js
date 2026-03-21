@@ -17,7 +17,7 @@ export default function Document() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Unit Economics — Exploring the hidden complexity behind every industry" />
+        <meta property="og:title" content="Unit Economics — How products actually get made" />
         <meta property="og:description" content="A show investigating familiar brands, the products they make, and the people shaping them — with a focus on the decisions, economics, and mechanics behind the scenes." />
         <meta property="og:url" content="https://uepod.com" />
         <meta property="og:image" content="https://uepod.com/og-image.png" />
@@ -25,7 +25,7 @@ export default function Document() {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Unit Economics — Exploring the hidden complexity behind every industry" />
+        <meta name="twitter:title" content="Unit Economics — How products actually get made" />
         <meta name="twitter:description" content="A show investigating familiar brands, the products they make, and the people shaping them." />
         <meta name="twitter:image" content="https://uepod.com/og-image.png" />
       </Head>
