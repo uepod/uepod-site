@@ -28,7 +28,7 @@ const SOCIAL_LINKS = {
   youtube: { url: "https://www.youtube.com/@TheUnitEconomicsPodcast", hc: "#FF0000", icon: YouTubeIcon },
   apple: { url: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735", hc: "#9B59B6", icon: AppleIcon },
   instagram: { url: "https://www.instagram.com/ue.pod/", hc: "#E1306C", icon: InstagramIcon },
-  tiktok: { url: "https://www.tiktok.com/@ue_pod", hc: "#fff", icon: TikTokIcon },
+  tiktok: { url: "https://www.tiktok.com/@ue.pod", hc: "#fff", icon: TikTokIcon },
   linkedin: { url: "https://www.linkedin.com/company/the-unit-economics-podcast/", hc: "#0A66C2", icon: LinkedInIcon },
 };
 
