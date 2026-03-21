@@ -28,6 +28,9 @@ const TikTokIcon = () => (
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
 );
+const SearchIcon = ({ size = 16 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+);
 
 /* ===== SOCIAL LINKS ===== */
 const SOCIAL_LINKS = {
@@ -277,9 +280,11 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
 export default function Home({ episodes }) {
   const [section, setSection] = useState(null);
   const [filter, setFilter] = useState("All");
+  const [search, setSearch] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const contentRef = useRef(null);
+  const searchTimerRef = useRef(null);
 
   const categories = ["All", ...new Set(episodes.map(e => e.category))].sort((a, b) => {
     if (a === "All") return -1;
@@ -287,7 +292,7 @@ export default function Home({ episodes }) {
     return a.localeCompare(b);
   });
 
-  // Read hash on mount to determine initial section (no flicker)
+  // Restore section from URL hash on load
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     const valid = ["home", "episodes", "about", "contact"];
@@ -312,13 +317,37 @@ export default function Home({ episodes }) {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const filtered =
-    filter === "All" ? episodes : episodes.filter(e => e.category === filter);
+  // Filter episodes by category and search
+  const filtered = episodes.filter(e => {
+    const matchesCategory = filter === "All" || e.category === filter;
+    if (!search.trim()) return matchesCategory;
+    const q = search.toLowerCase();
+    const matchesSearch =
+      (e.brand && e.brand.toLowerCase().includes(q)) ||
+      (e.guest && e.guest.toLowerCase().includes(q)) ||
+      (e.desc && e.desc.toLowerCase().includes(q)) ||
+      (e.category && e.category.toLowerCase().includes(q));
+    return matchesCategory && matchesSearch;
+  });
+
+  const handleSearch = (value) => {
+    setSearch(value);
+    // Debounced GA tracking — fires 800ms after user stops typing
+    if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
+    if (value.trim()) {
+      searchTimerRef.current = setTimeout(() => {
+        trackEvent("episode_search", { search_term: value.trim() });
+      }, 800);
+    }
+  };
 
   const navigate = (s) => {
     setSection(s);
     trackEvent("nav_click", { section: s });
-    if (s !== "episodes") setFilter("All");
+    if (s !== "episodes") {
+      setFilter("All");
+      setSearch("");
+    }
     setMenuOpen(false);
     window.history.replaceState(null, "", s === "home" ? "/" : `/#${s}`);
   };
@@ -564,6 +593,50 @@ export default function Home({ episodes }) {
                 Episodes
               </h2>
 
+              {/* Search bar */}
+              <div
+                style={{
+                  position: "relative",
+                  marginBottom: "20px",
+                  maxWidth: "400px",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "14px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    color: "rgba(255,255,255,0.25)",
+                    lineHeight: 0,
+                    pointerEvents: "none",
+                  }}
+                >
+                  <SearchIcon />
+                </div>
+                <input
+                  type="text"
+                  value={search}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  placeholder="Search episodes..."
+                  style={{
+                    width: "100%",
+                    padding: "10px 14px 10px 40px",
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    color: "#fff",
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    outline: "none",
+                    transition: "border-color 0.2s",
+                    boxSizing: "border-box",
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = "rgba(255,255,255,0.25)"}
+                  onBlur={(e) => e.target.style.borderColor = "rgba(255,255,255,0.10)"}
+                />
+              </div>
+
               {/* Filter bar */}
               <div
                 className="filter-bar"
@@ -596,11 +669,25 @@ export default function Home({ episodes }) {
                 }}
               >
                 {filtered.length} episode{filtered.length !== 1 ? "s" : ""}
+                {search.trim() ? ` matching "${search.trim()}"` : ""}
               </div>
 
               {filtered.map((ep, i) => (
                 <EpisodeCard key={ep.id} ep={ep} index={i} />
               ))}
+
+              {filtered.length === 0 && (
+                <div
+                  style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "15px",
+                    color: "rgba(255,255,255,0.35)",
+                    padding: "40px 0",
+                  }}
+                >
+                  No episodes found. Try a different search or category.
+                </div>
+              )}
             </div>
           )}
 
