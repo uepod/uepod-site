@@ -504,7 +504,7 @@ export default function Home({ episodes }) {
                     marginBottom: "40px",
                     color: "rgba(255,255,255,0.85)",
                   }}>
-                    <a href="https://www.linkedin.com/in/stabinsky" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "underline" }}>Josh Stabinsky</a> lives in San Francisco and spends a lot of time drinking coffee. He loves consumer packaged goods. And dogs.
+                    <a href="https://linkedin.com/in/stabinsky" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "none" }} onMouseEnter={(e) => e.target.style.borderBottom = "1px solid rgba(255,255,255,0.4)"} onMouseLeave={(e) => e.target.style.borderBottom = "none"}>Josh Stabinsky</a> lives in San Francisco and spends a lot of time drinking coffee. He loves consumer packaged goods. And dogs.
                   </div>
 
                   <div style={{
