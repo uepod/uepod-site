@@ -47,7 +47,12 @@ function parseCSVLine(line) {
  */
 async function fetchSheetData() {
   try {
-    const res = await fetch(SHEET_CSV_URL, { signal: AbortSignal.timeout(10000) });
+    const res = await fetch(SHEET_CSV_URL, {
+      cache: "no-store",
+      next: { revalidate: 0 },
+      signal: AbortSignal.timeout(10000),
+    });
+
     if (!res.ok) throw new Error(`Sheet fetch failed: ${res.status}`);
     const text = await res.text();
 
