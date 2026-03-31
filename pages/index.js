@@ -46,7 +46,7 @@ const SOCIAL_LINKS = {
 function HoverLink({ href, hoverColor, children, style = {}, onClick, ...props }) {
   const [hovered, setHovered] = useState(false);
   return (
-    
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -122,7 +122,7 @@ function EpisodeCard({ ep, index }) {
             textTransform: "uppercase",
           }}
         >
-          
+          <a
             href={ep.spotify}
             target="_blank"
             rel="noopener noreferrer"
@@ -248,7 +248,7 @@ function NavButton({ label, active, onClick }) {
 function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
   const [hovered, setHovered] = useState(false);
   return (
-    
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -744,7 +744,7 @@ export default function Home({ episodes }) {
                       color: "rgba(255,255,255,0.85)",
                     }}
                   >
-                    
+                    <a
                       href="https://linkedin.com/in/stabinsky"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -838,7 +838,7 @@ export default function Home({ episodes }) {
                 Guest suggestions, press inquiries, sponsorship, or just want to
                 say hi?
               </div>
-              
+              <a
                 href="mailto:hello@uepod.com"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
