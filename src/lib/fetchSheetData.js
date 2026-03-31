@@ -5,7 +5,7 @@
  */
 
 const SHEET_CSV_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRbV4hP7zdooVGUk1Qh1nudn1Psz8k0eVwPB52XVABBAE9DIIbyDY4U5lGEdihA3JezAcu8XKqGl6R/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/1friDHGDSPZSDEV_8ERMjEs8xTpcTe_aYSdMpMKchq58/export?format=csv&gid=0";
 
 /**
  * Parse a CSV line, respecting quoted fields that may contain commas.
