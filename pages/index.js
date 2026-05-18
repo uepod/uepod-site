@@ -401,9 +401,9 @@ export default function Home({ episodes }) {
             }}
           >
             <img
-              src="/logo-white.png"
+              src="/logo-horizontal.svg"
               alt="Unit Economics"
-              style={{ height: "54px", width: "auto" }}
+              style={{ height: "48px", width: "auto" }}
             />
           </div>
 
