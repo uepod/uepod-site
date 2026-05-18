@@ -594,7 +594,7 @@ export default function Home({ episodes }) {
               >
                 <h2
                   style={{
-                    fontFamily: "'Je', sans-serif",
+                    fontFamily: "'JetBrains Mono', monospace",
                     fontWeight: 400,
                     fontSize: "clamp(32px, 4vw, 48px)",
                     letterSpacing: "0.01em",
