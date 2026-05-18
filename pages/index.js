@@ -471,11 +471,11 @@ export default function Home({ episodes }) {
                 <h1
                   className="hero-title"
                   style={{
-                    fontFamily: "'Anton', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "clamp(48px, 8vw, 110px)",
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 800,
+                    fontSize: "clamp(36px, 5.5vw, 72px)",
                     lineHeight: 1.0,
-                    letterSpacing: "0.01em",
+                    letterSpacing: "-0.02em",
                     textTransform: "uppercase",
                     marginBottom: "40px",
                   }}
