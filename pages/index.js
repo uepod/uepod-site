@@ -466,7 +466,7 @@ export default function Home({ episodes }) {
               {/* Hero */}
               <div
                 className="hero-section"
-                style={{ padding: "120px 40px 56px" }}
+                style={{ padding: "60px 40px 56px" }}
               >
                 <h1
                   className="hero-title"
