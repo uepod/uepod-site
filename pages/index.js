@@ -476,7 +476,6 @@ export default function Home({ episodes }) {
                     fontSize: "clamp(36px, 5.5vw, 72px)",
                     lineHeight: 1.0,
                     letterSpacing: "-0.02em",
-                    textTransform: "uppercase",
                     marginBottom: "40px",
                   }}
                 >
