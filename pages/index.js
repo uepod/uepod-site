@@ -471,7 +471,7 @@ export default function Home({ episodes }) {
                 <h1
                   className="hero-title"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Space Grotesk', sans-serif",
                     fontWeight: 800,
                     fontSize: "clamp(36px, 5.5vw, 72px)",
                     textTransform: "uppercase",
