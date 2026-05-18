@@ -114,7 +114,7 @@ function EpisodeCard({ ep, index }) {
         </div>
         <div
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'JetBrains Mono', monospace",
             fontSize: "22px",
             fontWeight: 400,
             lineHeight: 1.25,
@@ -474,6 +474,7 @@ export default function Home({ episodes }) {
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 800,
                     fontSize: "clamp(36px, 5.5vw, 72px)",
+                    textTransform: "uppercase",
                     lineHeight: 1.0,
                     letterSpacing: "-0.02em",
                     marginBottom: "40px",
@@ -593,7 +594,7 @@ export default function Home({ episodes }) {
               >
                 <h2
                   style={{
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Je', sans-serif",
                     fontWeight: 400,
                     fontSize: "clamp(32px, 4vw, 48px)",
                     letterSpacing: "0.01em",
@@ -713,7 +714,7 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'JetBrains Mono', monospace",
                   fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
                   letterSpacing: "0.01em",
@@ -815,7 +816,7 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'JetBrains Mono', monospace",
                   fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
                   letterSpacing: "0.01em",
@@ -872,7 +873,7 @@ export default function Home({ episodes }) {
             >
               <h3
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'JetBrains Mono', monospace",
                   fontWeight: 400,
                   fontSize: "18px",
                   textTransform: "uppercase",
