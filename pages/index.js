@@ -485,7 +485,7 @@ export default function Home({ episodes }) {
                 <p
                   className="hero-subtitle"
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontSize: "clamp(16px, 2vw, 20px)",
                     fontWeight: 300,
                     color: "rgba(255,255,255,0.55)",
