@@ -114,7 +114,7 @@ function EpisodeCard({ ep, index }) {
         </div>
         <div
           style={{
-            fontFamily: "'Anton', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "22px",
             fontWeight: 400,
             lineHeight: 1.25,
@@ -594,7 +594,7 @@ export default function Home({ episodes }) {
               >
                 <h2
                   style={{
-                    fontFamily: "'Anton', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontWeight: 400,
                     fontSize: "clamp(32px, 4vw, 48px)",
                     letterSpacing: "0.01em",
@@ -714,7 +714,7 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: "'Anton', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
                   letterSpacing: "0.01em",
@@ -816,7 +816,7 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: "'Anton', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
                   letterSpacing: "0.01em",
@@ -873,7 +873,7 @@ export default function Home({ episodes }) {
             >
               <h3
                 style={{
-                  fontFamily: "'Anton', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 400,
                   fontSize: "18px",
                   textTransform: "uppercase",
