@@ -1,3 +1,4 @@
+
 /*
  * Legal Disclaimer for Basic Package licence
  *
@@ -12,14 +13,14 @@
  * uepod.com, up to 5k monthly page viewsFor up to 5k followers on all social media channels belonging to Unit Economics (or N/A Sole Proprietorship)
  *
  */
-
+ 
 @font-face {
   font-family: "AkkuratLLWeb-Regular";
   src: url("/fonts/AkkuratLLWeb-Regular.woff2") format("woff2"),
        url("/fonts/AkkuratLLWeb-Regular.woff") format("woff");
   font-display: swap;
 }
-
+ 
 @font-face {
   font-family: "AkkuratLLWeb-Bold";
   src: url("/fonts/AkkuratLLWeb-Bold.woff2") format("woff2"),
