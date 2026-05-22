@@ -1,3 +1,32 @@
+/*
+ * Legal Disclaimer for Basic Package licence
+ *
+ * Basic Licence Package with limited parameters.
+ *
+ * Should the license page views limit be exceeded the license holder will be required to contact Lineto.com for an upgrade.
+ * 
+ * It is strictly prohibited to rename the font and to download or use these fonts in any other media. 
+ * 
+ * These Web fonts are licensed exclusively for the use on the following domain(s) and their subdomains:
+ *
+ * uepod.com, up to 5k monthly page viewsFor up to 5k followers on all social media channels belonging to Unit Economics (or N/A Sole Proprietorship)
+ *
+ */
+
+@font-face {
+  font-family: "AkkuratLLWeb-Regular";
+  src: url("/fonts/AkkuratLLWeb-Regular.woff2") format("woff2"),
+       url("/fonts/AkkuratLLWeb-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Bold";
+  src: url("/fonts/AkkuratLLWeb-Bold.woff2") format("woff2"),
+       url("/fonts/AkkuratLLWeb-Bold.woff") format("woff");
+  font-display: swap;
+}
+
 /* Fonts loaded via <link> in _document.js */
 
 /* ===== RESET & BASE ===== */
