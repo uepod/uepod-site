@@ -114,12 +114,12 @@ function EpisodeCard({ ep, index }) {
         </div>
         <div
           style={{
-            fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+            fontFamily: "'JetBrains Mono', monospace",
             fontSize: "22px",
+            fontWeight: 400,
             lineHeight: 1.25,
             marginBottom: "4px",
             textTransform: "uppercase",
-            letterSpacing: "-0.02em",
           }}
         >
           <a
@@ -471,7 +471,8 @@ export default function Home({ episodes }) {
                 <h1
                   className="hero-title"
                   style={{
-                    fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 800,
                     fontSize: "clamp(36px, 5.5vw, 72px)",
                     textTransform: "uppercase",
                     lineHeight: 1.0,
@@ -593,9 +594,10 @@ export default function Home({ episodes }) {
               >
                 <h2
                   style={{
-                    fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontWeight: 400,
                     fontSize: "clamp(32px, 4vw, 48px)",
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "0.01em",
                     textTransform: "uppercase",
                     margin: 0,
                   }}
@@ -712,9 +714,10 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "0.01em",
                   textTransform: "uppercase",
                   marginBottom: "40px",
                 }}
@@ -813,9 +816,10 @@ export default function Home({ episodes }) {
             >
               <h2
                 style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontWeight: 400,
                   fontSize: "clamp(32px, 4vw, 48px)",
-                  letterSpacing: "-0.02em",
+                  letterSpacing: "0.01em",
                   textTransform: "uppercase",
                   marginBottom: "40px",
                 }}
@@ -869,11 +873,12 @@ export default function Home({ episodes }) {
             >
               <h3
                 style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                  fontSize: "13px",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontWeight: 400,
+                  fontSize: "18px",
                   textTransform: "uppercase",
                   marginBottom: "16px",
-                  letterSpacing: "0.12em",
+                  letterSpacing: "0.02em",
                 }}
               >
                 Follow
