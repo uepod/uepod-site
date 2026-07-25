@@ -792,7 +792,7 @@ export default function Home({ episodes }) {
                 </div>
                 <img
                   className="about-image"
-                  src="/josh-about.png"
+                  src="/josh-about.jpg"
                   alt="Josh Stabinsky"
                   style={{ width: "100%", maxWidth: "400px", height: "auto" }}
                 />
