@@ -794,7 +794,7 @@ export default function Home({ episodes }) {
                   className="about-image"
                   src="/josh-about.jpg"
                   alt="Josh Stabinsky"
-                  style={{ width: "100%", maxWidth: "400px", height: "auto" }}
+                  style={{ width: "100%", maxWidth: "400px", height: "400px" }}
                 />
               </div>
             </div>
