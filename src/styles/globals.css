@@ -190,17 +190,6 @@ a {
     display: flex !important;
   }
 
-  .post-grid {
-    grid-template-columns: 32px 72px 1fr !important;
-    gap: 12px !important;
-  }
-
-  .subscribe-cta {
-    padding: 28px 20px !important;
-    margin-top: 40px !important;
-    align-items: flex-start !important;
-  }
-
   .about-grid {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
