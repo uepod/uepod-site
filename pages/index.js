@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
+import { fetchPosts } from "../src/lib/fetchPosts";
 
 /* ===== GA4 EVENT HELPER ===== */
 function trackEvent(eventName, params = {}) {
@@ -28,6 +29,9 @@ const TikTokIcon = () => (
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
 );
+const SubstackIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+);
 const SearchIcon = ({ size = 14 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
 );
@@ -40,6 +44,7 @@ const SOCIAL_LINKS = {
   instagram: { url: "https://www.instagram.com/ue.pod/", hc: "#E1306C", icon: InstagramIcon },
   tiktok: { url: "https://www.tiktok.com/@ue.pod", hc: "#fff", icon: TikTokIcon },
   linkedin: { url: "https://www.linkedin.com/company/the-unit-economics-podcast/", hc: "#0A66C2", icon: LinkedInIcon },
+  substack: { url: "https://uepod.substack.com/", hc: "#FF6719", icon: SubstackIcon },
 };
 
 /* ===== HOVERABLE LINK COMPONENT ===== */
@@ -210,6 +215,118 @@ function EpisodeCard({ ep, index }) {
   );
 }
 
+/* ===== POST CARD ===== */
+function PostCard({ post, index }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <a
+      href={post.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => trackEvent("post_click", { post_title: post.title })}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        display: "block",
+        textDecoration: "none",
+        color: "inherit",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        padding: "28px 0",
+        opacity: 0,
+        animation: `fadeUp 0.4s ease ${index * 0.03}s forwards`,
+      }}
+    >
+      <div
+        className="episode-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "48px 1fr auto",
+          gap: "20px",
+          alignItems: "start",
+        }}
+      >
+        {/* Post number */}
+        <div
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "12px",
+            color: "rgba(255,255,255,0.3)",
+            paddingTop: "4px",
+            letterSpacing: "0.05em",
+          }}
+        >
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Main content */}
+        <div>
+          <div
+            style={{
+              fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+              fontSize: "22px",
+              lineHeight: 1.25,
+              marginBottom: "10px",
+              textTransform: "uppercase",
+              letterSpacing: "-0.02em",
+              color: "#fff",
+              textDecoration: hovered ? "underline" : "none",
+            }}
+          >
+            {post.title}
+          </div>
+
+          {post.excerpt && (
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "14px",
+                color: "rgba(255,255,255,0.35)",
+                lineHeight: 1.6,
+                maxWidth: "640px",
+              }}
+            >
+              {post.excerpt}
+            </div>
+          )}
+
+          {/* Inline date/reading time for mobile */}
+          <div
+            className="episode-meta-inline"
+            style={{
+              display: "none",
+              gap: "12px",
+              marginTop: "10px",
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "11px",
+              color: "rgba(255,255,255,0.25)",
+            }}
+          >
+            <span>{post.date}</span>
+            <span>{post.readingTime}</span>
+          </div>
+        </div>
+
+        {/* Date/reading time - hidden on mobile */}
+        <div
+          className="episode-meta"
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "12px",
+            color: "rgba(255,255,255,0.25)",
+            textAlign: "right",
+            whiteSpace: "nowrap",
+            paddingTop: "4px",
+          }}
+        >
+          <div>{post.date}</div>
+          <div style={{ marginTop: "4px" }}>{post.readingTime}</div>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 /* ===== NAV LINK WITH HOVER ===== */
 function NavButton({ label, active, onClick }) {
   const [hovered, setHovered] = useState(false);
@@ -277,7 +394,7 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
 }
 
 /* ===== MAIN PAGE ===== */
-export default function Home({ episodes }) {
+export default function Home({ episodes, posts }) {
   const [section, setSection] = useState(null);
   const [filter, setFilter] = useState("All");
   const [search, setSearch] = useState("");
@@ -295,7 +412,7 @@ export default function Home({ episodes }) {
   // Read hash on mount to determine initial section (no flicker)
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
-    const valid = ["home", "episodes", "about", "contact"];
+    const valid = ["home", "episodes", "posts", "about", "contact"];
     setSection(hash && valid.includes(hash) ? hash : "home");
   }, []);
 
@@ -415,6 +532,7 @@ export default function Home({ episodes }) {
             {[
               { key: "home", label: "Home" },
               { key: "episodes", label: "Listen" },
+              { key: "posts", label: "Read" },
               { key: "about", label: "About" },
               { key: "contact", label: "Contact" },
             ].map(({ key, label }) => (
@@ -442,6 +560,7 @@ export default function Home({ episodes }) {
           {[
             { key: "home", label: "Home" },
             { key: "episodes", label: "Listen" },
+            { key: "posts", label: "Read" },
             { key: "about", label: "About" },
             { key: "contact", label: "Contact" },
           ].map(({ key, label }) => (
@@ -701,6 +820,88 @@ export default function Home({ episodes }) {
             </div>
           )}
 
+          {/* ===== POSTS ===== */}
+          {section === "posts" && (
+            <div
+              className="content-section"
+              style={{
+                padding: "48px 40px 80px",
+                animation: "fadeIn 0.4s ease",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  letterSpacing: "-0.02em",
+                  textTransform: "uppercase",
+                  marginBottom: "20px",
+                }}
+              >
+                Read
+              </h2>
+
+              <div
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "15px",
+                  lineHeight: 1.75,
+                  color: "rgba(255,255,255,0.45)",
+                  maxWidth: "640px",
+                  marginBottom: "40px",
+                }}
+              >
+                A weekly newsletter on what the show turns up — the numbers,
+                the tradeoffs, and the decisions behind the brands.{" "}
+                <a
+                  href={SOCIAL_LINKS.substack.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#fff",
+                    textDecoration: "none",
+                    borderBottom: "1px solid rgba(255,255,255,0.3)",
+                  }}
+                  onClick={() => trackEvent("substack_subscribe_click", { location: "posts_header" })}
+                >
+                  Subscribe on Substack
+                </a>
+                .
+              </div>
+
+              {posts.length > 0 && (
+                <div
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "12px",
+                    color: "rgba(255,255,255,0.2)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  {posts.length} post{posts.length !== 1 ? "s" : ""}
+                </div>
+              )}
+
+              {posts.map((post, i) => (
+                <PostCard key={post.id} post={post} index={i} />
+              ))}
+
+              {posts.length === 0 && (
+                <div
+                  style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "15px",
+                    color: "rgba(255,255,255,0.35)",
+                    padding: "40px 0",
+                  }}
+                >
+                  First issue is on its way. Subscribe above and it'll land in
+                  your inbox.
+                </div>
+              )}
+            </div>
+          )}
+
           {/* ===== ABOUT ===== */}
           {section === "about" && (
             <div
@@ -710,27 +911,29 @@ export default function Home({ episodes }) {
                 animation: "fadeIn 0.5s ease",
               }}
             >
-              <h2
-                style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                  fontSize: "clamp(32px, 4vw, 48px)",
-                  letterSpacing: "-0.02em",
-                  textTransform: "uppercase",
-                  marginBottom: "40px",
-                }}
-              >
-                About
-              </h2>
               <div
                 className="about-grid"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
                   gap: "60px",
-                  alignItems: "start",
+                  alignItems: "stretch",
                 }}
               >
                 <div>
+                  <h2
+                    style={{
+                      fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                      fontSize: "clamp(32px, 4vw, 48px)",
+                      letterSpacing: "-0.02em",
+                      textTransform: "uppercase",
+                      marginTop: 0,
+                      marginBottom: "40px",
+                    }}
+                  >
+                    About
+                  </h2>
+
                   <div
                     style={{
                       fontFamily: '"AkkuratLLWeb-Regular", sans-serif',
@@ -761,6 +964,7 @@ export default function Home({ episodes }) {
                     lives in San Francisco and spends a lot of time drinking
                     coffee. He loves consumer packaged goods. And dogs.
                   </div>
+
                   <div
                     style={{
                       fontFamily: "'Space Grotesk', sans-serif",
@@ -778,6 +982,7 @@ export default function Home({ episodes }) {
                     covers industries from food and beverage to hardware, games,
                     apparel, and beyond.
                   </div>
+
                   <div
                     style={{
                       fontFamily: "'Space Grotesk', sans-serif",
@@ -790,12 +995,23 @@ export default function Home({ episodes }) {
                     Podcasts, and YouTube.
                   </div>
                 </div>
-                <img
-                  className="about-image"
-                  src="/josh-about.jpg"
-                  alt="Josh Stabinsky"
-                  style={{ width: "100%", maxWidth: "400px", height: "auto" }}
-                />
+
+                <div className="about-image" style={{ position: "relative" }}>
+                  <img
+                    src="/josh-about.jpg"
+                    alt="Josh Stabinsky"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      height: "100%",
+                      width: "auto",
+                      maxWidth: "100%",
+                      objectFit: "contain",
+                      objectPosition: "top right",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -953,19 +1169,25 @@ function FilterButton({ label, active, onClick }) {
 
 /* ===== SERVER-SIDE DATA FETCHING ===== */
 export async function getServerSideProps() {
-  let episodes;
-  try {
-    episodes = await fetchEpisodes();
-  } catch (err) {
-    console.error("RSS fetch failed, using empty array:", err.message);
-    episodes = [];
-  }
+  const [episodes, posts] = await Promise.all([
+    fetchEpisodes().catch((err) => {
+      console.error("Episode RSS fetch failed, using empty array:", err.message);
+      return [];
+    }),
+    fetchPosts().catch((err) => {
+      console.error("Substack RSS fetch failed, using empty array:", err.message);
+      return [];
+    }),
+  ]);
 
   if (!episodes || episodes.length === 0) {
     console.warn("No episodes from RSS, page will render with empty list.");
   }
 
   return {
-    props: { episodes: JSON.parse(JSON.stringify(episodes)) },
+    props: {
+      episodes: JSON.parse(JSON.stringify(episodes || [])),
+      posts: JSON.parse(JSON.stringify(posts || [])),
+    },
   };
 }
