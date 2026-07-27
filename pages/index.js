@@ -851,8 +851,8 @@ export default function Home({ episodes, posts }) {
                   marginBottom: "40px",
                 }}
               >
-                A weekly newsletter on what the show turns up — the numbers,
-                the tradeoffs, and the decisions behind the brands.{" "}
+                A weekly newsletter on what I'm learning — from the founders
+                I interview, and from building the show itself.{" "}
                 <a
                   href={SOCIAL_LINKS.substack.url}
                   target="_blank"
