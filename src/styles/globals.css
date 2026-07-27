@@ -196,8 +196,13 @@ a {
   }
 
   .about-image {
-    order: -1 !important;
     max-width: 280px !important;
+  }
+
+  .about-image img {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
   }
 
   .footer-inner {
