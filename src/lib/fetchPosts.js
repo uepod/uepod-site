@@ -56,15 +56,6 @@ function readingTime(html) {
 }
 
 /**
- * Pull the first <img> src out of post HTML, as a fallback cover image.
- */
-function firstImage(html) {
-  if (!html) return null;
-  const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-  return m ? m[1] : null;
-}
-
-/**
  * Fetch and normalize Substack posts.
  * Shape mirrors fetchEpisodes so the UI stays consistent.
  */
@@ -88,8 +79,6 @@ async function fetchPosts() {
       isoDate: item.isoDate || item.pubDate || null,
       excerpt: toExcerpt(item.contentSnippet || body),
       readingTime: readingTime(body),
-      image:
-        (item.enclosure && item.enclosure.url) || firstImage(body) || null,
     };
   });
 }
