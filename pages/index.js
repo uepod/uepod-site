@@ -215,6 +215,30 @@ function EpisodeCard({ ep, index }) {
   );
 }
 
+/* ===== SUBSTACK TEXT LINK ===== */
+function SubstackTextLink({ href, children, onClick }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={onClick}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        color: hovered ? "#FF6719" : "#fff",
+        textDecoration: "none",
+        borderBottom: `1px solid ${hovered ? "#FF6719" : "rgba(255,255,255,0.3)"}`,
+        transition: "color 0.2s, border-color 0.2s",
+      }}
+    >
+      {children}
+    </a>
+  );
+}
+
 /* ===== POST CARD ===== */
 function PostCard({ post, index }) {
   const [hovered, setHovered] = useState(false);
@@ -238,10 +262,10 @@ function PostCard({ post, index }) {
       }}
     >
       <div
-        className="episode-grid"
+        className="post-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "48px 1fr auto",
+          gridTemplateColumns: "48px 140px 1fr auto",
           gap: "20px",
           alignItems: "start",
         }}
@@ -257,6 +281,34 @@ function PostCard({ post, index }) {
           }}
         >
           {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Cover image */}
+        <div
+          className="post-thumb"
+          style={{
+            width: "100%",
+            aspectRatio: "4 / 3",
+            overflow: "hidden",
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}
+        >
+          {post.image && (
+            <img
+              src={post.image}
+              alt=""
+              loading="lazy"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+                opacity: hovered ? 1 : 0.85,
+                transition: "opacity 0.25s",
+              }}
+            />
+          )}
         </div>
 
         {/* Main content */}
@@ -853,19 +905,14 @@ export default function Home({ episodes, posts }) {
               >
                 A weekly newsletter on what I'm learning — from the founders
                 I interview, and from building the show itself.{" "}
-                <a
+                <SubstackTextLink
                   href={SOCIAL_LINKS.substack.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#fff",
-                    textDecoration: "none",
-                    borderBottom: "1px solid rgba(255,255,255,0.3)",
-                  }}
-                  onClick={() => trackEvent("substack_subscribe_click", { location: "posts_header" })}
+                  onClick={() =>
+                    trackEvent("substack_subscribe_click", { location: "posts_header" })
+                  }
                 >
                   Subscribe on Substack
-                </a>
+                </SubstackTextLink>
                 .
               </div>
 
@@ -899,6 +946,55 @@ export default function Home({ episodes, posts }) {
                   your inbox.
                 </div>
               )}
+
+              {/* Subscribe CTA */}
+              <div
+                className="subscribe-cta"
+                style={{
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  padding: "36px 32px",
+                  marginTop: "56px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "28px",
+                  flexWrap: "wrap",
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                      fontSize: "22px",
+                      textTransform: "uppercase",
+                      letterSpacing: "-0.02em",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Get it in your inbox
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "14px",
+                      color: "rgba(255,255,255,0.45)",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    One issue a week. Free, and no spam.
+                  </div>
+                </div>
+
+                <PlatformButton
+                  href={SOCIAL_LINKS.substack.url}
+                  hoverColor="#FF6719"
+                  icon={SubstackIcon}
+                  label="Subscribe"
+                  onClick={() =>
+                    trackEvent("substack_subscribe_click", { location: "posts_cta" })
+                  }
+                />
+              </div>
             </div>
           )}
 
