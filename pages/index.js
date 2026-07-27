@@ -863,7 +863,7 @@ export default function Home({ episodes, posts }) {
                     minWidth: 0,
                   }}
                 >
-                  A weekly newsletter on what I'm learning — from the founders I
+                  A newsletter on what I'm learning — from the founders I
                   interview, and from building the show itself.
                 </div>
 
