@@ -1167,8 +1167,13 @@ function FilterButton({ label, active, onClick }) {
   );
 }
 
-/* ===== SERVER-SIDE DATA FETCHING ===== */
-export async function getServerSideProps() {
+/* ===== STATIC GENERATION + ISR ===== */
+/**
+ * Built at deploy time, then regenerated on demand by the Vercel cron
+ * (daily, 4am Pacific -> /api/revalidate -> res.revalidate("/")).
+ * `revalidate` is a safety net in case the cron ever fails silently.
+ */
+export async function getStaticProps() {
   const [episodes, posts] = await Promise.all([
     fetchEpisodes().catch((err) => {
       console.error("Episode RSS fetch failed, using empty array:", err.message);
@@ -1189,5 +1194,6 @@ export async function getServerSideProps() {
       episodes: JSON.parse(JSON.stringify(episodes || [])),
       posts: JSON.parse(JSON.stringify(posts || [])),
     },
+    revalidate: 86400,
   };
 }
