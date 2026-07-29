@@ -863,7 +863,7 @@ export default function Home({ episodes, posts }) {
                     minWidth: 0,
                   }}
                 >
-                  A newsletter on what I'm learning — from the founders I
+                  A weekly newsletter on what I'm learning — from the founders I
                   interview, and from building the show itself.
                 </div>
 
@@ -1178,8 +1178,9 @@ function FilterButton({ label, active, onClick }) {
 
 /* ===== STATIC GENERATION + ISR ===== */
 /**
- * Built at deploy time, then regenerated on demand by the Vercel cron
- * (daily, 4am Pacific -> /api/revalidate -> res.revalidate("/")).
+ * Built at deploy time, then regenerated at most every 15 minutes on traffic
+ * (ISR), plus on demand by the Vercel cron
+ * (Vercel crons at 5am + 1pm Pacific -> /api/revalidate -> res.revalidate("/")).
  * `revalidate` is a safety net in case the cron ever fails silently.
  */
 export async function getStaticProps() {
@@ -1203,6 +1204,6 @@ export async function getStaticProps() {
       episodes: JSON.parse(JSON.stringify(episodes || [])),
       posts: JSON.parse(JSON.stringify(posts || [])),
     },
-    revalidate: 86400,
+    revalidate: 900,
   };
 }
