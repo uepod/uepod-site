@@ -216,7 +216,7 @@ function EpisodeCard({ ep, index }) {
 }
 
 /* ===== POST CARD ===== */
-function PostCard({ post, index }) {
+function PostCard({ post, index, total }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -256,7 +256,7 @@ function PostCard({ post, index }) {
             letterSpacing: "0.05em",
           }}
         >
-          {String(index + 1).padStart(2, "0")}
+          {String(total - index).padStart(2, "0")}
         </div>
 
         {/* Main content */}
@@ -892,7 +892,12 @@ export default function Home({ episodes, posts }) {
               )}
 
               {posts.map((post, i) => (
-                <PostCard key={post.id} post={post} index={i} />
+                <PostCard
+                  key={post.id}
+                  post={post}
+                  index={i}
+                  total={posts.length}
+                />
               ))}
 
               {posts.length === 0 && (
