@@ -12,44 +12,113 @@ function trackEvent(eventName, params = {}) {
 
 /* ===== ICON COMPONENTS ===== */
 const SpotifyIcon = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+  </svg>
 );
+
 const AppleIcon = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 10.2c-.1-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3.1-1.7-1.3-.1-2.6.8-3.2.8-.7 0-1.7-.8-2.8-.7-1.4 0-2.7.8-3.5 2.1-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4 0 0-2.3-.9-2.4-3.4zM16.7 3.8c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.7-.9 2.6.9.1 1.9-.5 2.5-1.2z"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.9 10.2c-.1-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3.1-1.7-1.3-.1-2.6.8-3.2.8-.7 0-1.7-.8-2.8-.7-1.4 0-2.7.8-3.5 2.1-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.3 1.2-2.4 0 0-2.3-.9-2.4-3.4zM16.7 3.8c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.7-.9 2.6.9.1 1.9-.5 2.5-1.2z" />
+  </svg>
 );
+
 const YouTubeIcon = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
 );
+
 const InstagramIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+  </svg>
 );
+
 const TikTokIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+  </svg>
 );
+
 const LinkedInIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
 );
+
 const SubstackIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+  </svg>
 );
+
 const SearchIcon = ({ size = 14 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+  </svg>
 );
 
 /* ===== SOCIAL LINKS ===== */
 const SOCIAL_LINKS = {
-  spotify: { url: "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F", hc: "#1DB954", icon: SpotifyIcon },
-  youtube: { url: "https://www.youtube.com/@TheUnitEconomicsPodcast", hc: "#FF0000", icon: YouTubeIcon },
-  apple: { url: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735", hc: "#9B59B6", icon: AppleIcon },
-  instagram: { url: "https://www.instagram.com/ue.pod/", hc: "#E1306C", icon: InstagramIcon },
-  tiktok: { url: "https://www.tiktok.com/@ue.pod", hc: "#fff", icon: TikTokIcon },
-  linkedin: { url: "https://www.linkedin.com/company/the-unit-economics-podcast/", hc: "#0A66C2", icon: LinkedInIcon },
-  substack: { url: "https://uepod.substack.com/", hc: "#FF6719", icon: SubstackIcon },
+  spotify: {
+    url: "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F",
+    hc: "#1DB954",
+    icon: SpotifyIcon,
+  },
+  youtube: {
+    url: "https://www.youtube.com/@TheUnitEconomicsPodcast",
+    hc: "#FF0000",
+    icon: YouTubeIcon,
+  },
+  apple: {
+    url: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735",
+    hc: "#9B59B6",
+    icon: AppleIcon,
+  },
+  instagram: {
+    url: "https://www.instagram.com/ue.pod/",
+    hc: "#E1306C",
+    icon: InstagramIcon,
+  },
+  tiktok: {
+    url: "https://www.tiktok.com/@ue.pod",
+    hc: "#fff",
+    icon: TikTokIcon,
+  },
+  linkedin: {
+    url: "https://www.linkedin.com/company/the-unit-economics-podcast/",
+    hc: "#0A66C2",
+    icon: LinkedInIcon,
+  },
+  substack: {
+    url: "https://uepod.substack.com/",
+    hc: "#FF6719",
+    icon: SubstackIcon,
+  },
 };
 
 /* ===== HOVERABLE LINK COMPONENT ===== */
-function HoverLink({ href, hoverColor, children, style = {}, onClick, ...props }) {
+function HoverLink({
+  href,
+  hoverColor,
+  children,
+  style = {},
+  onClick,
+  ...props
+}) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <a
       href={href}
@@ -75,6 +144,7 @@ function HoverLink({ href, hoverColor, children, style = {}, onClick, ...props }
 /* ===== EPISODE CARD ===== */
 function EpisodeCard({ ep, index }) {
   const [brandHovered, setBrandHovered] = useState(false);
+
   return (
     <div
       className="episode-grid"
@@ -117,6 +187,7 @@ function EpisodeCard({ ep, index }) {
         >
           {ep.category}
         </div>
+
         <div
           style={{
             fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
@@ -137,11 +208,16 @@ function EpisodeCard({ ep, index }) {
             }}
             onMouseEnter={() => setBrandHovered(true)}
             onMouseLeave={() => setBrandHovered(false)}
-            onClick={() => trackEvent("episode_brand_click", { episode_name: ep.brand })}
+            onClick={() =>
+              trackEvent("episode_brand_click", {
+                episode_name: ep.brand,
+              })
+            }
           >
             {ep.brand}
           </a>
         </div>
+
         <div
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
@@ -153,6 +229,7 @@ function EpisodeCard({ ep, index }) {
         >
           {ep.guest}
         </div>
+
         <div
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
@@ -190,9 +267,44 @@ function EpisodeCard({ ep, index }) {
             alignItems: "center",
           }}
         >
-          <HoverLink href={ep.spotify} hoverColor="#1DB954" onClick={() => trackEvent("episode_platform_click", { platform: "spotify", episode_name: ep.brand })}><SpotifyIcon /></HoverLink>
-          <HoverLink href={ep.apple} hoverColor="#9B59B6" onClick={() => trackEvent("episode_platform_click", { platform: "apple_podcasts", episode_name: ep.brand })}><AppleIcon /></HoverLink>
-          <HoverLink href={ep.youtube} hoverColor="#FF0000" onClick={() => trackEvent("episode_platform_click", { platform: "youtube", episode_name: ep.brand })}><YouTubeIcon /></HoverLink>
+          <HoverLink
+            href={ep.spotify}
+            hoverColor="#1DB954"
+            onClick={() =>
+              trackEvent("episode_platform_click", {
+                platform: "spotify",
+                episode_name: ep.brand,
+              })
+            }
+          >
+            <SpotifyIcon />
+          </HoverLink>
+
+          <HoverLink
+            href={ep.apple}
+            hoverColor="#9B59B6"
+            onClick={() =>
+              trackEvent("episode_platform_click", {
+                platform: "apple_podcasts",
+                episode_name: ep.brand,
+              })
+            }
+          >
+            <AppleIcon />
+          </HoverLink>
+
+          <HoverLink
+            href={ep.youtube}
+            hoverColor="#FF0000"
+            onClick={() =>
+              trackEvent("episode_platform_click", {
+                platform: "youtube",
+                episode_name: ep.brand,
+              })
+            }
+          >
+            <YouTubeIcon />
+          </HoverLink>
         </div>
       </div>
 
@@ -224,7 +336,11 @@ function PostCard({ post, index, total }) {
       href={post.link}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackEvent("post_click", { post_title: post.title })}
+      onClick={() =>
+        trackEvent("post_click", {
+          post_title: post.title,
+        })
+      }
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -330,6 +446,7 @@ function PostCard({ post, index, total }) {
 /* ===== NAV LINK WITH HOVER ===== */
 function NavButton({ label, active, onClick }) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <button
       onClick={onClick}
@@ -341,8 +458,8 @@ function NavButton({ label, active, onClick }) {
         color: active
           ? "#fff"
           : hovered
-          ? "rgba(255,255,255,0.75)"
-          : "rgba(255,255,255,0.4)",
+            ? "rgba(255,255,255,0.75)"
+            : "rgba(255,255,255,0.4)",
         fontFamily: "'JetBrains Mono', monospace",
         fontSize: "12px",
         fontWeight: 400,
@@ -362,8 +479,15 @@ function NavButton({ label, active, onClick }) {
 }
 
 /* ===== PLATFORM BUTTON WITH HOVER ===== */
-function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
+function PlatformButton({
+  href,
+  hoverColor,
+  icon: Icon,
+  label,
+  onClick,
+}) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <a
       href={href}
@@ -374,7 +498,9 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
         alignItems: "center",
         gap: "8px",
         padding: "12px 20px",
-        border: `1px solid ${hovered ? hoverColor : "rgba(255,255,255,0.2)"}`,
+        border: `1px solid ${
+          hovered ? hoverColor : "rgba(255,255,255,0.2)"
+        }`,
         textDecoration: "none",
         color: hovered ? hoverColor : "#fff",
         fontSize: "13px",
@@ -403,7 +529,10 @@ export default function Home({ episodes, posts }) {
   const contentRef = useRef(null);
   const searchTimerRef = useRef(null);
 
-  const categories = ["All", ...new Set(episodes.map(e => e.category))].sort((a, b) => {
+  const categories = [
+    "All",
+    ...new Set(episodes.map((e) => e.category)),
+  ].sort((a, b) => {
     if (a === "All") return -1;
     if (b === "All") return 1;
     return a.localeCompare(b);
@@ -419,54 +548,83 @@ export default function Home({ episodes, posts }) {
   useEffect(() => {
     const el = contentRef.current;
     if (!el) return;
+
     const handleScroll = () => setScrolled(el.scrollTop > 40);
+
     el.addEventListener("scroll", handleScroll);
+
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    if (contentRef.current) contentRef.current.scrollTop = 0;
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
   }, [section]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   // Filter episodes by category and search
-  const filtered = episodes.filter(e => {
-    const matchesCategory = filter === "All" || e.category === filter;
+  const filtered = episodes.filter((e) => {
+    const matchesCategory =
+      filter === "All" || e.category === filter;
+
     if (!search.trim()) return matchesCategory;
+
     const q = search.toLowerCase();
+
     const matchesSearch =
       (e.brand && e.brand.toLowerCase().includes(q)) ||
       (e.guest && e.guest.toLowerCase().includes(q)) ||
       (e.desc && e.desc.toLowerCase().includes(q)) ||
       (e.category && e.category.toLowerCase().includes(q));
+
     return matchesCategory && matchesSearch;
   });
 
   const handleSearch = (value) => {
     setSearch(value);
+
     // Debounced GA tracking — fires 800ms after user stops typing
-    if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
+    if (searchTimerRef.current) {
+      clearTimeout(searchTimerRef.current);
+    }
+
     if (value.trim()) {
       searchTimerRef.current = setTimeout(() => {
-        trackEvent("episode_search", { search_term: value.trim() });
+        trackEvent("episode_search", {
+          search_term: value.trim(),
+        });
       }, 800);
     }
   };
 
   const navigate = (s) => {
     setSection(s);
-    trackEvent("nav_click", { section: s });
+
+    trackEvent("nav_click", {
+      section: s,
+    });
+
     if (s !== "episodes") {
       setFilter("All");
       setSearch("");
     }
+
     setMenuOpen(false);
-    window.history.replaceState(null, "", s === "home" ? "/" : `/#${s}`);
+
+    window.history.replaceState(
+      null,
+      "",
+      s === "home" ? "/" : `/#${s}`
+    );
   };
 
   // Don't render until we know which section to show
@@ -475,7 +633,7 @@ export default function Home({ episodes, posts }) {
   return (
     <>
       <Head>
-        <title>Unit Economics — Exploring the hidden complexity behind every industry</title>
+        <title>Unit Economics — How businesses actually work.</title>
       </Head>
 
       <div
@@ -502,10 +660,15 @@ export default function Home({ episodes, posts }) {
             borderBottom: scrolled
               ? "1px solid rgba(255,255,255,0.06)"
               : "1px solid transparent",
-            transition: "border-color 0.3s, backdrop-filter 0.3s",
+            transition:
+              "border-color 0.3s, backdrop-filter 0.3s",
             backdropFilter: scrolled ? "blur(20px)" : "none",
-            WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
-            background: scrolled ? "rgba(0,0,0,0.85)" : "transparent",
+            WebkitBackdropFilter: scrolled
+              ? "blur(20px)"
+              : "none",
+            background: scrolled
+              ? "rgba(0,0,0,0.85)"
+              : "transparent",
           }}
         >
           <div
@@ -520,14 +683,21 @@ export default function Home({ episodes, posts }) {
             <img
               src="/logo-horizontal.svg"
               alt="Unit Economics"
-              style={{ height: "48px", width: "auto" }}
+              style={{
+                height: "48px",
+                width: "auto",
+              }}
             />
           </div>
 
           {/* Desktop nav */}
           <div
             className="nav-links"
-            style={{ display: "flex", gap: "32px", alignItems: "center" }}
+            style={{
+              display: "flex",
+              gap: "32px",
+              alignItems: "center",
+            }}
           >
             {[
               { key: "home", label: "Home" },
@@ -551,12 +721,18 @@ export default function Home({ episodes, posts }) {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span /><span /><span />
+            <span />
+            <span />
+            <span />
           </button>
         </nav>
 
         {/* Mobile menu overlay */}
-        <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <div
+          className={`mobile-menu ${
+            menuOpen ? "open" : ""
+          }`}
+        >
           {[
             { key: "home", label: "Home" },
             { key: "episodes", label: "Listen" },
@@ -566,7 +742,9 @@ export default function Home({ episodes, posts }) {
           ].map(({ key, label }) => (
             <button
               key={key}
-              className={section === key ? "active" : ""}
+              className={
+                section === key ? "active" : ""
+              }
               onClick={() => navigate(key)}
             >
               {label}
@@ -577,44 +755,61 @@ export default function Home({ episodes, posts }) {
         {/* ===== CONTENT ===== */}
         <div
           ref={contentRef}
-          style={{ flex: 1, overflow: "auto", scrollBehavior: "smooth" }}
+          style={{
+            flex: 1,
+            overflow: "auto",
+            scrollBehavior: "smooth",
+          }}
         >
           {/* ===== HOME ===== */}
           {section === "home" && (
-            <div style={{ animation: "fadeIn 0.5s ease" }}>
+            <div
+              style={{
+                animation: "fadeIn 0.5s ease",
+              }}
+            >
               {/* Hero */}
               <div
                 className="hero-section"
-                style={{ padding: "60px 40px 56px" }}
+                style={{
+                  padding: "60px 40px 56px",
+                }}
               >
                 <h1
                   className="hero-title"
                   style={{
-                    fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                    fontSize: "clamp(36px, 5.5vw, 72px)",
+                    fontFamily:
+                      '"AkkuratLLWeb-Bold", sans-serif',
+                    fontSize:
+                      "clamp(36px, 5.5vw, 72px)",
                     textTransform: "uppercase",
                     lineHeight: 1.0,
                     letterSpacing: "-0.02em",
                     marginBottom: "40px",
                   }}
                 >
-                  The real mechanics behind<span className="hero-br"><br /></span> your favorite brands.
+                  How businesses actually work.
                 </h1>
+
                 <p
                   className="hero-subtitle"
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "clamp(16px, 2vw, 20px)",
+                    fontFamily:
+                      "'Space Grotesk', sans-serif",
+                    fontSize:
+                      "clamp(16px, 2vw, 20px)",
                     fontWeight: 300,
-                    color: "rgba(255,255,255,0.55)",
+                    color:
+                      "rgba(255,255,255,0.55)",
                     lineHeight: 1.65,
                     maxWidth: "720px",
                   }}
                 >
-                  Conversations with founders on how products are designed,
-                  manufactured, priced, and distributed — with a focus on the
-                  decisions, economics, and tradeoffs behind the scenes.
+                  Conversations with founders, operators, and investors
+                  about the decisions, economics, constraints, and
+                  tradeoffs behind the scenes.
                 </p>
+
                 <div
                   className="platform-buttons"
                   style={{
@@ -628,21 +823,45 @@ export default function Home({ episodes, posts }) {
                     hoverColor="#1DB954"
                     icon={SpotifyIcon}
                     label="Spotify"
-                    onClick={() => trackEvent("hero_platform_click", { platform: "spotify" })}
+                    onClick={() =>
+                      trackEvent(
+                        "hero_platform_click",
+                        {
+                          platform: "spotify",
+                        }
+                      )
+                    }
                   />
+
                   <PlatformButton
                     href={SOCIAL_LINKS.apple.url}
                     hoverColor="#9B59B6"
                     icon={AppleIcon}
                     label="Apple Podcasts"
-                    onClick={() => trackEvent("hero_platform_click", { platform: "apple_podcasts" })}
+                    onClick={() =>
+                      trackEvent(
+                        "hero_platform_click",
+                        {
+                          platform:
+                            "apple_podcasts",
+                        }
+                      )
+                    }
                   />
+
                   <PlatformButton
                     href={SOCIAL_LINKS.youtube.url}
                     hoverColor="#FF0000"
                     icon={YouTubeIcon}
                     label="YouTube"
-                    onClick={() => trackEvent("hero_platform_click", { platform: "youtube" })}
+                    onClick={() =>
+                      trackEvent(
+                        "hero_platform_click",
+                        {
+                          platform: "youtube",
+                        }
+                      )
+                    }
                   />
                 </div>
               </div>
@@ -652,13 +871,15 @@ export default function Home({ episodes, posts }) {
                 className="content-section"
                 style={{
                   padding: "0 40px 80px",
-                  borderTop: "1px solid rgba(255,255,255,0.06)",
+                  borderTop:
+                    "1px solid rgba(255,255,255,0.06)",
                 }}
               >
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent:
+                      "space-between",
                     alignItems: "baseline",
                     paddingTop: "32px",
                     marginBottom: "8px",
@@ -666,25 +887,37 @@ export default function Home({ episodes, posts }) {
                 >
                   <h2
                     style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontFamily:
+                        "'Space Grotesk', sans-serif",
                       fontWeight: 600,
                       fontSize: "13px",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.4)",
+                      color:
+                        "rgba(255,255,255,0.4)",
                     }}
                   >
                     Latest Episodes
                   </h2>
+
                   <NavButton
                     label="View all →"
                     active={false}
-                    onClick={() => navigate("episodes")}
+                    onClick={() =>
+                      navigate("episodes")
+                    }
                   />
                 </div>
-                {episodes.slice(0, 3).map((ep, i) => (
-                  <EpisodeCard key={ep.id} ep={ep} index={i} />
-                ))}
+
+                {episodes
+                  .slice(0, 3)
+                  .map((ep, i) => (
+                    <EpisodeCard
+                      key={ep.id}
+                      ep={ep}
+                      index={i}
+                    />
+                  ))}
               </div>
             </div>
           )}
@@ -703,7 +936,8 @@ export default function Home({ episodes, posts }) {
                 className="episodes-header"
                 style={{
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent:
+                    "space-between",
                   alignItems: "center",
                   gap: "24px",
                   marginBottom: "32px",
@@ -712,8 +946,10 @@ export default function Home({ episodes, posts }) {
               >
                 <h2
                   style={{
-                    fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                    fontSize: "clamp(32px, 4vw, 48px)",
+                    fontFamily:
+                      '"AkkuratLLWeb-Bold", sans-serif',
+                    fontSize:
+                      "clamp(32px, 4vw, 48px)",
                     letterSpacing: "-0.02em",
                     textTransform: "uppercase",
                     margin: 0,
@@ -721,6 +957,7 @@ export default function Home({ episodes, posts }) {
                 >
                   Episodes
                 </h2>
+
                 <div
                   style={{
                     position: "relative",
@@ -733,35 +970,50 @@ export default function Home({ episodes, posts }) {
                       position: "absolute",
                       left: "12px",
                       top: "50%",
-                      transform: "translateY(-50%)",
-                      color: "rgba(255,255,255,0.25)",
+                      transform:
+                        "translateY(-50%)",
+                      color:
+                        "rgba(255,255,255,0.25)",
                       lineHeight: 0,
                       pointerEvents: "none",
                     }}
                   >
                     <SearchIcon />
                   </div>
+
                   <input
                     type="text"
                     value={search}
-                    onChange={(e) => handleSearch(e.target.value)}
+                    onChange={(e) =>
+                      handleSearch(e.target.value)
+                    }
                     placeholder="Search..."
                     style={{
                       width: "100%",
-                      padding: "6px 14px 6px 34px",
+                      padding:
+                        "6px 14px 6px 34px",
                       background: "transparent",
-                      border: "1px solid rgba(255,255,255,0.12)",
+                      border:
+                        "1px solid rgba(255,255,255,0.12)",
                       color: "#fff",
-                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontFamily:
+                        "'Space Grotesk', sans-serif",
                       fontSize: "12px",
                       fontWeight: 500,
                       letterSpacing: "0.06em",
                       outline: "none",
-                      transition: "border-color 0.2s",
+                      transition:
+                        "border-color 0.2s",
                       boxSizing: "border-box",
                     }}
-                    onFocus={(e) => e.target.style.borderColor = "rgba(255,255,255,0.3)"}
-                    onBlur={(e) => e.target.style.borderColor = "rgba(255,255,255,0.12)"}
+                    onFocus={(e) =>
+                      (e.target.style.borderColor =
+                        "rgba(255,255,255,0.3)")
+                    }
+                    onBlur={(e) =>
+                      (e.target.style.borderColor =
+                        "rgba(255,255,255,0.12)")
+                    }
                   />
                 </div>
               </div>
@@ -776,14 +1028,20 @@ export default function Home({ episodes, posts }) {
                   marginBottom: "32px",
                 }}
               >
-                {categories.map(cat => (
+                {categories.map((cat) => (
                   <FilterButton
                     key={cat}
                     label={cat}
                     active={filter === cat}
                     onClick={() => {
                       setFilter(cat);
-                      trackEvent("filter_click", { category: cat });
+
+                      trackEvent(
+                        "filter_click",
+                        {
+                          category: cat,
+                        }
+                      );
                     }}
                   />
                 ))}
@@ -791,26 +1049,39 @@ export default function Home({ episodes, posts }) {
 
               <div
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily:
+                    "'JetBrains Mono', monospace",
                   fontSize: "12px",
-                  color: "rgba(255,255,255,0.2)",
+                  color:
+                    "rgba(255,255,255,0.2)",
                   marginBottom: "16px",
                 }}
               >
-                {filtered.length} episode{filtered.length !== 1 ? "s" : ""}
-                {search.trim() ? ` matching "${search.trim()}"` : ""}
+                {filtered.length} episode
+                {filtered.length !== 1
+                  ? "s"
+                  : ""}
+                {search.trim()
+                  ? ` matching "${search.trim()}"`
+                  : ""}
               </div>
 
               {filtered.map((ep, i) => (
-                <EpisodeCard key={ep.id} ep={ep} index={i} />
+                <EpisodeCard
+                  key={ep.id}
+                  ep={ep}
+                  index={i}
+                />
               ))}
 
               {filtered.length === 0 && (
                 <div
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily:
+                      "'Space Grotesk', sans-serif",
                     fontSize: "15px",
-                    color: "rgba(255,255,255,0.35)",
+                    color:
+                      "rgba(255,255,255,0.35)",
                     padding: "40px 0",
                   }}
                 >
@@ -831,8 +1102,10 @@ export default function Home({ episodes, posts }) {
             >
               <h2
                 style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                  fontSize: "clamp(32px, 4vw, 48px)",
+                  fontFamily:
+                    '"AkkuratLLWeb-Bold", sans-serif',
+                  fontSize:
+                    "clamp(32px, 4vw, 48px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
                   marginBottom: "20px",
@@ -846,7 +1119,8 @@ export default function Home({ episodes, posts }) {
                 className="posts-header"
                 style={{
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent:
+                    "space-between",
                   alignItems: "center",
                   gap: "28px",
                   flexWrap: "wrap",
@@ -855,25 +1129,35 @@ export default function Home({ episodes, posts }) {
               >
                 <div
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily:
+                      "'Space Grotesk', sans-serif",
                     fontSize: "15px",
                     lineHeight: 1.75,
-                    color: "rgba(255,255,255,0.45)",
+                    color:
+                      "rgba(255,255,255,0.45)",
                     flex: "1 1 520px",
                     minWidth: 0,
                   }}
                 >
-                  A weekly newsletter on what I'm learning — from the founders I
-                  interview, and from building the show itself.
+                  A weekly newsletter on what I'm learning — from the
+                  founders I interview, and from building the show itself.
                 </div>
 
                 <PlatformButton
-                  href={SOCIAL_LINKS.substack.url}
+                  href={
+                    SOCIAL_LINKS.substack.url
+                  }
                   hoverColor="#FF6719"
                   icon={SubstackIcon}
                   label="Subscribe"
                   onClick={() =>
-                    trackEvent("substack_subscribe_click", { location: "posts_header" })
+                    trackEvent(
+                      "substack_subscribe_click",
+                      {
+                        location:
+                          "posts_header",
+                      }
+                    )
                   }
                 />
               </div>
@@ -881,13 +1165,18 @@ export default function Home({ episodes, posts }) {
               {posts.length > 0 && (
                 <div
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily:
+                      "'JetBrains Mono', monospace",
                     fontSize: "12px",
-                    color: "rgba(255,255,255,0.2)",
+                    color:
+                      "rgba(255,255,255,0.2)",
                     marginBottom: "16px",
                   }}
                 >
-                  {posts.length} post{posts.length !== 1 ? "s" : ""}
+                  {posts.length} post
+                  {posts.length !== 1
+                    ? "s"
+                    : ""}
                 </div>
               )}
 
@@ -903,9 +1192,11 @@ export default function Home({ episodes, posts }) {
               {posts.length === 0 && (
                 <div
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily:
+                      "'Space Grotesk', sans-serif",
                     fontSize: "15px",
-                    color: "rgba(255,255,255,0.35)",
+                    color:
+                      "rgba(255,255,255,0.35)",
                     padding: "40px 0",
                   }}
                 >
@@ -929,7 +1220,8 @@ export default function Home({ episodes, posts }) {
                 className="about-grid"
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateColumns:
+                    "1fr 1fr",
                   gap: "60px",
                   alignItems: "stretch",
                 }}
@@ -937,10 +1229,14 @@ export default function Home({ episodes, posts }) {
                 <div>
                   <h2
                     style={{
-                      fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                      fontSize: "clamp(32px, 4vw, 48px)",
-                      letterSpacing: "-0.02em",
-                      textTransform: "uppercase",
+                      fontFamily:
+                        '"AkkuratLLWeb-Bold", sans-serif',
+                      fontSize:
+                        "clamp(32px, 4vw, 48px)",
+                      letterSpacing:
+                        "-0.02em",
+                      textTransform:
+                        "uppercase",
                       marginTop: 0,
                       marginBottom: "40px",
                     }}
@@ -950,11 +1246,13 @@ export default function Home({ episodes, posts }) {
 
                   <div
                     style={{
-                      fontFamily: '"AkkuratLLWeb-Regular", sans-serif',
+                      fontFamily:
+                        '"AkkuratLLWeb-Regular", sans-serif',
                       fontSize: "24px",
                       lineHeight: 1.45,
                       marginBottom: "40px",
-                      color: "rgba(255,255,255,0.85)",
+                      color:
+                        "rgba(255,255,255,0.85)",
                     }}
                   >
                     <a
@@ -962,7 +1260,8 @@ export default function Home({ episodes, posts }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: "rgba(255,255,255,0.85)",
+                        color:
+                          "rgba(255,255,255,0.85)",
                         textDecoration: "none",
                       }}
                       onMouseEnter={(e) =>
@@ -970,39 +1269,43 @@ export default function Home({ episodes, posts }) {
                           "1px solid rgba(255,255,255,0.4)")
                       }
                       onMouseLeave={(e) =>
-                        (e.target.style.borderBottom = "none")
+                        (e.target.style.borderBottom =
+                          "none")
                       }
                     >
                       Josh Stabinsky
                     </a>{" "}
                     lives in San Francisco and spends a lot of time drinking
-                    coffee. He loves consumer packaged goods. And dogs.
+                    coffee. He likes asking people how things work. And dogs.
                   </div>
 
                   <div
                     style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontFamily:
+                        "'Space Grotesk', sans-serif",
                       fontSize: "15px",
                       lineHeight: 1.75,
-                      color: "rgba(255,255,255,0.45)",
+                      color:
+                        "rgba(255,255,255,0.45)",
                       marginBottom: "40px",
                     }}
                   >
-                    Unit Economics is a long-form interview podcast that digs
-                    into how products are actually designed, manufactured,
-                    priced, and distributed. Each episode is a conversation with
-                    a founder, operator, or builder about the decisions,
-                    constraints, and tradeoffs behind their business. The show
-                    covers industries from food and beverage to hardware, games,
-                    apparel, and beyond.
+                    Unit Economics is a long-form interview podcast about how
+                    businesses actually work. Each episode is a conversation
+                    with a founder, operator, investor, or other person with
+                    firsthand experience, digging into the decisions,
+                    economics, constraints, and tradeoffs that are often
+                    invisible from the outside.
                   </div>
 
                   <div
                     style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontFamily:
+                        "'Space Grotesk', sans-serif",
                       fontSize: "15px",
                       lineHeight: 1.75,
-                      color: "rgba(255,255,255,0.45)",
+                      color:
+                        "rgba(255,255,255,0.45)",
                     }}
                   >
                     New episodes every week. Available on Spotify, Apple
@@ -1010,7 +1313,12 @@ export default function Home({ episodes, posts }) {
                   </div>
                 </div>
 
-                <div className="about-image" style={{ position: "relative" }}>
+                <div
+                  className="about-image"
+                  style={{
+                    position: "relative",
+                  }}
+                >
                   <img
                     src="/josh-about.jpg"
                     alt="Josh Stabinsky"
@@ -1022,7 +1330,8 @@ export default function Home({ episodes, posts }) {
                       width: "auto",
                       maxWidth: "100%",
                       objectFit: "contain",
-                      objectPosition: "top right",
+                      objectPosition:
+                        "top right",
                     }}
                   />
                 </div>
@@ -1042,8 +1351,10 @@ export default function Home({ episodes, posts }) {
             >
               <h2
                 style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                  fontSize: "clamp(32px, 4vw, 48px)",
+                  fontFamily:
+                    '"AkkuratLLWeb-Bold", sans-serif',
+                  fontSize:
+                    "clamp(32px, 4vw, 48px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
                   marginBottom: "40px",
@@ -1051,27 +1362,33 @@ export default function Home({ episodes, posts }) {
               >
                 Contact
               </h2>
+
               <div
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily:
+                    "'Space Grotesk', sans-serif",
                   fontSize: "17px",
                   lineHeight: 1.7,
-                  color: "rgba(255,255,255,0.55)",
+                  color:
+                    "rgba(255,255,255,0.55)",
                   marginBottom: "32px",
                 }}
               >
-                Guest suggestions, press inquiries, sponsorship, or just want to
-                say hi?
+                Guest suggestions, press inquiries, sponsorship, or just want
+                to say hi?
               </div>
+
               <a
                 href="mailto:hello@uepod.com"
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily:
+                    "'Space Grotesk', sans-serif",
                   fontSize: "24px",
                   fontWeight: 400,
                   color: "#fff",
                   textDecoration: "none",
-                  borderBottom: "1px solid rgba(255,255,255,0.3)",
+                  borderBottom:
+                    "1px solid rgba(255,255,255,0.3)",
                   paddingBottom: "4px",
                 }}
               >
@@ -1083,7 +1400,8 @@ export default function Home({ episodes, posts }) {
           {/* ===== FOOTER ===== */}
           <footer
             style={{
-              borderTop: "1px solid rgba(255,255,255,0.06)",
+              borderTop:
+                "1px solid rgba(255,255,255,0.06)",
               padding: "48px 40px 40px",
             }}
           >
@@ -1098,7 +1416,8 @@ export default function Home({ episodes, posts }) {
             >
               <h3
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily:
+                    "'JetBrains Mono', monospace",
                   fontWeight: 400,
                   fontSize: "18px",
                   textTransform: "uppercase",
@@ -1108,6 +1427,7 @@ export default function Home({ episodes, posts }) {
               >
                 Follow
               </h3>
+
               <div
                 style={{
                   display: "flex",
@@ -1115,23 +1435,48 @@ export default function Home({ episodes, posts }) {
                   alignItems: "center",
                 }}
               >
-                {Object.entries(SOCIAL_LINKS).map(
-                  ([key, { url, hc, icon: Icon }]) => (
-                    <HoverLink key={key} href={url} hoverColor={hc} onClick={() => trackEvent("footer_social_click", { platform: key })}>
+                {Object.entries(
+                  SOCIAL_LINKS
+                ).map(
+                  ([
+                    key,
+                    {
+                      url,
+                      hc,
+                      icon: Icon,
+                    },
+                  ]) => (
+                    <HoverLink
+                      key={key}
+                      href={url}
+                      hoverColor={hc}
+                      onClick={() =>
+                        trackEvent(
+                          "footer_social_click",
+                          {
+                            platform: key,
+                          }
+                        )
+                      }
+                    >
                       <Icon />
                     </HoverLink>
                   )
                 )}
               </div>
             </div>
+
             <div
               className="footer-copyright"
               style={{
-                borderTop: "1px solid rgba(255,255,255,0.06)",
+                borderTop:
+                  "1px solid rgba(255,255,255,0.06)",
                 paddingTop: "20px",
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily:
+                  "'JetBrains Mono', monospace",
                 fontSize: "11px",
-                color: "rgba(255,255,255,0.4)",
+                color:
+                  "rgba(255,255,255,0.4)",
                 letterSpacing: "0.04em",
                 textAlign: "right",
               }}
@@ -1148,27 +1493,33 @@ export default function Home({ episodes, posts }) {
 /* ===== FILTER BUTTON ===== */
 function FilterButton({ label, active, onClick }) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <button
       onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() =>
+        setHovered(true)
+      }
+      onMouseLeave={() =>
+        setHovered(false)
+      }
       style={{
         background: active
           ? "#fff"
           : hovered
-          ? "rgba(255,255,255,0.06)"
-          : "transparent",
+            ? "rgba(255,255,255,0.06)"
+            : "transparent",
         color: active
           ? "#000"
           : hovered
-          ? "rgba(255,255,255,0.6)"
-          : "rgba(255,255,255,0.4)",
+            ? "rgba(255,255,255,0.6)"
+            : "rgba(255,255,255,0.4)",
         border: active
           ? "1px solid #fff"
           : "1px solid rgba(255,255,255,0.12)",
         padding: "6px 14px",
-        fontFamily: "'Space Grotesk', sans-serif",
+        fontFamily:
+          "'Space Grotesk', sans-serif",
         fontSize: "12px",
         fontWeight: 500,
         letterSpacing: "0.06em",
@@ -1189,25 +1540,38 @@ function FilterButton({ label, active, onClick }) {
  * `revalidate` is a safety net in case the cron ever fails silently.
  */
 export async function getStaticProps() {
-  const [episodes, posts] = await Promise.all([
-    fetchEpisodes().catch((err) => {
-      console.error("Episode RSS fetch failed, using empty array:", err.message);
-      return [];
-    }),
-    fetchPosts().catch((err) => {
-      console.error("Substack RSS fetch failed, using empty array:", err.message);
-      return [];
-    }),
-  ]);
+  const [episodes, posts] =
+    await Promise.all([
+      fetchEpisodes().catch((err) => {
+        console.error(
+          "Episode RSS fetch failed, using empty array:",
+          err.message
+        );
+        return [];
+      }),
+      fetchPosts().catch((err) => {
+        console.error(
+          "Substack RSS fetch failed, using empty array:",
+          err.message
+        );
+        return [];
+      }),
+    ]);
 
   if (!episodes || episodes.length === 0) {
-    console.warn("No episodes from RSS, page will render with empty list.");
+    console.warn(
+      "No episodes from RSS, page will render with empty list."
+    );
   }
 
   return {
     props: {
-      episodes: JSON.parse(JSON.stringify(episodes || [])),
-      posts: JSON.parse(JSON.stringify(posts || [])),
+      episodes: JSON.parse(
+        JSON.stringify(episodes || [])
+      ),
+      posts: JSON.parse(
+        JSON.stringify(posts || [])
+      ),
     },
     revalidate: 900,
   };
