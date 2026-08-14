@@ -1276,7 +1276,7 @@ export default function Home({ episodes, posts }) {
                       Josh Stabinsky
                     </a>{" "}
                     lives in San Francisco and spends a lot of time drinking
-                    coffee. He likes asking people how things work. And dogs.
+                    coffee. His interests include consumer goods and dogs.
                   </div>
 
                   <div
