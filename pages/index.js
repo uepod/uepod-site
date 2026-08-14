@@ -656,7 +656,7 @@ export default function Home({ episodes, posts }) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "20px 40px",
+            padding: "28px 40px 20px",
             borderBottom: scrolled
               ? "1px solid rgba(255,255,255,0.06)"
               : "1px solid transparent",
