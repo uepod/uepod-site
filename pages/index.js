@@ -633,7 +633,7 @@ export default function Home({ episodes, posts }) {
   return (
     <>
       <Head>
-        <title>Unit Economics — How businesses actually work.</title>
+        <title>Unit Economics — How Businesses Work.</title>
       </Head>
 
       <div
