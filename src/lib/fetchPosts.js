@@ -57,6 +57,15 @@ function readingTime(html) {
 }
 
 /**
+ * Podcast episodes are published into the same Substack RSS feed as written
+ * posts. RSS marks those entries with an audio enclosure, so use that stable
+ * metadata instead of relying on title or description conventions.
+ */
+function isPodcastEpisode(item) {
+  return item.enclosure?.type?.toLowerCase().startsWith("audio/") || false;
+}
+
+/**
  * Fetch and normalize Substack posts.
  * Shape mirrors fetchEpisodes so the UI stays consistent.
  */
@@ -70,18 +79,20 @@ async function fetchPosts() {
 
   const feed = await parser.parseURL(SUBSTACK_RSS);
 
-  return (feed.items || []).map((item, i) => {
-    const body = item.contentEncoded || item.content || "";
-    return {
-      id: item.guid || item.link || `post-${i}`,
-      title: item.title || "Untitled",
-      link: item.link || SUBSTACK_RSS.replace("/feed", ""),
-      date: formatDate(item.isoDate || item.pubDate),
-      isoDate: item.isoDate || item.pubDate || null,
-      excerpt: toExcerpt(item.contentSnippet || body),
-      readingTime: readingTime(body),
-    };
-  });
+  return (feed.items || [])
+    .filter((item) => !isPodcastEpisode(item))
+    .map((item, i) => {
+      const body = item.contentEncoded || item.content || "";
+      return {
+        id: item.guid || item.link || `post-${i}`,
+        title: item.title || "Untitled",
+        link: item.link || SUBSTACK_RSS.replace("/feed", ""),
+        date: formatDate(item.isoDate || item.pubDate),
+        isoDate: item.isoDate || item.pubDate || null,
+        excerpt: toExcerpt(item.contentSnippet || body),
+        readingTime: readingTime(body),
+      };
+    });
 }
 
-module.exports = { fetchPosts };
+module.exports = { fetchPosts, isPodcastEpisode };
