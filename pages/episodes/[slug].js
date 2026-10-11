@@ -1,15 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../../src/components/SiteChrome";
-import {
-  SpotifyIcon,
-  AppleIcon,
-  YouTubeIcon,
-  SubstackIcon,
-} from "../../src/components/icons";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
 import {
-  SUBSTACK_URL,
   listenOptions,
   normalizeWebsite,
   websiteLabel,
@@ -30,38 +23,6 @@ function trackEvent(eventName, params = {}) {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, params);
   }
-}
-
-function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
-  const [hovered, setHovered] = useState(false);
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "8px",
-        padding: "12px 20px",
-        border: `1px solid ${hovered ? hoverColor : "rgba(255,255,255,0.2)"}`,
-        textDecoration: "none",
-        color: hovered ? hoverColor : "#fff",
-        fontSize: "13px",
-        fontWeight: 500,
-        letterSpacing: "0.04em",
-        transition: "all 0.2s",
-        fontFamily: "'Space Grotesk', sans-serif",
-        whiteSpace: "nowrap",
-      }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onClick={onClick}
-    >
-      <Icon /> {label}
-    </a>
-  );
 }
 
 const EMBED_ALLOW =
@@ -257,43 +218,6 @@ export default function EpisodePage({ episode, related }) {
   ].filter(Boolean);
   const jsonLd = jsonLdScript(episode);
 
-  const buttons = [
-    episode.spotify
-      ? {
-          key: "spotify",
-          href: episode.spotify,
-          hoverColor: "#1DB954",
-          icon: SpotifyIcon,
-          label: "Spotify",
-        }
-      : null,
-    episode.apple
-      ? {
-          key: "apple",
-          href: episode.apple,
-          hoverColor: "#9B59B6",
-          icon: AppleIcon,
-          label: "Apple Podcasts",
-        }
-      : null,
-    episode.youtube
-      ? {
-          key: "youtube",
-          href: episode.youtube,
-          hoverColor: "#FF0000",
-          icon: YouTubeIcon,
-          label: "YouTube",
-        }
-      : null,
-    {
-      key: "substack",
-      href: SUBSTACK_URL,
-      hoverColor: "#FF6719",
-      icon: SubstackIcon,
-      label: "Substack",
-    },
-  ].filter(Boolean);
-
   return (
     <>
       <Head>
@@ -423,32 +347,6 @@ export default function EpisodePage({ episode, related }) {
           ) : null}
 
           <ListenSection episode={episode} />
-
-          <div
-            className="platform-buttons"
-            style={{
-              display: "flex",
-              gap: "12px",
-              marginTop: "28px",
-              flexWrap: "wrap",
-            }}
-          >
-            {buttons.map((button) => (
-              <PlatformButton
-                key={button.key}
-                href={button.href}
-                hoverColor={button.hoverColor}
-                icon={button.icon}
-                label={button.label}
-                onClick={() =>
-                  trackEvent("episode_platform_click", {
-                    platform: button.key,
-                    episode_name: episode.brand,
-                  })
-                }
-              />
-            ))}
-          </div>
 
           {episode.takeaways?.length ? (
             <section className="episode-takeaways">
