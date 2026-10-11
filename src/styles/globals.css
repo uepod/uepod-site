@@ -302,65 +302,6 @@ a {
   margin-bottom: 16px;
 }
 
-.listen-section {
-  margin-top: 40px;
-  max-width: 720px;
-}
-
-.listen-section h2 {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 14px;
-}
-
-.listen-tabs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
-
-.listen-tab {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 6px 14px;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.listen-tab[aria-selected="true"] {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-.listen-tab:hover:not([aria-selected="true"]) {
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.listen-frame iframe {
-  width: 100%;
-  border: 0;
-  display: block;
-  background: #000;
-  color-scheme: dark;
-}
-
-.listen-frame-video iframe {
-  aspect-ratio: 16 / 9;
-  height: auto;
-}
-
 .episode-takeaways,
 .episode-related {
   margin-top: 56px;

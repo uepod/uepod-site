@@ -6,10 +6,6 @@ const {
   resolveEpisodeImage,
   htmlToParagraphs,
   toIsoDuration,
-  youtubeVideoId,
-  spotifyEpisodeId,
-  appleEmbedSrc,
-  listenOptions,
   normalizeWebsite,
   websiteLabel,
   relatedEpisodes,
@@ -64,64 +60,6 @@ test("duration converts to ISO 8601", () => {
   assert.equal(toIsoDuration("00:48:00"), "PT48M");
   assert.equal(toIsoDuration("01:01:36"), "PT1H1M36S");
   assert.equal(toIsoDuration(""), null);
-});
-
-test("player ids only come from episode links, not the channel or the show", () => {
-  assert.equal(youtubeVideoId("https://youtu.be/UryCsPTJ-Sg"), "UryCsPTJ-Sg");
-  assert.equal(
-    youtubeVideoId("https://www.youtube.com/watch?v=JOzS8op2J2g"),
-    "JOzS8op2J2g"
-  );
-  assert.equal(
-    youtubeVideoId("https://www.youtube.com/@TheUnitEconomicsPodcast"),
-    null
-  );
-  assert.equal(
-    spotifyEpisodeId("https://open.spotify.com/episode/6DG2MmMkiAbGy15qZYzY64"),
-    "6DG2MmMkiAbGy15qZYzY64"
-  );
-  assert.equal(
-    spotifyEpisodeId("https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F"),
-    null
-  );
-});
-
-test("listen embeds use official players and skip show-level fallbacks", () => {
-  const options = listenOptions({
-    brand: "Mikey's Pies",
-    spotify: "https://open.spotify.com/episode/6DG2MmMkiAbGy15qZYzY64?si=abc",
-    apple:
-      "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735?i=1000793637451",
-    youtube: "https://youtu.be/UryCsPTJ-Sg",
-  });
-  assert.deepEqual(
-    options.map((option) => option.key),
-    ["spotify", "apple", "youtube"]
-  );
-  assert.equal(
-    options[0].src,
-    "https://open.spotify.com/embed/episode/6DG2MmMkiAbGy15qZYzY64?utm_source=generator&theme=0"
-  );
-  assert.equal(
-    options[1].src,
-    "https://embed.podcasts.apple.com/us/podcast/unit-economics/id1856362735?i=1000793637451"
-  );
-  assert.equal(
-    options[2].src,
-    "https://www.youtube-nocookie.com/embed/UryCsPTJ-Sg"
-  );
-  assert.equal(
-    appleEmbedSrc("https://podcasts.apple.com/us/podcast/unit-economics/id1856362735"),
-    null
-  );
-  assert.deepEqual(
-    listenOptions({
-      youtube: "https://www.youtube.com/@TheUnitEconomicsPodcast",
-      spotify: "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F",
-      apple: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735",
-    }),
-    []
-  );
 });
 
 test("website links gain a protocol and keep an existing one", () => {
