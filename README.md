@@ -46,7 +46,19 @@ A new RSS item is enough for a page. Sheet fields (description, guest, links, ca
 
 Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
 
-Related episodes prefer the same category, newest first. When that category has fewer than three other published episodes, the page fills the rest with the nearest episodes by release date. The current episode is never listed.
+Related episodes are the three published episodes most similar to this one. Similarity is a TF-IDF cosine over the title, brand, category, and description, computed when the page is built or revalidated. Episodes in the same category are ranked first. If that category has fewer than three, the rest come from the most similar episodes in other categories. The current episode is never listed.
+
+## Guest LinkedIn
+
+The RSS show notes do not include guest LinkedIn profiles. One episode has an anchor to `https://www.linkedin.com/feed/#`, which is not a profile and is ignored.
+
+Add an optional `linkedin` column to the Episode Metadata sheet when you want the guest name to link out. The cell must be a profile URL:
+
+```
+https://www.linkedin.com/in/example
+```
+
+`/in/…` and `/pub/…` are accepted. Anything else is ignored, and the site never invents a URL. On the next regeneration the guest line, and the first mention of that guest in the show notes, open the profile in a new tab. If a future RSS item contains a real profile anchor, that link is kept and the column is unnecessary for that episode. A sheet value wins when both exist.
 
 The Listen section is a Spotify / Apple Podcasts / YouTube tab switcher built from the episode links in the sheet. Spotify uses the dark embed theme. Only the selected player is loaded, and it loads lazily. A missing episode link omits that tab. There is no second row of outbound buttons. Substack stays in the site footer.
 

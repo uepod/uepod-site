@@ -252,62 +252,245 @@ function artworkAlt(episode) {
   return "Unit Economics episode artwork";
 }
 
-function episodeTime(episode) {
-  const time = Date.parse(episode?.isoDate || episode?.rawDate || "");
-  return Number.isFinite(time) ? time : null;
+const STOPWORDS = new Set(
+  `a an the and or of to in on for with from we i you it this that is are was were be as at by about into how what when who their they his her our its but not have has had will can just than then also more most some these those there here my me he she him them your if so do does did been being over after before out up down off which while where why because during through between both each few other such no nor too very now episode today conversation founder company business sit down hope enjoy learned lastly discuss talk talks think thinks`.split(
+    /\s+/
+  )
+);
+
+function episodeText(episode) {
+  const notes = Array.isArray(episode?.descriptionParagraphs)
+    ? episode.descriptionParagraphs.join(" ")
+    : "";
+  return [episode?.title, episode?.brand, episode?.category, episode?.desc, notes]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function termFreq(text) {
+  const counts = new Map();
+  const words = String(text || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .split(/\s+/);
+  for (const word of words) {
+    if (word.length < 3 || STOPWORDS.has(word)) continue;
+    counts.set(word, (counts.get(word) || 0) + 1);
+  }
+  return counts;
+}
+
+let vectorCacheKey = "";
+let vectorCache = null;
+
+function corpusVectors(episodes) {
+  let key = String(episodes.length);
+  for (const episode of episodes) {
+    key += `\n${episode.slug || ""}\n${episodeText(episode)}`;
+  }
+  if (key === vectorCacheKey && vectorCache) return vectorCache;
+
+  const rows = episodes.map((episode) => ({
+    episode,
+    tf: termFreq(episodeText(episode)),
+  }));
+  const df = new Map();
+  for (const row of rows) {
+    for (const term of row.tf.keys()) df.set(term, (df.get(term) || 0) + 1);
+  }
+  const idf = new Map();
+  const total = rows.length || 1;
+  for (const [term, docs] of df) {
+    idf.set(term, Math.log((total + 1) / (docs + 1)) + 1);
+  }
+  vectorCacheKey = key;
+  vectorCache = { rows, idf };
+  return vectorCache;
+}
+
+function cosine(tfA, tfB, idf) {
+  let dot = 0;
+  let normA = 0;
+  let normB = 0;
+  for (const [term, countA] of tfA) {
+    const weightA = countA * (idf.get(term) || 0);
+    normA += weightA * weightA;
+    const countB = tfB.get(term);
+    if (countB) dot += weightA * countB * (idf.get(term) || 0);
+  }
+  for (const [term, countB] of tfB) {
+    const weightB = countB * (idf.get(term) || 0);
+    normB += weightB * weightB;
+  }
+  if (!normA || !normB) return 0;
+  return dot / Math.sqrt(normA * normB);
 }
 
 /**
- * Two or three other published episodes. Same-category matches come first,
- * in catalog order (newest first). If that is fewer than `limit`, the rest
- * are the nearest other episodes by release date. The current episode is
- * never included, and a slug is never repeated.
+ * Two or three other published episodes. Same-category candidates are ranked
+ * by TF-IDF cosine similarity over title, brand, category, and description,
+ * and they fill the list before any other category. Remaining slots are the
+ * most similar episodes outside the category. Ties break on slug. The current
+ * episode is never included, and a slug is never repeated.
+ * Computed from the catalog already loaded at build or revalidation.
  */
 function relatedEpisodes(episodes, current, limit = 3) {
   if (!current || !Array.isArray(episodes) || limit < 1) return [];
 
-  const others = episodes.filter(
-    (episode) =>
-      episode &&
-      episode.published !== false &&
-      episode.slug &&
-      episode.slug !== current.slug
+  const published = episodes.filter(
+    (episode) => episode && episode.published !== false && episode.slug
   );
+  const { rows, idf } = corpusVectors(published);
+  const currentRow = rows.find((row) => row.episode.slug === current.slug);
+  const currentTf = currentRow ? currentRow.tf : termFreq(episodeText(current));
 
-  const picked = [];
+  const ranked = [];
   const seen = new Set();
-
-  function take(episode) {
-    if (!episode?.slug || seen.has(episode.slug) || picked.length >= limit) return;
-    seen.add(episode.slug);
-    picked.push(episode);
+  for (const row of rows) {
+    if (row.episode.slug === current.slug || seen.has(row.episode.slug)) continue;
+    seen.add(row.episode.slug);
+    ranked.push({
+      episode: row.episode,
+      same: Boolean(current.category) && row.episode.category === current.category,
+      score: Math.round(cosine(currentTf, row.tf, idf) * 1e6) / 1e6,
+    });
   }
 
-  if (current.category) {
-    for (const episode of others) {
-      if (episode.category === current.category) take(episode);
+  ranked.sort((a, b) => {
+    if (a.same !== b.same) return a.same ? -1 : 1;
+    if (a.score !== b.score) return b.score - a.score;
+    return a.episode.slug.localeCompare(b.episode.slug);
+  });
+
+  return ranked.slice(0, limit).map((row) => row.episode);
+}
+
+/**
+ * https://www.linkedin.com/in/… or /pub/… only. Feed placeholders such as
+ * linkedin.com/feed/# are not profiles and are ignored.
+ */
+function linkedinProfileUrl(value) {
+  if (!value || typeof value !== "string") return null;
+  let url;
+  try {
+    url = new URL(value.trim());
+  } catch {
+    return null;
+  }
+  if (url.protocol !== "https:") return null;
+  const host = url.hostname.replace(/^www\./, "").toLowerCase();
+  if (host !== "linkedin.com") return null;
+  const parts = url.pathname.split("/").filter(Boolean);
+  if ((parts[0] !== "in" && parts[0] !== "pub") || !parts[1]) return null;
+  url.hash = "";
+  url.search = "";
+  return url.toString();
+}
+
+/**
+ * Show notes stay plain text, except a LinkedIn profile anchor is kept.
+ */
+function htmlToBlocks(html) {
+  if (!html || typeof html !== "string") return [];
+  const withBreaks = html
+    .replace(/<\s*br\s*\/?\s*>/gi, "\n")
+    .replace(/<\/\s*p\s*>/gi, "\n\n")
+    .replace(/<\/\s*h[1-6]\s*>/gi, "\n\n")
+    .replace(/<\s*li[^>]*>/gi, "• ")
+    .replace(/<\/\s*li\s*>/gi, "\n");
+
+  const pieces = [];
+  const anchor =
+    /<\s*a\b[^>]*href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))[^>]*>([\s\S]*?)<\s*\/\s*a\s*>/gi;
+  let last = 0;
+  let match;
+  while ((match = anchor.exec(withBreaks))) {
+    pieces.push({ raw: withBreaks.slice(last, match.index), href: null });
+    const href = match[1] || match[2] || match[3] || "";
+    const inner = match[4].replace(/<[^>]+>/g, "");
+    pieces.push({ raw: inner, href: linkedinProfileUrl(href) });
+    last = match.index + match[0].length;
+  }
+  pieces.push({ raw: withBreaks.slice(last), href: null });
+
+  const paragraphs = [[]];
+  for (const piece of pieces) {
+    const cleaned = decodeEntities(piece.raw.replace(/<[^>]+>/g, ""));
+    const bits = cleaned.split(/\n{2,}/);
+    bits.forEach((bit, index) => {
+      if (index > 0) paragraphs.push([]);
+      const text = bit.replace(/[ \t]*\n[ \t]*/g, " ").replace(/[ \t]{2,}/g, " ");
+      if (!text) return;
+      paragraphs[paragraphs.length - 1].push(
+        piece.href ? { text, href: piece.href } : { text }
+      );
+    });
+  }
+
+  return paragraphs
+    .map((parts) => {
+      if (!parts.length) return [];
+      const copy = parts.map((part) => ({ ...part }));
+      copy[0].text = copy[0].text.replace(/^\s+/, "");
+      copy[copy.length - 1].text = copy[copy.length - 1].text.replace(/\s+$/, "");
+      return copy.filter((part) => part.text);
+    })
+    .filter((parts) => parts.length);
+}
+
+function blocksToParagraphs(blocks) {
+  if (!Array.isArray(blocks)) return [];
+  return blocks
+    .map((parts) => parts.map((part) => part.text).join("").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+}
+
+function linkedinFromBlocks(blocks) {
+  if (!Array.isArray(blocks)) return null;
+  for (const parts of blocks) {
+    for (const part of parts) {
+      const url = linkedinProfileUrl(part.href);
+      if (url) return url;
     }
   }
+  return null;
+}
 
-  const currentTime = episodeTime(current);
-  const fill = others
-    .filter((episode) => !seen.has(episode.slug))
-    .map((episode, index) => ({
-      episode,
-      index,
-      time: episodeTime(episode),
-    }))
-    .sort((a, b) => {
-      if (currentTime == null) return a.index - b.index;
-      const distanceA = a.time == null ? Infinity : Math.abs(a.time - currentTime);
-      const distanceB = b.time == null ? Infinity : Math.abs(b.time - currentTime);
-      if (distanceA !== distanceB) return distanceA - distanceB;
-      if (a.time != null && b.time != null && a.time !== b.time) return b.time - a.time;
-      return a.index - b.index;
-    });
+/**
+ * Wrap the first plain-text mention of the guest when a profile URL is known
+ * and the show notes do not already link that name.
+ */
+function linkGuestName(blocks, guest, url) {
+  const profile = linkedinProfileUrl(url);
+  const needle = (guest || "").trim();
+  if (!profile || !needle || !Array.isArray(blocks)) return blocks || [];
+  const already = blocks.some((parts) =>
+    parts.some((part) => part.href && part.text.includes(needle))
+  );
+  if (already) return blocks;
 
-  for (const item of fill) take(item.episode);
-  return picked;
+  let done = false;
+  return blocks.map((parts) => {
+    if (done) return parts;
+    const next = [];
+    for (const part of parts) {
+      if (done || part.href) {
+        next.push(part);
+        continue;
+      }
+      const index = part.text.indexOf(needle);
+      if (index === -1) {
+        next.push(part);
+        continue;
+      }
+      done = true;
+      if (index > 0) next.push({ text: part.text.slice(0, index) });
+      next.push({ text: needle, href: profile });
+      const rest = part.text.slice(index + needle.length);
+      if (rest) next.push({ text: rest });
+    }
+    return next;
+  });
 }
 
 function pageTitle(episode) {
@@ -416,6 +599,11 @@ module.exports = {
   asImageUrl,
   resolveEpisodeImage,
   htmlToParagraphs,
+  htmlToBlocks,
+  blocksToParagraphs,
+  linkedinProfileUrl,
+  linkedinFromBlocks,
+  linkGuestName,
   toIsoDuration,
   youtubeVideoId,
   spotifyEpisodeId,

@@ -5,6 +5,10 @@ const {
   parseTakeaways,
   resolveEpisodeImage,
   htmlToParagraphs,
+  htmlToBlocks,
+  blocksToParagraphs,
+  linkedinProfileUrl,
+  linkGuestName,
   toIsoDuration,
   youtubeVideoId,
   spotifyEpisodeId,
@@ -150,66 +154,89 @@ test("related episodes are the same category, excluding the current one", () => 
   );
 });
 
-test("a unique category is filled with the nearest episodes by date", () => {
+function note(slug, category, text, extra = {}) {
+  return {
+    slug,
+    category,
+    title: text,
+    brand: slug,
+    desc: text,
+    descriptionParagraphs: [text],
+    published: true,
+    ...extra,
+  };
+}
+
+test("same-category episodes are ordered by similarity, then other categories fill", () => {
   const episodes = [
-    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-02-05T11:00:00.000Z" },
-    { slug: "far", category: "Food", published: true, isoDate: "2025-01-01T00:00:00.000Z" },
-    { slug: "before", category: "Food", published: true, isoDate: "2026-02-01T11:00:00.000Z" },
-    { slug: "after", category: "Media", published: true, isoDate: "2026-02-10T11:00:00.000Z" },
-    { slug: "closer-before", category: "Art", published: true, isoDate: "2026-02-04T11:00:00.000Z" },
-    { slug: "draft", category: "Jewelry", published: false, isoDate: "2026-02-06T11:00:00.000Z" },
-    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-02-05T11:00:00.000Z" },
+    note("self", "Food & Beverage", "sourdough bakery wholesale crumb"),
+    note("same-weak", "Food & Beverage", "warehouse pallets freight lanes"),
+    note("same-strong", "Food & Beverage", "sourdough bakery crumb loaf"),
+    note("other-strong", "Logistics", "sourdough bakery wholesale crumb loaf"),
+    note("draft", "Food & Beverage", "sourdough bakery crumb", { published: false }),
   ];
   const related = relatedEpisodes(episodes, episodes[0], 3);
   assert.deepEqual(
     related.map((episode) => episode.slug),
-    ["closer-before", "before", "after"]
+    ["same-strong", "same-weak", "other-strong"]
   );
   assert.equal(related.some((episode) => episode.slug === "self"), false);
-  assert.equal(new Set(related.map((episode) => episode.slug)).size, 3);
+  assert.equal(new Set(related.map((episode) => episode.slug)).size, related.length);
 });
 
-test("same-category matches stay first and the nearest dates fill the rest", () => {
+test("a unique category is filled with the most similar other episodes", () => {
   const episodes = [
-    { slug: "same-new", category: "Apparel", published: true, isoDate: "2026-08-01T00:00:00.000Z" },
-    { slug: "self", category: "Apparel", published: true, isoDate: "2026-06-01T00:00:00.000Z" },
-    { slug: "near", category: "Food", published: true, isoDate: "2026-06-02T00:00:00.000Z" },
-    { slug: "tie-older", category: "Media", published: true, isoDate: "2026-05-28T00:00:00.000Z" },
-    { slug: "tie-newer", category: "Art", published: true, isoDate: "2026-06-05T00:00:00.000Z" },
-    { slug: "same-old", category: "Apparel", published: true, isoDate: "2025-01-01T00:00:00.000Z" },
-  ];
-  const related = relatedEpisodes(episodes, episodes[1], 3);
-  assert.deepEqual(
-    related.map((episode) => episode.slug),
-    ["same-new", "same-old", "near"]
-  );
-});
-
-test("an equal date distance prefers the newer episode", () => {
-  const episodes = [
-    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-06-05T00:00:00.000Z" },
-    { slug: "older", category: "Food", published: true, isoDate: "2026-06-01T00:00:00.000Z" },
-    { slug: "newer", category: "Media", published: true, isoDate: "2026-06-09T00:00:00.000Z" },
-  ];
-  const related = relatedEpisodes(episodes, episodes[0], 2);
-  assert.deepEqual(
-    related.map((episode) => episode.slug),
-    ["newer", "older"]
-  );
-});
-
-test("a blank category still gets the nearest published episodes", () => {
-  const episodes = [
-    { slug: "self", category: "", published: true, isoDate: "2026-03-01T00:00:00.000Z" },
-    { slug: "near", category: "Food", published: true, isoDate: "2026-03-02T00:00:00.000Z" },
-    { slug: "next", category: "Media", published: true, isoDate: "2026-02-20T00:00:00.000Z" },
-    { slug: "draft", category: "Food", published: false, isoDate: "2026-03-01T00:00:00.000Z" },
+    note("self", "Jewelry", "heirloom gold rings casting"),
+    note("close", "Apparel", "heirloom gold rings"),
+    note("also", "Art & Design", "casting gold jewelry"),
+    note("far", "Logistics", "warehouse pallets freight"),
   ];
   const related = relatedEpisodes(episodes, episodes[0], 3);
   assert.deepEqual(
     related.map((episode) => episode.slug),
-    ["near", "next"]
+    ["close", "also", "far"]
   );
+});
+
+test("equal similarity is a stable slug order", () => {
+  const episodes = [
+    note("self", "Food & Beverage", "alpha beta gamma"),
+    note("b", "Food & Beverage", "alpha beta gamma"),
+    note("a", "Food & Beverage", "alpha beta gamma"),
+  ];
+  const once = relatedEpisodes(episodes, episodes[0], 2).map((episode) => episode.slug);
+  const twice = relatedEpisodes(episodes, episodes[0], 2).map((episode) => episode.slug);
+  assert.deepEqual(once, ["a", "b"]);
+  assert.deepEqual(twice, once);
+});
+
+test("linkedin profile urls are kept and placeholders are dropped", () => {
+  assert.equal(
+    linkedinProfileUrl("https://www.linkedin.com/in/jane-doe/"),
+    "https://www.linkedin.com/in/jane-doe/"
+  );
+  assert.equal(linkedinProfileUrl("https://www.linkedin.com/feed/#"), null);
+  assert.equal(linkedinProfileUrl("javascript:alert(1)"), null);
+  assert.equal(linkedinProfileUrl("https://example.com/in/jane"), null);
+
+  const blocks = htmlToBlocks(
+    '<p>I sit down with <a href="https://www.linkedin.com/in/jane-doe"><strong>Jane Doe</strong></a>, founder of <a href="https://example.com">Example</a>.</p><p>Second paragraph.</p>'
+  );
+  assert.equal(blocks[0][1].href, "https://www.linkedin.com/in/jane-doe");
+  assert.equal(blocks[0][1].text, "Jane Doe");
+  assert.equal(blocks[0].some((part) => part.href && part.href.includes("example.com")), false);
+  assert.equal(blocksToParagraphs(blocks)[1], "Second paragraph.");
+
+  const fromSheet = linkGuestName(
+    htmlToBlocks("<p>I sit down with Jane Doe, founder.</p>"),
+    "Jane Doe",
+    "https://www.linkedin.com/in/jane-doe"
+  );
+  assert.equal(fromSheet[0][1].href, "https://www.linkedin.com/in/jane-doe");
+  assert.equal(fromSheet[0][1].text, "Jane Doe");
+
+  const untouched = linkGuestName(blocks, "Jane Doe", "https://www.linkedin.com/in/other");
+  assert.equal(untouched[0][1].href, "https://www.linkedin.com/in/jane-doe");
 });
 
 test("JSON-LD uses the full-color artwork, guest, and series", () => {
