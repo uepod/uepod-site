@@ -46,6 +46,42 @@ A new RSS item is enough for a page. Sheet fields (description, guest, links, ca
 
 Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
 
+Each episode page shows three related episodes. They are chosen when the page is built or revalidated, in this order:
+
+1. Pins in `data/related-overrides.json`.
+2. Transcript mentions in `data/episode-mentions.json`, if that file is present. The file is directional (A names B). Ranking treats either direction as a connection: this episode’s outgoing mentions, plus incoming mentions where another episode names this one. Outgoing mentions weigh slightly more (10 vs 9 per count). When both directions exist, the weights are added.
+3. TF-IDF similarity over the title, brand, category, and description. Episodes in the same category come before other categories.
+
+The current episode is never listed, and a slug is never repeated. A slug that is not a published episode is skipped.
+
+To pin related episodes, add the episode’s slug and an ordered list of related slugs:
+
+```json
+{
+  "great-circle-ventures-jacob-afriat": [
+    "springdale-ventures-dan-graham-mollye-santulli",
+    "one-trick-pony-lucy-dana",
+    "alecs-ice-cream-alec-jaffe"
+  ]
+}
+```
+
+The first slug is shown first. Edit the file and the page picks it up on the next regeneration. No other code change.
+
+`data/episode-mentions.json` is optional and can cover only some episodes. The shape is `{ "slug": [{ "slug": "other-episode", "count": 2 }] }`, meaning that episode’s transcript names the other one that many times. The file in the repo has 24 pairs. A missing file, unreadable file, or episode with no outgoing or incoming mentions skips that step, and similarity fills the remaining slots. Most episodes have no mentions, so similarity still decides those lists.
+
+## Guest LinkedIn
+
+The RSS show notes do not include guest LinkedIn profiles. One episode has an anchor to `https://www.linkedin.com/feed/#`, which is not a profile and is ignored.
+
+Add an optional `linkedin` column to the Episode Metadata sheet when you want the guest name to link out. The cell must be a profile URL:
+
+```
+https://www.linkedin.com/in/example
+```
+
+`/in/…` and `/pub/…` are accepted. Anything else is ignored, and the site never invents a URL. On the next regeneration the guest line, and the first mention of that guest in the show notes, open the profile in a new tab. If a future RSS item contains a real profile anchor, that link is kept and the column is unnecessary for that episode. A sheet value wins when both exist.
+
 The Listen section is a Spotify / Apple Podcasts / YouTube tab switcher built from the episode links in the sheet. Spotify uses the dark embed theme. Only the selected player is loaded, and it loads lazily. A missing episode link omits that tab. There is no second row of outbound buttons. Substack stays in the site footer.
 
 ## Key takeaways

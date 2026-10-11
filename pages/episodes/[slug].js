@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
+import { loadRelatedSources } from "../../src/lib/relatedSources";
 import {
   listenOptions,
   normalizeWebsite,
@@ -204,11 +205,13 @@ export default function EpisodePage({ episode, related }) {
   const canonical = canonicalUrl(episode.slug);
   const image = shareImage(episode);
   const alt = artworkAlt(episode);
-  const paragraphs = episode.descriptionParagraphs?.length
-    ? episode.descriptionParagraphs
-    : episode.desc
-      ? [episode.desc]
-      : [];
+  const blocks = episode.descriptionBlocks?.length
+    ? episode.descriptionBlocks
+    : episode.descriptionParagraphs?.length
+      ? episode.descriptionParagraphs.map((paragraph) => [{ text: paragraph }])
+      : episode.desc
+        ? [[{ text: episode.desc }]]
+        : [];
   const websiteHref = normalizeWebsite(episode.website);
   const siteLabel = websiteLabel(episode.website);
   const metaBits = [
@@ -287,19 +290,30 @@ export default function EpisodePage({ episode, related }) {
                 {episode.brand || episode.title}
               </h1>
 
-              {episode.guest ? (
-                <div
-                  style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "18px",
-                    color: "rgba(255,255,255,0.5)",
-                    marginTop: "10px",
-                    fontWeight: 400,
-                  }}
+          {episode.guest ? (
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "18px",
+                color: "rgba(255,255,255,0.5)",
+                marginTop: "10px",
+                fontWeight: 400,
+              }}
+            >
+              {episode.linkedin ? (
+                <a
+                  className="episode-guest-link"
+                  href={episode.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {episode.guest}
-                </div>
-              ) : null}
+                </a>
+              ) : (
+                episode.guest
+              )}
+            </div>
+          ) : null}
 
               {websiteHref && siteLabel ? (
                 <a
@@ -338,10 +352,26 @@ export default function EpisodePage({ episode, related }) {
             </div>
           </header>
 
-          {paragraphs.length ? (
+          {blocks.length ? (
             <div className="episode-description">
-              {paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+              {blocks.map((parts, index) => (
+                <p key={index}>
+                  {parts.map((part, partIndex) =>
+                    part.href ? (
+                      <a
+                        key={partIndex}
+                        className="episode-guest-link"
+                        href={part.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {part.text}
+                      </a>
+                    ) : (
+                      <span key={partIndex}>{part.text}</span>
+                    )
+                  )}
+                </p>
               ))}
             </div>
           ) : null}
@@ -414,7 +444,9 @@ export async function getStaticProps({ params }) {
     return { notFound: true, revalidate: REVALIDATE_SECONDS };
   }
 
-  const related = relatedEpisodes(episodes, episode, 3).map(slimEpisode);
+  const related = relatedEpisodes(episodes, episode, 3, loadRelatedSources()).map(
+    slimEpisode
+  );
 
   return {
     props: {

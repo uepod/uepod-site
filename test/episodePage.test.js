@@ -5,6 +5,10 @@ const {
   parseTakeaways,
   resolveEpisodeImage,
   htmlToParagraphs,
+  htmlToBlocks,
+  blocksToParagraphs,
+  linkedinProfileUrl,
+  linkGuestName,
   toIsoDuration,
   youtubeVideoId,
   spotifyEpisodeId,
@@ -148,6 +152,252 @@ test("related episodes are the same category, excluding the current one", () => 
     related.map((episode) => episode.slug),
     ["b", "d", "e"]
   );
+});
+
+function note(slug, category, text, extra = {}) {
+  return {
+    slug,
+    category,
+    title: text,
+    brand: slug,
+    desc: text,
+    descriptionParagraphs: [text],
+    published: true,
+    ...extra,
+  };
+}
+
+test("same-category episodes are ordered by similarity, then other categories fill", () => {
+  const episodes = [
+    note("self", "Food & Beverage", "sourdough bakery wholesale crumb"),
+    note("same-weak", "Food & Beverage", "warehouse pallets freight lanes"),
+    note("same-strong", "Food & Beverage", "sourdough bakery crumb loaf"),
+    note("other-strong", "Logistics", "sourdough bakery wholesale crumb loaf"),
+    note("draft", "Food & Beverage", "sourdough bakery crumb", { published: false }),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["same-strong", "same-weak", "other-strong"]
+  );
+  assert.equal(related.some((episode) => episode.slug === "self"), false);
+  assert.equal(new Set(related.map((episode) => episode.slug)).size, related.length);
+});
+
+test("a unique category is filled with the most similar other episodes", () => {
+  const episodes = [
+    note("self", "Jewelry", "heirloom gold rings casting"),
+    note("close", "Apparel", "heirloom gold rings"),
+    note("also", "Art & Design", "casting gold jewelry"),
+    note("far", "Logistics", "warehouse pallets freight"),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["close", "also", "far"]
+  );
+});
+
+test("pins come first, then mentions by count, then similarity", () => {
+  const episodes = [
+    note("self", "Venture Capital", "venture fund founders"),
+    note("pinned-last", "Food & Beverage", "warehouse pallets freight"),
+    note("pinned-first", "Venture Capital", "venture fund founders"),
+    note("mentioned-high", "Apparel", "unrelated cloth"),
+    note("mentioned-low", "Media", "unrelated press"),
+    note("similar", "Venture Capital", "venture fund founders operators"),
+    note("draft", "Venture Capital", "venture fund founders", { published: false }),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3, {
+    overrides: {
+      self: ["pinned-first", "missing-slug", "self", "pinned-last", "pinned-first"],
+    },
+    mentions: {
+      self: [
+        { slug: "mentioned-low", count: 1 },
+        { slug: "mentioned-high", count: 4 },
+        { slug: "pinned-first", count: 9 },
+        { slug: "draft", count: 8 },
+        { slug: "not-an-episode", count: 3 },
+      ],
+    },
+  });
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["pinned-first", "pinned-last", "mentioned-high"]
+  );
+});
+
+test("a missing or partial mentions entry falls through to similarity", () => {
+  const episodes = [
+    note("self", "Jewelry", "heirloom gold rings"),
+    note("close", "Apparel", "heirloom gold rings"),
+    note("other", "Food & Beverage", "sourdough bakery"),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3, {
+    overrides: {},
+    mentions: { "someone-else": [{ slug: "other", count: 5 }] },
+  });
+  assert.equal(related[0].slug, "close");
+  assert.equal(related.some((episode) => episode.slug === "self"), false);
+});
+
+test("incoming mentions count, and an equal count prefers the outgoing mention", () => {
+  const episodes = [
+    note("self", "Food & Beverage", "alpha"),
+    note("outgoing-one", "Media", "beta"),
+    note("incoming-one", "Media", "gamma"),
+    note("incoming-many", "Apparel", "delta"),
+    note("both", "Logistics", "epsilon"),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3, {
+    mentions: {
+      self: [
+        { slug: "outgoing-one", count: 1 },
+        { slug: "both", count: 1 },
+      ],
+      "incoming-one": [{ slug: "self", count: 1 }],
+      "incoming-many": [{ slug: "self", count: 3 }],
+      both: [{ slug: "self", count: 1 }],
+    },
+  });
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["incoming-many", "both", "outgoing-one"]
+  );
+});
+
+test("equal mention counts are a stable slug order", () => {
+  const episodes = [
+    note("self", "Food & Beverage", "alpha"),
+    note("b", "Media", "beta"),
+    note("a", "Media", "gamma"),
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 2, {
+    mentions: {
+      self: [
+        { slug: "b", count: 2 },
+        { slug: "a", count: 2 },
+      ],
+    },
+  });
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["a", "b"]
+  );
+});
+
+test("equal similarity is a stable slug order", () => {
+  const episodes = [
+    note("self", "Food & Beverage", "alpha beta gamma"),
+    note("b", "Food & Beverage", "alpha beta gamma"),
+    note("a", "Food & Beverage", "alpha beta gamma"),
+  ];
+  const once = relatedEpisodes(episodes, episodes[0], 2).map((episode) => episode.slug);
+  const twice = relatedEpisodes(episodes, episodes[0], 2).map((episode) => episode.slug);
+  assert.deepEqual(once, ["a", "b"]);
+  assert.deepEqual(twice, once);
+});
+
+test("great circle pins are seeded and mentions are optional", () => {
+  const overrides = require("../data/related-overrides.json");
+  assert.deepEqual(overrides["great-circle-ventures-jacob-afriat"], [
+    "springdale-ventures-dan-graham-mollye-santulli",
+    "one-trick-pony-lucy-dana",
+    "alecs-ice-cream-alec-jaffe",
+  ]);
+
+  const fs = require("fs");
+  const os = require("os");
+  const path = require("path");
+  const { loadRelatedSources } = require("../src/lib/relatedSources");
+  const sources = loadRelatedSources();
+  assert.deepEqual(
+    sources.overrides["great-circle-ventures-jacob-afriat"],
+    overrides["great-circle-ventures-jacob-afriat"]
+  );
+
+  const missing = loadRelatedSources({
+    mentions: path.join(os.tmpdir(), "uepod-mentions-missing.json"),
+  });
+  assert.deepEqual(missing.mentions, {});
+
+  const brokenPath = path.join(os.tmpdir(), "uepod-mentions-broken.json");
+  fs.writeFileSync(brokenPath, "{");
+  const broken = loadRelatedSources({ mentions: brokenPath });
+  assert.deepEqual(broken.mentions, {});
+  fs.unlinkSync(brokenPath);
+});
+
+test("committed mentions keep both directions and pins still lead", () => {
+  const mentions = require("../data/episode-mentions.json");
+  const overrides = require("../data/related-overrides.json");
+  let pairs = 0;
+  for (const rows of Object.values(mentions)) {
+    assert.equal(Array.isArray(rows), true);
+    pairs += rows.length;
+  }
+  assert.equal(pairs, 24);
+
+  const catalog = [
+    note("great-circle-ventures-jacob-afriat", "Venture Capital", "venture fund"),
+    note("springdale-ventures-dan-graham-mollye-santulli", "Venture Capital", "venture fund"),
+    note("one-trick-pony-lucy-dana", "Food & Beverage", "snack bar"),
+    note("alecs-ice-cream-alec-jaffe", "Food & Beverage", "ice cream"),
+    note("honey-dept-noah-phillips", "Food & Beverage", "honey"),
+    note("laurels-coffee-isabel-washington", "Food & Beverage", "coffee"),
+    note("lotties-meats-chelsey-cassie-maschhoff", "Food & Beverage", "meat"),
+    note("sourmilk-kiki-couchman-elan-halpern", "Food & Beverage", "milk"),
+  ];
+  const bySlug = Object.fromEntries(catalog.map((episode) => [episode.slug, episode]));
+
+  assert.deepEqual(
+    relatedEpisodes(catalog, bySlug["great-circle-ventures-jacob-afriat"], 3, {
+      overrides,
+      mentions,
+    }).map((episode) => episode.slug),
+    overrides["great-circle-ventures-jacob-afriat"]
+  );
+
+  assert.deepEqual(
+    relatedEpisodes(catalog, bySlug["one-trick-pony-lucy-dana"], 3, {
+      mentions,
+    }).map((episode) => episode.slug),
+    [
+      "honey-dept-noah-phillips",
+      "great-circle-ventures-jacob-afriat",
+      "laurels-coffee-isabel-washington",
+    ]
+  );
+});
+
+test("linkedin profile urls are kept and placeholders are dropped", () => {
+  assert.equal(
+    linkedinProfileUrl("https://www.linkedin.com/in/jane-doe/"),
+    "https://www.linkedin.com/in/jane-doe/"
+  );
+  assert.equal(linkedinProfileUrl("https://www.linkedin.com/feed/#"), null);
+  assert.equal(linkedinProfileUrl("javascript:alert(1)"), null);
+  assert.equal(linkedinProfileUrl("https://example.com/in/jane"), null);
+
+  const blocks = htmlToBlocks(
+    '<p>I sit down with <a href="https://www.linkedin.com/in/jane-doe"><strong>Jane Doe</strong></a>, founder of <a href="https://example.com">Example</a>.</p><p>Second paragraph.</p>'
+  );
+  assert.equal(blocks[0][1].href, "https://www.linkedin.com/in/jane-doe");
+  assert.equal(blocks[0][1].text, "Jane Doe");
+  assert.equal(blocks[0].some((part) => part.href && part.href.includes("example.com")), false);
+  assert.equal(blocksToParagraphs(blocks)[1], "Second paragraph.");
+
+  const fromSheet = linkGuestName(
+    htmlToBlocks("<p>I sit down with Jane Doe, founder.</p>"),
+    "Jane Doe",
+    "https://www.linkedin.com/in/jane-doe"
+  );
+  assert.equal(fromSheet[0][1].href, "https://www.linkedin.com/in/jane-doe");
+  assert.equal(fromSheet[0][1].text, "Jane Doe");
+
+  const untouched = linkGuestName(blocks, "Jane Doe", "https://www.linkedin.com/in/other");
+  assert.equal(untouched[0][1].href, "https://www.linkedin.com/in/jane-doe");
 });
 
 test("JSON-LD uses the full-color artwork, guest, and series", () => {

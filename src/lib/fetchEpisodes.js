@@ -8,7 +8,11 @@ const {
   parseTakeaways,
   resolveEpisodeImage,
   asImageUrl,
-  htmlToParagraphs,
+  htmlToBlocks,
+  blocksToParagraphs,
+  linkedinProfileUrl,
+  linkedinFromBlocks,
+  linkGuestName,
   toIsoDuration,
 } = require("./episodePage");
 
@@ -19,7 +23,7 @@ const SPOTIFY_SHOW = "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F";
 const APPLE_SHOW = "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735";
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@TheUnitEconomicsPodcast";
 
-const CACHE_PATH = path.join(os.tmpdir(), "uepod-episodes-v1.json");
+const CACHE_PATH = path.join(os.tmpdir(), "uepod-episodes-v2.json");
 const LOCK_PATH = `${CACHE_PATH}.lock`;
 const CACHE_MS = 60 * 1000;
 
@@ -160,12 +164,17 @@ function toPublicEpisode(episode) {
 }
 
 function sheetOnlyEpisode(slug, row) {
+  const guest = row.guest || "";
+  const linkedin = linkedinProfileUrl(row.linkedin);
+  const descriptionBlocks = row.desc
+    ? linkGuestName([[{ text: row.desc }]], guest, linkedin)
+    : [];
   return {
     id: null,
     title: row.title || row.brand || slug,
     slug,
     brand: row.brand || row.title || slug,
-    guest: row.guest || "",
+    guest,
     desc: row.desc || "",
     category: row.category || "",
     duration: "",
@@ -177,11 +186,13 @@ function sheetOnlyEpisode(slug, row) {
     apple: row.apple || null,
     youtube: row.youtube || null,
     website: row.website || null,
+    linkedin,
     image: null,
     published: false,
     audioUrl: null,
     audioType: null,
-    descriptionParagraphs: [],
+    descriptionBlocks,
+    descriptionParagraphs: blocksToParagraphs(descriptionBlocks),
     takeaways: parseTakeaways(row.takeaways),
   };
 }
@@ -281,13 +292,18 @@ async function actuallyLoad() {
       const { brand: rssBrand, guest: rssGuest } = extractBrand(item.title || "");
       const rawDuration = item.duration || item.itunes?.duration || "";
       const { audioUrl, audioType } = audioFromItem(item);
+      const guest = override?.guest || rssGuest;
+      const rawBlocks = htmlToBlocks(item.content || item.contentSnippet || "");
+      const linkedin =
+        linkedinProfileUrl(override?.linkedin) || linkedinFromBlocks(rawBlocks);
+      const descriptionBlocks = linkGuestName(rawBlocks, guest, linkedin);
 
       return {
         id: feed.items.length - index,
         title: item.title || "",
         slug,
         brand: override?.brand || rssBrand,
-        guest: override?.guest || rssGuest,
+        guest,
         desc:
           override?.desc ||
           truncateDesc(item.contentSnippet || item.content || ""),
@@ -301,13 +317,13 @@ async function actuallyLoad() {
         apple: override?.apple || APPLE_SHOW,
         youtube: override?.youtube || YOUTUBE_CHANNEL,
         website: override?.website || null,
+        linkedin,
         image: resolveEpisodeImage(item, showImage),
         published: true,
         audioUrl,
         audioType,
-        descriptionParagraphs: htmlToParagraphs(
-          item.content || item.contentSnippet || ""
-        ),
+        descriptionBlocks,
+        descriptionParagraphs: blocksToParagraphs(descriptionBlocks),
         takeaways: parseTakeaways(override?.takeaways),
       };
     })
