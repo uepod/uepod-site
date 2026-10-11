@@ -863,6 +863,21 @@ export default function Home({ episodes, posts }) {
                       )
                     }
                   />
+
+                  <PlatformButton
+                    href={SOCIAL_LINKS.substack.url}
+                    hoverColor="#FF6719"
+                    icon={SubstackIcon}
+                    label="Substack"
+                    onClick={() =>
+                      trackEvent(
+                        "hero_platform_click",
+                        {
+                          platform: "substack",
+                        }
+                      )
+                    }
+                  />
                 </div>
               </div>
 
@@ -918,6 +933,22 @@ export default function Home({ episodes, posts }) {
                       index={i}
                     />
                   ))}
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    marginTop: "28px",
+                  }}
+                >
+                  <NavButton
+                    label="View all →"
+                    active={false}
+                    onClick={() =>
+                      navigate("episodes")
+                    }
+                  />
+                </div>
               </div>
             </div>
           )}
