@@ -46,6 +46,8 @@ A new RSS item is enough for a page. Sheet fields (description, guest, links, ca
 
 Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
 
+Related episodes prefer the same category, newest first. When that category has fewer than three other published episodes, the page fills the rest with the nearest episodes by release date. The current episode is never listed.
+
 The Listen section is a Spotify / Apple Podcasts / YouTube tab switcher built from the episode links in the sheet. Spotify uses the dark embed theme. Only the selected player is loaded, and it loads lazily. A missing episode link omits that tab. There is no second row of outbound buttons. Substack stays in the site footer.
 
 ## Key takeaways

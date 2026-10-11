@@ -252,22 +252,62 @@ function artworkAlt(episode) {
   return "Unit Economics episode artwork";
 }
 
+function episodeTime(episode) {
+  const time = Date.parse(episode?.isoDate || episode?.rawDate || "");
+  return Number.isFinite(time) ? time : null;
+}
+
 /**
- * Up to three other published episodes in the same category.
- * The catalog is newest-first, so this keeps the most recent matches.
+ * Two or three other published episodes. Same-category matches come first,
+ * in catalog order (newest first). If that is fewer than `limit`, the rest
+ * are the nearest other episodes by release date. The current episode is
+ * never included, and a slug is never repeated.
  */
 function relatedEpisodes(episodes, current, limit = 3) {
-  if (!current?.category || !Array.isArray(episodes)) return [];
-  return episodes
-    .filter(
-      (episode) =>
-        episode &&
-        episode.published !== false &&
-        episode.slug &&
-        episode.slug !== current.slug &&
-        episode.category === current.category
-    )
-    .slice(0, limit);
+  if (!current || !Array.isArray(episodes) || limit < 1) return [];
+
+  const others = episodes.filter(
+    (episode) =>
+      episode &&
+      episode.published !== false &&
+      episode.slug &&
+      episode.slug !== current.slug
+  );
+
+  const picked = [];
+  const seen = new Set();
+
+  function take(episode) {
+    if (!episode?.slug || seen.has(episode.slug) || picked.length >= limit) return;
+    seen.add(episode.slug);
+    picked.push(episode);
+  }
+
+  if (current.category) {
+    for (const episode of others) {
+      if (episode.category === current.category) take(episode);
+    }
+  }
+
+  const currentTime = episodeTime(current);
+  const fill = others
+    .filter((episode) => !seen.has(episode.slug))
+    .map((episode, index) => ({
+      episode,
+      index,
+      time: episodeTime(episode),
+    }))
+    .sort((a, b) => {
+      if (currentTime == null) return a.index - b.index;
+      const distanceA = a.time == null ? Infinity : Math.abs(a.time - currentTime);
+      const distanceB = b.time == null ? Infinity : Math.abs(b.time - currentTime);
+      if (distanceA !== distanceB) return distanceA - distanceB;
+      if (a.time != null && b.time != null && a.time !== b.time) return b.time - a.time;
+      return a.index - b.index;
+    });
+
+  for (const item of fill) take(item.episode);
+  return picked;
 }
 
 function pageTitle(episode) {

@@ -150,6 +150,68 @@ test("related episodes are the same category, excluding the current one", () => 
   );
 });
 
+test("a unique category is filled with the nearest episodes by date", () => {
+  const episodes = [
+    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-02-05T11:00:00.000Z" },
+    { slug: "far", category: "Food", published: true, isoDate: "2025-01-01T00:00:00.000Z" },
+    { slug: "before", category: "Food", published: true, isoDate: "2026-02-01T11:00:00.000Z" },
+    { slug: "after", category: "Media", published: true, isoDate: "2026-02-10T11:00:00.000Z" },
+    { slug: "closer-before", category: "Art", published: true, isoDate: "2026-02-04T11:00:00.000Z" },
+    { slug: "draft", category: "Jewelry", published: false, isoDate: "2026-02-06T11:00:00.000Z" },
+    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-02-05T11:00:00.000Z" },
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["closer-before", "before", "after"]
+  );
+  assert.equal(related.some((episode) => episode.slug === "self"), false);
+  assert.equal(new Set(related.map((episode) => episode.slug)).size, 3);
+});
+
+test("same-category matches stay first and the nearest dates fill the rest", () => {
+  const episodes = [
+    { slug: "same-new", category: "Apparel", published: true, isoDate: "2026-08-01T00:00:00.000Z" },
+    { slug: "self", category: "Apparel", published: true, isoDate: "2026-06-01T00:00:00.000Z" },
+    { slug: "near", category: "Food", published: true, isoDate: "2026-06-02T00:00:00.000Z" },
+    { slug: "tie-older", category: "Media", published: true, isoDate: "2026-05-28T00:00:00.000Z" },
+    { slug: "tie-newer", category: "Art", published: true, isoDate: "2026-06-05T00:00:00.000Z" },
+    { slug: "same-old", category: "Apparel", published: true, isoDate: "2025-01-01T00:00:00.000Z" },
+  ];
+  const related = relatedEpisodes(episodes, episodes[1], 3);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["same-new", "same-old", "near"]
+  );
+});
+
+test("an equal date distance prefers the newer episode", () => {
+  const episodes = [
+    { slug: "self", category: "Jewelry", published: true, isoDate: "2026-06-05T00:00:00.000Z" },
+    { slug: "older", category: "Food", published: true, isoDate: "2026-06-01T00:00:00.000Z" },
+    { slug: "newer", category: "Media", published: true, isoDate: "2026-06-09T00:00:00.000Z" },
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 2);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["newer", "older"]
+  );
+});
+
+test("a blank category still gets the nearest published episodes", () => {
+  const episodes = [
+    { slug: "self", category: "", published: true, isoDate: "2026-03-01T00:00:00.000Z" },
+    { slug: "near", category: "Food", published: true, isoDate: "2026-03-02T00:00:00.000Z" },
+    { slug: "next", category: "Media", published: true, isoDate: "2026-02-20T00:00:00.000Z" },
+    { slug: "draft", category: "Food", published: false, isoDate: "2026-03-01T00:00:00.000Z" },
+  ];
+  const related = relatedEpisodes(episodes, episodes[0], 3);
+  assert.deepEqual(
+    related.map((episode) => episode.slug),
+    ["near", "next"]
+  );
+});
+
 test("JSON-LD uses the full-color artwork, guest, and series", () => {
   const image = "https://cdn.example/mikey.jpg";
   const episode = {
