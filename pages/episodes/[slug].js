@@ -10,6 +10,7 @@ import {
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
 import {
   SUBSTACK_URL,
+  listenOptions,
   normalizeWebsite,
   websiteLabel,
   formatEpisodeNumber,
@@ -61,6 +62,72 @@ function PlatformButton({ href, hoverColor, icon: Icon, label, onClick }) {
       <Icon /> {label}
     </a>
   );
+}
+
+const EMBED_ALLOW =
+  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+const YOUTUBE_ALLOW =
+  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+function ListenEmbed({ option }) {
+  return (
+    <div className={option.video ? "listen-frame listen-frame-video" : "listen-frame"}>
+      <iframe
+        src={option.src}
+        title={option.title}
+        height={option.video ? undefined : option.height}
+        allow={option.video ? YOUTUBE_ALLOW : EMBED_ALLOW}
+        sandbox={option.sandbox}
+        allowFullScreen
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
+function ListenTabs({ options }) {
+  const [active, setActive] = useState(options[0].key);
+  const current = options.find((option) => option.key === active) || options[0];
+
+  return (
+    <section className="listen-section">
+      <h2>Listen</h2>
+      {options.length > 1 ? (
+        <div className="listen-tabs" role="tablist" aria-label="Listen">
+          {options.map((option) => {
+            const selected = option.key === current.key;
+            return (
+              <button
+                key={option.key}
+                type="button"
+                role="tab"
+                id={`listen-tab-${option.key}`}
+                aria-selected={selected}
+                aria-controls="listen-panel"
+                className="listen-tab"
+                onClick={() => setActive(option.key)}
+              >
+                {option.label}
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
+      <div
+        role="tabpanel"
+        id="listen-panel"
+        aria-labelledby={`listen-tab-${current.key}`}
+      >
+        <ListenEmbed key={current.src} option={current} />
+      </div>
+    </section>
+  );
+}
+
+function ListenSection({ episode }) {
+  const options = listenOptions(episode);
+  if (!options.length) return null;
+  return <ListenTabs options={options} />;
 }
 
 function RelatedRow({ episode }) {
@@ -355,12 +422,15 @@ export default function EpisodePage({ episode, related }) {
             </div>
           ) : null}
 
+          <ListenSection episode={episode} />
+
           <div
             className="platform-buttons"
             style={{
               display: "flex",
-              gap: "16px",
-              marginTop: "48px",
+              gap: "12px",
+              marginTop: "28px",
+              flexWrap: "wrap",
             }}
           >
             {buttons.map((button) => (

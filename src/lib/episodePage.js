@@ -111,6 +111,113 @@ function toIsoDuration(dur) {
   return iso;
 }
 
+function youtubeVideoId(url) {
+  if (!url || typeof url !== "string") return null;
+  let parsed;
+  try {
+    parsed = new URL(url.trim());
+  } catch {
+    return null;
+  }
+  const host = parsed.hostname.replace(/^www\./, "");
+  if (host === "youtu.be") {
+    const id = parsed.pathname.split("/").filter(Boolean)[0];
+    return id || null;
+  }
+  if (host === "youtube.com" || host === "m.youtube.com" || host === "music.youtube.com") {
+    if (parsed.pathname === "/watch") return parsed.searchParams.get("v") || null;
+    const match = parsed.pathname.match(/\/(?:embed|shorts|live|v)\/([^/?#]+)/);
+    return match ? match[1] : null;
+  }
+  return null;
+}
+
+function spotifyEpisodeId(url) {
+  if (!url || typeof url !== "string") return null;
+  let parsed;
+  try {
+    parsed = new URL(url.trim());
+  } catch {
+    return null;
+  }
+  const host = parsed.hostname.replace(/^www\./, "");
+  if (host !== "open.spotify.com") return null;
+  const match = parsed.pathname.match(/\/episode\/([a-zA-Z0-9]+)/);
+  return match ? match[1] : null;
+}
+
+/**
+ * Apple episode links look like
+ * https://podcasts.apple.com/us/podcast/unit-economics/id1856362735?i=1000793637451
+ * The official player is the same path on embed.podcasts.apple.com.
+ * Show-only URLs (no `i`) are not an episode embed.
+ */
+function appleEmbedSrc(url) {
+  if (!url || typeof url !== "string") return null;
+  let parsed;
+  try {
+    parsed = new URL(url.trim());
+  } catch {
+    return null;
+  }
+  const host = parsed.hostname.replace(/^www\./, "");
+  if (host !== "podcasts.apple.com" && host !== "embed.podcasts.apple.com") {
+    return null;
+  }
+  if (!parsed.searchParams.get("i")) return null;
+  parsed.protocol = "https:";
+  parsed.hostname = "embed.podcasts.apple.com";
+  return parsed.toString();
+}
+
+/**
+ * Official episode embeds for the Listen section, in site order.
+ * A platform is omitted when the sheet link is missing or is only the
+ * show/channel fallback.
+ */
+function listenOptions(episode) {
+  if (!episode) return [];
+  const label = episode.brand || episode.title || "this episode";
+  const options = [];
+
+  const spotifyId = spotifyEpisodeId(episode.spotify);
+  if (spotifyId) {
+    options.push({
+      key: "spotify",
+      label: "Spotify",
+      src: `https://open.spotify.com/embed/episode/${spotifyId}?utm_source=generator&theme=0`,
+      title: `${label} on Spotify`,
+      height: 152,
+    });
+  }
+
+  const appleSrc = appleEmbedSrc(episode.apple);
+  if (appleSrc) {
+    options.push({
+      key: "apple",
+      label: "Apple Podcasts",
+      src: appleSrc,
+      title: `${label} on Apple Podcasts`,
+      height: 175,
+      sandbox:
+        "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation",
+    });
+  }
+
+  const videoId = youtubeVideoId(episode.youtube);
+  if (videoId) {
+    options.push({
+      key: "youtube",
+      label: "YouTube",
+      src: `https://www.youtube-nocookie.com/embed/${videoId}`,
+      title: `${label} on YouTube`,
+      video: true,
+    });
+  }
+
+  return options;
+}
+
 function normalizeWebsite(url) {
   if (!url || typeof url !== "string") return null;
   const trimmed = url.trim();
@@ -270,6 +377,10 @@ module.exports = {
   resolveEpisodeImage,
   htmlToParagraphs,
   toIsoDuration,
+  youtubeVideoId,
+  spotifyEpisodeId,
+  appleEmbedSrc,
+  listenOptions,
   normalizeWebsite,
   websiteLabel,
   formatEpisodeNumber,
