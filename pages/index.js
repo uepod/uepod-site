@@ -1,7 +1,41 @@
 import { useState, useEffect, useRef } from "react";
+import { flushSync } from "react-dom";
 import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 import { fetchPosts } from "../src/lib/fetchPosts";
+
+const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
+
+function sectionFromLocation() {
+  const hash = window.location.hash.replace("#", "");
+  return SECTIONS.includes(hash) ? hash : "home";
+}
+
+function currentHistoryUrl() {
+  return (
+    window.location.pathname +
+    window.location.search +
+    window.location.hash
+  );
+}
+
+function stateWithScroll(scrollY) {
+  const prev =
+    history.state && typeof history.state === "object"
+      ? history.state
+      : {};
+  return { ...prev, scrollY };
+}
+
+function scrollPageTo(content, y) {
+  if (content) {
+    const previous = content.style.scrollBehavior;
+    content.style.scrollBehavior = "auto";
+    content.scrollTop = 0;
+    content.style.scrollBehavior = previous;
+  }
+  window.scrollTo(0, y);
+}
 
 /* ===== GA4 EVENT HELPER ===== */
 function trackEvent(eventName, params = {}) {
@@ -538,9 +572,69 @@ export default function Home({ episodes, posts }) {
 
   // Read hash on mount to determine initial section (no flicker)
   useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    const valid = ["home", "episodes", "posts", "about", "contact"];
-    setSection(hash && valid.includes(hash) ? hash : "home");
+    setSection(sectionFromLocation());
+  }, []);
+
+  // Back/forward. pushState does not emit popstate, so this only runs
+  // for browser history traversal. Restore the scroll position saved on
+  // that history entry after the section has rendered.
+  useEffect(() => {
+    const onPopState = () => {
+      const next = sectionFromLocation();
+      const saved =
+        history.state && typeof history.state.scrollY === "number"
+          ? history.state.scrollY
+          : 0;
+
+      document.documentElement.style.overflowAnchor = "none";
+
+      flushSync(() => {
+        setSection(next);
+        if (next !== "episodes") {
+          setFilter("All");
+          setSearch("");
+        }
+        setMenuOpen(false);
+      });
+
+      scrollPageTo(contentRef.current, saved);
+      requestAnimationFrame(() => {
+        scrollPageTo(contentRef.current, saved);
+        document.documentElement.style.overflowAnchor = "";
+      });
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  // Keep the current history entry's scroll position current so Forward
+  // returns to where the user left that view, not only where it opened.
+  useEffect(() => {
+    let frame = 0;
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const prev =
+          history.state && typeof history.state === "object"
+            ? history.state
+            : {};
+        if (prev.scrollY === window.scrollY) return;
+        history.replaceState(
+          { ...prev, scrollY: window.scrollY },
+          "",
+          currentHistoryUrl()
+        );
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -554,10 +648,10 @@ export default function Home({ episodes, posts }) {
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Re-enable scroll anchoring after a section change. It is turned off
+  // in navigate() so the swap itself cannot move the viewport.
   useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.scrollTop = 0;
-    }
+    document.documentElement.style.overflowAnchor = "";
   }, [section]);
 
   // Lock body scroll when mobile menu is open
@@ -605,6 +699,29 @@ export default function Home({ episodes, posts }) {
   };
 
   const navigate = (s) => {
+    if (s !== section) {
+      // replaceState rewrites the current history entry, so Back skipped
+      // home and left the site. Snapshot this entry's scroll position,
+      // then push the next view so Back/Forward can return to it.
+      // Push before scrolling: the browser stores the scroll position
+      // we are leaving. The footer stays mounted across the section
+      // swap, and scroll anchoring would otherwise keep it on screen
+      // and open Listen at the bottom.
+      history.replaceState(
+        stateWithScroll(window.scrollY),
+        "",
+        currentHistoryUrl()
+      );
+      history.pushState(
+        stateWithScroll(0),
+        "",
+        s === "home" ? "/" : `/#${s}`
+      );
+
+      document.documentElement.style.overflowAnchor = "none";
+      scrollPageTo(contentRef.current, 0);
+    }
+
     setSection(s);
 
     trackEvent("nav_click", {
@@ -617,12 +734,6 @@ export default function Home({ episodes, posts }) {
     }
 
     setMenuOpen(false);
-
-    window.history.replaceState(
-      null,
-      "",
-      s === "home" ? "/" : `/#${s}`
-    );
   };
 
   // Don't render until we know which section to show
