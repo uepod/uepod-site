@@ -329,6 +329,48 @@ test("great circle pins are seeded and mentions are optional", () => {
   fs.unlinkSync(brokenPath);
 });
 
+test("committed mentions keep both directions and pins still lead", () => {
+  const mentions = require("../data/episode-mentions.json");
+  const overrides = require("../data/related-overrides.json");
+  let pairs = 0;
+  for (const rows of Object.values(mentions)) {
+    assert.equal(Array.isArray(rows), true);
+    pairs += rows.length;
+  }
+  assert.equal(pairs, 24);
+
+  const catalog = [
+    note("great-circle-ventures-jacob-afriat", "Venture Capital", "venture fund"),
+    note("springdale-ventures-dan-graham-mollye-santulli", "Venture Capital", "venture fund"),
+    note("one-trick-pony-lucy-dana", "Food & Beverage", "snack bar"),
+    note("alecs-ice-cream-alec-jaffe", "Food & Beverage", "ice cream"),
+    note("honey-dept-noah-phillips", "Food & Beverage", "honey"),
+    note("laurels-coffee-isabel-washington", "Food & Beverage", "coffee"),
+    note("lotties-meats-chelsey-cassie-maschhoff", "Food & Beverage", "meat"),
+    note("sourmilk-kiki-couchman-elan-halpern", "Food & Beverage", "milk"),
+  ];
+  const bySlug = Object.fromEntries(catalog.map((episode) => [episode.slug, episode]));
+
+  assert.deepEqual(
+    relatedEpisodes(catalog, bySlug["great-circle-ventures-jacob-afriat"], 3, {
+      overrides,
+      mentions,
+    }).map((episode) => episode.slug),
+    overrides["great-circle-ventures-jacob-afriat"]
+  );
+
+  assert.deepEqual(
+    relatedEpisodes(catalog, bySlug["one-trick-pony-lucy-dana"], 3, {
+      mentions,
+    }).map((episode) => episode.slug),
+    [
+      "honey-dept-noah-phillips",
+      "great-circle-ventures-jacob-afriat",
+      "laurels-coffee-isabel-washington",
+    ]
+  );
+});
+
 test("linkedin profile urls are kept and placeholders are dropped", () => {
   assert.equal(
     linkedinProfileUrl("https://www.linkedin.com/in/jane-doe/"),

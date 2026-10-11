@@ -68,7 +68,7 @@ To pin related episodes, add the episode’s slug and an ordered list of related
 
 The first slug is shown first. Edit the file and the page picks it up on the next regeneration. No other code change.
 
-`data/episode-mentions.json` is optional and can cover only some episodes. The shape is `{ "slug": [{ "slug": "other-episode", "count": 2 }] }`, meaning that episode’s transcript names the other one that many times. A missing file, unreadable file, or episode with no outgoing or incoming mentions skips that step, and similarity fills the remaining slots. Most episodes have no mentions, so similarity still decides those lists.
+`data/episode-mentions.json` is optional and can cover only some episodes. The shape is `{ "slug": [{ "slug": "other-episode", "count": 2 }] }`, meaning that episode’s transcript names the other one that many times. The file in the repo has 24 pairs. A missing file, unreadable file, or episode with no outgoing or incoming mentions skips that step, and similarity fills the remaining slots. Most episodes have no mentions, so similarity still decides those lists.
 
 ## Guest LinkedIn
 
