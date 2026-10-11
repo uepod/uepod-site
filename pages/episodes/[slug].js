@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
+import { loadRelatedSources } from "../../src/lib/relatedSources";
 import {
   listenOptions,
   normalizeWebsite,
@@ -443,7 +444,9 @@ export async function getStaticProps({ params }) {
     return { notFound: true, revalidate: REVALIDATE_SECONDS };
   }
 
-  const related = relatedEpisodes(episodes, episode, 3).map(slimEpisode);
+  const related = relatedEpisodes(episodes, episode, 3, loadRelatedSources()).map(
+    slimEpisode
+  );
 
   return {
     props: {

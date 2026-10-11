@@ -326,43 +326,135 @@ function cosine(tfA, tfB, idf) {
   return dot / Math.sqrt(normA * normB);
 }
 
+function publishedBySlug(episodes) {
+  const map = new Map();
+  if (!Array.isArray(episodes)) return map;
+  for (const episode of episodes) {
+    if (!episode || episode.published === false || !episode.slug) continue;
+    if (!map.has(episode.slug)) map.set(episode.slug, episode);
+  }
+  return map;
+}
+
+function overrideSlugs(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((slug) => typeof slug === "string" && slug.trim())
+    .map((slug) => slug.trim());
+}
+
+// Outgoing mentions (this episode names the other) outweigh incoming ones
+// (the other episode names this one) without letting a much larger incoming
+// count lose to a single outgoing mention.
+const OUTGOING_MENTION_WEIGHT = 10;
+const INCOMING_MENTION_WEIGHT = 9;
+
+function mentionRows(value) {
+  if (!Array.isArray(value)) return [];
+  const rows = [];
+  for (const item of value) {
+    if (!item || typeof item.slug !== "string" || !item.slug.trim()) continue;
+    const count = Number(item.count);
+    rows.push({
+      slug: item.slug.trim(),
+      count: Number.isFinite(count) ? Math.max(0, count) : 0,
+    });
+  }
+  return rows;
+}
+
 /**
- * Two or three other published episodes. Same-category candidates are ranked
- * by TF-IDF cosine similarity over title, brand, category, and description,
- * and they fill the list before any other category. Remaining slots are the
- * most similar episodes outside the category. Ties break on slug. The current
- * episode is never included, and a slug is never repeated.
- * Computed from the catalog already loaded at build or revalidation.
+ * Connections from data/episode-mentions.json are directional in the file.
+ * Ranking uses both directions: this episode's outgoing mentions, plus
+ * incoming mentions where another episode names this one. Weights are summed
+ * when both directions exist. Equal weights break on slug.
  */
-function relatedEpisodes(episodes, current, limit = 3) {
+function mentionSlugs(mentions, slug) {
+  if (!slug || !mentions || typeof mentions !== "object" || Array.isArray(mentions)) return [];
+  const scores = new Map();
+
+  function add(other, weight) {
+    if (!other || other === slug) return;
+    scores.set(other, (scores.get(other) || 0) + weight);
+  }
+
+  for (const row of mentionRows(mentions[slug])) {
+    add(row.slug, row.count * OUTGOING_MENTION_WEIGHT);
+  }
+
+  for (const [otherSlug, rows] of Object.entries(mentions)) {
+    if (otherSlug === slug) continue;
+    for (const row of mentionRows(rows)) {
+      if (row.slug !== slug) continue;
+      add(otherSlug, row.count * INCOMING_MENTION_WEIGHT);
+    }
+  }
+
+  return [...scores.entries()]
+    .sort((a, b) => {
+      if (a[1] !== b[1]) return b[1] - a[1];
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([other]) => other);
+}
+
+/**
+ * Three other published episodes, in this order:
+ * 1. Slugs pinned in data/related-overrides.json, in file order.
+ * 2. Transcript mentions from data/episode-mentions.json. Outgoing mentions
+ *    and incoming mentions (another episode names this one) both count.
+ *    Outgoing mentions weigh slightly more. Highest weight first.
+ * 3. TF-IDF similarity, same category before other categories.
+ * The current episode is never included, and a slug is never repeated.
+ * Unknown slugs and a missing mentions file are skipped.
+ * Similarity is computed from the catalog already loaded at build or revalidation.
+ */
+function relatedEpisodes(episodes, current, limit = 3, sources = {}) {
   if (!current || !Array.isArray(episodes) || limit < 1) return [];
 
-  const published = episodes.filter(
-    (episode) => episode && episode.published !== false && episode.slug
-  );
+  const bySlug = publishedBySlug(episodes);
+  const published = [...bySlug.values()];
   const { rows, idf } = corpusVectors(published);
   const currentRow = rows.find((row) => row.episode.slug === current.slug);
   const currentTf = currentRow ? currentRow.tf : termFreq(episodeText(current));
 
   const ranked = [];
-  const seen = new Set();
+  const rankedSeen = new Set();
   for (const row of rows) {
-    if (row.episode.slug === current.slug || seen.has(row.episode.slug)) continue;
-    seen.add(row.episode.slug);
+    if (row.episode.slug === current.slug || rankedSeen.has(row.episode.slug)) continue;
+    rankedSeen.add(row.episode.slug);
     ranked.push({
-      episode: row.episode,
+      slug: row.episode.slug,
       same: Boolean(current.category) && row.episode.category === current.category,
       score: Math.round(cosine(currentTf, row.tf, idf) * 1e6) / 1e6,
     });
   }
-
   ranked.sort((a, b) => {
     if (a.same !== b.same) return a.same ? -1 : 1;
     if (a.score !== b.score) return b.score - a.score;
-    return a.episode.slug.localeCompare(b.episode.slug);
+    return a.slug.localeCompare(b.slug);
   });
 
-  return ranked.slice(0, limit).map((row) => row.episode);
+  const picked = [];
+  const seen = new Set();
+  if (current.slug) seen.add(current.slug);
+
+  function take(slug) {
+    if (!slug || seen.has(slug) || picked.length >= limit) return;
+    const episode = bySlug.get(slug);
+    if (!episode) return;
+    seen.add(slug);
+    picked.push(episode);
+  }
+
+  const slug = current.slug;
+  const overrides = sources.overrides && typeof sources.overrides === "object" ? sources.overrides : {};
+  const mentions = sources.mentions && typeof sources.mentions === "object" ? sources.mentions : {};
+  for (const pinned of overrideSlugs(overrides[slug])) take(pinned);
+  for (const mentioned of mentionSlugs(mentions, slug)) take(mentioned);
+  for (const row of ranked) take(row.slug);
+
+  return picked;
 }
 
 /**

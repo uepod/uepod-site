@@ -46,7 +46,29 @@ A new RSS item is enough for a page. Sheet fields (description, guest, links, ca
 
 Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
 
-Related episodes are the three published episodes most similar to this one. Similarity is a TF-IDF cosine over the title, brand, category, and description, computed when the page is built or revalidated. Episodes in the same category are ranked first. If that category has fewer than three, the rest come from the most similar episodes in other categories. The current episode is never listed.
+Each episode page shows three related episodes. They are chosen when the page is built or revalidated, in this order:
+
+1. Pins in `data/related-overrides.json`.
+2. Transcript mentions in `data/episode-mentions.json`, if that file is present. The file is directional (A names B). Ranking treats either direction as a connection: this episode’s outgoing mentions, plus incoming mentions where another episode names this one. Outgoing mentions weigh slightly more (10 vs 9 per count). When both directions exist, the weights are added.
+3. TF-IDF similarity over the title, brand, category, and description. Episodes in the same category come before other categories.
+
+The current episode is never listed, and a slug is never repeated. A slug that is not a published episode is skipped.
+
+To pin related episodes, add the episode’s slug and an ordered list of related slugs:
+
+```json
+{
+  "great-circle-ventures-jacob-afriat": [
+    "springdale-ventures-dan-graham-mollye-santulli",
+    "one-trick-pony-lucy-dana",
+    "alecs-ice-cream-alec-jaffe"
+  ]
+}
+```
+
+The first slug is shown first. Edit the file and the page picks it up on the next regeneration. No other code change.
+
+`data/episode-mentions.json` is optional and can cover only some episodes. The shape is `{ "slug": [{ "slug": "other-episode", "count": 2 }] }`, meaning that episode’s transcript names the other one that many times. A missing file, unreadable file, or episode with no outgoing or incoming mentions skips that step, and similarity fills the remaining slots. Most episodes have no mentions, so similarity still decides those lists.
 
 ## Guest LinkedIn
 
