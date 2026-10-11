@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 import { fetchPosts } from "../src/lib/fetchPosts";
@@ -528,9 +528,6 @@ export default function Home({ episodes, posts }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const contentRef = useRef(null);
   const searchTimerRef = useRef(null);
-  // Set only for a click-driven section change. Initial load and
-  // back/forward leave it false so the browser can restore scroll.
-  const scrollOnSectionChange = useRef(false);
 
   const categories = [
     "All",
@@ -559,24 +556,9 @@ export default function Home({ episodes, posts }) {
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // The window scrolls this page: the content pane grows with its
-  // contents, and the footer stays mounted under whichever section is
-  // showing. After a section swap the browser's scroll anchoring keeps
-  // that footer on screen, which lands a long page (Listen) at the
-  // bottom. Scroll to the top only for in-app clicks.
-  useLayoutEffect(() => {
-    if (!scrollOnSectionChange.current) return;
-    scrollOnSectionChange.current = false;
-
-    const content = contentRef.current;
-    if (content) {
-      const previous = content.style.scrollBehavior;
-      content.style.scrollBehavior = "auto";
-      content.scrollTop = 0;
-      content.style.scrollBehavior = previous;
-    }
-
-    window.scrollTo(0, 0);
+  // Re-enable scroll anchoring after a section change. It is turned off
+  // in navigate() so the swap itself cannot move the viewport.
+  useEffect(() => {
     document.documentElement.style.overflowAnchor = "";
   }, [section]);
 
@@ -626,8 +608,21 @@ export default function Home({ episodes, posts }) {
 
   const navigate = (s) => {
     if (s !== section) {
+      // The footer stays mounted while the section above it is replaced.
+      // Scroll anchoring would keep that footer on screen and open a long
+      // page (Listen) at the bottom. Pin the viewport to the top for this
+      // click only; back/forward scroll restoration stays on "auto".
       document.documentElement.style.overflowAnchor = "none";
-      scrollOnSectionChange.current = true;
+
+      const content = contentRef.current;
+      if (content) {
+        const previous = content.style.scrollBehavior;
+        content.style.scrollBehavior = "auto";
+        content.scrollTop = 0;
+        content.style.scrollBehavior = previous;
+      }
+
+      window.scrollTo(0, 0);
     }
 
     setSection(s);
