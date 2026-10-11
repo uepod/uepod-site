@@ -1,6 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+export default function MyDocument({ pathname }) {
+  // Episode pages and the 404 supply their own title, canonical, and social tags.
+  const omitDefaultSeo =
+    (pathname || "").startsWith("/episodes") || pathname === "/404";
+
   return (
     <Html lang="en">
       <Head>
@@ -26,10 +30,12 @@ export default function Document() {
           rel="stylesheet"
         />
 
-        <meta
-          name="description"
-          content="A podcast about how businesses actually work, featuring conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
-        />
+        {!omitDefaultSeo && (
+          <meta
+            name="description"
+            content="A podcast about how businesses actually work, featuring conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
+          />
+        )}
         <meta name="theme-color" content="#000000" />
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -44,33 +50,37 @@ export default function Document() {
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-        <link rel="canonical" href="https://uepod.com" />
+        {!omitDefaultSeo && (
+          <>
+            <link rel="canonical" href="https://uepod.com" />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Unit Economics — How businesses actually work."
-        />
-        <meta
-          property="og:description"
-          content="Conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
-        />
-        <meta property="og:url" content="https://uepod.com" />
-        <meta property="og:image" content="https://uepod.com/og-image.png" />
-        <meta property="og:site_name" content="Unit Economics" />
+            {/* Open Graph */}
+            <meta property="og:type" content="website" />
+            <meta
+              property="og:title"
+              content="Unit Economics — How businesses actually work."
+            />
+            <meta
+              property="og:description"
+              content="Conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
+            />
+            <meta property="og:url" content="https://uepod.com" />
+            <meta property="og:image" content="https://uepod.com/og-image.png" />
+            <meta property="og:site_name" content="Unit Economics" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Unit Economics — How businesses actually work."
-        />
-        <meta
-          name="twitter:description"
-          content="Conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
-        />
-        <meta name="twitter:image" content="https://uepod.com/og-image.png" />
+            {/* Twitter Card */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:title"
+              content="Unit Economics — How businesses actually work."
+            />
+            <meta
+              name="twitter:description"
+              content="Conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
+            />
+            <meta name="twitter:image" content="https://uepod.com/og-image.png" />
+          </>
+        )}
       </Head>
 
       <body>
@@ -80,3 +90,8 @@ export default function Document() {
     </Html>
   );
 }
+
+MyDocument.getInitialProps = async (ctx) => {
+  const initialProps = await Document.getInitialProps(ctx);
+  return { ...initialProps, pathname: ctx.pathname || "" };
+};
