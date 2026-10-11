@@ -199,9 +199,7 @@ function EpisodeCard({ ep, index }) {
           }}
         >
           <a
-            href={ep.spotify}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/episodes/${ep.slug}`}
             style={{
               color: "#fff",
               textDecoration: brandHovered ? "underline" : "none",
@@ -1536,7 +1534,8 @@ function FilterButton({ label, active, onClick }) {
 /**
  * Built at deploy time, then regenerated at most every 15 minutes on traffic
  * (ISR), plus on demand by the Vercel cron
- * (Vercel crons at 5am + 1pm Pacific -> /api/revalidate -> res.revalidate("/")).
+ * (Vercel crons at 5am + 1pm Pacific -> /api/revalidate, which revalidates
+ * `/` and every `/episodes/[slug]`).
  * `revalidate` is a safety net in case the cron ever fails silently.
  */
 export async function getStaticProps() {
