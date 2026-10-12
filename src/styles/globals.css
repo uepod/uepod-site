@@ -524,7 +524,7 @@ a {
 @media (min-width: 768px) {
   .listing-grid {
     row-gap: 72px;
-    margin-top: 72px;
+    margin-top: 56px;
   }
 }
 
