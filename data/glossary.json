@@ -4,9 +4,7 @@
     "aliases": [],
     "definition": "A 3PL (third-party logistics provider) is an outside company that stores a brand's inventory and packs and ships its orders.",
     "category": "operations",
-    "related": [
-      "DTC (direct-to-consumer)"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 41,
@@ -176,8 +174,7 @@
     "definition": "Building a company with the founders' own money and the cash the business earns, rather than raising money from outside investors.",
     "category": "fundraising",
     "related": [
-      "Venture capital",
-      "SBA loan (Small Business Administration loan)"
+      "Venture capital"
     ],
     "episodes": [
       {
@@ -326,8 +323,7 @@
     "definition": "How much cash a company uses up each month after accounting for the cash it brings in. This is often called net burn.",
     "category": "finance",
     "related": [
-      "Runway",
-      "Working capital"
+      "Runway"
     ],
     "episodes": [
       {
@@ -452,9 +448,7 @@
     "aliases": [],
     "definition": "A loosely defined term for products made with simple, recognizable ingredients, often without artificial additives. There is no single agreed-upon standard.",
     "category": "product",
-    "related": [
-      "CPG (consumer packaged goods)"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 9,
@@ -474,7 +468,7 @@
       "co-manufacturer",
       "contract manufacturer"
     ],
-    "definition": "A co-packer, also called a co-man (co-manufacturer), is an outside factory that makes and packages products for a brand under the brand's name.",
+    "definition": "A co-packer, also called a co-man (co-manufacturer), is an outside company that manufactures or packages products for a brand, allowing the brand to outsource some or all of its production.",
     "category": "operations",
     "related": [
       "MOQ (minimum order quantity)",
@@ -775,7 +769,6 @@
     "definition": "Handing out free samples in a store so shoppers can try a product.",
     "category": "marketing",
     "related": [
-      "Velocity",
       "Trade spend"
     ],
     "episodes": [
@@ -1132,9 +1125,7 @@
     "aliases": [],
     "definition": "A cycle where each part of the business feeds the next, so growth builds on itself over time.",
     "category": "marketing",
-    "related": [
-      "Moat"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 23,
@@ -1436,9 +1427,7 @@
     "aliases": [],
     "definition": "Something that makes a business hard for competitors to copy, such as a brand, a patent, or a cost advantage.",
     "category": "marketing",
-    "related": [
-      "Flywheel"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 35,
@@ -1633,9 +1622,7 @@
   },
   {
     "term": "Net terms",
-    "aliases": [
-      "payment terms"
-    ],
+    "aliases": [],
     "definition": "The number of days a buyer has to pay an invoice. Net 30 usually means payment is due 30 days after the invoice date, unless the agreement says otherwise.",
     "category": "finance",
     "related": [
@@ -1720,7 +1707,6 @@
   {
     "term": "Private label",
     "aliases": [
-      "white label",
       "store brand"
     ],
     "definition": "Products made by one company and sold under another company's brand name, such as a store's own brand.",
@@ -1918,9 +1904,7 @@
     ],
     "definition": "A projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
     "category": "finance",
-    "related": [
-      "Velocity"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 53,
@@ -1945,8 +1929,7 @@
     "definition": "How many months a company can keep operating before running out of cash, based on its current cash balance and burn rate.",
     "category": "fundraising",
     "related": [
-      "Burn rate",
-      "Working capital"
+      "Burn rate"
     ],
     "episodes": [
       {
@@ -1972,7 +1955,6 @@
     "definition": "An SBA loan is a small business loan that is partly guaranteed by the U.S. Small Business Administration, so the business repays it with interest without giving up ownership.",
     "category": "fundraising",
     "related": [
-      "Bootstrapping",
       "Working capital"
     ],
     "episodes": [
@@ -2088,9 +2070,7 @@
     "aliases": [],
     "definition": "Describes a product that can be stored at room temperature without refrigeration until it is opened.",
     "category": "product",
-    "related": [
-      "CPG (consumer packaged goods)"
-    ],
+    "related": [],
     "episodes": [
       {
         "number": 64,
@@ -2105,7 +2085,6 @@
     "definition": "A SKU (stock keeping unit) is a distinct version of a product, such as one flavor in one size, tracked separately in inventory with its own code.",
     "category": "operations",
     "related": [
-      "MOQ (minimum order quantity)",
       "Velocity"
     ],
     "episodes": [
@@ -2242,8 +2221,7 @@
     "definition": "SRP (suggested retail price), or MSRP (manufacturer's suggested retail price), is the shelf price a brand recommends that stores charge.",
     "category": "retail",
     "related": [
-      "TPR (temporary price reduction)",
-      "Gross margin"
+      "TPR (temporary price reduction)"
     ],
     "episodes": [
       {
@@ -2362,7 +2340,7 @@
   {
     "term": "Trade spend",
     "aliases": [],
-    "definition": "Money a brand spends to promote its products inside stores, such as price cuts, ads in store flyers, and display fees.",
+    "definition": "Money a brand spends on promotions and incentives through retailers and distributors, including price discounts, advertising, and in-store displays.",
     "category": "CPG/retail",
     "related": [
       "TPR (temporary price reduction)",
@@ -2453,7 +2431,7 @@
   {
     "term": "Unit economics",
     "aliases": [],
-    "definition": "The revenue and costs tied to one unit of a business, such as one product sold, one order fulfilled, or one customer served. It shows whether the business makes money on each sale as it grows.",
+    "definition": "The revenue and costs tied to one unit of a business, such as one product sold, one order fulfilled, or one customer served. It helps show whether the business can grow profitably.",
     "category": "finance",
     "related": [
       "Gross margin",
@@ -2566,8 +2544,7 @@
     "category": "CPG/retail",
     "related": [
       "Sell-through",
-      "Retail doors",
-      "Run rate"
+      "Retail doors"
     ],
     "episodes": [
       {
@@ -2647,7 +2624,7 @@
     "aliases": [
       "VC"
     ],
-    "definition": "Firms that invest pooled money from others into young companies in exchange for ownership.",
+    "definition": "Money invested in young, high-growth companies in exchange for ownership, usually by firms managing funds raised from outside investors.",
     "category": "fundraising",
     "related": [
       "Series A",

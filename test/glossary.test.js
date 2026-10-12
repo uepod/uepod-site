@@ -149,4 +149,9 @@ test("committed glossary has a term, definition, and episode links", () => {
   const ld = glossaryJsonLd(prepared.terms);
   assert.equal(ld["@type"], "DefinedTermSet");
   assert.equal(ld.hasDefinedTerm.length, prepared.terms.length);
+  for (const term of prepared.terms) {
+    const defined = ld.hasDefinedTerm.find((item) => item.name === term.term);
+    if (!term.related.length) assert.equal(defined.isRelatedTo, undefined);
+    else assert.equal(defined.isRelatedTo.length, term.related.length);
+  }
 });
