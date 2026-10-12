@@ -687,6 +687,34 @@ a {
   color: rgba(255, 255, 255, 0.78);
 }
 
+.glossary-related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-top: 8px;
+}
+
+.glossary-related span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.glossary-related a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.48);
+  text-decoration: none;
+}
+
+.glossary-related a:hover {
+  color: #fff;
+}
+
 .glossary-heard {
   display: flex;
   flex-wrap: wrap;

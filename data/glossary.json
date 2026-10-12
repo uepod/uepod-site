@@ -1,12 +1,12 @@
 [
   {
     "term": "3PL (third-party logistics)",
-    "aliases": [
-      "3PL",
-      "third-party logistics"
-    ],
+    "aliases": [],
     "definition": "A 3PL (third-party logistics provider) is an outside company that stores a brand's inventory and packs and ships its orders.",
     "category": "operations",
+    "related": [
+      "DTC (direct-to-consumer)"
+    ],
     "episodes": [
       {
         "number": 41,
@@ -67,12 +67,13 @@
   },
   {
     "term": "Angel investor",
-    "aliases": [
-      "angels",
-      "angel round"
-    ],
+    "aliases": [],
     "definition": "A person who invests their own money in very early companies, usually in exchange for a small share of ownership.",
     "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Seed round"
+    ],
     "episodes": [
       {
         "number": 59,
@@ -128,11 +129,12 @@
   },
   {
     "term": "B2B (business-to-business)",
-    "aliases": [
-      "business to business"
-    ],
+    "aliases": [],
     "definition": "B2B (business-to-business) means selling to other businesses rather than to individual consumers.",
     "category": "software",
+    "related": [
+      "DTC (direct-to-consumer)"
+    ],
     "episodes": [
       {
         "number": 50,
@@ -169,11 +171,14 @@
   {
     "term": "Bootstrapping",
     "aliases": [
-      "bootstrapped",
       "self-funded"
     ],
     "definition": "Building a company with the founders' own money and the cash the business earns, rather than raising money from outside investors.",
     "category": "fundraising",
+    "related": [
+      "Venture capital",
+      "SBA loan (Small Business Administration loan)"
+    ],
     "episodes": [
       {
         "number": 30,
@@ -290,6 +295,10 @@
     ],
     "definition": "An outside sales agent who pitches a brand's products to store buyers and is usually paid a commission on sales.",
     "category": "CPG/retail",
+    "related": [
+      "Category review",
+      "UNFI / KeHE"
+    ],
     "episodes": [
       {
         "number": 9,
@@ -314,8 +323,12 @@
       "cash burn",
       "burn"
     ],
-    "definition": "The amount of money a company loses each month when it spends more than it brings in.",
+    "definition": "How much cash a company uses up each month after accounting for the cash it brings in. This is often called net burn.",
     "category": "finance",
+    "related": [
+      "Runway",
+      "Working capital"
+    ],
     "episodes": [
       {
         "number": 14,
@@ -331,11 +344,14 @@
   },
   {
     "term": "CAC (customer acquisition cost)",
-    "aliases": [
-      "customer acquisition cost"
-    ],
+    "aliases": [],
     "definition": "CAC (customer acquisition cost) is the average amount a business spends on marketing and sales to win one new customer.",
     "category": "marketing",
+    "related": [
+      "LTV (lifetime value)",
+      "Payback period",
+      "Contribution margin"
+    ],
     "episodes": [
       {
         "number": 60,
@@ -361,6 +377,10 @@
     ],
     "definition": "A table showing who owns what share of a company, including founders, investors, and employees.",
     "category": "fundraising",
+    "related": [
+      "Equity",
+      "Dilution"
+    ],
     "episodes": [
       {
         "number": 3,
@@ -387,11 +407,14 @@
   {
     "term": "Category review",
     "aliases": [
-      "category review",
       "line review"
     ],
     "definition": "A scheduled period, often once a year, when a store chain's buyer decides which products to add to or drop from a section of the store.",
     "category": "retail",
+    "related": [
+      "Slotting fees",
+      "Broker"
+    ],
     "episodes": [
       {
         "number": 16,
@@ -412,6 +435,10 @@
     ],
     "definition": "The share of customers or subscribers who stop buying or cancel over a period of time.",
     "category": "marketing",
+    "related": [
+      "Cohort",
+      "LTV (lifetime value)"
+    ],
     "episodes": [
       {
         "number": 22,
@@ -422,11 +449,12 @@
   },
   {
     "term": "Clean label",
-    "aliases": [
-      "clean label"
-    ],
-    "definition": "A product made with a short list of simple, recognizable ingredients and no artificial additives.",
+    "aliases": [],
+    "definition": "A loosely defined term for products made with simple, recognizable ingredients, often without artificial additives. There is no single agreed-upon standard.",
     "category": "product",
+    "related": [
+      "CPG (consumer packaged goods)"
+    ],
     "episodes": [
       {
         "number": 9,
@@ -443,12 +471,16 @@
   {
     "term": "Co-packer (co-man)",
     "aliases": [
-      "co-man",
       "co-manufacturer",
       "contract manufacturer"
     ],
     "definition": "A co-packer, also called a co-man (co-manufacturer), is an outside factory that makes and packages products for a brand under the brand's name.",
     "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Private label",
+      "Lead time"
+    ],
     "episodes": [
       {
         "number": 49,
@@ -575,11 +607,15 @@
   {
     "term": "COGS (cost of goods sold)",
     "aliases": [
-      "cost of goods sold",
       "cost of goods"
     ],
-    "definition": "COGS (cost of goods sold) is the direct cost to make or buy the products a company sells, including ingredients, materials, packaging, and factory labor, but not rent, salaries, or marketing.",
+    "definition": "COGS (cost of goods sold) is the cost of making or buying the products a company sells, including materials, packaging, manufacturing labor, and factory overhead, but not marketing or general administrative expenses.",
     "category": "finance",
+    "related": [
+      "Gross margin",
+      "Contribution margin",
+      "Co-packer (co-man)"
+    ],
     "episodes": [
       {
         "number": 43,
@@ -635,11 +671,13 @@
   },
   {
     "term": "Cohort",
-    "aliases": [
-      "cohort"
-    ],
+    "aliases": [],
     "definition": "A group of customers who started buying in the same period, tracked together to see how their buying changes over time.",
     "category": "marketing",
+    "related": [
+      "Churn",
+      "LTV (lifetime value)"
+    ],
     "episodes": [
       {
         "number": 60,
@@ -658,6 +696,12 @@
     "aliases": [],
     "definition": "What is left from a sale after paying for the product and the costs that rise with each order, such as shipping, packaging, and payment fees. It shows how much each sale adds toward covering fixed costs and profit.",
     "category": "finance",
+    "related": [
+      "Gross margin",
+      "COGS (cost of goods sold)",
+      "Unit economics",
+      "CAC (customer acquisition cost)"
+    ],
     "episodes": [
       {
         "number": 59,
@@ -678,6 +722,9 @@
     ],
     "definition": "Mainstream supermarket chains such as Kroger or Albertsons, as opposed to natural or specialty stores.",
     "category": "CPG/retail",
+    "related": [
+      "Natural channel"
+    ],
     "episodes": [
       {
         "number": 4,
@@ -693,12 +740,14 @@
   },
   {
     "term": "CPG (consumer packaged goods)",
-    "aliases": [
-      "CPG",
-      "consumer packaged goods"
-    ],
+    "aliases": [],
     "definition": "CPG (consumer packaged goods) refers to products sold in packages to everyday shoppers, such as food, drinks, and personal care items.",
     "category": "industry",
+    "related": [
+      "Natural channel",
+      "Conventional grocery",
+      "Co-packer (co-man)"
+    ],
     "episodes": [
       {
         "number": 40,
@@ -720,12 +769,15 @@
   {
     "term": "Demo",
     "aliases": [
-      "demos",
       "sampling",
       "in-store demo"
     ],
     "definition": "Handing out free samples in a store so shoppers can try a product.",
     "category": "marketing",
+    "related": [
+      "Velocity",
+      "Trade spend"
+    ],
     "episodes": [
       {
         "number": 9,
@@ -796,11 +848,14 @@
   },
   {
     "term": "Dilution",
-    "aliases": [
-      "diluted"
-    ],
+    "aliases": [],
     "definition": "The drop in each existing owner's percentage of a company when new shares are issued, for example to new investors.",
     "category": "fundraising",
+    "related": [
+      "Equity",
+      "Cap table",
+      "Valuation"
+    ],
     "episodes": [
       {
         "number": 39,
@@ -812,12 +867,15 @@
   {
     "term": "DTC (direct-to-consumer)",
     "aliases": [
-      "D2C",
-      "direct-to-consumer",
-      "direct to consumer"
+      "D2C"
     ],
     "definition": "DTC (direct-to-consumer) means selling straight to customers, usually through the brand's own website, instead of through stores or other middlemen.",
     "category": "CPG/retail",
+    "related": [
+      "3PL (third-party logistics)",
+      "CAC (customer acquisition cost)",
+      "B2B (business-to-business)"
+    ],
     "episodes": [
       {
         "number": 41,
@@ -993,6 +1051,10 @@
     ],
     "definition": "The research an investor or buyer does on a company before investing in it or buying it.",
     "category": "finance",
+    "related": [
+      "Exit",
+      "Valuation"
+    ],
     "episodes": [
       {
         "number": 59,
@@ -1010,11 +1072,15 @@
     "term": "Equity",
     "aliases": [
       "ownership",
-      "shares",
       "stake"
     ],
     "definition": "Ownership in a company. Giving up equity means selling part of the business to investors or giving it to employees.",
     "category": "fundraising",
+    "related": [
+      "Cap table",
+      "Dilution",
+      "Valuation"
+    ],
     "episodes": [
       {
         "number": 3,
@@ -1035,11 +1101,14 @@
   },
   {
     "term": "Exit",
-    "aliases": [
-      "exit"
-    ],
-    "definition": "The sale of a company, or its listing on the stock market, which lets founders and investors turn their ownership into cash.",
+    "aliases": [],
+    "definition": "The sale or public listing of a company, which gives founders and investors a chance to sell their ownership for cash.",
     "category": "finance",
+    "related": [
+      "Valuation",
+      "Due diligence",
+      "Venture capital"
+    ],
     "episodes": [
       {
         "number": 60,
@@ -1063,6 +1132,9 @@
     "aliases": [],
     "definition": "A cycle where each part of the business feeds the next, so growth builds on itself over time.",
     "category": "marketing",
+    "related": [
+      "Moat"
+    ],
     "episodes": [
       {
         "number": 23,
@@ -1089,8 +1161,13 @@
   {
     "term": "Free fill",
     "aliases": [],
-    "definition": "Free product a brand gives a retailer to stock the shelves for a new item, a common form of slotting fee.",
+    "definition": "Free product a brand gives a retailer to stock its shelves when a new product launches, often in place of a cash slotting fee.",
     "category": "CPG/retail",
+    "related": [
+      "Slotting fees",
+      "Trade spend",
+      "TPR (temporary price reduction)"
+    ],
     "episodes": [
       {
         "number": 31,
@@ -1121,6 +1198,10 @@
     ],
     "definition": "An early round of money raised from people the founder already knows, usually before professional investors get involved.",
     "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Angel investor"
+    ],
     "episodes": [
       {
         "number": 15,
@@ -1179,8 +1260,12 @@
     "aliases": [
       "GTM"
     ],
-    "definition": "The plan for how a company will launch a product and reach its first customers, including who to sell to, where, and at what price.",
+    "definition": "The plan for how a business reaches and sells to customers, whether it is launching a new product or entering a new market, including who to sell to, where, and at what price.",
     "category": "marketing",
+    "related": [
+      "Product-market fit",
+      "TAM (total addressable market)"
+    ],
     "episodes": [
       {
         "number": 37,
@@ -1216,11 +1301,14 @@
   },
   {
     "term": "Gross margin",
-    "aliases": [
-      "gross profit"
-    ],
+    "aliases": [],
     "definition": "The share of each sale left over after paying the direct cost of making the product. If a $10 item costs $4 to make, the gross margin is 60%.",
     "category": "finance",
+    "related": [
+      "COGS (cost of goods sold)",
+      "Contribution margin",
+      "Unit economics"
+    ],
     "episodes": [
       {
         "number": 3,
@@ -1254,6 +1342,10 @@
     "aliases": [],
     "definition": "How long it takes from placing an order with a supplier to receiving the goods.",
     "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Co-packer (co-man)"
+    ],
     "episodes": [
       {
         "number": 20,
@@ -1295,12 +1387,17 @@
   {
     "term": "LTV (lifetime value)",
     "aliases": [
-      "lifetime value",
       "CLV",
       "customer lifetime value"
     ],
-    "definition": "LTV (lifetime value) is the total profit or revenue a business expects to earn from one customer over the whole time they keep buying, and it is often compared with CAC (customer acquisition cost).",
+    "definition": "LTV (lifetime value) is the revenue or gross profit a business expects to earn from a customer over their entire relationship. The profit-based version is the one usually compared with CAC (customer acquisition cost).",
     "category": "marketing",
+    "related": [
+      "CAC (customer acquisition cost)",
+      "Payback period",
+      "Churn",
+      "Cohort"
+    ],
     "episodes": [
       {
         "number": 41,
@@ -1339,6 +1436,9 @@
     "aliases": [],
     "definition": "Something that makes a business hard for competitors to copy, such as a brand, a patent, or a cost advantage.",
     "category": "marketing",
+    "related": [
+      "Flywheel"
+    ],
     "episodes": [
       {
         "number": 35,
@@ -1400,11 +1500,14 @@
   {
     "term": "MOQ (minimum order quantity)",
     "aliases": [
-      "minimum order quantity",
       "minimums"
     ],
     "definition": "MOQ (minimum order quantity) is the smallest order a factory or supplier will accept.",
     "category": "operations",
+    "related": [
+      "Co-packer (co-man)",
+      "Lead time"
+    ],
     "episodes": [
       {
         "number": 4,
@@ -1465,11 +1568,12 @@
   },
   {
     "term": "MVP (minimum viable product)",
-    "aliases": [
-      "minimum viable product"
-    ],
+    "aliases": [],
     "definition": "An MVP (minimum viable product) is a basic first version of a product, released to learn whether people want it before investing more.",
     "category": "software",
+    "related": [
+      "Product-market fit"
+    ],
     "episodes": [
       {
         "number": 28,
@@ -1500,6 +1604,10 @@
     ],
     "definition": "The group of grocery stores focused on natural and organic foods, such as Whole Foods, Sprouts, and independent co-ops.",
     "category": "CPG/retail",
+    "related": [
+      "Conventional grocery",
+      "UNFI / KeHE"
+    ],
     "episodes": [
       {
         "number": 6,
@@ -1526,12 +1634,13 @@
   {
     "term": "Net terms",
     "aliases": [
-      "net 30",
-      "net 60",
       "payment terms"
     ],
-    "definition": "How many days a buyer has to pay an invoice. Net 30 means payment is due 30 days after the goods are delivered.",
+    "definition": "The number of days a buyer has to pay an invoice. Net 30 usually means payment is due 30 days after the invoice date, unless the agreement says otherwise.",
     "category": "finance",
+    "related": [
+      "Working capital"
+    ],
     "episodes": [
       {
         "number": 5,
@@ -1557,6 +1666,10 @@
     ],
     "definition": "How long it takes for the money spent winning a customer, or on an investment, to be earned back.",
     "category": "finance",
+    "related": [
+      "CAC (customer acquisition cost)",
+      "LTV (lifetime value)"
+    ],
     "episodes": [
       {
         "number": 23,
@@ -1577,6 +1690,10 @@
     ],
     "definition": "The earliest formal round of outside money, often used to build a first product or test an idea.",
     "category": "fundraising",
+    "related": [
+      "Seed round",
+      "Friends and family round"
+    ],
     "episodes": [
       {
         "number": 14,
@@ -1608,6 +1725,9 @@
     ],
     "definition": "Products made by one company and sold under another company's brand name, such as a store's own brand.",
     "category": "CPG/retail",
+    "related": [
+      "Co-packer (co-man)"
+    ],
     "episodes": [
       {
         "number": 38,
@@ -1633,6 +1753,10 @@
     ],
     "definition": "The point at which a product meets a need for a group of customers who buy it and keep using it.",
     "category": "software",
+    "related": [
+      "MVP (minimum viable product)",
+      "Go-to-market"
+    ],
     "episodes": [
       {
         "number": 63,
@@ -1673,12 +1797,13 @@
   },
   {
     "term": "Promo calendar",
-    "aliases": [
-      "promo",
-      "promotion"
-    ],
+    "aliases": [],
     "definition": "A schedule that sets when and where a brand's products will be on sale or featured in stores over the year.",
     "category": "retail",
+    "related": [
+      "TPR (temporary price reduction)",
+      "Trade spend"
+    ],
     "episodes": [
       {
         "number": 31,
@@ -1704,6 +1829,10 @@
     ],
     "definition": "The number of individual store locations that carry a product. Being in 500 doors means being sold in 500 stores.",
     "category": "CPG/retail",
+    "related": [
+      "Velocity",
+      "Sell-through"
+    ],
     "episodes": [
       {
         "number": 44,
@@ -1789,6 +1918,9 @@
     ],
     "definition": "A projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
     "category": "finance",
+    "related": [
+      "Velocity"
+    ],
     "episodes": [
       {
         "number": 53,
@@ -1810,8 +1942,12 @@
   {
     "term": "Runway",
     "aliases": [],
-    "definition": "How many months a company can keep operating before it runs out of cash, at its current rate of spending.",
+    "definition": "How many months a company can keep operating before running out of cash, based on its current cash balance and burn rate.",
     "category": "fundraising",
+    "related": [
+      "Burn rate",
+      "Working capital"
+    ],
     "episodes": [
       {
         "number": 14,
@@ -1832,13 +1968,13 @@
   },
   {
     "term": "SBA loan (Small Business Administration loan)",
-    "aliases": [
-      "SBA",
-      "bank loan",
-      "line of credit"
-    ],
+    "aliases": [],
     "definition": "An SBA loan is a small business loan that is partly guaranteed by the U.S. Small Business Administration, so the business repays it with interest without giving up ownership.",
     "category": "fundraising",
+    "related": [
+      "Bootstrapping",
+      "Working capital"
+    ],
     "episodes": [
       {
         "number": 18,
@@ -1870,6 +2006,10 @@
     ],
     "definition": "An early round of investment that helps a young company prove its idea works and start growing. It usually comes before a Series A.",
     "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Series A"
+    ],
     "episodes": [
       {
         "number": 14,
@@ -1893,6 +2033,10 @@
     "aliases": [],
     "definition": "The share of the products a store bought that sold to shoppers during a given period.",
     "category": "CPG/retail",
+    "related": [
+      "Velocity",
+      "Retail doors"
+    ],
     "episodes": [
       {
         "number": 61,
@@ -1913,12 +2057,14 @@
   },
   {
     "term": "Series A",
-    "aliases": [
-      "Series B",
-      "Series C"
-    ],
+    "aliases": [],
     "definition": "A round of venture investment that usually comes after the seed round. Later rounds are lettered B, C, and so on.",
     "category": "fundraising",
+    "related": [
+      "Seed round",
+      "Venture capital",
+      "Valuation"
+    ],
     "episodes": [
       {
         "number": 14,
@@ -1939,11 +2085,12 @@
   },
   {
     "term": "Shelf-stable",
-    "aliases": [
-      "shelf-stable"
-    ],
+    "aliases": [],
     "definition": "Describes a product that can be stored at room temperature without refrigeration until it is opened.",
     "category": "product",
+    "related": [
+      "CPG (consumer packaged goods)"
+    ],
     "episodes": [
       {
         "number": 64,
@@ -1954,12 +2101,13 @@
   },
   {
     "term": "SKU (stock keeping unit)",
-    "aliases": [
-      "stock keeping unit",
-      "SKUs"
-    ],
-    "definition": "A SKU (stock keeping unit) is a unique code for one specific version of a product, such as one flavor in one size.",
+    "aliases": [],
+    "definition": "A SKU (stock keeping unit) is a distinct version of a product, such as one flavor in one size, tracked separately in inventory with its own code.",
     "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Velocity"
+    ],
     "episodes": [
       {
         "number": 41,
@@ -2055,6 +2203,11 @@
     ],
     "definition": "Payments a brand makes to a store chain, in cash or free product, to get its product placed on the shelf.",
     "category": "CPG/retail",
+    "related": [
+      "Free fill",
+      "Trade spend",
+      "Category review"
+    ],
     "episodes": [
       {
         "number": 31,
@@ -2085,12 +2238,13 @@
   },
   {
     "term": "SRP / MSRP (suggested retail price)",
-    "aliases": [
-      "SRP",
-      "MSRP"
-    ],
+    "aliases": [],
     "definition": "SRP (suggested retail price), or MSRP (manufacturer's suggested retail price), is the shelf price a brand recommends that stores charge.",
     "category": "retail",
+    "related": [
+      "TPR (temporary price reduction)",
+      "Gross margin"
+    ],
     "episodes": [
       {
         "number": 57,
@@ -2111,11 +2265,12 @@
   },
   {
     "term": "TAM (total addressable market)",
-    "aliases": [
-      "total addressable market"
-    ],
-    "definition": "TAM (total addressable market) is the total amount of money that could be spent on a product if every possible customer bought it.",
+    "aliases": [],
+    "definition": "TAM (total addressable market) is the total potential yearly revenue for a product if it captured the entire market it could serve.",
     "category": "marketing",
+    "related": [
+      "Go-to-market"
+    ],
     "episodes": [
       {
         "number": 43,
@@ -2141,11 +2296,13 @@
   },
   {
     "term": "Tooling",
-    "aliases": [
-      "molds"
-    ],
-    "definition": "Custom molds, dies, and equipment a factory needs to make a specific product. It is a large upfront cost paid before the first unit is made.",
+    "aliases": [],
+    "definition": "Custom molds, dies, and equipment a factory needs to make a specific product. It often requires a significant upfront investment before the first unit is made.",
     "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Co-packer (co-man)"
+    ],
     "episodes": [
       {
         "number": 1,
@@ -2186,11 +2343,14 @@
   },
   {
     "term": "TPR (temporary price reduction)",
-    "aliases": [
-      "TPR"
-    ],
+    "aliases": [],
     "definition": "A TPR (temporary price reduction) is a short-term price cut on a product in a store, usually funded by the brand.",
     "category": "retail",
+    "related": [
+      "Trade spend",
+      "Promo calendar",
+      "SRP / MSRP (suggested retail price)"
+    ],
     "episodes": [
       {
         "number": 41,
@@ -2201,12 +2361,15 @@
   },
   {
     "term": "Trade spend",
-    "aliases": [
-      "promos",
-      "promotions"
-    ],
+    "aliases": [],
     "definition": "Money a brand spends to promote its products inside stores, such as price cuts, ads in store flyers, and display fees.",
     "category": "CPG/retail",
+    "related": [
+      "TPR (temporary price reduction)",
+      "Promo calendar",
+      "Slotting fees",
+      "Free fill"
+    ],
     "episodes": [
       {
         "number": 60,
@@ -2252,12 +2415,13 @@
   },
   {
     "term": "UNFI / KeHE",
-    "aliases": [
-      "UNFI",
-      "KeHE"
-    ],
+    "aliases": [],
     "definition": "UNFI (United Natural Foods, Inc.) and KeHE Distributors are the two largest U.S. wholesale distributors that supply natural and specialty grocery stores.",
     "category": "CPG/retail",
+    "related": [
+      "Natural channel",
+      "Broker"
+    ],
     "episodes": [
       {
         "number": 4,
@@ -2288,11 +2452,15 @@
   },
   {
     "term": "Unit economics",
-    "aliases": [
-      "unit economics"
-    ],
-    "definition": "How much money a business makes or loses on a single unit, like one product sold or one customer served, after the direct costs of making and delivering it. It is also the name of this show.",
+    "aliases": [],
+    "definition": "The revenue and costs tied to one unit of a business, such as one product sold, one order fulfilled, or one customer served. It shows whether the business makes money on each sale as it grows.",
     "category": "finance",
+    "related": [
+      "Gross margin",
+      "Contribution margin",
+      "CAC (customer acquisition cost)",
+      "LTV (lifetime value)"
+    ],
     "episodes": [
       {
         "number": 59,
@@ -2358,12 +2526,14 @@
   },
   {
     "term": "Valuation",
-    "aliases": [
-      "pre-money",
-      "post-money"
-    ],
+    "aliases": [],
     "definition": "What a company is judged to be worth, usually agreed on during a fundraise or sale. It sets how much ownership an investor gets for their money.",
     "category": "fundraising",
+    "related": [
+      "Dilution",
+      "Cap table",
+      "Equity"
+    ],
     "episodes": [
       {
         "number": 59,
@@ -2390,11 +2560,15 @@
   {
     "term": "Velocity",
     "aliases": [
-      "sales velocity",
-      "units per store per week"
+      "sales velocity"
     ],
     "definition": "How fast a product sells in each store, often measured as units sold per store per week.",
     "category": "CPG/retail",
+    "related": [
+      "Sell-through",
+      "Retail doors",
+      "Run rate"
+    ],
     "episodes": [
       {
         "number": 34,
@@ -2471,12 +2645,15 @@
   {
     "term": "Venture capital",
     "aliases": [
-      "VC",
-      "VCs",
-      "venture capitalist"
+      "VC"
     ],
     "definition": "Firms that invest pooled money from others into young companies in exchange for ownership.",
     "category": "fundraising",
+    "related": [
+      "Series A",
+      "Valuation",
+      "Exit"
+    ],
     "episodes": [
       {
         "number": 20,
@@ -2538,8 +2715,12 @@
   {
     "term": "Working capital",
     "aliases": [],
-    "definition": "The cash a business needs on hand to cover day-to-day costs such as inventory and bills while it waits to get paid for sales.",
+    "definition": "The difference between a company's short-term assets, such as cash and inventory, and its short-term liabilities, such as unpaid bills. It shows the resources available to run the business day to day.",
     "category": "finance",
+    "related": [
+      "Net terms",
+      "Burn rate"
+    ],
     "episodes": [
       {
         "number": 63,

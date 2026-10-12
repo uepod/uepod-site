@@ -89,6 +89,33 @@ test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
   assert.equal(ld.hasDefinedTerm[0].name, "Alpha");
   assert.equal(ld.hasDefinedTerm[0].url, "https://uepod.com/glossary#alpha");
   assert.deepEqual(ld.hasDefinedTerm[0].alternateName, ["A"]);
+  assert.equal(ld.hasDefinedTerm[0].isRelatedTo, undefined);
+});
+
+test("related names link to glossary anchors and empty aliases stay off the term", () => {
+  const prepared = prepareGlossary(
+    expandGlossary(
+      [
+        { term: "CAC (customer acquisition cost)", definition: "Cost to win a customer.", aliases: [], related: ["LTV (lifetime value)", "Missing"] },
+        { term: "LTV (lifetime value)", definition: "Value of a customer.", aliases: ["lifetime value"], related: [] },
+      ],
+      []
+    )
+  );
+  const cac = prepared.terms.find((term) => term.term.startsWith("CAC"));
+  assert.deepEqual(cac.aliases, []);
+  assert.deepEqual(cac.related, [
+    { name: "LTV (lifetime value)", anchor: "ltv-lifetime-value" },
+  ]);
+  const ld = glossaryJsonLd(prepared.terms).hasDefinedTerm.find((term) => term.name.startsWith("CAC"));
+  assert.equal(ld.alternateName, undefined);
+  assert.deepEqual(ld.isRelatedTo, [
+    {
+      "@type": "DefinedTerm",
+      name: "LTV (lifetime value)",
+      url: "https://uepod.com/glossary#ltv-lifetime-value",
+    },
+  ]);
 });
 
 test("committed glossary has a term, definition, and episode links", () => {
@@ -109,6 +136,11 @@ test("committed glossary has a term, definition, and episode links", () => {
     assert.equal(term.episode_count, term.episodes.length);
     assert.ok(term.episodes.length >= 1 && term.episodes.length <= 3);
     assert.ok(Array.isArray(term.aliases));
+    assert.ok(Array.isArray(term.related));
+    for (const item of term.related) {
+      assert.ok(item.name);
+      assert.ok(item.anchor);
+    }
     for (const episode of term.episodes) {
       assert.ok(episode.slug);
       assert.match(heardInLabel(episode), /^E\. \d+/);

@@ -123,6 +123,33 @@ export default function GlossaryPage({ groups, letters, terms }) {
                     <p className="glossary-aliases">Also called {term.aliases.join(", ")}</p>
                   ) : null}
                   <p className="glossary-definition">{term.definition}</p>
+                  {term.related?.length ? (
+                    <p className="glossary-related">
+                      <span>Related</span>
+                      {term.related.map((item) => (
+                        <a
+                          key={item.anchor}
+                          href={`#${item.anchor}`}
+                          onClick={(event) => {
+                            if (
+                              event.button !== 0 ||
+                              event.metaKey ||
+                              event.ctrlKey ||
+                              event.shiftKey ||
+                              event.altKey
+                            ) {
+                              return;
+                            }
+                            event.preventDefault();
+                            scrollToId(item.anchor);
+                            history.replaceState(null, "", `#${item.anchor}`);
+                          }}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </p>
+                  ) : null}
                   {term.episodes.length > 0 ? (
                     <p className="glossary-heard">
                       <span>Heard in</span>

@@ -88,6 +88,11 @@ function expandGlossaryEntry(entry, known) {
       ? entry.a
       : [];
   const categoryValue = entry?.category ?? entry?.c ?? null;
+  const relatedSource = Array.isArray(entry?.related)
+    ? entry.related
+    : Array.isArray(entry?.r)
+      ? entry.r
+      : [];
   const seen = new Set();
   const episodes = [];
   for (const item of episodeList(entry)) {
@@ -100,6 +105,7 @@ function expandGlossaryEntry(entry, known) {
   return {
     term,
     aliases: aliasSource.map((alias) => String(alias).trim()).filter(Boolean),
+    related: relatedSource.map((name) => String(name).trim()).filter(Boolean),
     definition,
     category: categoryValue ? String(categoryValue) : null,
     episode_count: episodes.length,
@@ -124,6 +130,15 @@ function prepareGlossary(entries) {
     anchor: anchors[index],
     letter: termLetter(entry.term),
   }));
+  const anchorByTerm = new Map(terms.map((term) => [term.term, term.anchor]));
+  for (const term of terms) {
+    term.related = term.related
+      .map((name) => {
+        const anchor = anchorByTerm.get(name);
+        return anchor ? { name, anchor } : null;
+      })
+      .filter(Boolean);
+  }
   const groups = [];
   for (const term of terms) {
     const last = groups[groups.length - 1];
@@ -158,6 +173,13 @@ function glossaryJsonLd(terms) {
         url: `${SITE_URL}/glossary#${term.anchor}`,
       };
       if (term.aliases?.length) defined.alternateName = term.aliases;
+      if (term.related?.length) {
+        defined.isRelatedTo = term.related.map((item) => ({
+          "@type": "DefinedTerm",
+          name: item.name,
+          url: `${SITE_URL}/glossary#${item.anchor}`,
+        }));
+      }
       return defined;
     }),
   };
