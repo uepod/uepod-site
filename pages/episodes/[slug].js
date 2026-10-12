@@ -94,8 +94,22 @@ function ListenSection({ episode }) {
   return <ListenTabs options={options} />;
 }
 
+function relatedGuestLines(guest) {
+  const text = String(guest || "").trim();
+  if (!text.includes("&")) return text ? [text] : [];
+  const parts = text.split("&");
+  const lines = [];
+  parts.forEach((part, index) => {
+    const name = part.trim();
+    if (!name) return;
+    lines.push(index < parts.length - 1 ? `${name} &` : name);
+  });
+  return lines.length ? lines : [text];
+}
+
 function RelatedRow({ episode }) {
   const number = formatEpisodeNumber(episode.id);
+  const guestLines = relatedGuestLines(episode.guest);
 
   return (
     <div className="related-link">
@@ -159,16 +173,20 @@ function RelatedRow({ episode }) {
             {episode.brand || episode.title}
           </h3>
 
-          {episode.guest ? (
+          {guestLines.length ? (
             <div
+              className="related-guest"
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: "15px",
                 color: "rgba(255,255,255,0.5)",
                 fontWeight: 400,
+                lineHeight: 1.35,
               }}
             >
-              {episode.guest}
+              {guestLines.map((line) => (
+                <div key={line}>{line}</div>
+              ))}
             </div>
           ) : null}
 
