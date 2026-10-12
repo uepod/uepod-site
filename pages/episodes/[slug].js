@@ -94,6 +94,19 @@ function ListenSection({ episode }) {
   return <ListenTabs options={options} />;
 }
 
+function RelatedWords({ text }) {
+  const parts = String(text || "").split(/(\s+)/);
+  return parts.map((part, index) =>
+    part.trim() ? (
+      <span key={`${index}-${part}`} className="related-word">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+}
+
 function relatedGuestLines(guest) {
   const text = String(guest || "").trim();
   if (!text.includes("&")) return text ? [text] : [];
@@ -170,7 +183,7 @@ function RelatedRow({ episode }) {
               fontWeight: 400,
             }}
           >
-            {episode.brand || episode.title}
+            <RelatedWords text={episode.brand || episode.title} />
           </h3>
 
           {guestLines.length ? (
@@ -185,7 +198,9 @@ function RelatedRow({ episode }) {
               }}
             >
               {guestLines.map((line) => (
-                <div key={line}>{line}</div>
+                <div key={line}>
+                  <RelatedWords text={line} />
+                </div>
               ))}
             </div>
           ) : null}
