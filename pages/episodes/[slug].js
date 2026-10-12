@@ -351,55 +351,55 @@ export default function EpisodePage({ episode, related }) {
 
           <div className="episode-layout">
             <div className="episode-main">
-          {blocks.length ? (
-            <div className="episode-description">
-              <h2>About</h2>
-              {blocks.map((parts, index) => (
-                <p key={index}>
-                  {parts.map((part, partIndex) =>
-                    part.href ? (
-                      <a
-                        key={partIndex}
-                        className="episode-guest-link"
-                        href={part.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {part.text}
-                      </a>
-                    ) : (
-                      <span key={partIndex}>{part.text}</span>
-                    )
-                  )}
-                </p>
-              ))}
-            </div>
-          ) : null}
+              {blocks.length ? (
+                <div className="episode-description">
+                  <h2>About</h2>
+                  {blocks.map((parts, index) => (
+                    <p key={index}>
+                      {parts.map((part, partIndex) =>
+                        part.href ? (
+                          <a
+                            key={partIndex}
+                            className="episode-guest-link"
+                            href={part.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {part.text}
+                          </a>
+                        ) : (
+                          <span key={partIndex}>{part.text}</span>
+                        )
+                      )}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
             </div>
 
             <div className="episode-aside">
-          <ListenSection episode={episode} />
-
-          {episode.takeaways?.length ? (
-            <section className="episode-takeaways">
-              <h2>Key takeaways</h2>
-              <ul>
-                {episode.takeaways.map((takeaway, index) => (
-                  <li key={`${index}-${takeaway}`}>{takeaway}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
-
-          {related.length ? (
-            <section className="episode-related">
-              <h2>Related</h2>
-              {related.map((item) => (
-                <RelatedRow key={item.slug} episode={item} />
-              ))}
-            </section>
-          ) : null}
+              <ListenSection episode={episode} />
             </div>
+
+            {episode.takeaways?.length ? (
+              <section className="episode-takeaways">
+                <h2>Key takeaways</h2>
+                <ul>
+                  {episode.takeaways.map((takeaway, index) => (
+                    <li key={`${index}-${takeaway}`}>{takeaway}</li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {related.length ? (
+              <section className="episode-related">
+                <h2>Related</h2>
+                {related.map((item) => (
+                  <RelatedRow key={item.slug} episode={item} />
+                ))}
+              </section>
+            ) : null}
           </div>
 
           <a className="back-link episode-back-bottom" href="/#episodes">

@@ -440,22 +440,38 @@ a {
   text-decoration: underline;
 }
 
-/* Wide screens: notes on the left, player and related on the right. */
+/* Wide screens: About and Related on the left, Listen on the right. */
 @media (min-width: 1100px) {
   .episode-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
     column-gap: 64px;
     align-items: start;
+    margin-top: 36px;
   }
 
+  .episode-main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* Span the full left column so the player can stick while Related scrolls. */
   .episode-aside {
+    grid-column: 2;
+    grid-row: 1 / -1;
     position: sticky;
     top: 12px;
+    align-self: start;
   }
 
-  .episode-layout {
-    margin-top: 36px;
+  .episode-takeaways {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .episode-related {
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .episode-description,
