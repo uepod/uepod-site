@@ -18,6 +18,7 @@ import {
   episodePath,
 } from "../../src/lib/episodePage";
 import { topicTagsForEpisode } from "../../src/lib/topics";
+import { categoryPath } from "../../src/lib/categories";
 
 const REVALIDATE_SECONDS = 900;
 
@@ -97,7 +98,12 @@ function RelatedRow({ episode }) {
   const number = formatEpisodeNumber(episode.id);
 
   return (
-    <a className="related-link" href={episodePath(episode.slug)}>
+    <div className="related-link">
+      <a
+        className="related-card-link"
+        href={episodePath(episode.slug)}
+        aria-label={episode.brand || episode.title || "Episode"}
+      />
       <div
         className="episode-grid"
         style={{
@@ -122,19 +128,21 @@ function RelatedRow({ episode }) {
 
         <div>
           {episode.category ? (
-            <div
+            <a
+              className="category-label"
+              href={categoryPath(episode.category)}
               style={{
+                display: "inline-block",
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: "11px",
                 fontWeight: 500,
-                color: "rgba(255,255,255,0.35)",
                 textTransform: "uppercase",
                 letterSpacing: "0.12em",
                 marginBottom: "6px",
               }}
             >
               {episode.category}
-            </div>
+            </a>
           ) : null}
 
           <h3
@@ -197,7 +205,7 @@ function RelatedRow({ episode }) {
           ) : null}
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 
@@ -257,7 +265,9 @@ export default function EpisodePage({ episode, related }) {
             </a>
             {episodeNumber ? <span>{episodeNumber}</span> : null}
             {episode.category ? (
-              <span className="episode-category">{episode.category}</span>
+              <a className="episode-category" href={categoryPath(episode.category)}>
+                {episode.category}
+              </a>
             ) : null}
           </div>
 

@@ -3,6 +3,7 @@ import SiteChrome from "../../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
 import { SITE_URL, formatEpisodeNumber } from "../../src/lib/episodePage";
 import { allTopics, topicBySlug } from "../../src/lib/topics";
+import { categoryPath } from "../../src/lib/categories";
 
 const REVALIDATE_SECONDS = 900;
 
@@ -36,19 +37,21 @@ function TopicEpisode({ episode }) {
 
       <div>
         {episode.category ? (
-          <div
+          <a
+            className="category-label"
+            href={categoryPath(episode.category)}
             style={{
+              display: "inline-block",
               fontFamily: "'Space Grotesk', sans-serif",
               fontSize: "11px",
               fontWeight: 500,
-              color: "rgba(255,255,255,0.35)",
               textTransform: "uppercase",
               letterSpacing: "0.12em",
               marginBottom: "6px",
             }}
           >
             {episode.category}
-          </div>
+          </a>
         ) : null}
 
         <h2

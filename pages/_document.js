@@ -5,6 +5,7 @@ export default function MyDocument({ pathname }) {
   const omitDefaultSeo =
     (pathname || "").startsWith("/episodes") ||
     (pathname || "").startsWith("/topics") ||
+    (pathname || "").startsWith("/category") ||
     pathname === "/404";
 
   return (

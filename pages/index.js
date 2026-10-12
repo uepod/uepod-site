@@ -4,6 +4,7 @@ import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 import { fetchPosts } from "../src/lib/fetchPosts";
 import { formatEpisodeNumber } from "../src/lib/episodePage";
+import { categoryPath } from "../src/lib/categories";
 
 const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
 
@@ -210,19 +211,23 @@ function EpisodeCard({ ep, index }) {
 
       {/* Main content */}
       <div>
-        <div
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: "11px",
-            fontWeight: 500,
-            color: "rgba(255,255,255,0.35)",
-            textTransform: "uppercase",
-            letterSpacing: "0.12em",
-            marginBottom: "6px",
-          }}
-        >
-          {ep.category}
-        </div>
+        {ep.category ? (
+          <a
+            className="category-label"
+            href={categoryPath(ep.category)}
+            style={{
+              display: "inline-block",
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "11px",
+              fontWeight: 500,
+              textTransform: "uppercase",
+              letterSpacing: "0.12em",
+              marginBottom: "6px",
+            }}
+          >
+            {ep.category}
+          </a>
+        ) : null}
 
         <div
           style={{

@@ -294,6 +294,39 @@ a {
   color: rgba(255, 255, 255, 0.35);
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.episode-kicker a.episode-category:hover,
+.category-label:hover {
+  color: #fff;
+}
+
+.category-label {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+}
+
+.related-link {
+  position: relative;
+}
+
+.related-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.related-link .episode-grid {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.related-link .category-label {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 .episode-topics {
