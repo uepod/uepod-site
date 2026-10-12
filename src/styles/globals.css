@@ -450,6 +450,7 @@ a {
 
 .related-link h3 {
   color: #fff;
+  overflow-wrap: break-word;
 }
 
 .related-link:hover h3 {
@@ -458,7 +459,7 @@ a {
 
 /* Below 1280px the page stacks and Related stays one column, matching the homepage episode list. */
 
-/* Wide screens: About on the left, Listen on the right, Related underneath. */
+/* Wide screens: About and Related on the left, sticky Listen on the right. */
 @media (min-width: 1280px) {
   .episode-layout {
     display: grid;
@@ -473,7 +474,7 @@ a {
     grid-row: 1;
   }
 
-  /* Stick within the two columns, and stop before the full-width related row. */
+  /* Span the left column so the player sticks while About and Related scroll. */
   .episode-aside {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -487,6 +488,12 @@ a {
     grid-row: 2;
   }
 
+  .episode-related {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 48px;
+  }
+
   .episode-description,
   .listen-section,
   .episode-takeaways {
@@ -498,13 +505,9 @@ a {
     margin-top: 0;
   }
 
-  .episode-related {
-    margin-top: 72px;
-  }
-
   .related-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 48px;
+    column-gap: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
