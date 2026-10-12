@@ -1,0 +1,159 @@
+[
+  {
+    "term": "CAC",
+    "aliases": [],
+    "definition": "The average amount a business spends on marketing and sales to win one new customer.",
+    "category": null,
+    "episode_count": 2,
+    "episodes": [
+      {
+        "slug": "jones-hilary-dubin-caroline-huber",
+        "number": 14,
+        "brand": "Jones"
+      },
+      {
+        "slug": "loftie-matt-hassett",
+        "number": 30,
+        "brand": "Loftie"
+      }
+    ]
+  },
+  {
+    "term": "Co-packer",
+    "aliases": [],
+    "definition": "An outside factory that makes and packages products for a brand under the brand's name, so the brand does not need its own factory.",
+    "category": null,
+    "episode_count": 3,
+    "episodes": [
+      {
+        "slug": "jamies-farm-jamie-kim",
+        "number": 49,
+        "brand": "Jamie's Farm"
+      },
+      {
+        "slug": "pistakio-francine-voit-nicola-buffo",
+        "number": 48,
+        "brand": "Pistakio"
+      },
+      {
+        "slug": "alecs-ice-cream-alec-jaffe",
+        "number": 6,
+        "brand": "Alec's Ice Cream"
+      }
+    ]
+  },
+  {
+    "term": "Distributor",
+    "aliases": [],
+    "definition": "A company that buys products from brands, stores them in warehouses, and delivers them to many stores. Distributors take a cut of the price in exchange.",
+    "category": null,
+    "episode_count": 2,
+    "episodes": [
+      {
+        "slug": "seremoni-saif-khawaja",
+        "number": 37,
+        "brand": "Seremoni"
+      },
+      {
+        "slug": "yuzuco-basil-beshkov",
+        "number": 45,
+        "brand": "YUZUCO"
+      }
+    ]
+  },
+  {
+    "term": "Gross margin",
+    "aliases": [],
+    "definition": "The share of each sale left over after paying the direct cost of making the product. If a $10 item costs $4 to make, the gross margin is 60%.",
+    "category": null,
+    "episode_count": 1,
+    "episodes": [
+      {
+        "slug": "esspo-katharine-leitch",
+        "number": 41,
+        "brand": "Esspo"
+      }
+    ]
+  },
+  {
+    "term": "MOQ",
+    "aliases": [],
+    "definition": "The smallest order a factory or supplier will accept. High minimums can force small brands to buy more than they can sell quickly.",
+    "category": null,
+    "episode_count": 2,
+    "episodes": [
+      {
+        "slug": "spring-mulberry-kathryn-shah",
+        "number": 4,
+        "brand": "Spring & Mulberry"
+      },
+      {
+        "slug": "rite-of-way-alex-brands",
+        "number": 61,
+        "brand": "Rite of Way"
+      }
+    ]
+  },
+  {
+    "term": "Slotting fees",
+    "aliases": [],
+    "definition": "Payments a brand makes to a store chain to get its product placed on the shelf, often in the form of cash or free product.",
+    "category": null,
+    "episode_count": 2,
+    "episodes": [
+      {
+        "slug": "laurels-coffee-isabel-washington",
+        "number": 31,
+        "brand": "Laurel's Coffee"
+      },
+      {
+        "slug": "one-trick-pony-lucy-dana",
+        "number": 16,
+        "brand": "One Trick Pony"
+      }
+    ]
+  },
+  {
+    "term": "Velocity",
+    "aliases": [],
+    "definition": "How fast a product sells in each store, often measured as units sold per store per week. Stores use it to decide what stays on the shelf.",
+    "category": null,
+    "episode_count": 3,
+    "episodes": [
+      {
+        "slug": "esspo-katharine-leitch",
+        "number": 41,
+        "brand": "Esspo"
+      },
+      {
+        "slug": "something-sweet-brittney-cook",
+        "number": 34,
+        "brand": "Something Sweet"
+      },
+      {
+        "slug": "tofugo-caroline-dai",
+        "number": 64,
+        "brand": "TofuGo"
+      }
+    ]
+  },
+  {
+    "term": "Working capital",
+    "aliases": [],
+    "definition": "The cash a business needs on hand to cover day-to-day costs such as inventory and bills while it waits to get paid for sales.",
+    "category": null,
+    "episode_count": 2,
+    "episodes": [
+      {
+        "slug": "felt-fat-nate-mell",
+        "number": 18,
+        "brand": "Felt + Fat"
+      },
+      {
+        "slug": "seremoni-saif-khawaja",
+        "number": 37,
+        "brand": "Seremoni"
+      }
+    ]
+  }
+]
