@@ -1623,22 +1623,24 @@ export default function Home({ episodes, posts }) {
               </div>
             </div>
 
-            <div
-              className="footer-copyright"
-              style={{
-                borderTop:
-                  "1px solid rgba(255,255,255,0.06)",
-                paddingTop: "20px",
-                fontFamily:
-                  "'JetBrains Mono', monospace",
-                fontSize: "11px",
-                color:
-                  "rgba(255,255,255,0.4)",
-                letterSpacing: "0.04em",
-                textAlign: "right",
-              }}
-            >
-              © 2025–2026 Unit Economics Podcast
+            <div className="footer-bar">
+              <a className="footer-glossary" href="/glossary">
+                Glossary
+              </a>
+              <div
+                className="footer-copyright"
+                style={{
+                  fontFamily:
+                    "'JetBrains Mono', monospace",
+                  fontSize: "11px",
+                  color:
+                    "rgba(255,255,255,0.4)",
+                  letterSpacing: "0.04em",
+                  textAlign: "right",
+                }}
+              >
+                © 2025–2026 Unit Economics Podcast
+              </div>
             </div>
           </footer>
         </div>
