@@ -476,6 +476,12 @@ a {
   overflow-wrap: break-word;
 }
 
+.related-link .related-word {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .related-link:hover h3 {
   text-decoration: underline;
 }
