@@ -484,12 +484,13 @@ a {
 @media (min-width: 1280px) {
   .related-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 20px;
+    column-gap: 36px;
     align-items: start;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .related-link {
+    min-width: 0;
     border-bottom: none;
     padding: 22px 0 0;
   }
@@ -498,6 +499,14 @@ a {
     display: flex !important;
     flex-direction: column;
     gap: 0 !important;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .related-link .episode-grid > div {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .related-link .episode-number {
