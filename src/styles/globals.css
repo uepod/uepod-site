@@ -406,8 +406,8 @@ a {
 .listing-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 72px;
-  margin-top: 72px;
+  row-gap: 48px;
+  margin-top: 40px;
 }
 
 .listing-card {
@@ -517,7 +517,14 @@ a {
   .listing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 56px;
+    row-gap: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .listing-grid {
     row-gap: 72px;
+    margin-top: 72px;
   }
 }
 
