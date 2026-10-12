@@ -44,12 +44,7 @@ function GlossaryTopLink() {
     const update = () => {
       const phone = window.matchMedia("(max-width: 768px)").matches;
       const pastFold = scroller.scrollTop >= scroller.clientHeight * 1.5;
-      const footer = scroller.querySelector("footer");
-      let clearOfFooter = true;
-      if (footer) {
-        clearOfFooter = footer.getBoundingClientRect().top > window.innerHeight - 72;
-      }
-      setVisible(!phone && pastFold && clearOfFooter);
+      setVisible(!phone && pastFold);
     };
 
     update();
@@ -125,6 +120,7 @@ export default function GlossaryPage({ groups, letters, terms }) {
         />
       </Head>
       <SiteChrome>
+        <div className="glossary-shell">
         <div className="glossary-page">
           <p className="glossary-kicker">Reference</p>
           <h1>Glossary</h1>
@@ -219,7 +215,10 @@ export default function GlossaryPage({ groups, letters, terms }) {
             </section>
           ))}
         </div>
-        <GlossaryTopLink />
+        <div className="glossary-top-slot">
+          <GlossaryTopLink />
+        </div>
+        </div>
       </SiteChrome>
     </>
   );

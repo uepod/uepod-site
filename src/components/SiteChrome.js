@@ -216,7 +216,7 @@ export default function SiteChrome({ children }) {
       <div
         ref={contentRef}
         className="site-scroll"
-        style={{ flex: 1, minHeight: 0, overflow: "auto" }}
+        style={{ flex: 1, minHeight: 0, overflowX: "hidden", overflowY: "auto" }}
       >
         {children}
 
