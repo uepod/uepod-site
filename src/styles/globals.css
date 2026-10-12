@@ -407,7 +407,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 72px;
-  margin-top: 40px;
+  margin-top: 72px;
 }
 
 .listing-card {
