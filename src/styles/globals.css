@@ -396,13 +396,134 @@ a {
 }
 
 .topic-page {
-  width: min(1100px, 100%);
+  width: 100%;
   margin-inline: auto;
   padding: 48px 40px 80px;
 }
 
-.topic-page h2 a:hover {
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 48px;
+  margin-top: 40px;
+}
+
+.listing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.listing-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.listing-card-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.listing-number {
+  margin-bottom: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.listing-category {
+  display: block;
+  width: fit-content;
+  margin-bottom: 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  pointer-events: auto;
+}
+
+.listing-card h2 {
+  margin: 0 0 4px;
+  font-family: "AkkuratLLWeb-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.listing-card h2 a {
+  color: #fff;
+}
+
+.listing-guest {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.listing-card .listing-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  max-width: 100%;
+  pointer-events: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.listing-word {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.listing-meta {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}
+
+.listing-card:hover h2 a {
   text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 48px;
+  }
+}
+
+@media (min-width: 1501px) {
+  .listing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 48px;
+  }
 }
 
 .back-link {
@@ -679,7 +800,36 @@ a {
 }
 
 .glossary-top {
-  margin-top: 56px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 80;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.glossary-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.glossary-top:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .glossary-top {
+    right: 16px;
+    bottom: 16px;
+  }
 }
 
 .footer-glossary {
