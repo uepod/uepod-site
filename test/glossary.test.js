@@ -9,6 +9,7 @@ const {
   heardInLabel,
   glossaryJsonLd,
   termLetter,
+  termsForEpisode,
 } = require("../src/lib/glossary");
 
 test("null episode numbers and brands are filled from the directory", () => {
@@ -154,4 +155,38 @@ test("committed glossary has a term, definition, and episode links", () => {
     if (!term.related.length) assert.equal(defined.isRelatedTo, undefined);
     else assert.equal(defined.isRelatedTo.length, term.related.length);
   }
+});
+
+test("episode terms keep glossary anchors past the three-episode display cap", () => {
+  const entries = [
+    {
+      term: "3PL (third-party logistics)",
+      definition: "A company that stores and ships for you.",
+      episodes: [
+        { slug: "a", number: 1, brand: "A" },
+        { slug: "b", number: 2, brand: "B" },
+        { slug: "c", number: 3, brand: "C" },
+        { slug: "mikeys-pies-mikey-deegan", number: 65, brand: "Mikey's Pies" },
+      ],
+    },
+    {
+      term: "Gross margin",
+      definition: "What is left after the cost of goods.",
+      episodes: [{ slug: "mikeys-pies-mikey-deegan", number: 65, brand: "Mikey's Pies" }],
+    },
+  ];
+  const prepared = prepareGlossary(expandGlossary(entries));
+  const terms = termsForEpisode("mikeys-pies-mikey-deegan", entries);
+  assert.deepEqual(terms, [
+    {
+      term: "3PL (third-party logistics)",
+      anchor: prepared.terms.find((term) => term.term.startsWith("3PL")).anchor,
+    },
+    {
+      term: "Gross margin",
+      anchor: prepared.terms.find((term) => term.term === "Gross margin").anchor,
+    },
+  ]);
+  assert.equal(expandGlossary(entries)[0].episodes.length, 3);
+  assert.deepEqual(termsForEpisode("missing", entries), []);
 });

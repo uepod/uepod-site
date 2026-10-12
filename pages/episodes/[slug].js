@@ -18,6 +18,7 @@ import {
   episodePath,
 } from "../../src/lib/episodePage";
 import { topicTagsForEpisode } from "../../src/lib/topics";
+import { termsForEpisode } from "../../src/lib/glossary";
 import { categoryPath } from "../../src/lib/categories";
 import { trackListenClick } from "../../src/lib/listenTracking";
 
@@ -255,7 +256,7 @@ function RelatedRow({ episode }) {
   );
 }
 
-export default function EpisodePage({ episode, related }) {
+export default function EpisodePage({ episode, related, terms = [] }) {
   const title = pageTitle(episode);
   const description = metaDescription(episode);
   const canonical = canonicalUrl(episode.slug);
@@ -403,6 +404,18 @@ export default function EpisodePage({ episode, related }) {
                 ))}
               </p>
             ) : null}
+
+            {terms.length ? (
+              <p className="episode-terms">
+                <span className="episode-terms-label">Terms in this episode</span>
+                {terms.map((term, index) => (
+                  <span key={term.anchor}>
+                    {index > 0 ? <span className="episode-terms-sep">, </span> : null}
+                    <a href={`/glossary#${term.anchor}`}>{term.term}</a>
+                  </span>
+                ))}
+              </p>
+            ) : null}
           </header>
 
           <ListenSection episode={episode} />
@@ -508,6 +521,7 @@ export async function getStaticProps({ params }) {
     props: {
       episode: JSON.parse(JSON.stringify(episode)),
       related: JSON.parse(JSON.stringify(related)),
+      terms: termsForEpisode(episode.slug),
     },
     revalidate: REVALIDATE_SECONDS,
   };

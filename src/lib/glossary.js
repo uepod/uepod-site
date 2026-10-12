@@ -189,6 +189,44 @@ function glossaryJsonLdScript(terms) {
   return JSON.stringify(glossaryJsonLd(terms)).replace(/</g, "\\u003c");
 }
 
+function loadGlossaryEntries() {
+  return require("../../data/glossary.json");
+}
+
+function entryListsSlug(entry, slug) {
+  return episodeList(entry).some((item) => String(asEpisode(item).slug || "").trim() === slug);
+}
+
+// Full "Heard in" mappings from the glossary file, not the three-episode
+// cap used on the glossary page. Anchors match /glossary#term-anchor.
+function termsForEpisode(slug, entries) {
+  const source = Array.isArray(entries) ? entries : loadGlossaryEntries();
+  const wanted = String(slug || "").trim();
+  if (!wanted) return [];
+
+  const prepared = prepareGlossary(expandGlossary(source));
+  const anchorsByTerm = new Map();
+  for (const term of prepared.terms) {
+    if (!anchorsByTerm.has(term.term)) anchorsByTerm.set(term.term, []);
+    anchorsByTerm.get(term.term).push(term.anchor);
+  }
+
+  const matches = [];
+  for (const entry of source) {
+    if (!entryListsSlug(entry, wanted)) continue;
+    const expanded = expandGlossary([entry]);
+    if (!expanded.length) continue;
+    const name = expanded[0].term;
+    const anchors = anchorsByTerm.get(name);
+    const anchor = anchors && anchors.length ? anchors.shift() : null;
+    if (!anchor) continue;
+    matches.push({ term: name, anchor });
+  }
+
+  matches.sort((a, b) => a.term.localeCompare(b.term, "en", { sensitivity: "base" }));
+  return matches;
+}
+
 module.exports = {
   LETTERS,
   GLOSSARY_DESCRIPTION,
@@ -199,4 +237,5 @@ module.exports = {
   heardInLabel,
   glossaryJsonLd,
   glossaryJsonLdScript,
+  termsForEpisode,
 };

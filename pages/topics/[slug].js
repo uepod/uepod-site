@@ -193,11 +193,9 @@ export async function getStaticProps({ params }) {
     console.error("Topic episode lookup failed:", err.message);
   }
 
-  const bySlug = new Map(directory.map((episode) => [episode.slug, episode]));
-  const episodes = topic.episodeSlugs
-    .map((slug) => bySlug.get(slug))
-    .filter(Boolean)
-    .slice(0, 6)
+  const wanted = new Set(topic.episodeSlugs);
+  const episodes = directory
+    .filter((episode) => episode.published && wanted.has(episode.slug))
     .map(slimEpisode);
 
   return {

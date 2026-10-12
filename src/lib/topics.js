@@ -1,49 +1,46 @@
 /**
- * Mockup topic tags. Only Mikey's Pies is tagged.
- * Manufacturing also lists a few episodes whose copy is about making the product.
+ * Topic tags for published episodes. data/topic-tags.json is the review list.
+ * Mikey's Pies stays Manufacturing, Pricing & Margins, Growth Without Ads.
  */
 
-const MIKEY_SLUG = "mikeys-pies-mikey-deegan";
+const data = require("../../data/topic-tags.json");
 
-const TOPICS = [
-  {
-    slug: "manufacturing",
-    label: "Manufacturing",
-    episodeSlugs: [
-      MIKEY_SLUG,
-      "alecs-ice-cream-alec-jaffe",
-      "terra-kaffe-sahand-dilmaghani",
-      "tofugo-caroline-dai",
-      "spring-mulberry-kathryn-shah",
-      "pf-candle-co-kristen-pumphrey-thomas-neuberger",
-    ],
-  },
-  {
-    slug: "pricing-margins",
-    label: "Pricing & Margins",
-    episodeSlugs: [MIKEY_SLUG],
-  },
-  {
-    slug: "growth-without-ads",
-    label: "Growth Without Ads",
-    episodeSlugs: [MIKEY_SLUG],
-  },
-];
+const TOPICS = data.topics;
 
 function topicTagsForEpisode(slug) {
-  if (slug !== MIKEY_SLUG) return [];
-  return TOPICS.map(({ slug: topicSlug, label }) => ({
-    slug: topicSlug,
-    label,
-  }));
+  const record = (data.episodes || []).find((episode) => episode.slug === slug);
+  if (!record) return [];
+  const bySlug = new Map(TOPICS.map((topic) => [topic.slug, topic]));
+  return (record.tags || [])
+    .map((topicSlug) => {
+      const topic = bySlug.get(topicSlug);
+      return topic ? { slug: topic.slug, label: topic.label } : null;
+    })
+    .filter(Boolean);
+}
+
+function episodeSlugsForTopic(topicSlug) {
+  return (data.episodes || [])
+    .filter((episode) => (episode.tags || []).includes(topicSlug))
+    .map((episode) => episode.slug);
 }
 
 function topicBySlug(slug) {
-  return TOPICS.find((topic) => topic.slug === slug) || null;
+  const topic = TOPICS.find((item) => item.slug === slug);
+  if (!topic) return null;
+  return {
+    slug: topic.slug,
+    label: topic.label,
+    episodeSlugs: episodeSlugsForTopic(topic.slug),
+  };
 }
 
 function allTopics() {
-  return TOPICS;
+  return TOPICS.map((topic) => ({
+    slug: topic.slug,
+    label: topic.label,
+    episodeSlugs: episodeSlugsForTopic(topic.slug),
+  }));
 }
 
 module.exports = {

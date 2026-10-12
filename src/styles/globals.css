@@ -368,6 +368,33 @@ a {
   color: #fff;
 }
 
+.episode-terms {
+  margin: 14px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.episode-terms-label {
+  margin-right: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.episode-terms a,
+.episode-terms-sep {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.episode-terms a:hover {
+  color: #fff;
+}
+
 .topic-page {
   width: min(1100px, 100%);
   margin-inline: auto;
