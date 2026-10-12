@@ -191,6 +191,10 @@ a {
     gap: 12px !important;
   }
 
+  .episode-grid:has(.episode-number) {
+    grid-template-columns: 64px 1fr !important;
+  }
+
   .episode-meta {
     display: none !important;
   }
@@ -425,6 +429,10 @@ a {
   color: rgba(255, 255, 255, 0.55);
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.episode-number {
+  white-space: nowrap;
 }
 
 .related-list {

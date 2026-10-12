@@ -101,12 +101,13 @@ function RelatedRow({ episode }) {
         className="episode-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "48px 1fr auto",
+          gridTemplateColumns: "64px 1fr auto",
           gap: "20px",
           alignItems: "start",
         }}
       >
         <div
+          className="episode-number"
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "12px",

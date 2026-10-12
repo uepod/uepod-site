@@ -241,7 +241,7 @@ function formatEpisodeNumber(id) {
   if (id === null || id === undefined || id === "") return "";
   const n = Number(id);
   if (!Number.isFinite(n)) return "";
-  return String(n).padStart(2, "0");
+  return `E. ${n}`;
 }
 
 function artworkAlt(episode) {

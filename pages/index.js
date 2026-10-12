@@ -3,6 +3,7 @@ import { flushSync } from "react-dom";
 import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 import { fetchPosts } from "../src/lib/fetchPosts";
+import { formatEpisodeNumber } from "../src/lib/episodePage";
 
 const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
 
@@ -186,7 +187,7 @@ function EpisodeCard({ ep, index }) {
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         padding: "28px 0",
         display: "grid",
-        gridTemplateColumns: "48px 1fr auto",
+        gridTemplateColumns: "64px 1fr auto",
         gap: "20px",
         alignItems: "start",
         opacity: 0,
@@ -195,6 +196,7 @@ function EpisodeCard({ ep, index }) {
     >
       {/* Episode number */}
       <div
+        className="episode-number"
         style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: "12px",
@@ -203,7 +205,7 @@ function EpisodeCard({ ep, index }) {
           letterSpacing: "0.05em",
         }}
       >
-        {String(ep.id).padStart(2, "0")}
+        {formatEpisodeNumber(ep.id)}
       </div>
 
       {/* Main content */}

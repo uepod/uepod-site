@@ -20,8 +20,17 @@ const {
   artworkAlt,
   buildEpisodeJsonLd,
   shareImage,
+  formatEpisodeNumber,
   FALLBACK_SHARE_IMAGE,
 } = require("../src/lib/episodePage");
+
+test("episode numbers read E. 65 with no leading zero", () => {
+  assert.equal(formatEpisodeNumber(65), "E. 65");
+  assert.equal(formatEpisodeNumber(9), "E. 9");
+  assert.equal(formatEpisodeNumber("09"), "E. 9");
+  assert.equal(formatEpisodeNumber(""), "");
+  assert.equal(formatEpisodeNumber(null), "");
+});
 
 test("takeaways stay empty until a sheet cell has them", () => {
   assert.deepEqual(parseTakeaways(undefined), []);
