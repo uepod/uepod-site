@@ -722,6 +722,8 @@ export default function Home({ episodes, posts }) {
 
       document.documentElement.style.overflowAnchor = "none";
       scrollPageTo(contentRef.current, 0);
+    } else if (s === "home" && window.scrollY > 0) {
+      scrollPageTo(contentRef.current, 0);
     }
 
     setSection(s);
@@ -782,13 +784,26 @@ export default function Home({ episodes, posts }) {
               : "transparent",
           }}
         >
-          <div
-            onClick={() => navigate("home")}
+          <a
+            href="/"
+            onClick={(event) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ) {
+                return;
+              }
+              event.preventDefault();
+              navigate("home");
+            }}
             style={{
-              cursor: "pointer",
               display: "flex",
               alignItems: "center",
-              gap: "12px",
+              lineHeight: 0,
+              textDecoration: "none",
             }}
           >
             <img
@@ -799,7 +814,7 @@ export default function Home({ episodes, posts }) {
                 width: "auto",
               }}
             />
-          </div>
+          </a>
 
           {/* Desktop nav */}
           <div
