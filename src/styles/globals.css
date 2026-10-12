@@ -456,10 +456,10 @@ a {
   text-decoration: underline;
 }
 
-/* Below 1100px Related stays one column, matching the homepage episode list. */
+/* Below 1280px the page stacks and Related stays one column, matching the homepage episode list. */
 
 /* Wide screens: About on the left, Listen on the right, Related underneath. */
-@media (min-width: 1100px) {
+@media (min-width: 1280px) {
   .episode-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
