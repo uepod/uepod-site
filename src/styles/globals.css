@@ -485,11 +485,13 @@ a {
   .related-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 56px;
-    align-items: start;
+    align-items: stretch;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .related-link {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
     border-bottom: none;
     padding: 22px 0 0;
@@ -498,6 +500,7 @@ a {
   .related-link .episode-grid {
     display: flex !important;
     flex-direction: column;
+    flex: 1;
     gap: 0 !important;
     min-width: 0;
     width: 100%;
@@ -518,8 +521,8 @@ a {
     gap: 16px;
     text-align: left !important;
     white-space: normal !important;
-    margin-top: 10px;
-    padding-top: 0 !important;
+    margin-top: auto;
+    padding-top: 10px !important;
   }
 
   .related-link .episode-meta div {
