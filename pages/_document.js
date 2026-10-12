@@ -4,6 +4,8 @@ export default function MyDocument({ pathname }) {
   // Episode pages and the 404 supply their own title, canonical, and social tags.
   const omitDefaultSeo =
     (pathname || "").startsWith("/episodes") ||
+    (pathname || "").startsWith("/topics") ||
+    (pathname || "").startsWith("/category") ||
     pathname === "/404" ||
     pathname === "/glossary";
 

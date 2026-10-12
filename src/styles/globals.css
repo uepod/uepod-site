@@ -278,15 +278,104 @@ a {
   }
 }
 
-/* Episode pages. Capped so a wide monitor stays a composed page. */
+/* Episode pages. One reading column, centered at every width. */
 .episode-page {
-  width: min(1500px, 100%);
+  width: min(740px, 100%);
+  margin-inline: auto;
+  padding: 48px 0 80px;
+}
+
+.episode-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+}
+
+.episode-kicker .back-link {
+  margin-right: 4px;
+}
+
+.episode-kicker > span,
+.episode-when {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.episode-kicker .episode-category {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.episode-kicker a.episode-category:hover,
+.category-label:hover {
+  color: #fff;
+}
+
+.category-label {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+}
+
+.related-link {
+  position: relative;
+}
+
+.related-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.related-link .episode-grid {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.related-link .category-label {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.episode-topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.episode-topics a,
+.episode-topics-sep {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+}
+
+.episode-topics a:hover {
+  color: #fff;
+}
+
+.topic-page {
+  width: min(1100px, 100%);
   margin-inline: auto;
   padding: 48px 40px 80px;
 }
 
-.episode-layout {
-  display: block;
+.topic-page h2 a:hover {
+  text-decoration: underline;
 }
 
 .back-link {
@@ -305,7 +394,7 @@ a {
 }
 
 .episode-back-bottom {
-  margin-top: 36px;
+  margin-top: 56px;
 }
 
 .episode-header {
@@ -342,8 +431,7 @@ a {
 }
 
 .episode-description {
-  margin-top: 36px;
-  max-width: 680px;
+  margin-top: 40px;
 }
 
 .episode-description p {
@@ -355,8 +443,7 @@ a {
 }
 
 .listen-section {
-  margin-top: 40px;
-  max-width: 720px;
+  margin-top: 36px;
 }
 
 .episode-description h2,
@@ -429,8 +516,7 @@ a {
 }
 
 .episode-takeaways {
-  margin-top: 56px;
-  max-width: 760px;
+  margin-top: 48px;
 }
 
 .episode-related {
@@ -472,67 +558,43 @@ a {
   overflow-wrap: break-word;
 }
 
+.related-link .related-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.related-link a.related-clamp {
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-link .related-word {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .related-link:hover h3 {
   text-decoration: underline;
 }
 
-/* Below 1280px the page stacks and Related stays one column, matching the homepage episode list. */
-
-/* Wide screens: About and Related on the left, sticky Listen on the right. */
+/* Desktop: Related sits in one row of three. Narrow screens stack the cards. */
 @media (min-width: 1280px) {
-  .episode-layout {
-    display: grid;
-    /* Reading column stays a fixed measure; the player uses the room beside it. */
-    grid-template-columns: minmax(0, 42rem) minmax(0, 1fr);
-    column-gap: 56px;
-    align-items: start;
-    margin-top: 36px;
-  }
-
-  .episode-main {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  /* Span the left column so the player sticks while About and Related scroll. */
-  .episode-aside {
-    grid-column: 2;
-    grid-row: 1 / -1;
-    position: sticky;
-    top: 12px;
-    align-self: start;
-  }
-
-  .episode-takeaways {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .episode-related {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 48px;
-  }
-
-  .episode-description,
-  .listen-section,
-  .episode-takeaways {
-    max-width: none;
-  }
-
-  .episode-description,
-  .listen-section {
-    margin-top: 0;
-  }
-
   .related-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 24px;
+    column-gap: 56px;
+    align-items: stretch;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .related-link {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     border-bottom: none;
     padding: 22px 0 0;
   }
@@ -540,8 +602,26 @@ a {
   .related-link .episode-grid {
     display: flex !important;
     flex-direction: column;
-    gap: 14px;
-    height: 100%;
+    flex: 1;
+    gap: 0 !important;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .related-link .episode-grid > div {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .related-link .episode-number {
+    margin-bottom: 5px;
+  }
+
+  .related-link .category-label {
+    display: block !important;
+    width: fit-content;
+    line-height: 1.1;
   }
 
   .related-link .episode-meta {
@@ -550,17 +630,11 @@ a {
     text-align: left !important;
     white-space: normal !important;
     margin-top: auto;
-    padding-top: 8px !important;
+    padding-top: 10px !important;
   }
 
   .related-link .episode-meta div {
     margin-top: 0 !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  .episode-layout {
-    column-gap: 72px;
   }
 }
 
