@@ -42,13 +42,14 @@ function GlossaryTopLink() {
     if (!scroller) return;
 
     const update = () => {
+      const phone = window.matchMedia("(max-width: 768px)").matches;
       const pastFold = scroller.scrollTop >= scroller.clientHeight * 1.5;
       const footer = scroller.querySelector("footer");
       let clearOfFooter = true;
       if (footer) {
         clearOfFooter = footer.getBoundingClientRect().top > window.innerHeight - 72;
       }
-      setVisible(pastFold && clearOfFooter);
+      setVisible(!phone && pastFold && clearOfFooter);
     };
 
     update();

@@ -827,8 +827,7 @@ a {
 
 @media (max-width: 768px) {
   .glossary-top {
-    right: 16px;
-    bottom: 16px;
+    display: none;
   }
 }
 
