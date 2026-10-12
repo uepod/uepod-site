@@ -17,6 +17,7 @@ import {
   jsonLdScript,
   episodePath,
 } from "../../src/lib/episodePage";
+import { topicTagsForEpisode } from "../../src/lib/topics";
 
 const REVALIDATE_SECONDS = 900;
 
@@ -217,6 +218,7 @@ export default function EpisodePage({ episode, related }) {
   const siteLabel = websiteLabel(episode.website);
   const episodeNumber = formatEpisodeNumber(episode.id);
   const whenBits = [episode.date, episode.duration].filter(Boolean);
+  const topicTags = topicTagsForEpisode(episode.slug);
   const jsonLd = jsonLdScript(episode);
 
   return (
@@ -333,6 +335,17 @@ export default function EpisodePage({ episode, related }) {
                   <span key={bit}>{bit}</span>
                 ))}
               </div>
+            ) : null}
+
+            {topicTags.length ? (
+              <p className="episode-topics">
+                {topicTags.map((tag, index) => (
+                  <span key={tag.slug}>
+                    {index > 0 ? <span className="episode-topics-sep">, </span> : null}
+                    <a href={`/topics/${tag.slug}`}>{tag.label}</a>
+                  </span>
+                ))}
+              </p>
             ) : null}
           </header>
 

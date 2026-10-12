@@ -296,6 +296,38 @@ a {
   letter-spacing: 0.12em;
 }
 
+.episode-topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.episode-topics a,
+.episode-topics-sep {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+}
+
+.episode-topics a:hover {
+  color: #fff;
+}
+
+.topic-page {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: 48px 40px 80px;
+}
+
+.topic-page h2 a:hover {
+  text-decoration: underline;
+}
+
 .back-link {
   display: inline-block;
   font-family: "JetBrains Mono", monospace;

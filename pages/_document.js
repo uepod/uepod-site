@@ -3,7 +3,9 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 export default function MyDocument({ pathname }) {
   // Episode pages and the 404 supply their own title, canonical, and social tags.
   const omitDefaultSeo =
-    (pathname || "").startsWith("/episodes") || pathname === "/404";
+    (pathname || "").startsWith("/episodes") ||
+    (pathname || "").startsWith("/topics") ||
+    pathname === "/404";
 
   return (
     <Html lang="en">
