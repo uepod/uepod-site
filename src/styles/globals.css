@@ -261,15 +261,39 @@ a {
   }
 }
 
-/* Episode pages. Capped so a wide monitor stays a composed page. */
+/* Episode pages. One reading column, centered at every width. */
 .episode-page {
-  width: min(1500px, 100%);
+  width: min(740px, 100%);
   margin-inline: auto;
-  padding: 48px 40px 80px;
+  padding: 48px 0 80px;
 }
 
-.episode-layout {
-  display: block;
+.episode-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+}
+
+.episode-kicker .back-link {
+  margin-right: 4px;
+}
+
+.episode-kicker > span,
+.episode-when {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.episode-kicker .episode-category {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .back-link {
@@ -325,8 +349,7 @@ a {
 }
 
 .episode-description {
-  margin-top: 36px;
-  max-width: 680px;
+  margin-top: 40px;
 }
 
 .episode-description p {
@@ -338,8 +361,7 @@ a {
 }
 
 .listen-section {
-  margin-top: 40px;
-  max-width: 720px;
+  margin-top: 36px;
 }
 
 .episode-description h2,
@@ -412,8 +434,7 @@ a {
 }
 
 .episode-takeaways {
-  margin-top: 56px;
-  max-width: 760px;
+  margin-top: 48px;
 }
 
 .episode-related {
@@ -459,58 +480,11 @@ a {
   text-decoration: underline;
 }
 
-/* Below 1280px the page stacks and Related stays one column, matching the homepage episode list. */
-
-/* Wide screens: About and Related on the left, sticky Listen on the right. */
+/* Desktop: Related sits in one row of three. Narrow screens stack the cards. */
 @media (min-width: 1280px) {
-  .episode-layout {
-    display: grid;
-    /* Reading column stays a fixed measure; the player uses the room beside it. */
-    grid-template-columns: minmax(0, 42rem) minmax(0, 1fr);
-    column-gap: 56px;
-    align-items: start;
-    margin-top: 36px;
-  }
-
-  .episode-main {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  /* Span the left column so the player sticks while About and Related scroll. */
-  .episode-aside {
-    grid-column: 2;
-    grid-row: 1 / -1;
-    position: sticky;
-    top: 12px;
-    align-self: start;
-  }
-
-  .episode-takeaways {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .episode-related {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 48px;
-  }
-
-  .episode-description,
-  .listen-section,
-  .episode-takeaways {
-    max-width: none;
-  }
-
-  .episode-description,
-  .listen-section {
-    margin-top: 0;
-  }
-
   .related-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 24px;
+    column-gap: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
@@ -538,12 +512,6 @@ a {
 
   .related-link .episode-meta div {
     margin-top: 0 !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  .episode-layout {
-    column-gap: 72px;
   }
 }
 

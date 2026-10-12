@@ -215,11 +215,8 @@ export default function EpisodePage({ episode, related }) {
         : [];
   const websiteHref = normalizeWebsite(episode.website);
   const siteLabel = websiteLabel(episode.website);
-  const metaBits = [
-    formatEpisodeNumber(episode.id),
-    episode.date,
-    episode.duration,
-  ].filter(Boolean);
+  const episodeNumber = formatEpisodeNumber(episode.id);
+  const whenBits = [episode.date, episode.duration].filter(Boolean);
   const jsonLd = jsonLdScript(episode);
 
   return (
@@ -252,158 +249,141 @@ export default function EpisodePage({ episode, related }) {
 
       <SiteChrome>
         <article className="content-section episode-page">
-          <a className="back-link" href="/#episodes">
-            ← All episodes
-          </a>
+          <div className="episode-kicker">
+            <a className="back-link" href="/#episodes">
+              ← All episodes
+            </a>
+            {episodeNumber ? <span>{episodeNumber}</span> : null}
+            {episode.category ? (
+              <span className="episode-category">{episode.category}</span>
+            ) : null}
+          </div>
 
           <header className="episode-header">
-            <div>
-              {episode.category ? (
-                <div
-                  style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "11px",
-                    fontWeight: 500,
-                    color: "rgba(255,255,255,0.35)",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.12em",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {episode.category}
-                </div>
-              ) : null}
-
-              <h1
-                style={{
-                  fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-                  fontSize: "clamp(32px, 4vw, 56px)",
-                  lineHeight: 1.05,
-                  textTransform: "uppercase",
-                  letterSpacing: "-0.02em",
-                  fontWeight: 400,
-                  margin: 0,
-                }}
-              >
-                {episode.brand || episode.title}
-              </h1>
-
-          {episode.guest ? (
-            <div
+            <h1
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: "18px",
-                color: "rgba(255,255,255,0.5)",
-                marginTop: "10px",
+                fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
+                fontSize: "clamp(32px, 4vw, 56px)",
+                lineHeight: 1.05,
+                textTransform: "uppercase",
+                letterSpacing: "-0.02em",
                 fontWeight: 400,
+                margin: 0,
               }}
             >
-              {episode.linkedin ? (
-                <a
-                  className="episode-guest-link"
-                  href={episode.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {episode.guest}
-                </a>
-              ) : (
-                episode.guest
-              )}
+              {episode.brand || episode.title}
+            </h1>
+
+            {episode.guest ? (
+              <div
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "18px",
+                  color: "rgba(255,255,255,0.5)",
+                  marginTop: "10px",
+                  fontWeight: 400,
+                }}
+              >
+                {episode.linkedin ? (
+                  <a
+                    className="episode-guest-link"
+                    href={episode.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {episode.guest}
+                  </a>
+                ) : (
+                  episode.guest
+                )}
+              </div>
+            ) : null}
+
+            {websiteHref && siteLabel ? (
+              <a
+                className="episode-website"
+                href={websiteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() =>
+                  trackEvent("episode_website_click", {
+                    episode_name: episode.brand,
+                  })
+                }
+              >
+                {siteLabel}
+              </a>
+            ) : null}
+
+            {whenBits.length ? (
+              <div
+                className="episode-when"
+                style={{
+                  display: "flex",
+                  gap: "16px",
+                  flexWrap: "wrap",
+                  marginTop: "16px",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.25)",
+                  letterSpacing: "0.04em",
+                }}
+              >
+                {whenBits.map((bit) => (
+                  <span key={bit}>{bit}</span>
+                ))}
+              </div>
+            ) : null}
+          </header>
+
+          <ListenSection episode={episode} />
+
+          {blocks.length ? (
+            <div className="episode-description">
+              <h2>About</h2>
+              {blocks.map((parts, index) => (
+                <p key={index}>
+                  {parts.map((part, partIndex) =>
+                    part.href ? (
+                      <a
+                        key={partIndex}
+                        className="episode-guest-link"
+                        href={part.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {part.text}
+                      </a>
+                    ) : (
+                      <span key={partIndex}>{part.text}</span>
+                    )
+                  )}
+                </p>
+              ))}
             </div>
           ) : null}
 
-              {websiteHref && siteLabel ? (
-                <a
-                  className="episode-website"
-                  href={websiteHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() =>
-                    trackEvent("episode_website_click", {
-                      episode_name: episode.brand,
-                    })
-                  }
-                >
-                  {siteLabel}
-                </a>
-              ) : null}
+          {episode.takeaways?.length ? (
+            <section className="episode-takeaways">
+              <h2>Key takeaways</h2>
+              <ul>
+                {episode.takeaways.map((takeaway, index) => (
+                  <li key={`${index}-${takeaway}`}>{takeaway}</li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
 
-              {metaBits.length ? (
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "16px",
-                    flexWrap: "wrap",
-                    marginTop: "16px",
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "12px",
-                    color: "rgba(255,255,255,0.25)",
-                    letterSpacing: "0.04em",
-                  }}
-                >
-                  {metaBits.map((bit) => (
-                    <span key={bit}>{bit}</span>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          </header>
-
-          <div className="episode-layout">
-            <div className="episode-main">
-              {blocks.length ? (
-                <div className="episode-description">
-                  <h2>About</h2>
-                  {blocks.map((parts, index) => (
-                    <p key={index}>
-                      {parts.map((part, partIndex) =>
-                        part.href ? (
-                          <a
-                            key={partIndex}
-                            className="episode-guest-link"
-                            href={part.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {part.text}
-                          </a>
-                        ) : (
-                          <span key={partIndex}>{part.text}</span>
-                        )
-                      )}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-
-            <div className="episode-aside">
-              <ListenSection episode={episode} />
-            </div>
-
-            {episode.takeaways?.length ? (
-              <section className="episode-takeaways">
-                <h2>Key takeaways</h2>
-                <ul>
-                  {episode.takeaways.map((takeaway, index) => (
-                    <li key={`${index}-${takeaway}`}>{takeaway}</li>
-                  ))}
-                </ul>
-              </section>
-            ) : null}
-
-            {related.length ? (
-              <section className="episode-related">
-                <h2>Related</h2>
-                <div className="related-list">
-                  {related.map((item) => (
-                    <RelatedRow key={item.slug} episode={item} />
-                  ))}
-                </div>
-              </section>
-            ) : null}
-          </div>
+          {related.length ? (
+            <section className="episode-related">
+              <h2>Related</h2>
+              <div className="related-list">
+                {related.map((item) => (
+                  <RelatedRow key={item.slug} episode={item} />
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <a className="back-link episode-back-bottom" href="/#episodes">
             All episodes →
