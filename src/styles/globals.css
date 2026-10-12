@@ -678,6 +678,10 @@ a {
   gap: 16px;
 }
 
+.glossary-top {
+  margin-top: 56px;
+}
+
 .footer-glossary {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;

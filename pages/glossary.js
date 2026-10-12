@@ -164,6 +164,27 @@ export default function GlossaryPage({ groups, letters, terms }) {
               ))}
             </section>
           ))}
+          <a
+            className="back-link glossary-top"
+            href="#top"
+            onClick={(event) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ) {
+                return;
+              }
+              event.preventDefault();
+              const scroller = document.querySelector(".site-scroll");
+              if (scroller) scroller.scrollTo({ top: 0, behavior: "smooth" });
+              else window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            ↑ Top
+          </a>
         </div>
       </SiteChrome>
     </>

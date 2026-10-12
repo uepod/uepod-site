@@ -3,10 +3,12 @@ import SiteChrome from "../../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
 import { SITE_URL, formatEpisodeNumber } from "../../src/lib/episodePage";
 import { categoryPath, categorySlug } from "../../src/lib/categories";
+import { withFrom } from "../../src/lib/fromLink";
+import BackLink from "../../src/components/BackLink";
 
 const REVALIDATE_SECONDS = 900;
 
-function CategoryEpisode({ episode }) {
+function CategoryEpisode({ episode, fromPath, fromName }) {
   const number = formatEpisodeNumber(episode.id);
 
   return (
@@ -38,7 +40,7 @@ function CategoryEpisode({ episode }) {
         {episode.category ? (
           <a
             className="category-label"
-            href={categoryPath(episode.category)}
+            href={withFrom(categoryPath(episode.category), fromPath, fromName)}
             style={{
               display: "inline-block",
               fontFamily: "'Space Grotesk', sans-serif",
@@ -65,7 +67,7 @@ function CategoryEpisode({ episode }) {
           }}
         >
           <a
-            href={`/episodes/${episode.slug}`}
+            href={withFrom(`/episodes/${episode.slug}`, fromPath, fromName)}
             style={{ color: "#fff", textDecoration: "none" }}
           >
             {episode.brand || episode.title}
@@ -121,6 +123,8 @@ function CategoryEpisode({ episode }) {
 }
 
 export default function CategoryPage({ category, episodes }) {
+  const fromPath = `/category/${category.slug}`;
+  const fromName = category.label;
   const title = `${category.label} | Unit Economics`;
   const description = `Episodes in ${category.label}.`;
   const canonical = `${SITE_URL}/category/${category.slug}`;
@@ -134,9 +138,7 @@ export default function CategoryPage({ category, episodes }) {
       </Head>
       <SiteChrome>
         <article className="content-section topic-page">
-          <a className="back-link" href="/#episodes">
-            ← All episodes
-          </a>
+          <BackLink />
           <h1
             style={{
               fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
@@ -152,7 +154,12 @@ export default function CategoryPage({ category, episodes }) {
           </h1>
           <div>
             {episodes.map((episode) => (
-              <CategoryEpisode key={episode.slug} episode={episode} />
+              <CategoryEpisode
+                key={episode.slug}
+                episode={episode}
+                fromPath={fromPath}
+                fromName={fromName}
+              />
             ))}
           </div>
         </article>

@@ -5,7 +5,7 @@ const { topicTagsForEpisode, allTopics, topicBySlug } = require("../src/lib/topi
 
 const MIKEY = "mikeys-pies-mikey-deegan";
 
-test("every published episode has two to four known topics", () => {
+test("topic tags stay inside the taxonomy and every topic has at least three episodes", () => {
   assert.ok(data.topics.length >= 12 && data.topics.length <= 20);
   const known = new Set(data.topics.map((topic) => topic.slug));
   const slugs = new Set();
@@ -16,7 +16,7 @@ test("every published episode has two to four known topics", () => {
     assert.ok(episode.brand);
     assert.equal(slugs.has(episode.slug), false);
     slugs.add(episode.slug);
-    assert.ok(episode.tags.length >= 2 && episode.tags.length <= 4);
+    assert.ok(episode.tags.length <= 4);
     for (const tag of episode.tags) {
       assert.ok(known.has(tag), tag);
       used.set(tag, used.get(tag) + 1);
@@ -29,7 +29,7 @@ test("every published episode has two to four known topics", () => {
 
   assert.equal(data.episodes.length, 65);
   for (const [slug, count] of used) {
-    assert.ok(count > 0, slug);
+    assert.ok(count >= 3, `${slug} has ${count}`);
   }
   assert.deepEqual(
     topicTagsForEpisode(MIKEY).map((tag) => tag.label),

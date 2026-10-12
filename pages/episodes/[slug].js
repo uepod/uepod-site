@@ -20,6 +20,8 @@ import {
 import { topicTagsForEpisode } from "../../src/lib/topics";
 import { termsForEpisode } from "../../src/lib/glossary";
 import { categoryPath } from "../../src/lib/categories";
+import { withFrom } from "../../src/lib/fromLink";
+import BackLink from "../../src/components/BackLink";
 import { trackListenClick } from "../../src/lib/listenTracking";
 
 const REVALIDATE_SECONDS = 900;
@@ -125,7 +127,7 @@ function relatedGuestLines(guest) {
   return lines.length ? lines : [text];
 }
 
-function RelatedRow({ episode }) {
+function RelatedRow({ episode, fromPath, fromName }) {
   const number = formatEpisodeNumber(episode.id);
   const guestLines = relatedGuestLines(episode.guest);
 
@@ -133,7 +135,7 @@ function RelatedRow({ episode }) {
     <div className="related-link">
       <a
         className="related-card-link"
-        href={episodePath(episode.slug)}
+        href={withFrom(episodePath(episode.slug), fromPath, fromName)}
         aria-label={episode.brand || episode.title || "Episode"}
       />
       <div
@@ -162,7 +164,7 @@ function RelatedRow({ episode }) {
           {episode.category ? (
             <a
               className="category-label"
-              href={categoryPath(episode.category)}
+              href={withFrom(categoryPath(episode.category), fromPath, fromName)}
               style={{
                 display: "inline-block",
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -190,7 +192,7 @@ function RelatedRow({ episode }) {
           >
             <a
               className="related-clamp"
-              href={episodePath(episode.slug)}
+              href={withFrom(episodePath(episode.slug), fromPath, fromName)}
               title={episode.brand || episode.title || ""}
             >
               <RelatedWords text={episode.brand || episode.title} />
@@ -200,7 +202,7 @@ function RelatedRow({ episode }) {
           {guestLines.length ? (
             <a
               className="related-guest related-clamp"
-              href={episodePath(episode.slug)}
+              href={withFrom(episodePath(episode.slug), fromPath, fromName)}
               title={episode.guest || ""}
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -274,6 +276,8 @@ export default function EpisodePage({ episode, related, terms = [] }) {
   const episodeNumber = formatEpisodeNumber(episode.id);
   const whenBits = [episode.date, episode.duration].filter(Boolean);
   const topicTags = topicTagsForEpisode(episode.slug);
+  const fromPath = `/episodes/${episode.slug}`;
+  const fromName = episode.brand || episode.title || "this episode";
   const jsonLd = jsonLdScript(episode);
 
   return (
@@ -307,12 +311,10 @@ export default function EpisodePage({ episode, related, terms = [] }) {
       <SiteChrome>
         <article className="content-section episode-page">
           <div className="episode-kicker">
-            <a className="back-link" href="/#episodes">
-              ← All episodes
-            </a>
+            <BackLink />
             {episodeNumber ? <span>{episodeNumber}</span> : null}
             {episode.category ? (
-              <a className="episode-category" href={categoryPath(episode.category)}>
+              <a className="episode-category" href={withFrom(categoryPath(episode.category), fromPath, fromName)}>
                 {episode.category}
               </a>
             ) : null}
@@ -399,7 +401,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                 {topicTags.map((tag, index) => (
                   <span key={tag.slug}>
                     {index > 0 ? <span className="episode-topics-sep">, </span> : null}
-                    <a href={`/topics/${tag.slug}`}>{tag.label}</a>
+                    <a href={withFrom(`/topics/${tag.slug}`, fromPath, fromName)}>{tag.label}</a>
                   </span>
                 ))}
               </p>
@@ -461,7 +463,12 @@ export default function EpisodePage({ episode, related, terms = [] }) {
               <h2>Related</h2>
               <div className="related-list">
                 {related.map((item) => (
-                  <RelatedRow key={item.slug} episode={item} />
+                  <RelatedRow
+                    key={item.slug}
+                    episode={item}
+                    fromPath={fromPath}
+                    fromName={fromName}
+                  />
                 ))}
               </div>
             </section>

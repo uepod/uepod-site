@@ -1,5 +1,6 @@
 /**
  * Topic tags for published episodes. data/topic-tags.json is the review list.
+ * A tag is only listed when that subject is a central part of the episode.
  * Mikey's Pies stays Manufacturing, Pricing & Margins, Growth Without Ads.
  */
 

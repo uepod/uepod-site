@@ -4,10 +4,12 @@ import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
 import { SITE_URL, formatEpisodeNumber } from "../../src/lib/episodePage";
 import { allTopics, topicBySlug } from "../../src/lib/topics";
 import { categoryPath } from "../../src/lib/categories";
+import { withFrom } from "../../src/lib/fromLink";
+import BackLink from "../../src/components/BackLink";
 
 const REVALIDATE_SECONDS = 900;
 
-function TopicEpisode({ episode }) {
+function TopicEpisode({ episode, fromPath, fromName }) {
   const number = formatEpisodeNumber(episode.id);
 
   return (
@@ -39,7 +41,7 @@ function TopicEpisode({ episode }) {
         {episode.category ? (
           <a
             className="category-label"
-            href={categoryPath(episode.category)}
+            href={withFrom(categoryPath(episode.category), fromPath, fromName)}
             style={{
               display: "inline-block",
               fontFamily: "'Space Grotesk', sans-serif",
@@ -66,7 +68,7 @@ function TopicEpisode({ episode }) {
           }}
         >
           <a
-            href={`/episodes/${episode.slug}`}
+            href={withFrom(`/episodes/${episode.slug}`, fromPath, fromName)}
             style={{ color: "#fff", textDecoration: "none" }}
           >
             {episode.brand || episode.title}
@@ -122,6 +124,8 @@ function TopicEpisode({ episode }) {
 }
 
 export default function TopicPage({ topic, episodes }) {
+  const fromPath = `/topics/${topic.slug}`;
+  const fromName = topic.label;
   const title = `${topic.label} | Unit Economics`;
   const description = `Episodes tagged ${topic.label}.`;
   const canonical = `${SITE_URL}/topics/${topic.slug}`;
@@ -135,9 +139,7 @@ export default function TopicPage({ topic, episodes }) {
       </Head>
       <SiteChrome>
         <article className="content-section topic-page">
-          <a className="back-link" href="/#episodes">
-            ← All episodes
-          </a>
+          <BackLink />
           <h1
             style={{
               fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
@@ -153,7 +155,12 @@ export default function TopicPage({ topic, episodes }) {
           </h1>
           <div>
             {episodes.map((episode) => (
-              <TopicEpisode key={episode.slug} episode={episode} />
+              <TopicEpisode
+                key={episode.slug}
+                episode={episode}
+                fromPath={fromPath}
+                fromName={fromName}
+              />
             ))}
           </div>
         </article>
