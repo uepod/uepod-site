@@ -562,11 +562,17 @@ a {
   .related-link .episode-grid {
     display: flex !important;
     flex-direction: column;
-    gap: 0;
+    gap: 0 !important;
   }
 
   .related-link .episode-number {
     margin-bottom: 5px;
+  }
+
+  .related-link .category-label {
+    display: block !important;
+    width: fit-content;
+    line-height: 1.1;
   }
 
   .related-link .episode-meta {
