@@ -61,6 +61,23 @@ a {
   color: inherit;
 }
 
+.track-notice {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 400;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 6px 10px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
