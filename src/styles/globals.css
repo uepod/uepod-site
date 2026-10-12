@@ -261,8 +261,10 @@ a {
   }
 }
 
-/* Episode pages */
+/* Episode pages. Capped so a wide monitor stays a composed page. */
 .episode-page {
+  width: min(1500px, 100%);
+  margin-inline: auto;
   padding: 48px 40px 80px;
 }
 
@@ -463,8 +465,9 @@ a {
 @media (min-width: 1280px) {
   .episode-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    column-gap: 64px;
+    /* Reading column stays a fixed measure; the player uses the room beside it. */
+    grid-template-columns: minmax(0, 42rem) minmax(0, 1fr);
+    column-gap: 56px;
     align-items: start;
     margin-top: 36px;
   }
@@ -540,7 +543,7 @@ a {
 
 @media (min-width: 1440px) {
   .episode-layout {
-    column-gap: 80px;
+    column-gap: 72px;
   }
 }
 
