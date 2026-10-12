@@ -143,11 +143,13 @@ export default function SiteChrome({ children }) {
         flexDirection: "column",
       }}
     >
+      <div
+        ref={contentRef}
+        className="site-scroll"
+        style={{ flex: 1, minHeight: 0, overflowX: "hidden", overflowY: "auto" }}
+      >
       <nav
         style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -213,11 +215,6 @@ export default function SiteChrome({ children }) {
         ))}
       </div>
 
-      <div
-        ref={contentRef}
-        className="site-scroll"
-        style={{ flex: 1, minHeight: 0, overflow: "auto" }}
-      >
         {children}
 
         <footer

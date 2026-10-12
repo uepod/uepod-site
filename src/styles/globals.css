@@ -368,14 +368,180 @@ a {
   color: #fff;
 }
 
+.episode-terms {
+  margin: 14px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.episode-terms-label {
+  margin-right: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.episode-terms a,
+.episode-terms-sep {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.episode-terms a:hover {
+  color: #fff;
+}
+
 .topic-page {
-  width: min(1100px, 100%);
-  margin-inline: auto;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: 0;
   padding: 48px 40px 80px;
 }
 
-.topic-page h2 a:hover {
-  text-decoration: underline;
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 48px;
+  margin-top: 40px;
+}
+
+.listing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.listing-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.listing-card-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.listing-number {
+  margin-bottom: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.listing-category {
+  display: block;
+  width: fit-content;
+  margin-bottom: 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  pointer-events: auto;
+}
+
+.listing-card h2 {
+  margin: 0 0 4px;
+  font-family: "AkkuratLLWeb-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.listing-card h2 a {
+  color: #fff;
+}
+
+.listing-guest {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.listing-card .listing-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  max-width: 100%;
+  pointer-events: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.listing-word {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.listing-meta {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}
+
+.listing-card h2 a,
+.listing-card:hover h2 a {
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  .listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .listing-grid {
+    row-gap: 72px;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .listing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 72px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .listing-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 72px;
+  }
 }
 
 .back-link {
@@ -578,8 +744,11 @@ a {
   overflow-wrap: anywhere;
 }
 
-.related-link:hover h3 {
-  text-decoration: underline;
+.related-link h3,
+.related-link:hover h3,
+.related-link:hover h3 a,
+.related-link:hover .related-clamp {
+  text-decoration: none;
 }
 
 /* Desktop: Related sits in one row of three. Narrow screens stack the cards. */
@@ -649,6 +818,53 @@ a {
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
+}
+
+.glossary-shell {
+  position: relative;
+}
+
+.glossary-top-slot {
+  position: sticky;
+  bottom: 24px;
+  z-index: 80;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-right: 40px;
+  height: 16px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  pointer-events: none;
+}
+
+.glossary-top {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.glossary-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.glossary-top:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .glossary-top-slot {
+    display: none;
+  }
 }
 
 .footer-glossary {

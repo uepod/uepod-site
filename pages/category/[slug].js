@@ -1,126 +1,16 @@
 import Head from "next/head";
 import SiteChrome from "../../src/components/SiteChrome";
+import EpisodeCard from "../../src/components/EpisodeCard";
+import BackLink from "../../src/components/BackLink";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
-import { SITE_URL, formatEpisodeNumber } from "../../src/lib/episodePage";
-import { categoryPath, categorySlug } from "../../src/lib/categories";
+import { SITE_URL } from "../../src/lib/episodePage";
+import { categorySlug } from "../../src/lib/categories";
 
 const REVALIDATE_SECONDS = 900;
 
-function CategoryEpisode({ episode }) {
-  const number = formatEpisodeNumber(episode.id);
-
-  return (
-    <div
-      className="episode-grid"
-      style={{
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        padding: "28px 0",
-        display: "grid",
-        gridTemplateColumns: "64px 1fr auto",
-        gap: "20px",
-        alignItems: "start",
-      }}
-    >
-      <div
-        className="episode-number"
-        style={{
-          fontFamily: "'JetBrains Mono', monospace",
-          fontSize: "12px",
-          color: "rgba(255,255,255,0.3)",
-          paddingTop: "4px",
-          letterSpacing: "0.05em",
-        }}
-      >
-        {number}
-      </div>
-
-      <div>
-        {episode.category ? (
-          <a
-            className="category-label"
-            href={categoryPath(episode.category)}
-            style={{
-              display: "inline-block",
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "11px",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              letterSpacing: "0.12em",
-              marginBottom: "6px",
-            }}
-          >
-            {episode.category}
-          </a>
-        ) : null}
-
-        <h2
-          style={{
-            fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-            fontSize: "22px",
-            lineHeight: 1.25,
-            marginBottom: "4px",
-            textTransform: "uppercase",
-            letterSpacing: "-0.02em",
-            fontWeight: 400,
-          }}
-        >
-          <a
-            href={`/episodes/${episode.slug}`}
-            style={{ color: "#fff", textDecoration: "none" }}
-          >
-            {episode.brand || episode.title}
-          </a>
-        </h2>
-
-        {episode.guest ? (
-          <div
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "15px",
-              color: "rgba(255,255,255,0.5)",
-            }}
-          >
-            {episode.guest}
-          </div>
-        ) : null}
-
-        <div
-          className="episode-meta-inline"
-          style={{
-            display: "none",
-            gap: "12px",
-            marginTop: "10px",
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: "11px",
-            color: "rgba(255,255,255,0.25)",
-          }}
-        >
-          {episode.date ? <span>{episode.date}</span> : null}
-          {episode.duration ? <span>{episode.duration}</span> : null}
-        </div>
-      </div>
-
-      <div
-        className="episode-meta"
-        style={{
-          fontFamily: "'JetBrains Mono', monospace",
-          fontSize: "12px",
-          color: "rgba(255,255,255,0.25)",
-          textAlign: "right",
-          whiteSpace: "nowrap",
-          paddingTop: "4px",
-        }}
-      >
-        {episode.date ? <div>{episode.date}</div> : null}
-        {episode.duration ? (
-          <div style={{ marginTop: "4px" }}>{episode.duration}</div>
-        ) : null}
-      </div>
-    </div>
-  );
-}
-
 export default function CategoryPage({ category, episodes }) {
+  const fromPath = `/category/${category.slug}`;
+  const fromName = category.label;
   const title = `${category.label} | Unit Economics`;
   const description = `Episodes in ${category.label}.`;
   const canonical = `${SITE_URL}/category/${category.slug}`;
@@ -134,9 +24,7 @@ export default function CategoryPage({ category, episodes }) {
       </Head>
       <SiteChrome>
         <article className="content-section topic-page">
-          <a className="back-link" href="/#episodes">
-            ← All episodes
-          </a>
+          <BackLink />
           <h1
             style={{
               fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
@@ -145,14 +33,19 @@ export default function CategoryPage({ category, episodes }) {
               textTransform: "uppercase",
               letterSpacing: "-0.02em",
               fontWeight: 400,
-              margin: "28px 0 8px",
+              margin: "28px 0 0",
             }}
           >
             {category.label}
           </h1>
-          <div>
+          <div className="listing-grid">
             {episodes.map((episode) => (
-              <CategoryEpisode key={episode.slug} episode={episode} />
+              <EpisodeCard
+                key={episode.slug}
+                episode={episode}
+                fromPath={fromPath}
+                fromName={fromName}
+              />
             ))}
           </div>
         </article>

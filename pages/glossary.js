@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../src/lib/fetchEpisodes";
@@ -32,6 +32,55 @@ function scrollToId(id) {
     barHeight -
     8;
   scroller.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+}
+
+function GlossaryTopLink() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const scroller = document.querySelector(".site-scroll");
+    if (!scroller) return;
+
+    const update = () => {
+      const phone = window.matchMedia("(max-width: 768px)").matches;
+      const pastFold = scroller.scrollTop >= scroller.clientHeight * 1.5;
+      setVisible(!phone && pastFold);
+    };
+
+    update();
+    scroller.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      scroller.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
+  return (
+    <a
+      className={`glossary-top${visible ? " is-visible" : ""}`}
+      href="#top"
+      aria-hidden={visible ? undefined : true}
+      tabIndex={visible ? 0 : -1}
+      onClick={(event) => {
+        if (
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+        event.preventDefault();
+        const scroller = document.querySelector(".site-scroll");
+        if (scroller) scroller.scrollTo({ top: 0, behavior: "smooth" });
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+    >
+      ↑ Top
+    </a>
+  );
 }
 
 export default function GlossaryPage({ groups, letters, terms }) {
@@ -71,6 +120,7 @@ export default function GlossaryPage({ groups, letters, terms }) {
         />
       </Head>
       <SiteChrome>
+        <div className="glossary-shell">
         <div className="glossary-page">
           <p className="glossary-kicker">Reference</p>
           <h1>Glossary</h1>
@@ -164,6 +214,10 @@ export default function GlossaryPage({ groups, letters, terms }) {
               ))}
             </section>
           ))}
+        </div>
+        <div className="glossary-top-slot">
+          <GlossaryTopLink />
+        </div>
         </div>
       </SiteChrome>
     </>

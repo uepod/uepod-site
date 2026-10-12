@@ -1,0 +1,344 @@
+{
+  "topics": [
+    { "slug": "manufacturing", "label": "Manufacturing" },
+    { "slug": "pricing-margins", "label": "Pricing & Margins" },
+    { "slug": "growth-without-ads", "label": "Growth Without Ads" },
+    { "slug": "fundraising", "label": "Fundraising" },
+    { "slug": "retail-distribution", "label": "Retail Distribution" },
+    { "slug": "direct-to-consumer", "label": "Direct-to-Consumer" },
+    { "slug": "packaging-brand", "label": "Packaging & Brand" },
+    { "slug": "supply-chain", "label": "Supply Chain" },
+    { "slug": "product-development", "label": "Product Development" },
+    { "slug": "bootstrapping", "label": "Bootstrapping" },
+    { "slug": "hardware", "label": "Hardware" },
+    { "slug": "community", "label": "Community" },
+    { "slug": "regulation", "label": "Regulation" }
+  ],
+  "episodes": [
+    {
+      "slug": "mikeys-pies-mikey-deegan",
+      "brand": "Mikey's Pies",
+      "tags": ["manufacturing", "pricing-margins", "growth-without-ads"]
+    },
+    {
+      "slug": "tofugo-caroline-dai",
+      "brand": "TofuGo",
+      "tags": ["manufacturing", "retail-distribution", "packaging-brand"]
+    },
+    {
+      "slug": "matic-robots-mehul-nariyawala",
+      "brand": "Matic Robots",
+      "tags": ["hardware", "manufacturing", "product-development"]
+    },
+    {
+      "slug": "yardsale-cristina-ashbaugh",
+      "brand": "Yardsale",
+      "tags": ["retail-distribution"]
+    },
+    {
+      "slug": "rite-of-way-alex-brands",
+      "brand": "Rite of Way",
+      "tags": ["product-development", "pricing-margins", "retail-distribution", "packaging-brand"]
+    },
+    {
+      "slug": "great-circle-ventures-jacob-afriat",
+      "brand": "Great Circle Ventures",
+      "tags": ["fundraising", "pricing-margins"]
+    },
+    {
+      "slug": "springdale-ventures-dan-graham-mollye-santulli",
+      "brand": "Springdale Ventures",
+      "tags": ["fundraising"]
+    },
+    {
+      "slug": "alexandra-spitz-new-mom-school",
+      "brand": "New Mom School",
+      "tags": ["pricing-margins"]
+    },
+    {
+      "slug": "joy-supply-lindsay-leopold",
+      "brand": "Joy Supply",
+      "tags": ["manufacturing", "supply-chain", "retail-distribution"]
+    },
+    {
+      "slug": "caro-caroline-mckay",
+      "brand": "Caro",
+      "tags": ["growth-without-ads"]
+    },
+    {
+      "slug": "noshi-for-kids-tomo-delaney",
+      "brand": "Noshi for Kids",
+      "tags": ["pricing-margins", "direct-to-consumer", "retail-distribution"]
+    },
+    {
+      "slug": "biche-alexandra-pauly",
+      "brand": "Biche",
+      "tags": ["product-development", "pricing-margins", "retail-distribution", "direct-to-consumer"]
+    },
+    {
+      "slug": "brightland-aishwarya-iyer",
+      "brand": "Brightland",
+      "tags": ["pricing-margins", "product-development", "retail-distribution", "fundraising"]
+    },
+    {
+      "slug": "mahsa-chai-mahsa-darabi",
+      "brand": "Mahsa Chai",
+      "tags": ["supply-chain", "pricing-margins"]
+    },
+    {
+      "slug": "betty-jos-erin-forden-maddie-nehlen",
+      "brand": "Betty Jo's",
+      "tags": ["manufacturing", "growth-without-ads"]
+    },
+    {
+      "slug": "terra-kaffe-sahand-dilmaghani",
+      "brand": "Terra Kaffe",
+      "tags": ["hardware", "manufacturing", "product-development"]
+    },
+    {
+      "slug": "jamies-farm-jamie-kim",
+      "brand": "Jamie's Farm",
+      "tags": ["manufacturing", "supply-chain", "retail-distribution", "bootstrapping"]
+    },
+    {
+      "slug": "pistakio-francine-voit-nicola-buffo",
+      "brand": "Pistakio",
+      "tags": ["retail-distribution", "product-development"]
+    },
+    {
+      "slug": "rip-cold-brew-brendan-flannery",
+      "brand": "RIP Cold Brew",
+      "tags": ["product-development", "retail-distribution", "direct-to-consumer"]
+    },
+    {
+      "slug": "9-mini-interviews",
+      "brand": "9 Mini Interviews",
+      "tags": []
+    },
+    {
+      "slug": "yuzuco-basil-beshkov",
+      "brand": "YUZUCO",
+      "tags": ["supply-chain", "product-development", "retail-distribution"]
+    },
+    {
+      "slug": "noon-jane-wong",
+      "brand": "NOON",
+      "tags": ["product-development", "packaging-brand", "retail-distribution"]
+    },
+    {
+      "slug": "gato-dates-gabriella-labi-tonya-reznikovich",
+      "brand": "Gato Dates",
+      "tags": ["manufacturing", "supply-chain", "pricing-margins"]
+    },
+    {
+      "slug": "courier-matt-sims",
+      "brand": "Courier",
+      "tags": ["product-development", "pricing-margins", "retail-distribution"]
+    },
+    {
+      "slug": "esspo-katharine-leitch",
+      "brand": "Esspo",
+      "tags": ["retail-distribution", "direct-to-consumer", "pricing-margins", "packaging-brand"]
+    },
+    {
+      "slug": "cpgd-zoya-virani",
+      "brand": "CPGD",
+      "tags": ["community", "fundraising"]
+    },
+    {
+      "slug": "lasso-clarke-pennington",
+      "brand": "Lasso",
+      "tags": ["product-development", "manufacturing", "pricing-margins"]
+    },
+    {
+      "slug": "yes-apples-tenley-fitzgerald",
+      "brand": "Yes! Apples",
+      "tags": ["packaging-brand", "retail-distribution", "direct-to-consumer", "supply-chain"]
+    },
+    {
+      "slug": "seremoni-saif-khawaja",
+      "brand": "Seremoni",
+      "tags": ["hardware", "manufacturing", "supply-chain", "pricing-margins"]
+    },
+    {
+      "slug": "fjord-gabe-turner",
+      "brand": "Fjord",
+      "tags": ["regulation", "product-development"]
+    },
+    {
+      "slug": "honey-dept-noah-phillips",
+      "brand": "Honey Dept.",
+      "tags": ["product-development", "supply-chain", "packaging-brand"]
+    },
+    {
+      "slug": "something-sweet-brittney-cook",
+      "brand": "Something Sweet",
+      "tags": ["manufacturing", "direct-to-consumer", "retail-distribution"]
+    },
+    {
+      "slug": "sway-julia-marsh",
+      "brand": "Sway",
+      "tags": ["manufacturing", "supply-chain", "product-development"]
+    },
+    {
+      "slug": "madre-shay-carrillo",
+      "brand": "MADRE",
+      "tags": ["manufacturing", "supply-chain", "pricing-margins", "retail-distribution"]
+    },
+    {
+      "slug": "laurels-coffee-isabel-washington",
+      "brand": "Laurel's Coffee",
+      "tags": ["retail-distribution"]
+    },
+    {
+      "slug": "loftie-matt-hassett",
+      "brand": "Loftie",
+      "tags": ["hardware", "manufacturing", "bootstrapping", "supply-chain"]
+    },
+    {
+      "slug": "lotties-meats-chelsey-cassie-maschhoff",
+      "brand": "Lottie's Meats",
+      "tags": ["manufacturing", "regulation", "direct-to-consumer", "pricing-margins"]
+    },
+    {
+      "slug": "bytem-jack-davis-jacob-tubis",
+      "brand": "Byte'm",
+      "tags": ["manufacturing", "pricing-margins", "packaging-brand", "retail-distribution"]
+    },
+    {
+      "slug": "armada-seamus-meniahane",
+      "brand": "Armada",
+      "tags": ["manufacturing", "supply-chain"]
+    },
+    {
+      "slug": "lil-tuffy",
+      "brand": "Lil Tuffy",
+      "tags": ["pricing-margins"]
+    },
+    {
+      "slug": "muttville-sherri-franklin",
+      "brand": "Muttville",
+      "tags": ["community"]
+    },
+    {
+      "slug": "kelly-bennett",
+      "brand": "Kelly Bennett",
+      "tags": ["packaging-brand", "retail-distribution", "growth-without-ads"]
+    },
+    {
+      "slug": "pickle-brian-mcmahon",
+      "brand": "Pickle",
+      "tags": ["product-development", "fundraising"]
+    },
+    {
+      "slug": "hiya-adam-gillman",
+      "brand": "Hiya",
+      "tags": ["product-development", "direct-to-consumer", "bootstrapping", "pricing-margins"]
+    },
+    {
+      "slug": "sourmilk-kiki-couchman-elan-halpern",
+      "brand": "Sourmilk",
+      "tags": ["manufacturing", "supply-chain", "product-development"]
+    },
+    {
+      "slug": "light-joe-hollier",
+      "brand": "Light",
+      "tags": ["hardware", "manufacturing", "pricing-margins"]
+    },
+    {
+      "slug": "hotel-ceramics-sara-victorio",
+      "brand": "Hotel Ceramics",
+      "tags": ["manufacturing", "pricing-margins"]
+    },
+    {
+      "slug": "felt-fat-nate-mell",
+      "brand": "Felt + Fat",
+      "tags": ["manufacturing", "pricing-margins", "direct-to-consumer"]
+    },
+    {
+      "slug": "erstwhile-jared-klusner",
+      "brand": "Erstwhile",
+      "tags": ["supply-chain", "pricing-margins"]
+    },
+    {
+      "slug": "one-trick-pony-lucy-dana",
+      "brand": "One Trick Pony",
+      "tags": ["manufacturing", "supply-chain", "packaging-brand", "pricing-margins"]
+    },
+    {
+      "slug": "gob-lauryn-menard",
+      "brand": "GOB",
+      "tags": ["product-development", "pricing-margins", "direct-to-consumer"]
+    },
+    {
+      "slug": "jones-hilary-dubin-caroline-huber",
+      "brand": "Jones",
+      "tags": ["regulation", "fundraising", "product-development"]
+    },
+    {
+      "slug": "weast-coast-games-dan-cassaro-dan-christofferson-meg-yahashi",
+      "brand": "Young Jerks / Weastcoast",
+      "tags": ["product-development", "pricing-margins"]
+    },
+    {
+      "slug": "nymzo-elliott-walker-tim-hucklesby",
+      "brand": "Nymzo",
+      "tags": ["manufacturing", "product-development", "bootstrapping", "direct-to-consumer"]
+    },
+    {
+      "slug": "stonemaier-games-jamey-stegmaier",
+      "brand": "Stonemaier Games",
+      "tags": ["manufacturing", "pricing-margins", "supply-chain", "retail-distribution"]
+    },
+    {
+      "slug": "almond-surfboards-dave-allee",
+      "brand": "Almond Surfboards",
+      "tags": ["community"]
+    },
+    {
+      "slug": "bezi-ilay-karateke",
+      "brand": "Bezi",
+      "tags": ["retail-distribution", "bootstrapping", "growth-without-ads", "fundraising"]
+    },
+    {
+      "slug": "currently-running-nash-howe",
+      "brand": "Currently Running",
+      "tags": ["product-development", "bootstrapping", "direct-to-consumer"]
+    },
+    {
+      "slug": "rotten-michael-fisher",
+      "brand": "Rotten",
+      "tags": ["product-development", "retail-distribution", "pricing-margins", "packaging-brand"]
+    },
+    {
+      "slug": "alecs-ice-cream-alec-jaffe",
+      "brand": "Alec's Ice Cream",
+      "tags": ["manufacturing", "supply-chain", "pricing-margins"]
+    },
+    {
+      "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+      "brand": "PF Candle Co",
+      "tags": ["manufacturing", "product-development", "bootstrapping", "retail-distribution"]
+    },
+    {
+      "slug": "spring-mulberry-kathryn-shah",
+      "brand": "Spring & Mulberry",
+      "tags": ["manufacturing", "supply-chain", "retail-distribution", "packaging-brand"]
+    },
+    {
+      "slug": "talea-beer-co-tara-hankinson-and-leann-darland",
+      "brand": "Talea Beer Co",
+      "tags": ["fundraising"]
+    },
+    {
+      "slug": "le-puzz-alistair-matthews-and-michael-hunter",
+      "brand": "Le Puzz",
+      "tags": ["community", "packaging-brand", "pricing-margins"]
+    },
+    {
+      "slug": "craighill-zach-fried",
+      "brand": "Craighill",
+      "tags": ["product-development", "community"]
+    }
+  ]
+}
