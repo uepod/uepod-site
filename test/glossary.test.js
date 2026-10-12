@@ -9,6 +9,7 @@ const {
   heardInLabel,
   glossaryJsonLd,
   termLetter,
+  shortTermName,
   termsForEpisode,
 } = require("../src/lib/glossary");
 
@@ -189,4 +190,12 @@ test("episode terms keep glossary anchors past the three-episode display cap", (
   ]);
   assert.equal(expandGlossary(entries)[0].episodes.length, 3);
   assert.deepEqual(termsForEpisode("missing", entries), []);
+});
+
+test("short term names drop a trailing expansion", () => {
+  assert.equal(shortTermName("3PL (third-party logistics)"), "3PL");
+  assert.equal(shortTermName("DTC (direct-to-consumer)"), "DTC");
+  assert.equal(shortTermName("Gross margin"), "Gross margin");
+  assert.equal(shortTermName("Co-packer (co-man)"), "Co-packer");
+  assert.equal(shortTermName("SRP / MSRP (suggested retail price)"), "SRP / MSRP");
 });

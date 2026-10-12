@@ -193,6 +193,12 @@ function loadGlossaryEntries() {
   return require("../../data/glossary.json");
 }
 
+function shortTermName(term) {
+  return String(term || "")
+    .replace(/\s*\([^)]*\)\s*$/, "")
+    .trim();
+}
+
 function entryListsSlug(entry, slug) {
   return episodeList(entry).some((item) => String(asEpisode(item).slug || "").trim() === slug);
 }
@@ -238,4 +244,5 @@ module.exports = {
   glossaryJsonLd,
   glossaryJsonLdScript,
   termsForEpisode,
+  shortTermName,
 };

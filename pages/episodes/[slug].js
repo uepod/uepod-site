@@ -18,7 +18,7 @@ import {
   episodePath,
 } from "../../src/lib/episodePage";
 import { topicTagsForEpisode } from "../../src/lib/topics";
-import { termsForEpisode } from "../../src/lib/glossary";
+import { shortTermName, termsForEpisode } from "../../src/lib/glossary";
 import { categoryPath } from "../../src/lib/categories";
 import { withFrom } from "../../src/lib/fromLink";
 import BackLink from "../../src/components/BackLink";
@@ -397,10 +397,11 @@ export default function EpisodePage({ episode, related, terms = [] }) {
             ) : null}
 
             {topicTags.length ? (
-              <p className="episode-topics">
+              <p className="episode-terms">
+                <span className="episode-terms-label">Topics</span>
                 {topicTags.map((tag, index) => (
                   <span key={tag.slug}>
-                    {index > 0 ? <span className="episode-topics-sep">, </span> : null}
+                    {index > 0 ? <span className="episode-terms-sep">, </span> : null}
                     <a href={withFrom(`/topics/${tag.slug}`, fromPath, fromName)}>{tag.label}</a>
                   </span>
                 ))}
@@ -413,7 +414,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                 {terms.map((term, index) => (
                   <span key={term.anchor}>
                     {index > 0 ? <span className="episode-terms-sep">, </span> : null}
-                    <a href={`/glossary#${term.anchor}`}>{term.term}</a>
+                    <a href={`/glossary#${term.anchor}`}>{shortTermName(term.term)}</a>
                   </span>
                 ))}
               </p>
