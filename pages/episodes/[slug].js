@@ -250,10 +250,9 @@ export default function EpisodePage({ episode, related }) {
       </Head>
 
       <SiteChrome>
-        <article
-          className="content-section"
-          style={{ padding: "48px 40px 80px" }}
-        >
+        <article className="content-section episode-page">
+          <div className="episode-layout">
+            <div className="episode-main">
           <a className="back-link" href="/#episodes">
             ← All episodes
           </a>
@@ -375,7 +374,9 @@ export default function EpisodePage({ episode, related }) {
               ))}
             </div>
           ) : null}
+            </div>
 
+            <div className="episode-aside">
           <ListenSection episode={episode} />
 
           {episode.takeaways?.length ? (
@@ -397,6 +398,8 @@ export default function EpisodePage({ episode, related }) {
               ))}
             </section>
           ) : null}
+            </div>
+          </div>
 
           <a className="back-link episode-back-bottom" href="/#episodes">
             All episodes →
