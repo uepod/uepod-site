@@ -497,7 +497,7 @@ a {
   .related-link .episode-grid {
     display: flex !important;
     flex-direction: column;
-    gap: 0;
+    gap: 0 !important;
   }
 
   .related-link .episode-number {
