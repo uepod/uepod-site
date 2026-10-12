@@ -251,8 +251,6 @@ export default function EpisodePage({ episode, related }) {
 
       <SiteChrome>
         <article className="content-section episode-page">
-          <div className="episode-layout">
-            <div className="episode-main">
           <a className="back-link" href="/#episodes">
             ← All episodes
           </a>
@@ -351,6 +349,8 @@ export default function EpisodePage({ episode, related }) {
             </div>
           </header>
 
+          <div className="episode-layout">
+            <div className="episode-main">
           {blocks.length ? (
             <div className="episode-description">
               {blocks.map((parts, index) => (

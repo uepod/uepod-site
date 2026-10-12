@@ -462,6 +462,10 @@ a {
     top: 12px;
   }
 
+  .episode-layout {
+    margin-top: 36px;
+  }
+
   .episode-description,
   .listen-section,
   .episode-takeaways,
@@ -469,6 +473,7 @@ a {
     max-width: none;
   }
 
+  .episode-description,
   .listen-section {
     margin-top: 0;
   }
