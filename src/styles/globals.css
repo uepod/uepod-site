@@ -541,6 +541,20 @@ a {
   overflow-wrap: break-word;
 }
 
+.related-link .related-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.related-link a.related-clamp {
+  color: inherit;
+  text-decoration: none;
+}
+
 .related-link .related-word {
   display: inline-block;
   max-width: 100%;
