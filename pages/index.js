@@ -4,6 +4,7 @@ import Head from "next/head";
 import { fetchEpisodes } from "../src/lib/fetchEpisodes";
 import { fetchPosts } from "../src/lib/fetchPosts";
 import { formatEpisodeNumber } from "../src/lib/episodePage";
+import { trackListenClick } from "../src/lib/listenTracking";
 
 const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
 
@@ -304,12 +305,13 @@ function EpisodeCard({ ep, index }) {
           <HoverLink
             href={ep.spotify}
             hoverColor="#1DB954"
-            onClick={() =>
+            onClick={() => {
               trackEvent("episode_platform_click", {
                 platform: "spotify",
                 episode_name: ep.brand,
-              })
-            }
+              });
+              trackListenClick("spotify", ep.slug);
+            }}
           >
             <SpotifyIcon />
           </HoverLink>
@@ -317,12 +319,13 @@ function EpisodeCard({ ep, index }) {
           <HoverLink
             href={ep.apple}
             hoverColor="#9B59B6"
-            onClick={() =>
+            onClick={() => {
               trackEvent("episode_platform_click", {
                 platform: "apple_podcasts",
                 episode_name: ep.brand,
-              })
-            }
+              });
+              trackListenClick("apple", ep.slug);
+            }}
           >
             <AppleIcon />
           </HoverLink>
@@ -330,12 +333,13 @@ function EpisodeCard({ ep, index }) {
           <HoverLink
             href={ep.youtube}
             hoverColor="#FF0000"
-            onClick={() =>
+            onClick={() => {
               trackEvent("episode_platform_click", {
                 platform: "youtube",
                 episode_name: ep.brand,
-              })
-            }
+              });
+              trackListenClick("youtube", ep.slug);
+            }}
           >
             <YouTubeIcon />
           </HoverLink>
@@ -949,14 +953,15 @@ export default function Home({ episodes, posts }) {
                     hoverColor="#1DB954"
                     icon={SpotifyIcon}
                     label="Spotify"
-                    onClick={() =>
+                    onClick={() => {
                       trackEvent(
                         "hero_platform_click",
                         {
                           platform: "spotify",
                         }
-                      )
-                    }
+                      );
+                      trackListenClick("spotify", "");
+                    }}
                   />
 
                   <PlatformButton
@@ -964,15 +969,16 @@ export default function Home({ episodes, posts }) {
                     hoverColor="#9B59B6"
                     icon={AppleIcon}
                     label="Apple Podcasts"
-                    onClick={() =>
+                    onClick={() => {
                       trackEvent(
                         "hero_platform_click",
                         {
                           platform:
                             "apple_podcasts",
                         }
-                      )
-                    }
+                      );
+                      trackListenClick("apple", "");
+                    }}
                   />
 
                   <PlatformButton
@@ -980,14 +986,15 @@ export default function Home({ episodes, posts }) {
                     hoverColor="#FF0000"
                     icon={YouTubeIcon}
                     label="YouTube"
-                    onClick={() =>
+                    onClick={() => {
                       trackEvent(
                         "hero_platform_click",
                         {
                           platform: "youtube",
                         }
-                      )
-                    }
+                      );
+                      trackListenClick("youtube", "");
+                    }}
                   />
 
                   <PlatformButton
