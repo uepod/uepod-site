@@ -6,22 +6,12 @@ export default function MyDocument({ pathname }) {
     (pathname || "").startsWith("/episodes") ||
     (pathname || "").startsWith("/topics") ||
     (pathname || "").startsWith("/category") ||
-    pathname === "/404";
+    pathname === "/404" ||
+    pathname === "/glossary";
 
   return (
     <Html lang="en">
       <Head>
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JZWSC4TBS0"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-JZWSC4TBS0');`,
-          }}
-        />
-
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

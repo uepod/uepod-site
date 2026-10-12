@@ -1,0 +1,2719 @@
+[
+  {
+    "term": "3PL (third-party logistics)",
+    "aliases": [],
+    "definition": "A 3PL (third-party logistics provider) is an outside company that stores a brand's inventory and packs and ships its orders.",
+    "category": "operations",
+    "related": [],
+    "episodes": [
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 65,
+        "brand": "Mikey's Pies",
+        "slug": "mikeys-pies-mikey-deegan"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      },
+      {
+        "number": 27,
+        "brand": "Armada",
+        "slug": "armada-seamus-meniahane"
+      },
+      {
+        "number": 22,
+        "brand": "Hiya",
+        "slug": "hiya-adam-gillman"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 45,
+        "brand": "YUZUCO",
+        "slug": "yuzuco-basil-beshkov"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 37,
+        "brand": "Seremoni",
+        "slug": "seremoni-saif-khawaja"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Angel investor",
+    "aliases": [],
+    "definition": "A person who invests their own money in very early companies, usually in exchange for a small share of ownership.",
+    "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Seed round"
+    ],
+    "episodes": [
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 63,
+        "brand": "Matic Robots",
+        "slug": "matic-robots-mehul-nariyawala"
+      },
+      {
+        "number": 20,
+        "brand": "Light",
+        "slug": "light-joe-hollier"
+      },
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 36,
+        "brand": "Fjord",
+        "slug": "fjord-gabe-turner"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 54,
+        "brand": "Biche",
+        "slug": "biche-alexandra-pauly"
+      },
+      {
+        "number": 40,
+        "brand": "CPGD",
+        "slug": "cpgd-zoya-virani"
+      }
+    ]
+  },
+  {
+    "term": "B2B (business-to-business)",
+    "aliases": [],
+    "definition": "B2B (business-to-business) means selling to other businesses rather than to individual consumers.",
+    "category": "software",
+    "related": [
+      "DTC (direct-to-consumer)"
+    ],
+    "episodes": [
+      {
+        "number": 50,
+        "brand": "Terra Kaffe",
+        "slug": "terra-kaffe-sahand-dilmaghani"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 27,
+        "brand": "Armada",
+        "slug": "armada-seamus-meniahane"
+      },
+      {
+        "number": 2,
+        "brand": "Le Puzz",
+        "slug": "le-puzz-alistair-matthews-and-michael-hunter"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      }
+    ]
+  },
+  {
+    "term": "Bootstrapping",
+    "aliases": [
+      "self-funded"
+    ],
+    "definition": "Building a company with the founders' own money and the cash the business earns, rather than raising money from outside investors.",
+    "category": "fundraising",
+    "related": [
+      "Venture capital"
+    ],
+    "episodes": [
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 2,
+        "brand": "Le Puzz",
+        "slug": "le-puzz-alistair-matthews-and-michael-hunter"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 49,
+        "brand": "Jamie's Farm",
+        "slug": "jamies-farm-jamie-kim"
+      },
+      {
+        "number": 63,
+        "brand": "Matic Robots",
+        "slug": "matic-robots-mehul-nariyawala"
+      },
+      {
+        "number": 58,
+        "brand": "Alexandra Spitz",
+        "slug": "alexandra-spitz-new-mom-school"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 50,
+        "brand": "Terra Kaffe",
+        "slug": "terra-kaffe-sahand-dilmaghani"
+      },
+      {
+        "number": 22,
+        "brand": "Hiya",
+        "slug": "hiya-adam-gillman"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 8,
+        "brand": "Currently Running",
+        "slug": "currently-running-nash-howe"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Broker",
+    "aliases": [
+      "food broker",
+      "sales broker"
+    ],
+    "definition": "An outside sales agent who pitches a brand's products to store buyers and is usually paid a commission on sales.",
+    "category": "CPG/retail",
+    "related": [
+      "Category review",
+      "UNFI / KeHE"
+    ],
+    "episodes": [
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      }
+    ]
+  },
+  {
+    "term": "Burn rate",
+    "aliases": [
+      "cash burn",
+      "burn"
+    ],
+    "definition": "How much cash a company uses up each month after accounting for the cash it brings in. This is often called net burn.",
+    "category": "finance",
+    "related": [
+      "Runway"
+    ],
+    "episodes": [
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      }
+    ]
+  },
+  {
+    "term": "CAC (customer acquisition cost)",
+    "aliases": [],
+    "definition": "CAC (customer acquisition cost) is the average amount a business spends on marketing and sales to win one new customer.",
+    "category": "marketing",
+    "related": [
+      "LTV (lifetime value)",
+      "Payback period",
+      "Contribution margin"
+    ],
+    "episodes": [
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      }
+    ]
+  },
+  {
+    "term": "Cap table",
+    "aliases": [
+      "capitalization table"
+    ],
+    "definition": "A table showing who owns what share of a company, including founders, investors, and employees.",
+    "category": "fundraising",
+    "related": [
+      "Equity",
+      "Dilution"
+    ],
+    "episodes": [
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Category review",
+    "aliases": [
+      "line review"
+    ],
+    "definition": "A scheduled period, often once a year, when a store chain's buyer decides which products to add to or drop from a section of the store.",
+    "category": "retail",
+    "related": [
+      "Slotting fees",
+      "Broker"
+    ],
+    "episodes": [
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      }
+    ]
+  },
+  {
+    "term": "Churn",
+    "aliases": [
+      "churn rate"
+    ],
+    "definition": "The share of customers or subscribers who stop buying or cancel over a period of time.",
+    "category": "marketing",
+    "related": [
+      "Cohort",
+      "LTV (lifetime value)"
+    ],
+    "episodes": [
+      {
+        "number": 22,
+        "brand": "Hiya",
+        "slug": "hiya-adam-gillman"
+      }
+    ]
+  },
+  {
+    "term": "Clean label",
+    "aliases": [],
+    "definition": "A loosely defined term for products made with simple, recognizable ingredients, often without artificial additives. There is no single agreed-upon standard.",
+    "category": "product",
+    "related": [],
+    "episodes": [
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      }
+    ]
+  },
+  {
+    "term": "Co-packer (co-man)",
+    "aliases": [
+      "co-manufacturer",
+      "contract manufacturer"
+    ],
+    "definition": "A co-packer, also called a co-man (co-manufacturer), is an outside company that manufactures or packages products for a brand, allowing the brand to outsource some or all of its production.",
+    "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Private label",
+      "Lead time"
+    ],
+    "episodes": [
+      {
+        "number": 49,
+        "brand": "Jamie's Farm",
+        "slug": "jamies-farm-jamie-kim"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 6,
+        "brand": "Alec's Ice Cream",
+        "slug": "alecs-ice-cream-alec-jaffe"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 35,
+        "brand": "Honey Dept.",
+        "slug": "honey-dept-noah-phillips"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      },
+      {
+        "number": 45,
+        "brand": "YUZUCO",
+        "slug": "yuzuco-basil-beshkov"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 22,
+        "brand": "Hiya",
+        "slug": "hiya-adam-gillman"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 52,
+        "brand": "MAHSA CHAI®",
+        "slug": "mahsa-chai-mahsa-darabi"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 2,
+        "brand": "Le Puzz",
+        "slug": "le-puzz-alistair-matthews-and-michael-hunter"
+      }
+    ]
+  },
+  {
+    "term": "COGS (cost of goods sold)",
+    "aliases": [
+      "cost of goods"
+    ],
+    "definition": "COGS (cost of goods sold) is the cost of making or buying the products a company sells, including materials, packaging, manufacturing labor, and factory overhead, but not marketing or general administrative expenses.",
+    "category": "finance",
+    "related": [
+      "Gross margin",
+      "Contribution margin",
+      "Co-packer (co-man)"
+    ],
+    "episodes": [
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 52,
+        "brand": "MAHSA CHAI®",
+        "slug": "mahsa-chai-mahsa-darabi"
+      }
+    ]
+  },
+  {
+    "term": "Cohort",
+    "aliases": [],
+    "definition": "A group of customers who started buying in the same period, tracked together to see how their buying changes over time.",
+    "category": "marketing",
+    "related": [
+      "Churn",
+      "LTV (lifetime value)"
+    ],
+    "episodes": [
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      }
+    ]
+  },
+  {
+    "term": "Contribution margin",
+    "aliases": [],
+    "definition": "What is left from a sale after paying for the product and the costs that rise with each order, such as shipping, packaging, and payment fees. It shows how much each sale adds toward covering fixed costs and profit.",
+    "category": "finance",
+    "related": [
+      "Gross margin",
+      "COGS (cost of goods sold)",
+      "Unit economics",
+      "CAC (customer acquisition cost)"
+    ],
+    "episodes": [
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      }
+    ]
+  },
+  {
+    "term": "Conventional grocery",
+    "aliases": [
+      "conventional"
+    ],
+    "definition": "Mainstream supermarket chains such as Kroger or Albertsons, as opposed to natural or specialty stores.",
+    "category": "CPG/retail",
+    "related": [
+      "Natural channel"
+    ],
+    "episodes": [
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      }
+    ]
+  },
+  {
+    "term": "CPG (consumer packaged goods)",
+    "aliases": [],
+    "definition": "CPG (consumer packaged goods) refers to products sold in packages to everyday shoppers, such as food, drinks, and personal care items.",
+    "category": "industry",
+    "related": [
+      "Natural channel",
+      "Conventional grocery",
+      "Co-packer (co-man)"
+    ],
+    "episodes": [
+      {
+        "number": 40,
+        "brand": "CPGD",
+        "slug": "cpgd-zoya-virani"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 24,
+        "brand": "",
+        "slug": "kelly-bennett"
+      }
+    ]
+  },
+  {
+    "term": "Demo",
+    "aliases": [
+      "sampling",
+      "in-store demo"
+    ],
+    "definition": "Handing out free samples in a store so shoppers can try a product.",
+    "category": "marketing",
+    "related": [
+      "Trade spend"
+    ],
+    "episodes": [
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 6,
+        "brand": "Alec's Ice Cream",
+        "slug": "alecs-ice-cream-alec-jaffe"
+      },
+      {
+        "number": 49,
+        "brand": "Jamie's Farm",
+        "slug": "jamies-farm-jamie-kim"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Dilution",
+    "aliases": [],
+    "definition": "The drop in each existing owner's percentage of a company when new shares are issued, for example to new investors.",
+    "category": "fundraising",
+    "related": [
+      "Equity",
+      "Cap table",
+      "Valuation"
+    ],
+    "episodes": [
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      }
+    ]
+  },
+  {
+    "term": "DTC (direct-to-consumer)",
+    "aliases": [
+      "D2C"
+    ],
+    "definition": "DTC (direct-to-consumer) means selling straight to customers, usually through the brand's own website, instead of through stores or other middlemen.",
+    "category": "CPG/retail",
+    "related": [
+      "3PL (third-party logistics)",
+      "CAC (customer acquisition cost)",
+      "B2B (business-to-business)"
+    ],
+    "episodes": [
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 38,
+        "brand": "Yes! Apples",
+        "slug": "yes-apples-tenley-fitzgerald"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 35,
+        "brand": "Honey Dept.",
+        "slug": "honey-dept-noah-phillips"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      },
+      {
+        "number": 22,
+        "brand": "Hiya",
+        "slug": "hiya-adam-gillman"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 7,
+        "brand": "Rotten",
+        "slug": "rotten-michael-fisher"
+      },
+      {
+        "number": 42,
+        "brand": "Courier",
+        "slug": "courier-matt-sims"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 65,
+        "brand": "Mikey's Pies",
+        "slug": "mikeys-pies-mikey-deegan"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 54,
+        "brand": "Biche",
+        "slug": "biche-alexandra-pauly"
+      },
+      {
+        "number": 1,
+        "brand": "Craighill",
+        "slug": "craighill-zach-fried"
+      },
+      {
+        "number": 8,
+        "brand": "Currently Running",
+        "slug": "currently-running-nash-howe"
+      },
+      {
+        "number": 51,
+        "brand": "Betty Jo's",
+        "slug": "betty-jos-erin-forden-maddie-nehlen"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 52,
+        "brand": "MAHSA CHAI®",
+        "slug": "mahsa-chai-mahsa-darabi"
+      }
+    ]
+  },
+  {
+    "term": "Due diligence",
+    "aliases": [
+      "diligence"
+    ],
+    "definition": "The research an investor or buyer does on a company before investing in it or buying it.",
+    "category": "finance",
+    "related": [
+      "Exit",
+      "Valuation"
+    ],
+    "episodes": [
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 27,
+        "brand": "Armada",
+        "slug": "armada-seamus-meniahane"
+      }
+    ]
+  },
+  {
+    "term": "Equity",
+    "aliases": [
+      "ownership",
+      "stake"
+    ],
+    "definition": "Ownership in a company. Giving up equity means selling part of the business to investors or giving it to employees.",
+    "category": "fundraising",
+    "related": [
+      "Cap table",
+      "Dilution",
+      "Valuation"
+    ],
+    "episodes": [
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 51,
+        "brand": "Betty Jo's",
+        "slug": "betty-jos-erin-forden-maddie-nehlen"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Exit",
+    "aliases": [],
+    "definition": "The sale or public listing of a company, which gives founders and investors a chance to sell their ownership for cash.",
+    "category": "finance",
+    "related": [
+      "Valuation",
+      "Due diligence",
+      "Venture capital"
+    ],
+    "episodes": [
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Flywheel",
+    "aliases": [],
+    "definition": "A cycle where each part of the business feeds the next, so growth builds on itself over time.",
+    "category": "marketing",
+    "related": [],
+    "episodes": [
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 19,
+        "brand": "Hotel Ceramics",
+        "slug": "hotel-ceramics-sara-victorio"
+      }
+    ]
+  },
+  {
+    "term": "Free fill",
+    "aliases": [],
+    "definition": "Free product a brand gives a retailer to stock its shelves when a new product launches, often in place of a cash slotting fee.",
+    "category": "CPG/retail",
+    "related": [
+      "Slotting fees",
+      "Trade spend",
+      "TPR (temporary price reduction)"
+    ],
+    "episodes": [
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 46,
+        "brand": "",
+        "slug": "9-mini-interviews"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      }
+    ]
+  },
+  {
+    "term": "Friends and family round",
+    "aliases": [
+      "F&F round"
+    ],
+    "definition": "An early round of money raised from people the founder already knows, usually before professional investors get involved.",
+    "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Angel investor"
+    ],
+    "episodes": [
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 58,
+        "brand": "Alexandra Spitz",
+        "slug": "alexandra-spitz-new-mom-school"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      },
+      {
+        "number": 54,
+        "brand": "Biche",
+        "slug": "biche-alexandra-pauly"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Go-to-market",
+    "aliases": [
+      "GTM"
+    ],
+    "definition": "The plan for how a business reaches and sells to customers, whether it is launching a new product or entering a new market, including who to sell to, where, and at what price.",
+    "category": "marketing",
+    "related": [
+      "Product-market fit",
+      "TAM (total addressable market)"
+    ],
+    "episodes": [
+      {
+        "number": 37,
+        "brand": "Seremoni",
+        "slug": "seremoni-saif-khawaja"
+      },
+      {
+        "number": 54,
+        "brand": "Biche",
+        "slug": "biche-alexandra-pauly"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 35,
+        "brand": "Honey Dept.",
+        "slug": "honey-dept-noah-phillips"
+      },
+      {
+        "number": 45,
+        "brand": "YUZUCO",
+        "slug": "yuzuco-basil-beshkov"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      }
+    ]
+  },
+  {
+    "term": "Gross margin",
+    "aliases": [],
+    "definition": "The share of each sale left over after paying the direct cost of making the product. If a $10 item costs $4 to make, the gross margin is 60%.",
+    "category": "finance",
+    "related": [
+      "COGS (cost of goods sold)",
+      "Contribution margin",
+      "Unit economics"
+    ],
+    "episodes": [
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 65,
+        "brand": "Mikey's Pies",
+        "slug": "mikeys-pies-mikey-deegan"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      }
+    ]
+  },
+  {
+    "term": "Lead time",
+    "aliases": [],
+    "definition": "How long it takes from placing an order with a supplier to receiving the goods.",
+    "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Co-packer (co-man)"
+    ],
+    "episodes": [
+      {
+        "number": 20,
+        "brand": "Light",
+        "slug": "light-joe-hollier"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 1,
+        "brand": "Craighill",
+        "slug": "craighill-zach-fried"
+      },
+      {
+        "number": 33,
+        "brand": "Sway",
+        "slug": "sway-julia-marsh"
+      }
+    ]
+  },
+  {
+    "term": "LTV (lifetime value)",
+    "aliases": [
+      "CLV",
+      "customer lifetime value"
+    ],
+    "definition": "LTV (lifetime value) is the revenue or gross profit a business expects to earn from a customer over their entire relationship. The profit-based version is the one usually compared with CAC (customer acquisition cost).",
+    "category": "marketing",
+    "related": [
+      "CAC (customer acquisition cost)",
+      "Payback period",
+      "Churn",
+      "Cohort"
+    ],
+    "episodes": [
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 58,
+        "brand": "Alexandra Spitz",
+        "slug": "alexandra-spitz-new-mom-school"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 50,
+        "brand": "Terra Kaffe",
+        "slug": "terra-kaffe-sahand-dilmaghani"
+      }
+    ]
+  },
+  {
+    "term": "Moat",
+    "aliases": [],
+    "definition": "Something that makes a business hard for competitors to copy, such as a brand, a patent, or a cost advantage.",
+    "category": "marketing",
+    "related": [],
+    "episodes": [
+      {
+        "number": 35,
+        "brand": "Honey Dept.",
+        "slug": "honey-dept-noah-phillips"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 40,
+        "brand": "CPGD",
+        "slug": "cpgd-zoya-virani"
+      },
+      {
+        "number": 33,
+        "brand": "Sway",
+        "slug": "sway-julia-marsh"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      }
+    ]
+  },
+  {
+    "term": "MOQ (minimum order quantity)",
+    "aliases": [
+      "minimums"
+    ],
+    "definition": "MOQ (minimum order quantity) is the smallest order a factory or supplier will accept.",
+    "category": "operations",
+    "related": [
+      "Co-packer (co-man)",
+      "Lead time"
+    ],
+    "episodes": [
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 42,
+        "brand": "Courier",
+        "slug": "courier-matt-sims"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 1,
+        "brand": "Craighill",
+        "slug": "craighill-zach-fried"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 35,
+        "brand": "Honey Dept.",
+        "slug": "honey-dept-noah-phillips"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      }
+    ]
+  },
+  {
+    "term": "MVP (minimum viable product)",
+    "aliases": [],
+    "definition": "An MVP (minimum viable product) is a basic first version of a product, released to learn whether people want it before investing more.",
+    "category": "software",
+    "related": [
+      "Product-market fit"
+    ],
+    "episodes": [
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 36,
+        "brand": "Fjord",
+        "slug": "fjord-gabe-turner"
+      },
+      {
+        "number": 20,
+        "brand": "Light",
+        "slug": "light-joe-hollier"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      }
+    ]
+  },
+  {
+    "term": "Natural channel",
+    "aliases": [
+      "natural grocery"
+    ],
+    "definition": "The group of grocery stores focused on natural and organic foods, such as Whole Foods, Sprouts, and independent co-ops.",
+    "category": "CPG/retail",
+    "related": [
+      "Conventional grocery",
+      "UNFI / KeHE"
+    ],
+    "episodes": [
+      {
+        "number": 6,
+        "brand": "Alec's Ice Cream",
+        "slug": "alecs-ice-cream-alec-jaffe"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      }
+    ]
+  },
+  {
+    "term": "Net terms",
+    "aliases": [],
+    "definition": "The number of days a buyer has to pay an invoice. Net 30 usually means payment is due 30 days after the invoice date, unless the agreement says otherwise.",
+    "category": "finance",
+    "related": [
+      "Working capital"
+    ],
+    "episodes": [
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      }
+    ]
+  },
+  {
+    "term": "Payback period",
+    "aliases": [
+      "payback"
+    ],
+    "definition": "How long it takes for the money spent winning a customer, or on an investment, to be earned back.",
+    "category": "finance",
+    "related": [
+      "CAC (customer acquisition cost)",
+      "LTV (lifetime value)"
+    ],
+    "episodes": [
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      },
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      }
+    ]
+  },
+  {
+    "term": "Pre-seed",
+    "aliases": [
+      "pre-seed round"
+    ],
+    "definition": "The earliest formal round of outside money, often used to build a first product or test an idea.",
+    "category": "fundraising",
+    "related": [
+      "Seed round",
+      "Friends and family round"
+    ],
+    "episodes": [
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      }
+    ]
+  },
+  {
+    "term": "Private label",
+    "aliases": [
+      "store brand"
+    ],
+    "definition": "Products made by one company and sold under another company's brand name, such as a store's own brand.",
+    "category": "CPG/retail",
+    "related": [
+      "Co-packer (co-man)"
+    ],
+    "episodes": [
+      {
+        "number": 38,
+        "brand": "Yes! Apples",
+        "slug": "yes-apples-tenley-fitzgerald"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 52,
+        "brand": "MAHSA CHAI®",
+        "slug": "mahsa-chai-mahsa-darabi"
+      }
+    ]
+  },
+  {
+    "term": "Product-market fit",
+    "aliases": [
+      "PMF"
+    ],
+    "definition": "The point at which a product meets a need for a group of customers who buy it and keep using it.",
+    "category": "software",
+    "related": [
+      "MVP (minimum viable product)",
+      "Go-to-market"
+    ],
+    "episodes": [
+      {
+        "number": 63,
+        "brand": "Matic Robots",
+        "slug": "matic-robots-mehul-nariyawala"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      }
+    ]
+  },
+  {
+    "term": "Promo calendar",
+    "aliases": [],
+    "definition": "A schedule that sets when and where a brand's products will be on sale or featured in stores over the year.",
+    "category": "retail",
+    "related": [
+      "TPR (temporary price reduction)",
+      "Trade spend"
+    ],
+    "episodes": [
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 7,
+        "brand": "Rotten",
+        "slug": "rotten-michael-fisher"
+      }
+    ]
+  },
+  {
+    "term": "Retail doors",
+    "aliases": [
+      "doors"
+    ],
+    "definition": "The number of individual store locations that carry a product. Being in 500 doors means being sold in 500 stores.",
+    "category": "CPG/retail",
+    "related": [
+      "Velocity",
+      "Sell-through"
+    ],
+    "episodes": [
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      },
+      {
+        "number": 49,
+        "brand": "Jamie's Farm",
+        "slug": "jamies-farm-jamie-kim"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 1,
+        "brand": "Craighill",
+        "slug": "craighill-zach-fried"
+      },
+      {
+        "number": 46,
+        "brand": "",
+        "slug": "9-mini-interviews"
+      }
+    ]
+  },
+  {
+    "term": "Run rate",
+    "aliases": [
+      "revenue run rate"
+    ],
+    "definition": "A projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
+    "category": "finance",
+    "related": [],
+    "episodes": [
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      }
+    ]
+  },
+  {
+    "term": "Runway",
+    "aliases": [],
+    "definition": "How many months a company can keep operating before running out of cash, based on its current cash balance and burn rate.",
+    "category": "fundraising",
+    "related": [
+      "Burn rate"
+    ],
+    "episodes": [
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      }
+    ]
+  },
+  {
+    "term": "SBA loan (Small Business Administration loan)",
+    "aliases": [],
+    "definition": "An SBA loan is a small business loan that is partly guaranteed by the U.S. Small Business Administration, so the business repays it with interest without giving up ownership.",
+    "category": "fundraising",
+    "related": [
+      "Working capital"
+    ],
+    "episodes": [
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      }
+    ]
+  },
+  {
+    "term": "Seed round",
+    "aliases": [
+      "seed",
+      "seed funding"
+    ],
+    "definition": "An early round of investment that helps a young company prove its idea works and start growing. It usually comes before a Series A.",
+    "category": "fundraising",
+    "related": [
+      "Pre-seed",
+      "Series A"
+    ],
+    "episodes": [
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      }
+    ]
+  },
+  {
+    "term": "Sell-through",
+    "aliases": [],
+    "definition": "The share of the products a store bought that sold to shoppers during a given period.",
+    "category": "CPG/retail",
+    "related": [
+      "Velocity",
+      "Retail doors"
+    ],
+    "episodes": [
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 10,
+        "brand": "Almond Surfboards",
+        "slug": "almond-surfboards-dave-allee"
+      },
+      {
+        "number": 45,
+        "brand": "YUZUCO",
+        "slug": "yuzuco-basil-beshkov"
+      }
+    ]
+  },
+  {
+    "term": "Series A",
+    "aliases": [],
+    "definition": "A round of venture investment that usually comes after the seed round. Later rounds are lettered B, C, and so on.",
+    "category": "fundraising",
+    "related": [
+      "Seed round",
+      "Venture capital",
+      "Valuation"
+    ],
+    "episodes": [
+      {
+        "number": 14,
+        "brand": "Jones",
+        "slug": "jones-hilary-dubin-caroline-huber"
+      },
+      {
+        "number": 23,
+        "brand": "Pickle",
+        "slug": "pickle-brian-mcmahon"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      }
+    ]
+  },
+  {
+    "term": "Shelf-stable",
+    "aliases": [],
+    "definition": "Describes a product that can be stored at room temperature without refrigeration until it is opened.",
+    "category": "product",
+    "related": [],
+    "episodes": [
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      }
+    ]
+  },
+  {
+    "term": "SKU (stock keeping unit)",
+    "aliases": [],
+    "definition": "A SKU (stock keeping unit) is a distinct version of a product, such as one flavor in one size, tracked separately in inventory with its own code.",
+    "category": "operations",
+    "related": [
+      "Velocity"
+    ],
+    "episodes": [
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 54,
+        "brand": "Biche",
+        "slug": "biche-alexandra-pauly"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 61,
+        "brand": "Rite of Way",
+        "slug": "rite-of-way-alex-brands"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      }
+    ]
+  },
+  {
+    "term": "Slotting fees",
+    "aliases": [
+      "slotting"
+    ],
+    "definition": "Payments a brand makes to a store chain, in cash or free product, to get its product placed on the shelf.",
+    "category": "CPG/retail",
+    "related": [
+      "Free fill",
+      "Trade spend",
+      "Category review"
+    ],
+    "episodes": [
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 46,
+        "brand": "",
+        "slug": "9-mini-interviews"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      }
+    ]
+  },
+  {
+    "term": "SRP / MSRP (suggested retail price)",
+    "aliases": [],
+    "definition": "SRP (suggested retail price), or MSRP (manufacturer's suggested retail price), is the shelf price a brand recommends that stores charge.",
+    "category": "retail",
+    "related": [
+      "TPR (temporary price reduction)"
+    ],
+    "episodes": [
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      }
+    ]
+  },
+  {
+    "term": "TAM (total addressable market)",
+    "aliases": [],
+    "definition": "TAM (total addressable market) is the total potential yearly revenue for a product if it captured the entire market it could serve.",
+    "category": "marketing",
+    "related": [
+      "Go-to-market"
+    ],
+    "episodes": [
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      },
+      {
+        "number": 50,
+        "brand": "Terra Kaffe",
+        "slug": "terra-kaffe-sahand-dilmaghani"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      }
+    ]
+  },
+  {
+    "term": "Tooling",
+    "aliases": [],
+    "definition": "Custom molds, dies, and equipment a factory needs to make a specific product. It often requires a significant upfront investment before the first unit is made.",
+    "category": "operations",
+    "related": [
+      "MOQ (minimum order quantity)",
+      "Co-packer (co-man)"
+    ],
+    "episodes": [
+      {
+        "number": 1,
+        "brand": "Craighill",
+        "slug": "craighill-zach-fried"
+      },
+      {
+        "number": 12,
+        "brand": "Nymzo",
+        "slug": "nymzo-elliott-walker-tim-hucklesby"
+      },
+      {
+        "number": 10,
+        "brand": "Almond Surfboards",
+        "slug": "almond-surfboards-dave-allee"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 19,
+        "brand": "Hotel Ceramics",
+        "slug": "hotel-ceramics-sara-victorio"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 62,
+        "brand": "Yardsale",
+        "slug": "yardsale-cristina-ashbaugh"
+      }
+    ]
+  },
+  {
+    "term": "TPR (temporary price reduction)",
+    "aliases": [],
+    "definition": "A TPR (temporary price reduction) is a short-term price cut on a product in a store, usually funded by the brand.",
+    "category": "retail",
+    "related": [
+      "Trade spend",
+      "Promo calendar",
+      "SRP / MSRP (suggested retail price)"
+    ],
+    "episodes": [
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      }
+    ]
+  },
+  {
+    "term": "Trade spend",
+    "aliases": [],
+    "definition": "Money a brand spends on promotions and incentives through retailers and distributors, including price discounts, advertising, and in-store displays.",
+    "category": "CPG/retail",
+    "related": [
+      "TPR (temporary price reduction)",
+      "Promo calendar",
+      "Slotting fees",
+      "Free fill"
+    ],
+    "episodes": [
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 57,
+        "brand": "Joy Supply",
+        "slug": "joy-supply-lindsay-leopold"
+      },
+      {
+        "number": 7,
+        "brand": "Rotten",
+        "slug": "rotten-michael-fisher"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 39,
+        "brand": "Lasso",
+        "slug": "lasso-clarke-pennington"
+      }
+    ]
+  },
+  {
+    "term": "UNFI / KeHE",
+    "aliases": [],
+    "definition": "UNFI (United Natural Foods, Inc.) and KeHE Distributors are the two largest U.S. wholesale distributors that supply natural and specialty grocery stores.",
+    "category": "CPG/retail",
+    "related": [
+      "Natural channel",
+      "Broker"
+    ],
+    "episodes": [
+      {
+        "number": 4,
+        "brand": "Spring & Mulberry",
+        "slug": "spring-mulberry-kathryn-shah"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 55,
+        "brand": "Noshi for Kids",
+        "slug": "noshi-for-kids-tomo-delaney"
+      }
+    ]
+  },
+  {
+    "term": "Unit economics",
+    "aliases": [],
+    "definition": "The revenue and costs tied to one unit of a business, such as one product sold, one order fulfilled, or one customer served. It helps show whether the business can grow profitably.",
+    "category": "finance",
+    "related": [
+      "Gross margin",
+      "Contribution margin",
+      "CAC (customer acquisition cost)",
+      "LTV (lifetime value)"
+    ],
+    "episodes": [
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 53,
+        "brand": "Brightland",
+        "slug": "brightland-aishwarya-iyer"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 47,
+        "brand": "RIP Cold Brew",
+        "slug": "rip-cold-brew-brendan-flannery"
+      },
+      {
+        "number": 16,
+        "brand": "One Trick Pony",
+        "slug": "one-trick-pony-lucy-dana"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 20,
+        "brand": "Light",
+        "slug": "light-joe-hollier"
+      },
+      {
+        "number": 36,
+        "brand": "Fjord",
+        "slug": "fjord-gabe-turner"
+      }
+    ]
+  },
+  {
+    "term": "Valuation",
+    "aliases": [],
+    "definition": "What a company is judged to be worth, usually agreed on during a fundraise or sale. It sets how much ownership an investor gets for their money.",
+    "category": "fundraising",
+    "related": [
+      "Dilution",
+      "Cap table",
+      "Equity"
+    ],
+    "episodes": [
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      }
+    ]
+  },
+  {
+    "term": "Velocity",
+    "aliases": [
+      "sales velocity"
+    ],
+    "definition": "How fast a product sells in each store, often measured as units sold per store per week.",
+    "category": "CPG/retail",
+    "related": [
+      "Sell-through",
+      "Retail doors"
+    ],
+    "episodes": [
+      {
+        "number": 34,
+        "brand": "Something Sweet",
+        "slug": "something-sweet-brittney-cook"
+      },
+      {
+        "number": 41,
+        "brand": "Esspo",
+        "slug": "esspo-katharine-leitch"
+      },
+      {
+        "number": 7,
+        "brand": "Rotten",
+        "slug": "rotten-michael-fisher"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 31,
+        "brand": "Laurel's Coffee",
+        "slug": "laurels-coffee-isabel-washington"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 64,
+        "brand": "TofuGo",
+        "slug": "tofugo-caroline-dai"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 28,
+        "brand": "Byte'm",
+        "slug": "bytem-jack-davis-jacob-tubis"
+      },
+      {
+        "number": 43,
+        "brand": "Gato Dates",
+        "slug": "gato-dates-gabriella-labi-tonya-reznikovich"
+      },
+      {
+        "number": 5,
+        "brand": "P.F. Candle Co.",
+        "slug": "pf-candle-co-kristen-pumphrey-thomas-neuberger"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 44,
+        "brand": "NOON",
+        "slug": "noon-jane-wong"
+      }
+    ]
+  },
+  {
+    "term": "Venture capital",
+    "aliases": [
+      "VC"
+    ],
+    "definition": "Money invested in young, high-growth companies in exchange for ownership, usually by firms managing funds raised from outside investors.",
+    "category": "fundraising",
+    "related": [
+      "Series A",
+      "Valuation",
+      "Exit"
+    ],
+    "episodes": [
+      {
+        "number": 20,
+        "brand": "Light",
+        "slug": "light-joe-hollier"
+      },
+      {
+        "number": 30,
+        "brand": "Loftie",
+        "slug": "loftie-matt-hassett"
+      },
+      {
+        "number": 15,
+        "brand": "GOB",
+        "slug": "gob-lauryn-menard"
+      },
+      {
+        "number": 63,
+        "brand": "Matic Robots",
+        "slug": "matic-robots-mehul-nariyawala"
+      },
+      {
+        "number": 3,
+        "brand": "Talea Beer Co.",
+        "slug": "talea-beer-co-tara-hankinson-and-leann-darland"
+      },
+      {
+        "number": 59,
+        "brand": "Springdale Ventures",
+        "slug": "springdale-ventures-dan-graham-mollye-santulli"
+      },
+      {
+        "number": 21,
+        "brand": "Sourmilk",
+        "slug": "sourmilk-kiki-couchman-elan-halpern"
+      },
+      {
+        "number": 60,
+        "brand": "Great Circle Ventures",
+        "slug": "great-circle-ventures-jacob-afriat"
+      },
+      {
+        "number": 48,
+        "brand": "Pistakio",
+        "slug": "pistakio-francine-voit-nicola-buffo"
+      },
+      {
+        "number": 9,
+        "brand": "Bezi",
+        "slug": "bezi-ilay-karateke"
+      },
+      {
+        "number": 29,
+        "brand": "Lottie's Meats",
+        "slug": "lotties-meats-chelsey-cassie-maschhoff"
+      }
+    ]
+  },
+  {
+    "term": "Working capital",
+    "aliases": [],
+    "definition": "The difference between a company's short-term assets, such as cash and inventory, and its short-term liabilities, such as unpaid bills. It shows the resources available to run the business day to day.",
+    "category": "finance",
+    "related": [
+      "Net terms",
+      "Burn rate"
+    ],
+    "episodes": [
+      {
+        "number": 63,
+        "brand": "Matic Robots",
+        "slug": "matic-robots-mehul-nariyawala"
+      },
+      {
+        "number": 18,
+        "brand": "Felt + Fat",
+        "slug": "felt-fat-nate-mell"
+      },
+      {
+        "number": 37,
+        "brand": "Seremoni",
+        "slug": "seremoni-saif-khawaja"
+      }
+    ]
+  }
+]

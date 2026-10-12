@@ -19,6 +19,7 @@ import {
 } from "../../src/lib/episodePage";
 import { topicTagsForEpisode } from "../../src/lib/topics";
 import { categoryPath } from "../../src/lib/categories";
+import { trackListenClick } from "../../src/lib/listenTracking";
 
 const REVALIDATE_SECONDS = 900;
 
@@ -49,7 +50,7 @@ function ListenEmbed({ option }) {
   );
 }
 
-function ListenTabs({ options }) {
+function ListenTabs({ options, slug }) {
   const [active, setActive] = useState(options[0].key);
   const current = options.find((option) => option.key === active) || options[0];
 
@@ -69,7 +70,10 @@ function ListenTabs({ options }) {
                 aria-selected={selected}
                 aria-controls="listen-panel"
                 className="listen-tab"
-                onClick={() => setActive(option.key)}
+                onClick={() => {
+                  setActive(option.key);
+                  trackListenClick(option.key, slug);
+                }}
               >
                 {option.label}
               </button>
@@ -91,7 +95,7 @@ function ListenTabs({ options }) {
 function ListenSection({ episode }) {
   const options = listenOptions(episode);
   if (!options.length) return null;
-  return <ListenTabs options={options} />;
+  return <ListenTabs options={options} slug={episode.slug} />;
 }
 
 function RelatedWords({ text }) {
