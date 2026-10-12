@@ -101,12 +101,13 @@ function RelatedRow({ episode }) {
         className="episode-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "48px 1fr auto",
+          gridTemplateColumns: "64px 1fr auto",
           gap: "20px",
           alignItems: "start",
         }}
       >
         <div
+          className="episode-number"
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "12px",
@@ -250,10 +251,7 @@ export default function EpisodePage({ episode, related }) {
       </Head>
 
       <SiteChrome>
-        <article
-          className="content-section"
-          style={{ padding: "48px 40px 80px" }}
-        >
+        <article className="content-section episode-page">
           <a className="back-link" href="/#episodes">
             ← All episodes
           </a>
@@ -352,51 +350,60 @@ export default function EpisodePage({ episode, related }) {
             </div>
           </header>
 
-          {blocks.length ? (
-            <div className="episode-description">
-              {blocks.map((parts, index) => (
-                <p key={index}>
-                  {parts.map((part, partIndex) =>
-                    part.href ? (
-                      <a
-                        key={partIndex}
-                        className="episode-guest-link"
-                        href={part.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {part.text}
-                      </a>
-                    ) : (
-                      <span key={partIndex}>{part.text}</span>
-                    )
-                  )}
-                </p>
-              ))}
+          <div className="episode-layout">
+            <div className="episode-main">
+              {blocks.length ? (
+                <div className="episode-description">
+                  <h2>About</h2>
+                  {blocks.map((parts, index) => (
+                    <p key={index}>
+                      {parts.map((part, partIndex) =>
+                        part.href ? (
+                          <a
+                            key={partIndex}
+                            className="episode-guest-link"
+                            href={part.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {part.text}
+                          </a>
+                        ) : (
+                          <span key={partIndex}>{part.text}</span>
+                        )
+                      )}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
             </div>
-          ) : null}
 
-          <ListenSection episode={episode} />
+            <div className="episode-aside">
+              <ListenSection episode={episode} />
+            </div>
 
-          {episode.takeaways?.length ? (
-            <section className="episode-takeaways">
-              <h2>Key takeaways</h2>
-              <ul>
-                {episode.takeaways.map((takeaway, index) => (
-                  <li key={`${index}-${takeaway}`}>{takeaway}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+            {episode.takeaways?.length ? (
+              <section className="episode-takeaways">
+                <h2>Key takeaways</h2>
+                <ul>
+                  {episode.takeaways.map((takeaway, index) => (
+                    <li key={`${index}-${takeaway}`}>{takeaway}</li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
-          {related.length ? (
-            <section className="episode-related">
-              <h2>Related</h2>
-              {related.map((item) => (
-                <RelatedRow key={item.slug} episode={item} />
-              ))}
-            </section>
-          ) : null}
+            {related.length ? (
+              <section className="episode-related">
+                <h2>Related</h2>
+                <div className="related-list">
+                  {related.map((item) => (
+                    <RelatedRow key={item.slug} episode={item} />
+                  ))}
+                </div>
+              </section>
+            ) : null}
+          </div>
 
           <a className="back-link episode-back-bottom" href="/#episodes">
             All episodes →

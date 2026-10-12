@@ -133,10 +133,10 @@ export default function SiteChrome({ children }) {
 
   return (
     <div
+      className="site-shell"
       style={{
         background: "#000",
         color: "#fff",
-        minHeight: "100vh",
         fontFamily: "'Space Grotesk', sans-serif",
         overflow: "hidden",
         display: "flex",
@@ -215,7 +215,8 @@ export default function SiteChrome({ children }) {
 
       <div
         ref={contentRef}
-        style={{ flex: 1, overflow: "auto", scrollBehavior: "smooth" }}
+        className="site-scroll"
+        style={{ flex: 1, minHeight: 0, overflow: "auto" }}
       >
         {children}
 
