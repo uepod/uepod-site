@@ -19,6 +19,7 @@ import {
 } from "../../src/lib/episodePage";
 import { topicTagsForEpisode } from "../../src/lib/topics";
 import { shortTermName, termsForEpisode } from "../../src/lib/glossary";
+import { loadEpisodeTranscript } from "../../src/lib/transcript";
 import { categoryPath } from "../../src/lib/categories";
 import { withFrom } from "../../src/lib/fromLink";
 import BackLink from "../../src/components/BackLink";
@@ -258,7 +259,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
   );
 }
 
-export default function EpisodePage({ episode, related, terms = [] }) {
+export default function EpisodePage({ episode, related, terms = [], transcript = [] }) {
   const title = pageTitle(episode);
   const description = metaDescription(episode);
   const canonical = canonicalUrl(episode.slug);
@@ -475,6 +476,20 @@ export default function EpisodePage({ episode, related, terms = [] }) {
             </section>
           ) : null}
 
+          {transcript.length ? (
+            <details className="episode-transcript">
+              <summary>Read transcript</summary>
+              {transcript.map((turn, index) => (
+                <div key={`${turn.speaker}-${index}`}>
+                  <p className="episode-transcript-speaker">{turn.speaker}</p>
+                  {turn.paragraphs.map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex}>{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </details>
+          ) : null}
+
           <a className="back-link episode-back-bottom" href="/#episodes">
             All episodes →
           </a>
@@ -530,6 +545,7 @@ export async function getStaticProps({ params }) {
       episode: JSON.parse(JSON.stringify(episode)),
       related: JSON.parse(JSON.stringify(related)),
       terms: termsForEpisode(episode.slug),
+      transcript: loadEpisodeTranscript(episode.slug),
     },
     revalidate: REVALIDATE_SECONDS,
   };
