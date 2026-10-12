@@ -405,10 +405,13 @@ a {
   height: auto;
 }
 
-.episode-takeaways,
-.episode-related {
+.episode-takeaways {
   margin-top: 56px;
   max-width: 760px;
+}
+
+.episode-related {
+  margin-top: 56px;
 }
 
 .episode-takeaways ul {
@@ -422,6 +425,11 @@ a {
   color: rgba(255, 255, 255, 0.55);
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.related-list {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .related-link {
@@ -440,7 +448,9 @@ a {
   text-decoration: underline;
 }
 
-/* Wide screens: About and Related on the left, Listen on the right. */
+/* Below 1100px Related stays one column, matching the homepage episode list. */
+
+/* Wide screens: About on the left, Listen on the right, Related underneath. */
 @media (min-width: 1100px) {
   .episode-layout {
     display: grid;
@@ -455,7 +465,7 @@ a {
     grid-row: 1;
   }
 
-  /* Span the full left column so the player can stick while Related scrolls. */
+  /* Stick within the two columns, and stop before the full-width related row. */
   .episode-aside {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -469,21 +479,51 @@ a {
     grid-row: 2;
   }
 
-  .episode-related {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
   .episode-description,
   .listen-section,
-  .episode-takeaways,
-  .episode-related {
+  .episode-takeaways {
     max-width: none;
   }
 
   .episode-description,
   .listen-section {
     margin-top: 0;
+  }
+
+  .episode-related {
+    margin-top: 72px;
+  }
+
+  .related-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .related-link {
+    height: 100%;
+    border-bottom: none;
+    padding: 22px 0 0;
+  }
+
+  .related-link .episode-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+  }
+
+  .related-link .episode-meta {
+    display: flex !important;
+    gap: 16px;
+    text-align: left !important;
+    white-space: normal !important;
+    margin-top: auto;
+    padding-top: 8px !important;
+  }
+
+  .related-link .episode-meta div {
+    margin-top: 0 !important;
   }
 }
 

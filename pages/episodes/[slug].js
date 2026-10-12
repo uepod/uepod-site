@@ -391,16 +391,18 @@ export default function EpisodePage({ episode, related }) {
                 </ul>
               </section>
             ) : null}
+          </div>
 
-            {related.length ? (
-              <section className="episode-related">
-                <h2>Related</h2>
+          {related.length ? (
+            <section className="episode-related">
+              <h2>Related</h2>
+              <div className="related-list">
                 {related.map((item) => (
                   <RelatedRow key={item.slug} episode={item} />
                 ))}
-              </section>
-            ) : null}
-          </div>
+              </div>
+            </section>
+          ) : null}
 
           <a className="back-link episode-back-bottom" href="/#episodes">
             All episodes →
