@@ -336,7 +336,10 @@ a {
   max-width: 720px;
 }
 
-.listen-section h2 {
+.episode-description h2,
+.listen-section h2,
+.episode-takeaways h2,
+.episode-related h2 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -408,17 +411,6 @@ a {
   max-width: 760px;
 }
 
-.episode-takeaways h2,
-.episode-related h2 {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 8px;
-}
-
 .episode-takeaways ul {
   list-style: none;
 }
@@ -452,8 +444,8 @@ a {
 @media (min-width: 1100px) {
   .episode-layout {
     display: grid;
-    grid-template-columns: minmax(0, 720px) minmax(360px, 1fr);
-    column-gap: 56px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    column-gap: 64px;
     align-items: start;
   }
 
@@ -477,15 +469,10 @@ a {
   .listen-section {
     margin-top: 0;
   }
-
-  .episode-related {
-    margin-top: 48px;
-  }
 }
 
 @media (min-width: 1440px) {
   .episode-layout {
-    grid-template-columns: minmax(0, 760px) minmax(420px, 1fr);
     column-gap: 80px;
   }
 }

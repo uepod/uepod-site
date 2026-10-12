@@ -353,6 +353,7 @@ export default function EpisodePage({ episode, related }) {
             <div className="episode-main">
           {blocks.length ? (
             <div className="episode-description">
+              <h2>About</h2>
               {blocks.map((parts, index) => (
                 <p key={index}>
                   {parts.map((part, partIndex) =>
