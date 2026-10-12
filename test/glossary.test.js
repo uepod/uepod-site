@@ -79,6 +79,7 @@ test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
     prepared.groups.map((group) => group.letter),
     ["A", "Z"]
   );
+  assert.deepEqual(prepared.letters, ["A", "Z"]);
   assert.equal(prepared.terms[0].anchor, "alpha");
   assert.equal(termLetter("3PL"), "#");
 
@@ -93,10 +94,14 @@ test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
 test("committed glossary has a term, definition, and episode links", () => {
   const file = path.join(__dirname, "../data/glossary.json");
   const data = JSON.parse(fs.readFileSync(file, "utf8"));
-  assert.equal(data.length, 77);
+  assert.equal(data.length, 61);
 
   const prepared = prepareGlossary(expandGlossary(data, []));
-  assert.equal(prepared.terms.length, 77);
+  assert.equal(prepared.terms.length, 61);
+  assert.deepEqual(
+    prepared.letters,
+    prepared.groups.map((group) => group.letter)
+  );
   assert.equal(prepared.letters[0], "#");
   for (const term of prepared.terms) {
     assert.ok(term.term);

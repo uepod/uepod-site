@@ -133,9 +133,7 @@ function prepareGlossary(entries) {
       last.terms.push(term);
     }
   }
-  const letters = terms.some((term) => term.letter === "#")
-    ? ["#", ...LETTERS]
-    : LETTERS;
+  const letters = groups.map((group) => group.letter);
   return { terms, groups, letters };
 }
 
