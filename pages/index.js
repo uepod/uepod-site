@@ -917,6 +917,7 @@ export default function Home({ episodes, posts }) {
                     textTransform: "uppercase",
                     lineHeight: 1.0,
                     letterSpacing: "-0.02em",
+                    fontWeight: 400,
                     marginBottom: "40px",
                   }}
                 >
@@ -1118,6 +1119,7 @@ export default function Home({ episodes, posts }) {
                       "clamp(32px, 4vw, 48px)",
                     letterSpacing: "-0.02em",
                     textTransform: "uppercase",
+                    fontWeight: 400,
                     margin: 0,
                   }}
                 >
@@ -1274,6 +1276,7 @@ export default function Home({ episodes, posts }) {
                     "clamp(32px, 4vw, 48px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
+                  fontWeight: 400,
                   marginBottom: "20px",
                 }}
               >
@@ -1403,6 +1406,7 @@ export default function Home({ episodes, posts }) {
                         "-0.02em",
                       textTransform:
                         "uppercase",
+                      fontWeight: 400,
                       marginTop: 0,
                       marginBottom: "40px",
                     }}
@@ -1523,6 +1527,7 @@ export default function Home({ episodes, posts }) {
                     "clamp(32px, 4vw, 48px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
+                  fontWeight: 400,
                   marginBottom: "40px",
                 }}
               >

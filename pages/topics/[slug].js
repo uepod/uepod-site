@@ -28,7 +28,7 @@ export default function TopicPage({ topic, episodes }) {
           <h1
             style={{
               fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
-              fontSize: "clamp(32px, 4vw, 56px)",
+              fontSize: "clamp(32px, 4vw, 48px)",
               lineHeight: 1.05,
               textTransform: "uppercase",
               letterSpacing: "-0.02em",
