@@ -21,29 +21,8 @@
     ]
   },
   {
-    "t": "Amazon / marketplaces",
-    "d": "Large online stores where many brands sell. They offer huge reach but take fees and give the brand less control over price and customer data.",
-    "e": [
-      [
-        "stonemaier-games-jamey-stegmaier",
-        11,
-        "Stonemaier Games"
-      ],
-      [
-        "esspo-katharine-leitch",
-        41,
-        "Esspo"
-      ],
-      [
-        "noshi-for-kids-tomo-delaney",
-        55,
-        "Noshi for Kids"
-      ]
-    ]
-  },
-  {
     "t": "Angel investor",
-    "d": "A wealthy individual who invests their own money in very early companies, usually in exchange for a small share of ownership.",
+    "d": "A person who invests their own money in very early companies, usually in exchange for a small share of ownership.",
     "e": [
       [
         "springdale-ventures-dan-graham-mollye-santulli",
@@ -312,7 +291,7 @@
   },
   {
     "t": "Conventional grocery",
-    "d": "Mainstream supermarkets like Kroger or Albertsons, as opposed to natural or specialty stores. They reach far more shoppers but are harder and more costly to get into.",
+    "d": "Mainstream supermarket chains such as Kroger or Albertsons, as opposed to natural or specialty stores.",
     "e": [
       [
         "spring-mulberry-kathryn-shah",
@@ -349,7 +328,7 @@
   },
   {
     "t": "Demo",
-    "d": "Handing out free samples in a store so shoppers can try a product, which often leads to a sale on the spot.",
+    "d": "Handing out free samples in a store so shoppers can try a product.",
     "e": [
       [
         "bezi-ilay-karateke",
@@ -381,7 +360,7 @@
   },
   {
     "t": "Discounting",
-    "d": "Selling below the normal price to attract buyers or move stock. It can boost sales in the short term but cuts into margin and can train customers to wait for deals.",
+    "d": "Selling a product below its normal price to increase sales or clear stock, which lowers the margin on each sale.",
     "e": [
       [
         "great-circle-ventures-jacob-afriat",
@@ -439,27 +418,6 @@
         "one-trick-pony-lucy-dana",
         16,
         "One Trick Pony"
-      ]
-    ]
-  },
-  {
-    "t": "Email list",
-    "d": "A list of people who have agreed to receive emails from a brand. Brands value it because they own it and can reach those people without paying for ads.",
-    "e": [
-      [
-        "craighill-zach-fried",
-        1,
-        "Craighill"
-      ],
-      [
-        "kelly-bennett",
-        24,
-        ""
-      ],
-      [
-        "spring-mulberry-kathryn-shah",
-        4,
-        "Spring & Mulberry"
       ]
     ]
   },
@@ -543,27 +501,6 @@
     ]
   },
   {
-    "t": "Freight",
-    "d": "Moving large amounts of goods by truck, ship, rail, or plane, and the cost of doing so.",
-    "e": [
-      [
-        "le-puzz-alistair-matthews-and-michael-hunter",
-        2,
-        "Le Puzz"
-      ],
-      [
-        "spring-mulberry-kathryn-shah",
-        4,
-        "Spring & Mulberry"
-      ],
-      [
-        "loftie-matt-hassett",
-        30,
-        "Loftie"
-      ]
-    ]
-  },
-  {
     "t": "Friends and family round",
     "d": "An early round of money raised from people the founder already knows, usually before professional investors get involved.",
     "e": [
@@ -602,27 +539,6 @@
         "sourmilk-kiki-couchman-elan-halpern",
         21,
         "Sourmilk"
-      ]
-    ]
-  },
-  {
-    "t": "Fundraising",
-    "d": "Getting money from investors, lenders, or other backers to grow a business, usually in exchange for a share of ownership or a promise to repay.",
-    "e": [
-      [
-        "talea-beer-co-tara-hankinson-and-leann-darland",
-        3,
-        "Talea Beer Co."
-      ],
-      [
-        "jones-hilary-dubin-caroline-huber",
-        14,
-        "Jones"
-      ],
-      [
-        "felt-fat-nate-mell",
-        18,
-        "Felt + Fat"
       ]
     ]
   },
@@ -686,27 +602,6 @@
         "pickle-brian-mcmahon",
         23,
         "Pickle"
-      ]
-    ]
-  },
-  {
-    "t": "Inventory",
-    "d": "The products and materials a business has on hand waiting to be sold. Too little means missed sales; too much ties up cash.",
-    "e": [
-      [
-        "loftie-matt-hassett",
-        30,
-        "Loftie"
-      ],
-      [
-        "armada-seamus-meniahane",
-        27,
-        "Armada"
-      ],
-      [
-        "light-joe-hollier",
-        20,
-        "Light"
       ]
     ]
   },
@@ -812,7 +707,7 @@
   },
   {
     "t": "Moat",
-    "d": "Something that protects a business from competitors, such as a strong brand, a patent, or a cost advantage that is hard to copy.",
+    "d": "Something that makes a business hard for competitors to copy, such as a brand, a patent, or a cost advantage.",
     "e": [
       [
         "honey-dept-noah-phillips",
@@ -833,7 +728,7 @@
   },
   {
     "t": "MOQ",
-    "d": "The smallest order a factory or supplier will accept. High minimums can force small brands to buy more than they can sell quickly.",
+    "d": "The smallest order a factory or supplier will accept.",
     "e": [
       [
         "spring-mulberry-kathryn-shah",
@@ -854,7 +749,7 @@
   },
   {
     "t": "MVP",
-    "d": "The simplest version of a product that can be released to learn whether people want it, before investing more.",
+    "d": "A basic first version of a product, released to learn whether people want it before investing more.",
     "e": [
       [
         "bytem-jack-davis-jacob-tubis",
@@ -937,27 +832,6 @@
     ]
   },
   {
-    "t": "Paid ads",
-    "d": "Advertising a business pays for, such as ads on Instagram, Facebook, or Google, as opposed to free attention it earns on its own.",
-    "e": [
-      [
-        "craighill-zach-fried",
-        1,
-        "Craighill"
-      ],
-      [
-        "great-circle-ventures-jacob-afriat",
-        60,
-        "Great Circle Ventures"
-      ],
-      [
-        "tofugo-caroline-dai",
-        64,
-        "TofuGo"
-      ]
-    ]
-  },
-  {
     "t": "Payback period",
     "d": "How long it takes for the money spent winning a customer, or on an investment, to be earned back.",
     "e": [
@@ -995,29 +869,8 @@
     ]
   },
   {
-    "t": "Pop-up",
-    "d": "A temporary shop or stand, open for days or weeks, used to sell products, meet customers, and test a location.",
-    "e": [
-      [
-        "rite-of-way-alex-brands",
-        61,
-        "Rite of Way"
-      ],
-      [
-        "mikeys-pies-mikey-deegan",
-        65,
-        "Mikey's Pies"
-      ],
-      [
-        "talea-beer-co-tara-hankinson-and-leann-darland",
-        3,
-        "Talea Beer Co."
-      ]
-    ]
-  },
-  {
     "t": "Pre-orders",
-    "d": "Orders customers pay for before a product is made or in stock. They bring in cash early and show whether people actually want the product.",
+    "d": "Orders customers pay for before a product is made or in stock.",
     "e": [
       [
         "light-joe-hollier",
@@ -1101,7 +954,7 @@
   },
   {
     "t": "Product-market fit",
-    "d": "The point when a product clearly meets a real need and customers seek it out and keep using it, so growth comes more easily.",
+    "d": "The point at which a product meets a need for a group of customers who buy it and keep using it.",
     "e": [
       [
         "matic-robots-mehul-nariyawala",
@@ -1142,50 +995,8 @@
     ]
   },
   {
-    "t": "Profitability",
-    "d": "When a business brings in more money than it spends over a period, so it makes a profit instead of a loss.",
-    "e": [
-      [
-        "loftie-matt-hassett",
-        30,
-        "Loftie"
-      ],
-      [
-        "one-trick-pony-lucy-dana",
-        16,
-        "One Trick Pony"
-      ],
-      [
-        "alexandra-spitz-new-mom-school",
-        58,
-        "Alexandra Spitz"
-      ]
-    ]
-  },
-  {
-    "t": "Prototype",
-    "d": "An early test version of a product, used to check the design before paying for full production.",
-    "e": [
-      [
-        "loftie-matt-hassett",
-        30,
-        "Loftie"
-      ],
-      [
-        "stonemaier-games-jamey-stegmaier",
-        11,
-        "Stonemaier Games"
-      ],
-      [
-        "currently-running-nash-howe",
-        8,
-        "Currently Running"
-      ]
-    ]
-  },
-  {
     "t": "Repeat purchase",
-    "d": "When a customer buys again after their first order. A high repeat rate is a strong sign people like the product.",
+    "d": "When a customer buys a product again after their first order.",
     "e": [
       [
         "sourmilk-kiki-couchman-elan-halpern",
@@ -1269,7 +1080,7 @@
   },
   {
     "t": "Run rate",
-    "d": "A quick projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
+    "d": "A projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
     "e": [
       [
         "brightland-aishwarya-iyer",
@@ -1332,7 +1143,7 @@
   },
   {
     "t": "Sell-through",
-    "d": "The share of products a store bought that actually sold to shoppers. High sell-through means the store will likely reorder.",
+    "d": "The share of the products a store bought that sold to shoppers during a given period.",
     "e": [
       [
         "rite-of-way-alex-brands",
@@ -1353,7 +1164,7 @@
   },
   {
     "t": "Series A",
-    "d": "A larger, more formal round of venture investment that usually comes after seed, once a company has shown real traction. Later rounds are lettered B, C, and so on.",
+    "d": "A round of venture investment that usually comes after the seed round. Later rounds are lettered B, C, and so on.",
     "e": [
       [
         "jones-hilary-dubin-caroline-huber",
@@ -1374,7 +1185,7 @@
   },
   {
     "t": "Shelf life",
-    "d": "How long a product stays safe and good to sell. Short shelf life makes distribution harder and leads to more waste.",
+    "d": "How long a product can be stored and sold before it expires.",
     "e": [
       [
         "sourmilk-kiki-couchman-elan-halpern",
@@ -1395,7 +1206,7 @@
   },
   {
     "t": "Shelf space",
-    "d": "The physical room a product gets on store shelves. It is limited, so brands compete hard for it.",
+    "d": "The physical room a product gets on store shelves.",
     "e": [
       [
         "alecs-ice-cream-alec-jaffe",
@@ -1453,27 +1264,6 @@
         "one-trick-pony-lucy-dana",
         16,
         "One Trick Pony"
-      ]
-    ]
-  },
-  {
-    "t": "Subscription",
-    "d": "A model where customers pay on a regular schedule, such as monthly, to keep receiving a product or service.",
-    "e": [
-      [
-        "hiya-adam-gillman",
-        22,
-        "Hiya"
-      ],
-      [
-        "gob-lauryn-menard",
-        15,
-        "GOB"
-      ],
-      [
-        "lasso-clarke-pennington",
-        39,
-        "Lasso"
       ]
     ]
   },
@@ -1626,7 +1416,7 @@
   },
   {
     "t": "UNFI / KeHE",
-    "d": "The two largest distributors that supply natural and specialty grocery stores in the U.S. Getting into one of them is often a key step for food brands.",
+    "d": "The two largest U.S. distributors that supply natural and specialty grocery stores.",
     "e": [
       [
         "spring-mulberry-kathryn-shah",
@@ -1710,7 +1500,7 @@
   },
   {
     "t": "Venture capital",
-    "d": "Firms that invest pooled money from others into young, fast-growing companies in exchange for ownership, hoping a few big wins pay for many losses.",
+    "d": "Firms that invest pooled money from others into young companies in exchange for ownership.",
     "e": [
       [
         "light-joe-hollier",
@@ -1747,27 +1537,6 @@
         "felt-fat-nate-mell",
         18,
         "Felt + Fat"
-      ]
-    ]
-  },
-  {
-    "t": "Word of mouth",
-    "d": "Customers telling friends and family about a product on their own. It is free, trusted, and hard to force.",
-    "e": [
-      [
-        "terra-kaffe-sahand-dilmaghani",
-        50,
-        "Terra Kaffe"
-      ],
-      [
-        "felt-fat-nate-mell",
-        18,
-        "Felt + Fat"
-      ],
-      [
-        "light-joe-hollier",
-        20,
-        "Light"
       ]
     ]
   },

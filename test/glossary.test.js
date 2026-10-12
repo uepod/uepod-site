@@ -93,10 +93,10 @@ test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
 test("committed glossary has a term, definition, and episode links", () => {
   const file = path.join(__dirname, "../data/glossary.json");
   const data = JSON.parse(fs.readFileSync(file, "utf8"));
-  assert.equal(data.length, 88);
+  assert.equal(data.length, 77);
 
   const prepared = prepareGlossary(expandGlossary(data, []));
-  assert.equal(prepared.terms.length, 88);
+  assert.equal(prepared.terms.length, 77);
   assert.equal(prepared.letters[0], "#");
   for (const term of prepared.terms) {
     assert.ok(term.term);
