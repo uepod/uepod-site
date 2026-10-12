@@ -1,159 +1,1795 @@
 [
   {
-    "term": "CAC",
-    "aliases": [],
-    "definition": "The average amount a business spends on marketing and sales to win one new customer.",
-    "category": null,
-    "episode_count": 2,
-    "episodes": [
-      {
-        "slug": "jones-hilary-dubin-caroline-huber",
-        "number": 14,
-        "brand": "Jones"
-      },
-      {
-        "slug": "loftie-matt-hassett",
-        "number": 30,
-        "brand": "Loftie"
-      }
+    "t": "3PL / fulfillment",
+    "d": "Fulfillment is storing, packing, and shipping orders. A 3PL is an outside company paid to do that work for a brand.",
+    "e": [
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ],
+      [
+        "yardsale-cristina-ashbaugh",
+        62,
+        "Yardsale"
+      ]
     ]
   },
   {
-    "term": "Co-packer",
-    "aliases": [],
-    "definition": "An outside factory that makes and packages products for a brand under the brand's name, so the brand does not need its own factory.",
-    "category": null,
-    "episode_count": 3,
-    "episodes": [
-      {
-        "slug": "jamies-farm-jamie-kim",
-        "number": 49,
-        "brand": "Jamie's Farm"
-      },
-      {
-        "slug": "pistakio-francine-voit-nicola-buffo",
-        "number": 48,
-        "brand": "Pistakio"
-      },
-      {
-        "slug": "alecs-ice-cream-alec-jaffe",
-        "number": 6,
-        "brand": "Alec's Ice Cream"
-      }
+    "t": "Amazon / marketplaces",
+    "d": "Large online stores where many brands sell. They offer huge reach but take fees and give the brand less control over price and customer data.",
+    "e": [
+      [
+        "stonemaier-games-jamey-stegmaier",
+        11,
+        "Stonemaier Games"
+      ],
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "noshi-for-kids-tomo-delaney",
+        55,
+        "Noshi for Kids"
+      ]
     ]
   },
   {
-    "term": "Distributor",
-    "aliases": [],
-    "definition": "A company that buys products from brands, stores them in warehouses, and delivers them to many stores. Distributors take a cut of the price in exchange.",
-    "category": null,
-    "episode_count": 2,
-    "episodes": [
-      {
-        "slug": "seremoni-saif-khawaja",
-        "number": 37,
-        "brand": "Seremoni"
-      },
-      {
-        "slug": "yuzuco-basil-beshkov",
-        "number": 45,
-        "brand": "YUZUCO"
-      }
+    "t": "Angel investor",
+    "d": "A wealthy individual who invests their own money in very early companies, usually in exchange for a small share of ownership.",
+    "e": [
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ],
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "matic-robots-mehul-nariyawala",
+        63,
+        "Matic Robots"
+      ]
     ]
   },
   {
-    "term": "Gross margin",
-    "aliases": [],
-    "definition": "The share of each sale left over after paying the direct cost of making the product. If a $10 item costs $4 to make, the gross margin is 60%.",
-    "category": null,
-    "episode_count": 1,
-    "episodes": [
-      {
-        "slug": "esspo-katharine-leitch",
-        "number": 41,
-        "brand": "Esspo"
-      }
+    "t": "B2B",
+    "d": "Selling to other businesses rather than to individual consumers.",
+    "e": [
+      [
+        "terra-kaffe-sahand-dilmaghani",
+        50,
+        "Terra Kaffe"
+      ],
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ],
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ]
     ]
   },
   {
-    "term": "MOQ",
-    "aliases": [],
-    "definition": "The smallest order a factory or supplier will accept. High minimums can force small brands to buy more than they can sell quickly.",
-    "category": null,
-    "episode_count": 2,
-    "episodes": [
-      {
-        "slug": "spring-mulberry-kathryn-shah",
-        "number": 4,
-        "brand": "Spring & Mulberry"
-      },
-      {
-        "slug": "rite-of-way-alex-brands",
-        "number": 61,
-        "brand": "Rite of Way"
-      }
+    "t": "Bootstrapping",
+    "d": "Building a company with the founders' own money and the cash the business earns, rather than raising money from outside investors.",
+    "e": [
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "le-puzz-alistair-matthews-and-michael-hunter",
+        2,
+        "Le Puzz"
+      ]
     ]
   },
   {
-    "term": "Slotting fees",
-    "aliases": [],
-    "definition": "Payments a brand makes to a store chain to get its product placed on the shelf, often in the form of cash or free product.",
-    "category": null,
-    "episode_count": 2,
-    "episodes": [
-      {
-        "slug": "laurels-coffee-isabel-washington",
-        "number": 31,
-        "brand": "Laurel's Coffee"
-      },
-      {
-        "slug": "one-trick-pony-lucy-dana",
-        "number": 16,
-        "brand": "One Trick Pony"
-      }
+    "t": "Broker",
+    "d": "An outside sales agent who pitches a brand's products to store buyers and is usually paid a commission on sales.",
+    "e": [
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ],
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "noon-jane-wong",
+        44,
+        "NOON"
+      ]
     ]
   },
   {
-    "term": "Velocity",
-    "aliases": [],
-    "definition": "How fast a product sells in each store, often measured as units sold per store per week. Stores use it to decide what stays on the shelf.",
-    "category": null,
-    "episode_count": 3,
-    "episodes": [
-      {
-        "slug": "esspo-katharine-leitch",
-        "number": 41,
-        "brand": "Esspo"
-      },
-      {
-        "slug": "something-sweet-brittney-cook",
-        "number": 34,
-        "brand": "Something Sweet"
-      },
-      {
-        "slug": "tofugo-caroline-dai",
-        "number": 64,
-        "brand": "TofuGo"
-      }
+    "t": "Burn rate",
+    "d": "How fast a company spends more money than it brings in, usually stated per month.",
+    "e": [
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ]
     ]
   },
   {
-    "term": "Working capital",
-    "aliases": [],
-    "definition": "The cash a business needs on hand to cover day-to-day costs such as inventory and bills while it waits to get paid for sales.",
-    "category": null,
-    "episode_count": 2,
-    "episodes": [
-      {
-        "slug": "felt-fat-nate-mell",
-        "number": 18,
-        "brand": "Felt + Fat"
-      },
-      {
-        "slug": "seremoni-saif-khawaja",
-        "number": 37,
-        "brand": "Seremoni"
-      }
+    "t": "Buyer",
+    "d": "The person at a store chain who decides which products the store will carry in a given aisle or category.",
+    "e": [
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ],
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "noon-jane-wong",
+        44,
+        "NOON"
+      ]
+    ]
+  },
+  {
+    "t": "CAC",
+    "d": "The average amount a business spends on marketing and sales to win one new customer.",
+    "e": [
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ]
+    ]
+  },
+  {
+    "t": "Cap table",
+    "d": "A table showing who owns what share of a company, including founders, investors, and employees.",
+    "e": [
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ],
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ]
+    ]
+  },
+  {
+    "t": "Cash flow",
+    "d": "The timing of money coming into and going out of a business. A company can be profitable on paper and still run short of cash if it pays suppliers long before customers pay it.",
+    "e": [
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ],
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ]
+    ]
+  },
+  {
+    "t": "Churn",
+    "d": "The share of customers or subscribers who stop buying or cancel over a period of time.",
+    "e": [
+      [
+        "hiya-adam-gillman",
+        22,
+        "Hiya"
+      ]
+    ]
+  },
+  {
+    "t": "Co-packer",
+    "d": "An outside factory that makes and packages products for a brand under the brand's name, so the brand does not need its own factory.",
+    "e": [
+      [
+        "jamies-farm-jamie-kim",
+        49,
+        "Jamie's Farm"
+      ],
+      [
+        "pistakio-francine-voit-nicola-buffo",
+        48,
+        "Pistakio"
+      ],
+      [
+        "alecs-ice-cream-alec-jaffe",
+        6,
+        "Alec's Ice Cream"
+      ]
+    ]
+  },
+  {
+    "t": "COGS",
+    "d": "The direct cost to make or buy the products a company sells, including ingredients, materials, packaging, and factory labor. It does not include rent, salaries, or marketing.",
+    "e": [
+      [
+        "gato-dates-gabriella-labi-tonya-reznikovich",
+        43,
+        "Gato Dates"
+      ],
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ]
+    ]
+  },
+  {
+    "t": "Consignment",
+    "d": "An arrangement where a store displays a brand's products but only pays for them after they sell. Unsold items go back to the brand.",
+    "e": [
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ],
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ]
+    ]
+  },
+  {
+    "t": "Contribution margin",
+    "d": "What is left from a sale after paying for the product and the costs that rise with each order, such as shipping, packaging, and payment fees. It shows how much each sale adds toward covering fixed costs and profit.",
+    "e": [
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ],
+      [
+        "brightland-aishwarya-iyer",
+        53,
+        "Brightland"
+      ]
+    ]
+  },
+  {
+    "t": "Conventional grocery",
+    "d": "Mainstream supermarkets like Kroger or Albertsons, as opposed to natural or specialty stores. They reach far more shoppers but are harder and more costly to get into.",
+    "e": [
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ]
+    ]
+  },
+  {
+    "t": "Conversion rate",
+    "d": "The share of people who take a desired action, such as visitors to a website who end up buying.",
+    "e": [
+      [
+        "yardsale-cristina-ashbaugh",
+        62,
+        "Yardsale"
+      ],
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "noon-jane-wong",
+        44,
+        "NOON"
+      ]
+    ]
+  },
+  {
+    "t": "Demo",
+    "d": "Handing out free samples in a store so shoppers can try a product, which often leads to a sale on the spot.",
+    "e": [
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ],
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ]
+    ]
+  },
+  {
+    "t": "Dilution",
+    "d": "The drop in each existing owner's percentage of a company when new shares are issued, for example to new investors.",
+    "e": [
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ]
+    ]
+  },
+  {
+    "t": "Discounting",
+    "d": "Selling below the normal price to attract buyers or move stock. It can boost sales in the short term but cuts into margin and can train customers to wait for deals.",
+    "e": [
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ],
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ]
+    ]
+  },
+  {
+    "t": "Distributor",
+    "d": "A company that buys products from brands, stores them in warehouses, and delivers them to many stores. Distributors take a cut of the price in exchange.",
+    "e": [
+      [
+        "seremoni-saif-khawaja",
+        37,
+        "Seremoni"
+      ],
+      [
+        "alecs-ice-cream-alec-jaffe",
+        6,
+        "Alec's Ice Cream"
+      ],
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ]
+    ]
+  },
+  {
+    "t": "DTC",
+    "d": "Selling straight to customers, usually through the brand's own website, instead of through stores or other middlemen.",
+    "e": [
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ]
+    ]
+  },
+  {
+    "t": "Email list",
+    "d": "A list of people who have agreed to receive emails from a brand. Brands value it because they own it and can reach those people without paying for ads.",
+    "e": [
+      [
+        "craighill-zach-fried",
+        1,
+        "Craighill"
+      ],
+      [
+        "kelly-bennett",
+        24,
+        ""
+      ],
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ]
+    ]
+  },
+  {
+    "t": "Equity",
+    "d": "Ownership in a company. Giving up equity means selling part of the business to investors or giving it to employees.",
+    "e": [
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "betty-jos-erin-forden-maddie-nehlen",
+        51,
+        "Betty Jo's"
+      ],
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ]
+    ]
+  },
+  {
+    "t": "Exclusivity",
+    "d": "An agreement that only one store, partner, or region gets to sell a product for a period of time.",
+    "e": [
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ],
+      [
+        "jamies-farm-jamie-kim",
+        49,
+        "Jamie's Farm"
+      ]
+    ]
+  },
+  {
+    "t": "Flywheel",
+    "d": "A cycle where each part of the business feeds the next, so growth builds on itself over time.",
+    "e": [
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "rip-cold-brew-brendan-flannery",
+        47,
+        "RIP Cold Brew"
+      ]
+    ]
+  },
+  {
+    "t": "Free fill",
+    "d": "Free product a brand gives a retailer to stock the shelves for a new item, a common form of slotting fee.",
+    "e": [
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "9-mini-interviews",
+        46,
+        ""
+      ],
+      [
+        "joy-supply-lindsay-leopold",
+        57,
+        "Joy Supply"
+      ]
+    ]
+  },
+  {
+    "t": "Freight",
+    "d": "Moving large amounts of goods by truck, ship, rail, or plane, and the cost of doing so.",
+    "e": [
+      [
+        "le-puzz-alistair-matthews-and-michael-hunter",
+        2,
+        "Le Puzz"
+      ],
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ]
+    ]
+  },
+  {
+    "t": "Friends and family round",
+    "d": "An early round of money raised from people the founder already knows, usually before professional investors get involved.",
+    "e": [
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ],
+      [
+        "alexandra-spitz-new-mom-school",
+        58,
+        "Alexandra Spitz"
+      ],
+      [
+        "pistakio-francine-voit-nicola-buffo",
+        48,
+        "Pistakio"
+      ]
+    ]
+  },
+  {
+    "t": "Frozen / refrigerated",
+    "d": "Products that must be kept cold from factory to store. Keeping them cold the whole way adds cost and limits which distributors and stores can carry them.",
+    "e": [
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ],
+      [
+        "alecs-ice-cream-alec-jaffe",
+        6,
+        "Alec's Ice Cream"
+      ],
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ]
+    ]
+  },
+  {
+    "t": "Fundraising",
+    "d": "Getting money from investors, lenders, or other backers to grow a business, usually in exchange for a share of ownership or a promise to repay.",
+    "e": [
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ]
+    ]
+  },
+  {
+    "t": "Go-to-market",
+    "d": "The plan for how a company will launch a product and reach its first customers, including who to sell to, where, and at what price.",
+    "e": [
+      [
+        "seremoni-saif-khawaja",
+        37,
+        "Seremoni"
+      ],
+      [
+        "biche-alexandra-pauly",
+        54,
+        "Biche"
+      ],
+      [
+        "brightland-aishwarya-iyer",
+        53,
+        "Brightland"
+      ]
+    ]
+  },
+  {
+    "t": "Gross margin",
+    "d": "The share of each sale left over after paying the direct cost of making the product. If a $10 item costs $4 to make, the gross margin is 60%.",
+    "e": [
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ]
+    ]
+  },
+  {
+    "t": "Influencer marketing",
+    "d": "Paying or gifting products to people with large social media followings so they will show the product to their audience.",
+    "e": [
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ],
+      [
+        "pistakio-francine-voit-nicola-buffo",
+        48,
+        "Pistakio"
+      ],
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ]
+    ]
+  },
+  {
+    "t": "Inventory",
+    "d": "The products and materials a business has on hand waiting to be sold. Too little means missed sales; too much ties up cash.",
+    "e": [
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ],
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ]
+    ]
+  },
+  {
+    "t": "Kickstarter / crowdfunding",
+    "d": "Raising money from many members of the public, often by taking orders for a product before it is made. It funds production and tests demand at the same time.",
+    "e": [
+      [
+        "stonemaier-games-jamey-stegmaier",
+        11,
+        "Stonemaier Games"
+      ],
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ],
+      [
+        "rotten-michael-fisher",
+        7,
+        "Rotten"
+      ]
+    ]
+  },
+  {
+    "t": "Lead time",
+    "d": "How long it takes from placing an order with a supplier to receiving the goods.",
+    "e": [
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ],
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ]
+    ]
+  },
+  {
+    "t": "Loan / SBA loan",
+    "d": "Borrowed money that must be paid back with interest, without giving up ownership. SBA loans are small business loans partly backed by the U.S. government.",
+    "e": [
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ],
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ]
+    ]
+  },
+  {
+    "t": "LTV",
+    "d": "The total profit (or sometimes revenue) a business expects to earn from one customer over the whole time they keep buying. It is usually compared with CAC to see if winning customers is worth the cost.",
+    "e": [
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ],
+      [
+        "brightland-aishwarya-iyer",
+        53,
+        "Brightland"
+      ]
+    ]
+  },
+  {
+    "t": "Markup",
+    "d": "The amount added on top of a product's cost to set its selling price, often shown as a percentage of cost.",
+    "e": [
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ]
+    ]
+  },
+  {
+    "t": "Moat",
+    "d": "Something that protects a business from competitors, such as a strong brand, a patent, or a cost advantage that is hard to copy.",
+    "e": [
+      [
+        "honey-dept-noah-phillips",
+        35,
+        "Honey Dept."
+      ],
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ],
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ]
+    ]
+  },
+  {
+    "t": "MOQ",
+    "d": "The smallest order a factory or supplier will accept. High minimums can force small brands to buy more than they can sell quickly.",
+    "e": [
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ]
+    ]
+  },
+  {
+    "t": "MVP",
+    "d": "The simplest version of a product that can be released to learn whether people want it, before investing more.",
+    "e": [
+      [
+        "bytem-jack-davis-jacob-tubis",
+        28,
+        "Byte'm"
+      ],
+      [
+        "fjord-gabe-turner",
+        36,
+        "Fjord"
+      ],
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ]
+    ]
+  },
+  {
+    "t": "Natural channel",
+    "d": "Grocery stores focused on natural and organic foods, such as Whole Foods, Sprouts, and independent co-ops.",
+    "e": [
+      [
+        "alecs-ice-cream-alec-jaffe",
+        6,
+        "Alec's Ice Cream"
+      ],
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ]
+    ]
+  },
+  {
+    "t": "Net terms",
+    "d": "How many days a buyer has to pay an invoice. Net 30 means payment is due 30 days after the goods are delivered.",
+    "e": [
+      [
+        "pf-candle-co-kristen-pumphrey-thomas-neuberger",
+        5,
+        "P.F. Candle Co."
+      ],
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "tofugo-caroline-dai",
+        64,
+        "TofuGo"
+      ]
+    ]
+  },
+  {
+    "t": "Overhead",
+    "d": "The ongoing costs of running a business that stay about the same no matter how much it sells, such as rent, salaries, and software.",
+    "e": [
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ],
+      [
+        "le-puzz-alistair-matthews-and-michael-hunter",
+        2,
+        "Le Puzz"
+      ],
+      [
+        "alexandra-spitz-new-mom-school",
+        58,
+        "Alexandra Spitz"
+      ]
+    ]
+  },
+  {
+    "t": "Paid ads",
+    "d": "Advertising a business pays for, such as ads on Instagram, Facebook, or Google, as opposed to free attention it earns on its own.",
+    "e": [
+      [
+        "craighill-zach-fried",
+        1,
+        "Craighill"
+      ],
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ],
+      [
+        "tofugo-caroline-dai",
+        64,
+        "TofuGo"
+      ]
+    ]
+  },
+  {
+    "t": "Payback period",
+    "d": "How long it takes for the money spent winning a customer, or on an investment, to be earned back.",
+    "e": [
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ],
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ]
+    ]
+  },
+  {
+    "t": "Pivot",
+    "d": "A major change in a company's product, customers, or strategy after the original plan does not work as hoped.",
+    "e": [
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ],
+      [
+        "pistakio-francine-voit-nicola-buffo",
+        48,
+        "Pistakio"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ]
+    ]
+  },
+  {
+    "t": "Pop-up",
+    "d": "A temporary shop or stand, open for days or weeks, used to sell products, meet customers, and test a location.",
+    "e": [
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ],
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ]
+    ]
+  },
+  {
+    "t": "Pre-orders",
+    "d": "Orders customers pay for before a product is made or in stock. They bring in cash early and show whether people actually want the product.",
+    "e": [
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ]
+    ]
+  },
+  {
+    "t": "Pre-seed",
+    "d": "The earliest formal round of outside money, often used to build a first product or test an idea.",
+    "e": [
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "joy-supply-lindsay-leopold",
+        57,
+        "Joy Supply"
+      ],
+      [
+        "rip-cold-brew-brendan-flannery",
+        47,
+        "RIP Cold Brew"
+      ]
+    ]
+  },
+  {
+    "t": "Price point",
+    "d": "The price a product sells for to shoppers. Choosing it means balancing what customers will pay against what the product costs to make and sell.",
+    "e": [
+      [
+        "rip-cold-brew-brendan-flannery",
+        47,
+        "RIP Cold Brew"
+      ],
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ]
+    ]
+  },
+  {
+    "t": "Private label",
+    "d": "Products made by one company and sold under another company's brand name, such as a store's own brand.",
+    "e": [
+      [
+        "yes-apples-tenley-fitzgerald",
+        38,
+        "Yes! Apples"
+      ],
+      [
+        "joy-supply-lindsay-leopold",
+        57,
+        "Joy Supply"
+      ],
+      [
+        "mahsa-chai-mahsa-darabi",
+        52,
+        "MAHSA CHAI®"
+      ]
+    ]
+  },
+  {
+    "t": "Product-market fit",
+    "d": "The point when a product clearly meets a real need and customers seek it out and keep using it, so growth comes more easily.",
+    "e": [
+      [
+        "matic-robots-mehul-nariyawala",
+        63,
+        "Matic Robots"
+      ],
+      [
+        "nymzo-elliott-walker-tim-hucklesby",
+        12,
+        "Nymzo"
+      ],
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ]
+    ]
+  },
+  {
+    "t": "Production run",
+    "d": "One round of manufacturing a set quantity of product at once. Bigger runs usually lower the cost per unit.",
+    "e": [
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ],
+      [
+        "lotties-meats-chelsey-cassie-maschhoff",
+        29,
+        "Lottie's Meats"
+      ]
+    ]
+  },
+  {
+    "t": "Profitability",
+    "d": "When a business brings in more money than it spends over a period, so it makes a profit instead of a loss.",
+    "e": [
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ],
+      [
+        "alexandra-spitz-new-mom-school",
+        58,
+        "Alexandra Spitz"
+      ]
+    ]
+  },
+  {
+    "t": "Prototype",
+    "d": "An early test version of a product, used to check the design before paying for full production.",
+    "e": [
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "stonemaier-games-jamey-stegmaier",
+        11,
+        "Stonemaier Games"
+      ],
+      [
+        "currently-running-nash-howe",
+        8,
+        "Currently Running"
+      ]
+    ]
+  },
+  {
+    "t": "Repeat purchase",
+    "d": "When a customer buys again after their first order. A high repeat rate is a strong sign people like the product.",
+    "e": [
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ],
+      [
+        "jamies-farm-jamie-kim",
+        49,
+        "Jamie's Farm"
+      ],
+      [
+        "mikeys-pies-mikey-deegan",
+        65,
+        "Mikey's Pies"
+      ]
+    ]
+  },
+  {
+    "t": "Retail doors",
+    "d": "The number of individual store locations that carry a product. Being in 500 doors means being sold in 500 stores.",
+    "e": [
+      [
+        "noon-jane-wong",
+        44,
+        "NOON"
+      ],
+      [
+        "jamies-farm-jamie-kim",
+        49,
+        "Jamie's Farm"
+      ],
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ]
+    ]
+  },
+  {
+    "t": "Retention",
+    "d": "How well a business keeps customers coming back over time. It is the opposite of churn.",
+    "e": [
+      [
+        "hiya-adam-gillman",
+        22,
+        "Hiya"
+      ],
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ],
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ]
+    ]
+  },
+  {
+    "t": "Royalty",
+    "d": "An ongoing payment, usually a percentage of each sale, paid to the owner of a brand, design, or idea for the right to use it.",
+    "e": [
+      [
+        "stonemaier-games-jamey-stegmaier",
+        11,
+        "Stonemaier Games"
+      ],
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ],
+      [
+        "alexandra-spitz-new-mom-school",
+        58,
+        "Alexandra Spitz"
+      ]
+    ]
+  },
+  {
+    "t": "Run rate",
+    "d": "A quick projection of yearly sales based on a recent period. For example, $100,000 in one month is a $1.2 million annual run rate.",
+    "e": [
+      [
+        "brightland-aishwarya-iyer",
+        53,
+        "Brightland"
+      ],
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ],
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ]
+    ]
+  },
+  {
+    "t": "Runway",
+    "d": "How many months a company can keep operating before it runs out of cash, at its current rate of spending.",
+    "e": [
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ],
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ]
+    ]
+  },
+  {
+    "t": "Seed round",
+    "d": "An early round of investment that helps a young company prove its idea works and start growing. It usually comes before a Series A.",
+    "e": [
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ],
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ]
+    ]
+  },
+  {
+    "t": "Sell-through",
+    "d": "The share of products a store bought that actually sold to shoppers. High sell-through means the store will likely reorder.",
+    "e": [
+      [
+        "rite-of-way-alex-brands",
+        61,
+        "Rite of Way"
+      ],
+      [
+        "almond-surfboards-dave-allee",
+        10,
+        "Almond Surfboards"
+      ],
+      [
+        "yuzuco-basil-beshkov",
+        45,
+        "YUZUCO"
+      ]
+    ]
+  },
+  {
+    "t": "Series A",
+    "d": "A larger, more formal round of venture investment that usually comes after seed, once a company has shown real traction. Later rounds are lettered B, C, and so on.",
+    "e": [
+      [
+        "jones-hilary-dubin-caroline-huber",
+        14,
+        "Jones"
+      ],
+      [
+        "pickle-brian-mcmahon",
+        23,
+        "Pickle"
+      ],
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ]
+    ]
+  },
+  {
+    "t": "Shelf life",
+    "d": "How long a product stays safe and good to sell. Short shelf life makes distribution harder and leads to more waste.",
+    "e": [
+      [
+        "sourmilk-kiki-couchman-elan-halpern",
+        21,
+        "Sourmilk"
+      ],
+      [
+        "tofugo-caroline-dai",
+        64,
+        "TofuGo"
+      ],
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ]
+    ]
+  },
+  {
+    "t": "Shelf space",
+    "d": "The physical room a product gets on store shelves. It is limited, so brands compete hard for it.",
+    "e": [
+      [
+        "alecs-ice-cream-alec-jaffe",
+        6,
+        "Alec's Ice Cream"
+      ],
+      [
+        "9-mini-interviews",
+        46,
+        ""
+      ],
+      [
+        "rip-cold-brew-brendan-flannery",
+        47,
+        "RIP Cold Brew"
+      ]
+    ]
+  },
+  {
+    "t": "SKU",
+    "d": "A unique code for one specific version of a product, such as one flavor in one size. More SKUs means more variety but more complexity.",
+    "e": [
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "bytem-jack-davis-jacob-tubis",
+        28,
+        "Byte'm"
+      ]
+    ]
+  },
+  {
+    "t": "Slotting fees",
+    "d": "Payments a brand makes to a store chain to get its product placed on the shelf, often in the form of cash or free product.",
+    "e": [
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "9-mini-interviews",
+        46,
+        ""
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ]
+    ]
+  },
+  {
+    "t": "Subscription",
+    "d": "A model where customers pay on a regular schedule, such as monthly, to keep receiving a product or service.",
+    "e": [
+      [
+        "hiya-adam-gillman",
+        22,
+        "Hiya"
+      ],
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ],
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ]
+    ]
+  },
+  {
+    "t": "Supply chain",
+    "d": "The full path a product takes from raw materials to factory to warehouse to customer, and all the companies involved along the way.",
+    "e": [
+      [
+        "seremoni-saif-khawaja",
+        37,
+        "Seremoni"
+      ],
+      [
+        "honey-dept-noah-phillips",
+        35,
+        "Honey Dept."
+      ],
+      [
+        "armada-seamus-meniahane",
+        27,
+        "Armada"
+      ]
+    ]
+  },
+  {
+    "t": "TAM",
+    "d": "The total amount of money that could be spent on a product if every possible customer bought it. It is used to judge how big a business could get.",
+    "e": [
+      [
+        "gato-dates-gabriella-labi-tonya-reznikovich",
+        43,
+        "Gato Dates"
+      ],
+      [
+        "terra-kaffe-sahand-dilmaghani",
+        50,
+        "Terra Kaffe"
+      ],
+      [
+        "tofugo-caroline-dai",
+        64,
+        "TofuGo"
+      ]
+    ]
+  },
+  {
+    "t": "Tariffs",
+    "d": "Taxes a government charges on goods brought in from other countries. They raise the cost of imported products and materials.",
+    "e": [
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "le-puzz-alistair-matthews-and-michael-hunter",
+        2,
+        "Le Puzz"
+      ],
+      [
+        "one-trick-pony-lucy-dana",
+        16,
+        "One Trick Pony"
+      ]
+    ]
+  },
+  {
+    "t": "Tooling",
+    "d": "Custom molds, dies, and equipment a factory needs to make a specific product. It is a large upfront cost paid before the first unit is made.",
+    "e": [
+      [
+        "craighill-zach-fried",
+        1,
+        "Craighill"
+      ],
+      [
+        "nymzo-elliott-walker-tim-hucklesby",
+        12,
+        "Nymzo"
+      ],
+      [
+        "almond-surfboards-dave-allee",
+        10,
+        "Almond Surfboards"
+      ]
+    ]
+  },
+  {
+    "t": "Top line / bottom line",
+    "d": "The top line is total sales (revenue). The bottom line is what is left after every cost is paid, meaning profit or loss.",
+    "e": [
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ],
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "terra-kaffe-sahand-dilmaghani",
+        50,
+        "Terra Kaffe"
+      ]
+    ]
+  },
+  {
+    "t": "Trade show",
+    "d": "An industry event where brands set up booths to meet store buyers, distributors, and press.",
+    "e": [
+      [
+        "craighill-zach-fried",
+        1,
+        "Craighill"
+      ],
+      [
+        "lasso-clarke-pennington",
+        39,
+        "Lasso"
+      ],
+      [
+        "noshi-for-kids-tomo-delaney",
+        55,
+        "Noshi for Kids"
+      ]
+    ]
+  },
+  {
+    "t": "Trade spend",
+    "d": "Money a brand spends to promote its products inside stores, such as price cuts, ads in store flyers, and display fees.",
+    "e": [
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ],
+      [
+        "laurels-coffee-isabel-washington",
+        31,
+        "Laurel's Coffee"
+      ],
+      [
+        "joy-supply-lindsay-leopold",
+        57,
+        "Joy Supply"
+      ]
+    ]
+  },
+  {
+    "t": "UNFI / KeHE",
+    "d": "The two largest distributors that supply natural and specialty grocery stores in the U.S. Getting into one of them is often a key step for food brands.",
+    "e": [
+      [
+        "spring-mulberry-kathryn-shah",
+        4,
+        "Spring & Mulberry"
+      ],
+      [
+        "bezi-ilay-karateke",
+        9,
+        "Bezi"
+      ],
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ]
+    ]
+  },
+  {
+    "t": "Unit economics",
+    "d": "How much money a business makes or loses on a single unit, like one product sold or one customer served, after the direct costs of making and delivering it. It is also the name of this show.",
+    "e": [
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ]
+    ]
+  },
+  {
+    "t": "Valuation",
+    "d": "What a company is judged to be worth, usually agreed on during a fundraise or sale. It sets how much ownership an investor gets for their money.",
+    "e": [
+      [
+        "springdale-ventures-dan-graham-mollye-santulli",
+        59,
+        "Springdale Ventures"
+      ],
+      [
+        "talea-beer-co-tara-hankinson-and-leann-darland",
+        3,
+        "Talea Beer Co."
+      ],
+      [
+        "great-circle-ventures-jacob-afriat",
+        60,
+        "Great Circle Ventures"
+      ]
+    ]
+  },
+  {
+    "t": "Velocity",
+    "d": "How fast a product sells in each store, often measured as units sold per store per week. Stores use it to decide what stays on the shelf.",
+    "e": [
+      [
+        "something-sweet-brittney-cook",
+        34,
+        "Something Sweet"
+      ],
+      [
+        "esspo-katharine-leitch",
+        41,
+        "Esspo"
+      ],
+      [
+        "rotten-michael-fisher",
+        7,
+        "Rotten"
+      ]
+    ]
+  },
+  {
+    "t": "Venture capital",
+    "d": "Firms that invest pooled money from others into young, fast-growing companies in exchange for ownership, hoping a few big wins pay for many losses.",
+    "e": [
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ],
+      [
+        "loftie-matt-hassett",
+        30,
+        "Loftie"
+      ],
+      [
+        "gob-lauryn-menard",
+        15,
+        "GOB"
+      ]
+    ]
+  },
+  {
+    "t": "Wholesale",
+    "d": "Selling products in bulk to stores at a lower price, so the stores can resell them to shoppers at a markup.",
+    "e": [
+      [
+        "le-puzz-alistair-matthews-and-michael-hunter",
+        2,
+        "Le Puzz"
+      ],
+      [
+        "yardsale-cristina-ashbaugh",
+        62,
+        "Yardsale"
+      ],
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ]
+    ]
+  },
+  {
+    "t": "Word of mouth",
+    "d": "Customers telling friends and family about a product on their own. It is free, trusted, and hard to force.",
+    "e": [
+      [
+        "terra-kaffe-sahand-dilmaghani",
+        50,
+        "Terra Kaffe"
+      ],
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ],
+      [
+        "light-joe-hollier",
+        20,
+        "Light"
+      ]
+    ]
+  },
+  {
+    "t": "Working capital",
+    "d": "The cash a business needs on hand to cover day-to-day costs such as inventory and bills while it waits to get paid for sales.",
+    "e": [
+      [
+        "matic-robots-mehul-nariyawala",
+        63,
+        "Matic Robots"
+      ],
+      [
+        "felt-fat-nate-mell",
+        18,
+        "Felt + Fat"
+      ],
+      [
+        "seremoni-saif-khawaja",
+        37,
+        "Seremoni"
+      ]
     ]
   }
 ]

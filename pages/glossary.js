@@ -15,6 +15,10 @@ import glossarySource from "../data/glossary.json";
 const CANONICAL = `${SITE_URL}/glossary`;
 const TITLE = "Glossary | Unit Economics";
 
+function letterDomId(letter) {
+  return letter === "#" ? "letter-num" : `letter-${letter}`;
+}
+
 function scrollToId(id) {
   const scroller = document.querySelector(".site-scroll");
   const target = document.getElementById(id);
@@ -77,7 +81,7 @@ export default function GlossaryPage({ groups, letters, terms }) {
               present.has(letter) ? (
                 <a
                   key={letter}
-                  href={`#letter-${letter}`}
+                  href={`#${letterDomId(letter)}`}
                   onClick={(event) => {
                     if (
                       event.button !== 0 ||
@@ -89,8 +93,9 @@ export default function GlossaryPage({ groups, letters, terms }) {
                       return;
                     }
                     event.preventDefault();
-                    scrollToId(`letter-${letter}`);
-                    history.replaceState(null, "", `#letter-${letter}`);
+                    const id = letterDomId(letter);
+                    scrollToId(id);
+                    history.replaceState(null, "", `#${id}`);
                   }}
                 >
                   {letter}
@@ -106,11 +111,11 @@ export default function GlossaryPage({ groups, letters, terms }) {
           {groups.map((group) => (
             <section
               key={group.letter}
-              id={`letter-${group.letter}`}
+              id={letterDomId(group.letter)}
               className="glossary-group"
-              aria-labelledby={`letter-heading-${group.letter}`}
+              aria-labelledby={`${letterDomId(group.letter)}-heading`}
             >
-              <h2 id={`letter-heading-${group.letter}`}>{group.letter}</h2>
+              <h2 id={`${letterDomId(group.letter)}-heading`}>{group.letter}</h2>
               {group.terms.map((term) => (
                 <article key={term.anchor} id={term.anchor} className="glossary-term">
                   <h3>{term.term}</h3>

@@ -53,7 +53,7 @@ function resolveEpisode(episode, known) {
   const numeric = number === null || number === undefined || number === "" ? null : Number(number);
   let brand = episode?.brand;
   if (brand === null || brand === undefined || String(brand).trim() === "") {
-    brand = match?.brand || "";
+    brand = (match?.title || match?.brand || "").trim();
   }
   return {
     slug,
@@ -95,6 +95,7 @@ function expandGlossaryEntry(entry, known) {
     if (!resolved.slug || seen.has(resolved.slug)) continue;
     seen.add(resolved.slug);
     episodes.push(resolved);
+    if (episodes.length === 3) break;
   }
   return {
     term,
@@ -132,7 +133,10 @@ function prepareGlossary(entries) {
       last.terms.push(term);
     }
   }
-  return { terms, groups, letters: LETTERS };
+  const letters = terms.some((term) => term.letter === "#")
+    ? ["#", ...LETTERS]
+    : LETTERS;
+  return { terms, groups, letters };
 }
 
 function heardInLabel(episode) {

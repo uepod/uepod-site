@@ -39,6 +39,31 @@ test("null episode numbers and brands are filled from the directory", () => {
   assert.equal(heardInLabel(expanded[0].episodes[0]), "E. 41 Mikey's Pies");
 });
 
+test("a blank brand uses the episode title and only three episodes are kept", () => {
+  const expanded = expandGlossary(
+    [
+      {
+        t: "Email list",
+        d: "People who agreed to get emails.",
+        e: [
+          ["kelly-bennett", 24, ""],
+          ["a", 1, "A"],
+          ["b", 2, "B"],
+          ["c", 3, "C"],
+        ],
+      },
+    ],
+    [{ slug: "kelly-bennett", id: 24, brand: "Kelly Bennett", title: "Kelly Bennett" }]
+  );
+  assert.equal(expanded[0].episode_count, 3);
+  assert.deepEqual(
+    expanded[0].episodes.map((episode) => episode.slug),
+    ["kelly-bennett", "a", "b"]
+  );
+  assert.equal(expanded[0].episodes[0].brand, "Kelly Bennett");
+  assert.equal(heardInLabel(expanded[0].episodes[0]), "E. 24 Kelly Bennett");
+});
+
 test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
   const prepared = prepareGlossary(
     expandGlossary(
@@ -68,18 +93,20 @@ test("terms group from A to Z and JSON-LD is a DefinedTermSet", () => {
 test("committed glossary has a term, definition, and episode links", () => {
   const file = path.join(__dirname, "../data/glossary.json");
   const data = JSON.parse(fs.readFileSync(file, "utf8"));
-  assert.ok(Array.isArray(data) && data.length > 0);
+  assert.equal(data.length, 88);
 
   const prepared = prepareGlossary(expandGlossary(data, []));
-  assert.equal(prepared.terms.length, data.length);
+  assert.equal(prepared.terms.length, 88);
+  assert.equal(prepared.letters[0], "#");
   for (const term of prepared.terms) {
     assert.ok(term.term);
     assert.ok(term.definition);
     assert.equal(term.episode_count, term.episodes.length);
+    assert.ok(term.episodes.length >= 1 && term.episodes.length <= 3);
     assert.ok(Array.isArray(term.aliases));
     for (const episode of term.episodes) {
       assert.ok(episode.slug);
-      assert.ok(heardInLabel(episode).startsWith("E. ") || episode.brand);
+      assert.match(heardInLabel(episode), /^E\. \d+/);
     }
   }
   const ld = glossaryJsonLd(prepared.terms);
