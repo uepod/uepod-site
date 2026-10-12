@@ -772,9 +772,6 @@ export default function Home({ episodes, posts }) {
         {/* ===== NAV ===== */}
         <nav
           style={{
-            position: "sticky",
-            top: 0,
-            zIndex: 100,
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
