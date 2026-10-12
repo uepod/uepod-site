@@ -459,9 +459,25 @@ a {
   text-decoration: underline;
 }
 
-/* Below 1280px the page stacks and Related stays one column, matching the homepage episode list. */
+/* Below 1280 the pieces stack in the same order as before: About, Listen, takeaways, Related, All episodes. */
+@media (max-width: 1279px) {
+  .episode-layout {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Wide screens: About and Related on the left, sticky Listen on the right. */
+  .episode-rail {
+    display: contents;
+  }
+
+  .episode-main { order: 1; }
+  .listen-section { order: 2; }
+  .episode-takeaways { order: 3; }
+  .episode-related { order: 4; }
+  .episode-all { order: 5; }
+}
+
+/* Wide screens: About on the left. Listen, then a vertical Related stack, on the right. */
 @media (min-width: 1280px) {
   .episode-layout {
     display: grid;
@@ -477,24 +493,36 @@ a {
     grid-row: 1;
   }
 
-  /* Span the left column so the player sticks while About and Related scroll. */
-  .episode-aside {
-    grid-column: 2;
-    grid-row: 1 / -1;
-    position: sticky;
-    top: 12px;
-    align-self: start;
-  }
-
   .episode-takeaways {
     grid-column: 1;
     grid-row: 2;
   }
 
+  .episode-rail {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  /* Pin Listen and Related together only when the whole stack fits on screen. */
+  .episode-rail.is-fit {
+    position: sticky;
+    top: 12px;
+  }
+
+  /* When the stack is taller, Listen alone stays pinned and Related scrolls past it. */
+  .episode-rail:not(.is-fit) .listen-section {
+    position: sticky;
+    top: 12px;
+    z-index: 1;
+    background: #000;
+  }
+
   .episode-related {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 48px;
+    margin-top: 40px;
   }
 
   .episode-description,
@@ -509,22 +537,21 @@ a {
   }
 
   .related-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 24px;
+    grid-template-columns: 1fr;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .related-link {
-    height: 100%;
-    border-bottom: none;
-    padding: 22px 0 0;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 22px 0;
   }
 
   .related-link .episode-grid {
     display: flex !important;
     flex-direction: column;
     gap: 14px;
-    height: 100%;
+    height: auto;
   }
 
   .related-link .episode-meta {
@@ -532,7 +559,7 @@ a {
     gap: 16px;
     text-align: left !important;
     white-space: normal !important;
-    margin-top: auto;
+    margin-top: 0;
     padding-top: 8px !important;
   }
 

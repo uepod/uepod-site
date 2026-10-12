@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../../src/components/SiteChrome";
 import { fetchEpisodeDirectory } from "../../src/lib/fetchEpisodes";
@@ -90,6 +90,65 @@ function ListenSection({ episode }) {
   const options = listenOptions(episode);
   if (!options.length) return null;
   return <ListenTabs options={options} />;
+}
+
+function EpisodeRail({ episode, related }) {
+  const railRef = useRef(null);
+  const [fits, setFits] = useState(false);
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const scroller = rail.closest(".site-scroll");
+
+    const measure = () => {
+      const wide = window.matchMedia("(min-width: 1280px)").matches;
+      if (!wide || !scroller) {
+        setFits(false);
+        return;
+      }
+      // Measure the stack itself, not the stretched column around it.
+      let contentHeight = 0;
+      for (const child of rail.children) {
+        const style = getComputedStyle(child);
+        contentHeight +=
+          child.offsetHeight +
+          parseFloat(style.marginTop) +
+          parseFloat(style.marginBottom);
+      }
+      const available = scroller.clientHeight - 24;
+      setFits(contentHeight <= available);
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(rail);
+    if (scroller) observer.observe(scroller);
+    window.addEventListener("resize", measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [episode, related]);
+
+  return (
+    <div ref={railRef} className={fits ? "episode-rail is-fit" : "episode-rail"}>
+      <ListenSection episode={episode} />
+      {related.length ? (
+        <section className="episode-related">
+          <h2>Related</h2>
+          <div className="related-list">
+            {related.map((item) => (
+              <RelatedRow key={item.slug} episode={item} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      <a className="back-link episode-back-bottom episode-all" href="/#episodes">
+        All episodes →
+      </a>
+    </div>
+  );
 }
 
 function RelatedRow({ episode }) {
@@ -378,9 +437,7 @@ export default function EpisodePage({ episode, related }) {
               ) : null}
             </div>
 
-            <div className="episode-aside">
-              <ListenSection episode={episode} />
-            </div>
+            <EpisodeRail episode={episode} related={related} />
 
             {episode.takeaways?.length ? (
               <section className="episode-takeaways">
@@ -392,22 +449,7 @@ export default function EpisodePage({ episode, related }) {
                 </ul>
               </section>
             ) : null}
-
-            {related.length ? (
-              <section className="episode-related">
-                <h2>Related</h2>
-                <div className="related-list">
-                  {related.map((item) => (
-                    <RelatedRow key={item.slug} episode={item} />
-                  ))}
-                </div>
-              </section>
-            ) : null}
           </div>
-
-          <a className="back-link episode-back-bottom" href="/#episodes">
-            All episodes →
-          </a>
         </article>
       </SiteChrome>
     </>
