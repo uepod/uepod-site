@@ -29,12 +29,13 @@ function stateWithScroll(scrollY) {
 }
 
 function scrollPageTo(content, y) {
-  if (!content) return;
-  const top = Number.isFinite(y) ? y : 0;
-  const previous = content.style.scrollBehavior;
-  content.style.scrollBehavior = "auto";
-  content.scrollTop = top;
-  content.style.scrollBehavior = previous;
+  if (content) {
+    const previous = content.style.scrollBehavior;
+    content.style.scrollBehavior = "auto";
+    content.scrollTop = 0;
+    content.style.scrollBehavior = previous;
+  }
+  window.scrollTo(0, y);
 }
 
 /* ===== GA4 EVENT HELPER ===== */
@@ -611,17 +612,10 @@ export default function Home({ episodes, posts }) {
 
   // Keep the current history entry's scroll position current so Forward
   // returns to where the user left that view, not only where it opened.
-  // The homepage shell is a fixed viewport; the inner scroller is the
-  // only element that moves.
   useEffect(() => {
-    const el = contentRef.current;
-    if (!el) return;
-
     let frame = 0;
 
     const onScroll = () => {
-      setScrolled(el.scrollTop > 40);
-
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
@@ -629,21 +623,32 @@ export default function Home({ episodes, posts }) {
           history.state && typeof history.state === "object"
             ? history.state
             : {};
-        if (prev.scrollY === el.scrollTop) return;
+        if (prev.scrollY === window.scrollY) return;
         history.replaceState(
-          { ...prev, scrollY: el.scrollTop },
+          { ...prev, scrollY: window.scrollY },
           "",
           currentHistoryUrl()
         );
       });
     };
 
-    el.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      el.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", onScroll);
       if (frame) cancelAnimationFrame(frame);
     };
-  }, [section]);
+  }, []);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    const handleScroll = () => setScrolled(el.scrollTop > 40);
+
+    el.addEventListener("scroll", handleScroll);
+
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Re-enable scroll anchoring after a section change. It is turned off
   // in navigate() so the swap itself cannot move the viewport.
@@ -651,8 +656,7 @@ export default function Home({ episodes, posts }) {
     document.documentElement.style.overflowAnchor = "";
   }, [section]);
 
-  // Lock body scroll when the mobile menu is open. The content
-  // scroller is locked through its overflow style below.
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
 
@@ -697,18 +701,16 @@ export default function Home({ episodes, posts }) {
   };
 
   const navigate = (s) => {
-    const content = contentRef.current;
-    const currentScroll = content ? content.scrollTop : 0;
-
     if (s !== section) {
       // replaceState rewrites the current history entry, so Back skipped
       // home and left the site. Snapshot this entry's scroll position,
       // then push the next view so Back/Forward can return to it.
-      // Push before scrolling: the footer stays mounted across the section
+      // Push before scrolling: the browser stores the scroll position
+      // we are leaving. The footer stays mounted across the section
       // swap, and scroll anchoring would otherwise keep it on screen
       // and open Listen at the bottom.
       history.replaceState(
-        stateWithScroll(currentScroll),
+        stateWithScroll(window.scrollY),
         "",
         currentHistoryUrl()
       );
@@ -719,9 +721,9 @@ export default function Home({ episodes, posts }) {
       );
 
       document.documentElement.style.overflowAnchor = "none";
-      scrollPageTo(content, 0);
-    } else if (s === "home" && currentScroll > 0) {
-      scrollPageTo(content, 0);
+      scrollPageTo(contentRef.current, 0);
+    } else if (s === "home" && window.scrollY > 0) {
+      scrollPageTo(contentRef.current, 0);
     }
 
     setSection(s);
@@ -748,10 +750,10 @@ export default function Home({ episodes, posts }) {
       </Head>
 
       <div
-        className="site-shell"
         style={{
           background: "#000",
           color: "#fff",
+          minHeight: "100vh",
           fontFamily: "'Space Grotesk', sans-serif",
           overflow: "hidden",
           display: "flex",
@@ -879,11 +881,10 @@ export default function Home({ episodes, posts }) {
         {/* ===== CONTENT ===== */}
         <div
           ref={contentRef}
-          className="site-scroll"
           style={{
             flex: 1,
-            minHeight: 0,
-            overflow: menuOpen ? "hidden" : "auto",
+            overflow: "auto",
+            scrollBehavior: "smooth",
           }}
         >
           {/* ===== HOME ===== */}
