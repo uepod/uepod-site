@@ -164,6 +164,8 @@ function RelatedRow({ episode }) {
           ) : null}
 
           <h3
+            className="related-clamp"
+            title={episode.brand || episode.title || ""}
             style={{
               fontFamily: '"AkkuratLLWeb-Bold", sans-serif',
               fontSize: "22px",
@@ -179,7 +181,8 @@ function RelatedRow({ episode }) {
 
           {guestLines.length ? (
             <div
-              className="related-guest"
+              className="related-guest related-clamp"
+              title={episode.guest || ""}
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: "15px",
@@ -188,10 +191,11 @@ function RelatedRow({ episode }) {
                 lineHeight: 1.35,
               }}
             >
-              {guestLines.map((line) => (
-                <div key={line}>
+              {guestLines.map((line, index) => (
+                <span key={line}>
+                  {index > 0 ? <br /> : null}
                   <RelatedWords text={line} />
-                </div>
+                </span>
               ))}
             </div>
           ) : null}
