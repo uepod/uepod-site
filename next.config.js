@@ -21,15 +21,6 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/rho',
-        destination: 'https://www.rho.co/partner/unit-economics',
-        permanent: false,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
