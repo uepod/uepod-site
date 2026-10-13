@@ -14,10 +14,37 @@
  */
 
 @font-face {
+  font-family: "Space Grotesk About Fallback";
+  src: local("Arial"), local("Liberation Sans");
+  ascent-override: 89.71%;
+  descent-override: 26.62%;
+  line-gap-override: 0.00%;
+  size-adjust: 116%;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Regular Fallback";
+  src: local("Arial"), local("Liberation Sans");
+  ascent-override: 90.87%;
+  descent-override: 23.31%;
+  line-gap-override: 0.00%;
+  size-adjust: 105.09%;
+}
+
+@font-face {
   font-family: "AkkuratLLWeb-Regular";
   src: url("/fonts/AkkuratLLWeb-Regular.woff2") format("woff2"),
        url("/fonts/AkkuratLLWeb-Regular.woff") format("woff");
   font-display: swap;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Bold Fallback";
+  src: local("Arial"), local("Liberation Sans");
+  ascent-override: 89.94%;
+  descent-override: 23.07%;
+  line-gap-override: 0.00%;
+  size-adjust: 106.19%;
 }
 
 @font-face {
