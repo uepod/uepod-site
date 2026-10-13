@@ -150,7 +150,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
         <div
           className="episode-number"
           style={{
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
             color: "rgba(255,255,255,0.3)",
             paddingTop: "4px",
@@ -167,7 +167,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
               href={withFrom(categoryPath(episode.category), fromPath, fromName)}
               style={{
                 display: "inline-block",
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: "11px",
                 fontWeight: 500,
                 textTransform: "uppercase",
@@ -205,7 +205,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
               href={withFrom(episodePath(episode.slug), fromPath, fromName)}
               title={episode.guest || ""}
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: "15px",
                 color: "rgba(255,255,255,0.5)",
                 fontWeight: 400,
@@ -227,7 +227,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
               display: "none",
               gap: "12px",
               marginTop: "10px",
-              fontFamily: "'JetBrains Mono', monospace",
+              fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "11px",
               color: "rgba(255,255,255,0.25)",
             }}
@@ -240,7 +240,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
         <div
           className="episode-meta"
           style={{
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
             color: "rgba(255,255,255,0.25)",
             textAlign: "right",
@@ -338,7 +338,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
             {episode.guest ? (
               <div
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontSize: "18px",
                   color: "rgba(255,255,255,0.5)",
                   marginTop: "10px",
@@ -384,7 +384,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                   gap: "16px",
                   flexWrap: "wrap",
                   marginTop: "16px",
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "var(--font-jetbrains-mono), monospace",
                   fontSize: "12px",
                   color: "rgba(255,255,255,0.25)",
                   letterSpacing: "0.04em",

@@ -72,7 +72,7 @@ function NavAnchor({ href, children }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         color: hovered ? "rgba(255,255,255,0.75)" : "rgba(255,255,255,0.4)",
-        fontFamily: "'JetBrains Mono', monospace",
+        fontFamily: "var(--font-jetbrains-mono), monospace",
         fontSize: "12px",
         fontWeight: 400,
         letterSpacing: "0.08em",
@@ -138,7 +138,7 @@ export default function SiteChrome({ children }) {
       style={{
         background: "#000",
         color: "#fff",
-        fontFamily: "'Space Grotesk', sans-serif",
+        fontFamily: "var(--font-space-grotesk), sans-serif",
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
@@ -202,7 +202,7 @@ export default function SiteChrome({ children }) {
             onClick={() => setMenuOpen(false)}
             style={{
               color: "rgba(255,255,255,0.6)",
-              fontFamily: "'JetBrains Mono', monospace",
+              fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "18px",
               fontWeight: 400,
               letterSpacing: "0.08em",
@@ -235,7 +235,7 @@ export default function SiteChrome({ children }) {
           >
             <h3
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "var(--font-jetbrains-mono), monospace",
                 fontWeight: 400,
                 fontSize: "18px",
                 textTransform: "uppercase",
@@ -276,7 +276,7 @@ export default function SiteChrome({ children }) {
             <div
               className="footer-copyright"
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "var(--font-jetbrains-mono), monospace",
                 fontSize: "11px",
                 color: "rgba(255,255,255,0.4)",
                 letterSpacing: "0.04em",

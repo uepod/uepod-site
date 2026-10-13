@@ -27,7 +27,7 @@ export default function NotFound() {
           </h1>
           <p
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: "15px",
               lineHeight: 1.75,
               color: "rgba(255,255,255,0.45)",

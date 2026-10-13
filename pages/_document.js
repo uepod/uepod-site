@@ -13,17 +13,6 @@ export default function MyDocument({ pathname }) {
   return (
     <Html lang="en">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap"
-          rel="stylesheet"
-        />
-
         {!omitDefaultSeo && (
           <meta name="description" content={HOMEPAGE_DESCRIPTION} />
         )}
