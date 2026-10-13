@@ -201,7 +201,7 @@ function EpisodeCard({ ep, index }) {
       <div
         className="episode-number"
         style={{
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "var(--font-jetbrains-mono), monospace",
           fontSize: "12px",
           color: "rgba(255,255,255,0.3)",
           paddingTop: "4px",
@@ -219,7 +219,7 @@ function EpisodeCard({ ep, index }) {
             href={categoryPath(ep.category)}
             style={{
               display: "inline-block",
-              fontFamily: "'Space Grotesk', sans-serif",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: "11px",
               fontWeight: 500,
               textTransform: "uppercase",
@@ -261,7 +261,7 @@ function EpisodeCard({ ep, index }) {
 
         <div
           style={{
-            fontFamily: "'Space Grotesk', sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontSize: "15px",
             color: "rgba(255,255,255,0.5)",
             marginBottom: "10px",
@@ -273,7 +273,7 @@ function EpisodeCard({ ep, index }) {
 
         <div
           style={{
-            fontFamily: "'Space Grotesk', sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontSize: "14px",
             color: "rgba(255,255,255,0.35)",
             lineHeight: 1.6,
@@ -290,7 +290,7 @@ function EpisodeCard({ ep, index }) {
             display: "none",
             gap: "12px",
             marginTop: "10px",
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "11px",
             color: "rgba(255,255,255,0.25)",
           }}
@@ -356,7 +356,7 @@ function EpisodeCard({ ep, index }) {
       <div
         className="episode-meta"
         style={{
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "var(--font-jetbrains-mono), monospace",
           fontSize: "12px",
           color: "rgba(255,255,255,0.25)",
           textAlign: "right",
@@ -409,7 +409,7 @@ function PostCard({ post, index, total }) {
         {/* Post number */}
         <div
           style={{
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
             color: "rgba(255,255,255,0.3)",
             paddingTop: "4px",
@@ -439,7 +439,7 @@ function PostCard({ post, index, total }) {
           {post.excerpt && (
             <div
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: "14px",
                 color: "rgba(255,255,255,0.35)",
                 lineHeight: 1.6,
@@ -457,7 +457,7 @@ function PostCard({ post, index, total }) {
               display: "none",
               gap: "12px",
               marginTop: "10px",
-              fontFamily: "'JetBrains Mono', monospace",
+              fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "11px",
               color: "rgba(255,255,255,0.25)",
             }}
@@ -471,7 +471,7 @@ function PostCard({ post, index, total }) {
         <div
           className="episode-meta"
           style={{
-            fontFamily: "'JetBrains Mono', monospace",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
             color: "rgba(255,255,255,0.25)",
             textAlign: "right",
@@ -504,7 +504,7 @@ function NavButton({ label, active, onClick }) {
           : hovered
             ? "rgba(255,255,255,0.75)"
             : "rgba(255,255,255,0.4)",
-        fontFamily: "'JetBrains Mono', monospace",
+        fontFamily: "var(--font-jetbrains-mono), monospace",
         fontSize: "12px",
         fontWeight: 400,
         letterSpacing: "0.08em",
@@ -551,7 +551,7 @@ function PlatformButton({
         fontWeight: 500,
         letterSpacing: "0.04em",
         transition: "all 0.2s",
-        fontFamily: "'Space Grotesk', sans-serif",
+        fontFamily: "var(--font-space-grotesk), sans-serif",
         whiteSpace: "nowrap",
       }}
       onMouseEnter={() => setHovered(true)}
@@ -775,7 +775,7 @@ export default function Home({ episodes, posts }) {
           background: "#000",
           color: "#fff",
           minHeight: "100vh",
-          fontFamily: "'Space Grotesk', sans-serif",
+          fontFamily: "var(--font-space-grotesk), sans-serif",
           overflow: "hidden",
           display: "flex",
           flexDirection: "column",
@@ -939,7 +939,7 @@ export default function Home({ episodes, posts }) {
                   className="hero-subtitle"
                   style={{
                     fontFamily:
-                      "'Space Grotesk', sans-serif",
+                      "var(--font-space-grotesk), sans-serif",
                     fontSize:
                       "clamp(16px, 2vw, 20px)",
                     fontWeight: 300,
@@ -1050,7 +1050,7 @@ export default function Home({ episodes, posts }) {
                   <h2
                     style={{
                       fontFamily:
-                        "'Space Grotesk', sans-serif",
+                        "var(--font-space-grotesk), sans-serif",
                       fontWeight: 600,
                       fontSize: "13px",
                       letterSpacing: "0.12em",
@@ -1175,7 +1175,7 @@ export default function Home({ episodes, posts }) {
                         "1px solid rgba(255,255,255,0.12)",
                       color: "#fff",
                       fontFamily:
-                        "'Space Grotesk', sans-serif",
+                        "var(--font-space-grotesk), sans-serif",
                       fontSize: "12px",
                       fontWeight: 500,
                       letterSpacing: "0.06em",
@@ -1228,7 +1228,7 @@ export default function Home({ episodes, posts }) {
               <div
                 style={{
                   fontFamily:
-                    "'JetBrains Mono', monospace",
+                    "var(--font-jetbrains-mono), monospace",
                   fontSize: "12px",
                   color:
                     "rgba(255,255,255,0.2)",
@@ -1256,7 +1256,7 @@ export default function Home({ episodes, posts }) {
                 <div
                   style={{
                     fontFamily:
-                      "'Space Grotesk', sans-serif",
+                      "var(--font-space-grotesk), sans-serif",
                     fontSize: "15px",
                     color:
                       "rgba(255,255,255,0.35)",
@@ -1308,7 +1308,7 @@ export default function Home({ episodes, posts }) {
                 <div
                   style={{
                     fontFamily:
-                      "'Space Grotesk', sans-serif",
+                      "var(--font-space-grotesk), sans-serif",
                     fontSize: "15px",
                     lineHeight: 1.75,
                     color:
@@ -1344,7 +1344,7 @@ export default function Home({ episodes, posts }) {
                 <div
                   style={{
                     fontFamily:
-                      "'JetBrains Mono', monospace",
+                      "var(--font-jetbrains-mono), monospace",
                     fontSize: "12px",
                     color:
                       "rgba(255,255,255,0.2)",
@@ -1371,7 +1371,7 @@ export default function Home({ episodes, posts }) {
                 <div
                   style={{
                     fontFamily:
-                      "'Space Grotesk', sans-serif",
+                      "var(--font-space-grotesk), sans-serif",
                     fontSize: "15px",
                     color:
                       "rgba(255,255,255,0.35)",
@@ -1460,7 +1460,7 @@ export default function Home({ episodes, posts }) {
                   <div
                     style={{
                       fontFamily:
-                        "'Space Grotesk', sans-serif",
+                        "var(--font-space-grotesk), sans-serif",
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
@@ -1479,7 +1479,7 @@ export default function Home({ episodes, posts }) {
                   <div
                     style={{
                       fontFamily:
-                        "'Space Grotesk', sans-serif",
+                        "var(--font-space-grotesk), sans-serif",
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
@@ -1544,7 +1544,7 @@ export default function Home({ episodes, posts }) {
               <div
                 style={{
                   fontFamily:
-                    "'Space Grotesk', sans-serif",
+                    "var(--font-space-grotesk), sans-serif",
                   fontSize: "17px",
                   lineHeight: 1.7,
                   color:
@@ -1560,7 +1560,7 @@ export default function Home({ episodes, posts }) {
                 href="mailto:hello@uepod.com"
                 style={{
                   fontFamily:
-                    "'Space Grotesk', sans-serif",
+                    "var(--font-space-grotesk), sans-serif",
                   fontSize: "24px",
                   fontWeight: 400,
                   color: "#fff",
@@ -1595,7 +1595,7 @@ export default function Home({ episodes, posts }) {
               <h3
                 style={{
                   fontFamily:
-                    "'JetBrains Mono', monospace",
+                    "var(--font-jetbrains-mono), monospace",
                   fontWeight: 400,
                   fontSize: "18px",
                   textTransform: "uppercase",
@@ -1657,7 +1657,7 @@ export default function Home({ episodes, posts }) {
                 className="footer-copyright"
                 style={{
                   fontFamily:
-                    "'JetBrains Mono', monospace",
+                    "var(--font-jetbrains-mono), monospace",
                   fontSize: "11px",
                   color:
                     "rgba(255,255,255,0.4)",
@@ -1704,7 +1704,7 @@ function FilterButton({ label, active, onClick }) {
           : "1px solid rgba(255,255,255,0.12)",
         padding: "6px 14px",
         fontFamily:
-          "'Space Grotesk', sans-serif",
+          "var(--font-space-grotesk), sans-serif",
         fontSize: "12px",
         fontWeight: 500,
         letterSpacing: "0.06em",

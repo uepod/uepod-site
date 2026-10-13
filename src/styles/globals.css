@@ -27,7 +27,10 @@
   font-display: swap;
 }
 
-/* Fonts loaded via <link> in _document.js */
+.font-scope {
+  display: contents;
+  font-family: var(--font-space-grotesk), sans-serif;
+}
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
@@ -39,7 +42,7 @@
 html, body {
   background: #000;
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -72,7 +75,7 @@ a {
   background: #000;
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: rgba(255, 255, 255, 0.72);
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.04em;
   pointer-events: none;
@@ -139,7 +142,7 @@ a {
   background: none;
   border: none;
   color: rgba(255,255,255,0.6);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -298,14 +301,14 @@ a {
 
 .episode-kicker > span,
 .episode-when {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.25);
 }
 
 .episode-kicker .episode-category {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 11px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.35);
@@ -351,7 +354,7 @@ a {
   flex-wrap: wrap;
   align-items: baseline;
   margin-top: 14px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -370,7 +373,7 @@ a {
 
 .episode-terms {
   margin: 14px 0 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 13px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.55);
@@ -436,7 +439,7 @@ a {
 
 .listing-number {
   margin-bottom: 5px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.05em;
@@ -446,7 +449,7 @@ a {
   display: block;
   width: fit-content;
   margin-bottom: 6px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 11px;
   font-weight: 500;
   line-height: 1.1;
@@ -470,7 +473,7 @@ a {
 }
 
 .listing-guest {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.35;
@@ -501,7 +504,7 @@ a {
   gap: 16px;
   margin-top: auto;
   padding-top: 10px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   line-height: 1.3;
   color: rgba(255, 255, 255, 0.25);
@@ -546,7 +549,7 @@ a {
 
 .back-link {
   display: inline-block;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -571,7 +574,7 @@ a {
 .partners-link {
   display: inline-block;
   margin-top: 10px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
@@ -604,7 +607,7 @@ a {
 
 .episode-description p,
 .partners-copy {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.55);
@@ -619,7 +622,7 @@ a {
 .listen-section h2,
 .episode-takeaways h2,
 .episode-related h2 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -640,7 +643,7 @@ a {
   color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 6px 14px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -697,7 +700,7 @@ a {
 }
 
 .episode-takeaways li {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.55);
@@ -843,7 +846,7 @@ a {
 }
 
 .glossary-top {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -877,7 +880,7 @@ a {
 }
 
 .footer-glossary {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -899,7 +902,7 @@ a {
 .glossary-kicker,
 .glossary-group h2,
 .glossary-heard span {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -924,7 +927,7 @@ a {
 
 .glossary-intro {
   max-width: 38rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -946,7 +949,7 @@ a {
 
 .glossary-letters a,
 .glossary-letters span {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   line-height: 1;
   text-align: center;
@@ -990,7 +993,7 @@ a {
 .glossary-aliases,
 .partners-disclosure {
   margin-top: 6px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.38);
@@ -999,7 +1002,7 @@ a {
 .glossary-definition {
   margin-top: 10px;
   max-width: 42rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.78);
@@ -1014,7 +1017,7 @@ a {
 }
 
 .glossary-related span {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -1023,7 +1026,7 @@ a {
 }
 
 .glossary-related a {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.48);
   text-decoration: none;
@@ -1042,7 +1045,7 @@ a {
 }
 
 .glossary-heard a {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.55);
@@ -1076,7 +1079,7 @@ a {
 .partners-name {
   display: block;
   margin: 0 0 14px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
   line-height: 1.55;
 }
 

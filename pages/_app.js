@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { fontVariables } from "../src/fonts";
 import "../src/styles/globals.css";
 
 const GA_ID = "G-JZWSC4TBS0";
@@ -70,7 +71,7 @@ export default function App({ Component, pageProps }) {
   }, [ready, noTrack]);
 
   return (
-    <>
+    <div className={`font-scope ${fontVariables}`}>
       <Component {...pageProps} />
       <Analytics beforeSend={allowAnalyticsEvent} />
       {ready && !noTrack ? (
@@ -93,6 +94,6 @@ gtag('config', '${GA_ID}');`}
           {notice}
         </p>
       ) : null}
-    </>
+    </div>
   );
 }
