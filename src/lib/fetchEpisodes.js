@@ -16,12 +16,12 @@ const {
   toIsoDuration,
 } = require("./episodePage");
 
-const RSS_URL = "https://anchor.fm/s/10a3f3bac/podcast/rss";
+const { RSS_URL, SHOW_URLS } = require("./site");
 
 // Fallback URLs when no per-episode link is available
-const SPOTIFY_SHOW = "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F";
-const APPLE_SHOW = "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735";
-const YOUTUBE_CHANNEL = "https://www.youtube.com/@TheUnitEconomicsPodcast";
+const SPOTIFY_SHOW = SHOW_URLS.spotify;
+const APPLE_SHOW = SHOW_URLS.apple;
+const YOUTUBE_CHANNEL = SHOW_URLS.youtube;
 
 const CACHE_PATH = path.join(os.tmpdir(), "uepod-episodes-v2.json");
 const LOCK_PATH = `${CACHE_PATH}.lock`;

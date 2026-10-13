@@ -6,6 +6,7 @@ import { fetchPosts } from "../src/lib/fetchPosts";
 import { formatEpisodeNumber } from "../src/lib/episodePage";
 import { categoryPath } from "../src/lib/categories";
 import { trackListenClick } from "../src/lib/listenTracking";
+import { SHOW_URLS, podcastSeriesJsonLdScript } from "../src/lib/site";
 
 const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
 
@@ -109,17 +110,17 @@ const SearchIcon = ({ size = 14 }) => (
 /* ===== SOCIAL LINKS ===== */
 const SOCIAL_LINKS = {
   spotify: {
-    url: "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F",
+    url: SHOW_URLS.spotify,
     hc: "#1DB954",
     icon: SpotifyIcon,
   },
   youtube: {
-    url: "https://www.youtube.com/@TheUnitEconomicsPodcast",
+    url: SHOW_URLS.youtube,
     hc: "#FF0000",
     icon: YouTubeIcon,
   },
   apple: {
-    url: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735",
+    url: SHOW_URLS.apple,
     hc: "#9B59B6",
     icon: AppleIcon,
   },
@@ -139,7 +140,7 @@ const SOCIAL_LINKS = {
     icon: LinkedInIcon,
   },
   substack: {
-    url: "https://uepod.substack.com/",
+    url: SHOW_URLS.substack,
     hc: "#FF6719",
     icon: SubstackIcon,
   },
@@ -749,11 +750,22 @@ export default function Home({ episodes, posts }) {
     setMenuOpen(false);
   };
 
-  // Don't render until we know which section to show
-  if (!section) return null;
+  const seriesJsonLd = (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: podcastSeriesJsonLdScript() }}
+      />
+    </Head>
+  );
+
+  // Don't render until we know which section to show. The series object
+  // is head-only, so it is in the server HTML without changing the page.
+  if (!section) return seriesJsonLd;
 
   return (
     <>
+      {seriesJsonLd}
       <Head>
         <title>Unit Economics — How Businesses Work.</title>
       </Head>

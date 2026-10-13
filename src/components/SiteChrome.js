@@ -8,6 +8,7 @@ import {
   LinkedInIcon,
   SubstackIcon,
 } from "./icons";
+import { SHOW_URLS } from "../lib/site";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -19,17 +20,17 @@ const NAV = [
 
 const SOCIAL_LINKS = {
   spotify: {
-    url: "https://open.spotify.com/show/6uN9t3y2TvEkiYFZfl317F",
+    url: SHOW_URLS.spotify,
     hc: "#1DB954",
     icon: SpotifyIcon,
   },
   youtube: {
-    url: "https://www.youtube.com/@TheUnitEconomicsPodcast",
+    url: SHOW_URLS.youtube,
     hc: "#FF0000",
     icon: YouTubeIcon,
   },
   apple: {
-    url: "https://podcasts.apple.com/us/podcast/unit-economics/id1856362735",
+    url: SHOW_URLS.apple,
     hc: "#9B59B6",
     icon: AppleIcon,
   },
@@ -49,7 +50,7 @@ const SOCIAL_LINKS = {
     icon: LinkedInIcon,
   },
   substack: {
-    url: "https://uepod.substack.com/",
+    url: SHOW_URLS.substack,
     hc: "#FF6719",
     icon: SubstackIcon,
   },

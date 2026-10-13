@@ -4,8 +4,7 @@
  * fields that already exist on an episode record.
  */
 
-const SITE_URL = "https://uepod.com";
-const SUBSTACK_URL = "https://uepod.substack.com/";
+const { SITE_URL, SUBSTACK_URL } = require("./site");
 const FALLBACK_SHARE_IMAGE = `${SITE_URL}/og-image.png`;
 
 /**
