@@ -14,6 +14,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## alecs-ice-cream-alec-jaffe
 
 Retake removals:
@@ -27,13 +29,17 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## alexandra-spitz-new-mom-school
 
 Retake removals:
-- alexandra-spitz-new-mom-school at 34:22: Cut request. Removed the request and the passage it referred to. Uncertain span, so the larger passage was removed.
+- none
 
 Intro and outro trims:
 - alexandra-spitz-new-mom-school at 00:00: Show intro, sponsor read, or music cue before the conversation.
+- alexandra-spitz-new-mom-school at 00:04: Show intro, sponsor read, or music cue before the conversation.
+- alexandra-spitz-new-mom-school at 46:22: Show outro or sign-off after the conversation.
 
 Name fixes:
 - none
@@ -49,6 +55,8 @@ Intro and outro trims:
 Name fixes:
 - "Craig Hill" to "Craighill" (2)
 
+
+
 ## armada-seamus-meniahane
 
 Retake removals:
@@ -60,6 +68,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## betty-jos-erin-forden-maddie-nehlen
 
 Retake removals:
@@ -70,6 +80,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## bezi-ilay-karateke
 
@@ -85,6 +97,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## biche-alexandra-pauly
 
 Retake removals:
@@ -96,6 +110,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## brightland-aishwarya-iyer
 
 Retake removals:
@@ -106,6 +122,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## bytem-jack-davis-jacob-tubis
 
@@ -120,6 +138,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## caro-caroline-mckay
 
 Retake removals:
@@ -132,6 +152,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## courier-matt-sims
 
@@ -148,6 +170,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## cpgd-zoya-virani
 
 Retake removals:
@@ -158,6 +182,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## craighill-zach-fried
 
@@ -171,6 +197,8 @@ Intro and outro trims:
 Name fixes:
 - "Craig Hill" to "Craighill" (4)
 
+
+
 ## currently-running-nash-howe
 
 Retake removals:
@@ -183,6 +211,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## erstwhile-jared-klusner
 
@@ -198,6 +228,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## esspo-katharine-leitch
 
 Retake removals:
@@ -209,6 +241,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## felt-fat-nate-mell
 
 Retake removals:
@@ -219,6 +253,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## fjord-gabe-turner
 
@@ -235,6 +271,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## gato-dates-gabriella-labi-tonya-reznikovich
 
 Retake removals:
@@ -249,6 +287,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## gob-lauryn-menard
 
 Retake removals:
@@ -260,6 +300,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## great-circle-ventures-jacob-afriat
 
@@ -275,6 +317,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## hiya-adam-gillman
 
 Retake removals:
@@ -286,6 +330,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## honey-dept-noah-phillips
 
@@ -301,6 +347,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## hotel-ceramics-sara-victorio
 
 Retake removals:
@@ -314,6 +362,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## jamies-farm-jamie-kim
 
 Retake removals:
@@ -324,6 +374,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## jones-hilary-dubin-caroline-huber
 
@@ -336,6 +388,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## joy-supply-lindsay-leopold
 
 Retake removals:
@@ -346,6 +400,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## kelly-bennett
 
@@ -360,6 +416,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## lasso-clarke-pennington
 
 Retake removals:
@@ -371,6 +429,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## laurels-coffee-isabel-washington
 
 Retake removals:
@@ -381,6 +441,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## le-puzz-alistair-matthews-and-michael-hunter
 
@@ -396,6 +458,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## light-joe-hollier
 
 Retake removals:
@@ -407,6 +471,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## lil-tuffy
 
@@ -420,6 +486,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## loftie-matt-hassett
 
@@ -436,6 +504,8 @@ Intro and outro trims:
 Name fixes:
 - "Union Economics" to "Unit Economics" (1)
 
+
+
 ## lotties-meats-chelsey-cassie-maschhoff
 
 Retake removals:
@@ -446,6 +516,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## madre-shay-carrillo
 
@@ -458,6 +530,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## mahsa-chai-mahsa-darabi
 
 Retake removals:
@@ -468,6 +542,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## matic-robots-mehul-nariyawala
 
@@ -481,6 +557,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## mikeys-pies-mikey-deegan
 
 Retake removals:
@@ -491,6 +569,8 @@ Intro and outro trims:
 
 Name fixes:
 - "Union Economics" to "Unit Economics" (1)
+
+
 
 ## muttville-sherri-franklin
 
@@ -506,6 +586,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## noon-jane-wong
 
 Retake removals:
@@ -518,6 +600,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## noshi-for-kids-tomo-delaney
 
@@ -532,6 +616,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## nymzo-elliott-walker-tim-hucklesby
 
 Retake removals:
@@ -542,6 +628,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## one-trick-pony-lucy-dana
 
@@ -555,6 +643,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## pf-candle-co-kristen-pumphrey-thomas-neuberger
 
@@ -570,6 +660,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## pickle-brian-mcmahon
 
 Retake removals:
@@ -583,6 +675,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## pistakio-francine-voit-nicola-buffo
 
 Retake removals:
@@ -593,6 +687,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## rip-cold-brew-brendan-flannery
 
@@ -613,6 +709,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## rite-of-way-alex-brands
 
 Retake removals:
@@ -629,6 +727,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## rotten-michael-fisher
 
 Retake removals:
@@ -641,6 +741,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## seremoni-saif-khawaja
 
@@ -655,6 +757,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## something-sweet-brittney-cook
 
 Retake removals:
@@ -667,6 +771,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## sourmilk-kiki-couchman-elan-halpern
 
@@ -681,6 +787,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## spring-mulberry-kathryn-shah
 
 Retake removals:
@@ -694,6 +802,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## springdale-ventures-dan-graham-mollye-santulli
 
 Retake removals:
@@ -704,6 +814,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## stonemaier-games-jamey-stegmaier
 
@@ -718,6 +830,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## sway-julia-marsh
 
 Retake removals:
@@ -728,6 +842,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## talea-beer-co-tara-hankinson-and-leann-darland
 
@@ -742,6 +858,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## terra-kaffe-sahand-dilmaghani
 
 Retake removals:
@@ -752,6 +870,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## tofugo-caroline-dai
 
@@ -766,6 +886,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## weast-coast-games-dan-cassaro-dan-christofferson-meg-yahashi
 
 Retake removals:
@@ -777,6 +899,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## yardsale-cristina-ashbaugh
 
@@ -791,6 +915,8 @@ Intro and outro trims:
 Name fixes:
 - none
 
+
+
 ## yes-apples-tenley-fitzgerald
 
 Retake removals:
@@ -801,6 +927,8 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
+
 
 ## yuzuco-basil-beshkov
 
@@ -814,3 +942,4 @@ Intro and outro trims:
 
 Name fixes:
 - none
+
