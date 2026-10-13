@@ -7,6 +7,15 @@ const TITLE = "Partners | Unit Economics";
 const DESCRIPTION = "The companies that help make Unit Economics possible.";
 const CANONICAL = `${SITE_URL}/partners`;
 
+function trackPartnerClick(partner, link) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "partner_click", {
+      partner: partner.id,
+      link,
+    });
+  }
+}
+
 export default function PartnersPage() {
   return (
     <>
@@ -36,7 +45,11 @@ export default function PartnersPage() {
             {partners.map((partner) => (
               <li key={partner.id}>
                 {partner.logo ? (
-                  <a className="partners-logo" href={partner.href}>
+                  <a
+                    className="partners-logo"
+                    href={partner.href}
+                    onClick={() => trackPartnerClick(partner, "logo")}
+                  >
                     <img src={partner.logo} alt={partner.name} width="409" height="182" />
                   </a>
                 ) : (
@@ -44,7 +57,11 @@ export default function PartnersPage() {
                 )}
                 <p className="partners-copy">{partner.description}</p>
                 <p className="partners-copy">{partner.offer}</p>
-                <a className="partners-link" href={partner.href}>
+                <a
+                  className="partners-link"
+                  href={partner.href}
+                  onClick={() => trackPartnerClick(partner, "learn_more")}
+                >
                   {partner.linkLabel}
                 </a>
                 <p className="partners-disclosure">{partner.disclosure}</p>
