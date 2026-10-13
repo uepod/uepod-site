@@ -479,14 +479,19 @@ export default function EpisodePage({ episode, related, terms = [], transcript =
           {transcript.length ? (
             <details className="episode-transcript">
               <summary>Read transcript</summary>
-              {transcript.map((turn, index) => (
-                <div key={`${turn.speaker}-${index}`}>
-                  <p className="episode-transcript-speaker">{turn.speaker}</p>
-                  {turn.paragraphs.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex}>{paragraph}</p>
-                  ))}
-                </div>
-              ))}
+              <div className="episode-transcript-panel">
+                <p className="episode-transcript-note">
+                  This transcript is generated automatically and may contain errors. Accents, audio quality, and crosstalk can affect accuracy.
+                </p>
+                {transcript.map((turn, index) => (
+                  <div key={`${turn.speaker}-${index}`}>
+                    <p className="episode-transcript-speaker">{turn.speaker}</p>
+                    {turn.paragraphs.map((paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>{paragraph}</p>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </details>
           ) : null}
 
