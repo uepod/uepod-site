@@ -7,6 +7,9 @@ import { formatEpisodeNumber } from "../src/lib/episodePage";
 import { categoryPath } from "../src/lib/categories";
 import { trackListenClick } from "../src/lib/listenTracking";
 import { SHOW_URLS, podcastSeriesJsonLdScript } from "../src/lib/site";
+import { spaceGrotesk } from "../src/fonts";
+
+const aboutBodyFont = `${spaceGrotesk.style.fontFamily.split(",")[0].trim()}, "Space Grotesk About Fallback", sans-serif`;
 
 const SECTIONS = ["home", "episodes", "posts", "about", "contact"];
 
@@ -1408,7 +1411,7 @@ export default function Home({ episodes, posts }) {
                   <h2
                     style={{
                       fontFamily:
-                        '"AkkuratLLWeb-Bold", sans-serif',
+                        '"AkkuratLLWeb-Bold", "AkkuratLLWeb-Bold Fallback", sans-serif',
                       fontSize:
                         "clamp(32px, 4vw, 48px)",
                       letterSpacing:
@@ -1425,7 +1428,7 @@ export default function Home({ episodes, posts }) {
                   <div
                     style={{
                       fontFamily:
-                        '"AkkuratLLWeb-Regular", sans-serif',
+                        '"AkkuratLLWeb-Regular", "AkkuratLLWeb-Regular Fallback", sans-serif',
                       fontSize: "24px",
                       lineHeight: 1.45,
                       marginBottom: "40px",
@@ -1459,8 +1462,7 @@ export default function Home({ episodes, posts }) {
 
                   <div
                     style={{
-                      fontFamily:
-                        "var(--font-space-grotesk), sans-serif",
+                      fontFamily: aboutBodyFont,
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
@@ -1478,8 +1480,7 @@ export default function Home({ episodes, posts }) {
 
                   <div
                     style={{
-                      fontFamily:
-                        "var(--font-space-grotesk), sans-serif",
+                      fontFamily: aboutBodyFont,
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
@@ -1500,6 +1501,8 @@ export default function Home({ episodes, posts }) {
                   <img
                     src="/josh-about.jpg"
                     alt="Josh Stabinsky"
+                    width={3437}
+                    height={4833}
                     style={{
                       position: "absolute",
                       top: 0,
@@ -1507,6 +1510,7 @@ export default function Home({ episodes, posts }) {
                       height: "100%",
                       width: "auto",
                       maxWidth: "100%",
+                      aspectRatio: "3437 / 4833",
                       objectFit: "contain",
                       objectPosition:
                         "top right",
