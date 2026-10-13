@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { HOMEPAGE_DESCRIPTION } from "../src/lib/site";
 
 export default function MyDocument({ pathname }) {
   // Episode pages and the 404 supply their own title, canonical, and social tags.
@@ -24,10 +25,7 @@ export default function MyDocument({ pathname }) {
         />
 
         {!omitDefaultSeo && (
-          <meta
-            name="description"
-            content="A podcast about how businesses actually work, featuring conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
-          />
+          <meta name="description" content={HOMEPAGE_DESCRIPTION} />
         )}
         <meta name="theme-color" content="#000000" />
 
