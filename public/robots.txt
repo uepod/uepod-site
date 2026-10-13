@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /dash
 
 Sitemap: https://uepod.com/sitemap.xml
