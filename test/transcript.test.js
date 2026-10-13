@@ -25,7 +25,7 @@ test("the show name is corrected and other wording stays", () => {
   assert.equal(turns[0].paragraphs[0], "back to Unit Economics and field industry.");
 });
 
-test("only Mikey's Pies loads a transcript", () => {
+test("a transcript file loads for its slug and a missing slug stays empty", () => {
   const turns = loadEpisodeTranscript("mikeys-pies-mikey-deegan");
   assert.equal(turns.filter((turn) => turn.speaker === "Josh").length, 52);
   assert.equal(turns.filter((turn) => turn.speaker === "Mikey Deegan").length, 51);

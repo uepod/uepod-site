@@ -1,10 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-const TRANSCRIPT_FILES = {
-  "mikeys-pies-mikey-deegan": "mikeys-pies-mikey-deegan.txt",
-};
-
 const SPEAKER_LINE = /^(.+?) \((\d{1,2}:\d{2})\)$/;
 
 // Proper names the recording clearly got wrong. Everything else stays as heard.
@@ -50,9 +46,8 @@ function parseTranscript(raw) {
 }
 
 function loadEpisodeTranscript(slug) {
-  const filename = TRANSCRIPT_FILES[slug];
-  if (!filename) return [];
-  const file = path.join(process.cwd(), "data", "transcripts", filename);
+  if (!/^[a-z0-9-]+$/.test(slug || "")) return [];
+  const file = path.join(process.cwd(), "data", "transcripts", `${slug}.txt`);
   if (!fs.existsSync(file)) return [];
   return parseTranscript(fs.readFileSync(file, "utf8"));
 }
