@@ -1,0 +1,245 @@
+Unit Economics (00:50)
+Thank you so much for joining today, Jamie. If you don't mind just giving a quick background on both yourself and the company, that would be great.
+
+Jamey Stegmaier (00:57)
+Yeah, my name is Jamie Stegmeier. I run a company called Stonemaier Games that I co-founded with my friend Alan in 2012 when we funded my first game, Viticulture, on Kickstarter. We were on Kickstarter for a few years with a few different games and expansions and now flash forward to 2025. seven and a half person company annual revenue around 20 to 25 million range and trying to... Accomplish our goal every day of bringing joy to tablelops worldwide. Yeah.
+
+Unit Economics (01:26)
+I appreciate the transparency around all the numbers as well. Where you get the half employee from.
+
+Jamey Stegmaier (01:30)
+Yeah. Alan, my co-founder, is our half-employee. He has a full-time job as ⁓ a counselor, but he still manages a few different key elements at the company.
+
+Unit Economics (01:42)
+What did the days leading up to forming the company look like? inspired you to get into
+
+Jamey Stegmaier (01:48)
+Yeah, it was the confluence of two different things because I've been making games as a hobby for pretty much my entire life ⁓ playing and making games. But with Kickstarter, the rise of Kickstarter really, really enamored me. I loved the idea that I could make something and I can connect directly with each person potentially who was interested and passionate in the thing that I was trying to make. That was absolutely fascinating to me that I could do that, opposed to putting that product on a shelf where I would never know who bought it and never potentially never have an interaction with that person. And so when I started to see games on Kickstarter and I had this passion for creating games, I decided to combine the two in 2011 when I started working on the first game, Viticulture. And that I consider the initial founding of the company the day that we successfully funded on Kickstarter in September of 2012.
+
+Unit Economics (02:33)
+know you were extremely successful with Kickstarter ⁓ and have written about how to be successful on Kickstarter and have offered up a lot of great advice. worked well and I guess what would you do differently if you could go back? Is there anything you would change?
+
+Jamey Stegmaier (02:46)
+Yeah, I think about this a lot, even though I haven't used crowdfunding as a creator in years, I still write about it. I talked to a lot of crowdfunders and entrepreneurs. There were a few things that I think I could have sunk the company fairly early on because I didn't budget all that well. I budgeted okay, but not nearly as well as I could have for things like stretch goals and things that I was hoping to add to or enhance the games that I had on Kickstarter. That was a potential pitfall that I luckily avoided. thing that I'm glad that I did is that from a very early stage, I think we offered a pretty good value for the price that we were offering on Kickstarter. We were trying to offer a really, really good deal, of a... What I was hoping would feel like a no-brainer deal to someone who was interested in the product. And so that's something that I still talk to with crowd funders today. And one thing I think that... that I have thought about more recently that I've seen a lot of crowd funders do that I think is a little bit of a pitfall that I did a little bit and then moved away from in those early days was ⁓ nowadays I see a lot of projects launch where the product isn't close to being finished, where the creator might launch in July and they say, okay, well in June of next year, that's when we intend to start production. And that to me is... a little baffling that you wouldn't have the product as close to production ready as possible when you're launching because it takes away so much of the uncertainty that will follow. And so that's something that I learned fairly early on. If I can eliminate that uncertainty, I could better serve our customers by adding the production schedule.
+
+Unit Economics (04:15)
+What does it look like to actually go from, have an idea for a board game to I have this board game in my hands now and I can actually go out and sell it?
+
+Jamey Stegmaier (04:24)
+Yeah, for me, have lot of ideas. And the ideas usually start with a brainstorming process. Maybe I'll make a prototype. Oftentimes I make a prototype and test it and realize right away this is something that I think could work, that I think is marketable, that I think could be fun, could be unique, could be innovative. Or after that first play test, I realize there isn't much here. I've tried it, I've played I'll learn from it, but I'll move on to something else that I think might be more viable. So usually that's like the beginning part. And for the few games that breakthrough where I'm like, okay, this is something, whether it's my design or design that's submitted to us, there's a lot of play test, a lot of iteration and a lot of project management to ensure that the quality of the game, the play test and proofreading the art, the graphic design, that everything comes together in a cohesive, balanced, fun, hopefully intuitive package. usually this process is at least a year, but. up to eight years. I've spent one game took around eight years to bring to life. Yeah.
+
+Unit Economics (05:11)
+Wow. Wow. Okay. So one to eight years later, you're ready to actually, you know, manufacture the product. ⁓ What does it look like from there?
+
+Jamey Stegmaier (05:16)
+Yeah. And usually my communication with the manufacturers happened much earlier because I'm trying to think about this idea of value. How much value can I pack into this game for the price point that I'm hoping to offer to customers? So I talked to our manufacturer. I work with a company called Panda. I talk with them early and often about what components make sense and what components don't make sense. When we're finally ready to go to print, upload all the digital files to Panda. They review them to make sure that they can print them the way that we're hoping that they can print them. And then they usually spend about a month creating a PPC, pre-production copy that looks like the final version of the game, but it isn't actually mass produced. just, it's a really good looking prototype, essentially. We get that copy, we play it, and we make sure that everything is as intuitive and clear and that the components fit together the way that we thought or that we hoped. And then we usually send some revisions back to the printer. They make them and then we spend, they spend another three months after that actually, making all the components, assembling them. ⁓ They actually send us another copy, an MPC, a mass produced copy right before, like after they've made all the components, but they haven't actually put them together yet. They sent me one final copy just to make sure that everything is correct. Every now and then we catch something at that stage that is a lot easier to fix then than after they've assembled and shrink wrapped 10,000 copies of the game. And then they move forward with the printing, the freight shipping to film centers and distributors around the world. And then we launch it on our web store.
+
+Unit Economics (06:45)
+How did you go about finding wouldn't even know where to start.
+
+Jamey Stegmaier (06:48)
+Yeah, and I was looking for this back in 2011, 2012 when it was, ⁓ I think, even back then it was a little hard to like just Google game manufacturers where to find them. But fortunately, a few other companies had started to put games on Kickstarter and that was what ⁓ made me think this was time for me to try it as well. And so I kind of followed a few of their leads. Some of them, I actually don't know how they found, they have found Panda, but they had found Panda. And these days there are a lot of other options to seek out. But I've stuck with Panda for like the last 13 years just because of their consistent quality, their communication is excellent. ⁓ When they mess up, they own up to it. I think any company that you work for for that long is gonna mess up a little bit. And every now and then they do, every now and then I do as well, of course. And just their consistency has been really, really incredible over the years. Their flexibility, they feel like a partner, not like a company that I'm outsourcing to.
+
+Unit Economics (07:42)
+Yeah, absolutely. And they're based in China, is that correct?
+
+Jamey Stegmaier (07:44)
+They're a Canadian company that has their main manufacturing facility in Shenzhen, China.
+
+Unit Economics (07:48)
+it. so on the topic of manufacturing and importing, talk to me a little bit about what tariffs have looked like and know you've been very vocal about this so I'd love to hear as much as you're willing to share.
+
+Jamey Stegmaier (08:01)
+Yeah, the tariff tax on China in particular for us has been pretty brutal this year. recording this in early December. By the end of the year, we're anticipating that the tariff tax will cost us directly around $600,000 in unexpected expenses. it has not been ideal. Like I said, we've worked with PANDA for 13 years. It isn't a quick and easy change to just find another amazing partner with that amount of consistency and quality and communication. And I haven't really wanted to find one. I have our partner, our life partner for manufacturing. I want to make that work. And so, so far what we've done is largely eat that cost and we've tried to communicate to customers that that cost is there, that it is an added cost that we have by putting a little option on our web store of a $3 tariff. tax offset gift card that a customer if they want they can add $3 to their order essentially. We're not making much money off of it. The main intent is to show customers that this is a tax that we are incurring. That it is not something that China pays or that Brazil pays that another nebulous country is paying. It is the importer of record. It is Stonemaier Games or the company in the US that's importing these goods that is incurring this tariff tax.
+
+Unit Economics (09:14)
+You've been extremely transparent about a lot of different topics as you've built the company. For listeners who don't know, operate really fascinating blog and a web series and dive into a lot of topics. And there's just like a wealth of information out there beyond just sort of like being a good Samaritan and offering up transparency and have you gotten out doing that. there been any tangible impacts on the business as a result?
+
+Jamey Stegmaier (09:43)
+Yeah, the approach that I've tried to take with it since 2012 is to kind of just share the, share stories, share examples, share things that I've tried, things that I've observed. I've actually tried to stay away from advice because I don't really know what I'm talking about. I just try things and see if they work or they don't work. I make a lot of mistakes and I like talking about them. And the reason I think that it's mutually beneficial, I don't see this as something that just benefits me or just benefits someone else, are the conversations that emerge as a result. including the one that I'm having with you right now. odds are higher that you would not have reached out to me if I didn't have a blog about this topic or the YouTube channel about this topic. And so it's led to a lot of great conversations with peers, with customers. And I think those conversations have made our products better, our processes better, and have made me more aware of the leader and entrepreneur that I want to be and that I can be. So it's really the conversations resulting from that content that I think hopefully me and others have benefited from over time.
+
+Unit Economics (10:44)
+Yeah, that makes When thinking about cost of goods increasing and the cost of running a business just generally I guess what can you do just eating the thing that comes to mind is know StoneMeyer offers games digitally. And so I'm wondering if you can share maybe even like what percent of your business is digital versus physical. you ever see digital sort of mainstay for the company. what that looks like, what that balance looks like.
+
+Jamey Stegmaier (11:13)
+Yeah, do you play games both digitally and on the tabletop? you play both ways.
+
+Unit Economics (11:17)
+I do, play Wingspan both digitally and on the tabletop. I've spent a little too much time playing both, but yes I do.
+
+Jamey Stegmaier (11:26)
+I'm the same. I play more on the tabletop, but I do play a few digital games and digital versions of tabletop games. ⁓ Generally, when I have a game night, my experience is that I want to have that tabletop experience if I'm playing with other people. That's my preference. are still definitely pursuing that. That is our main pursuit, both philosophically, but also in terms of revenue. digital revenue is around 3%. So the other 97 % are analog games that we're selling. And so if those numbers were quite different or evolved heavily over time, yes, we might lean a little bit more to the digital side. But I would say 97 % of that 3 % is Wingspan Digital. And so we're heavily reliant on that one product. And I try not to be heavily reliant on any one product if we
+
+Unit Economics (12:13)
+How much does it cost to produce a game like Wingspan?
+
+Jamey Stegmaier (12:15)
+The digital version or the tabletop version? For the physical version, we usually invest, like in Wingsman, there's a lot of art in the game. think around 180 unique bird illustrations in the game, each of which took Ana and Natalia around 10 hours, hand drawn to make. We invest heavily in art. So art, graphic design alone for any of our games can range from $50,000 to, some of them go a little over $100,000 just for the art graphic design. That's some cost.
+
+Unit Economics (12:17)
+Actually both, I was thinking physical, but both. Write it.
+
+Jamey Stegmaier (12:42)
+And then most of the other fees involved. Oh, I guess there's the manufacturer. The manufacturer for a game is the that that and the freight shipping are the highest cost that can vary depending on the how big the game is. For game like Wingspan, it cost around $10 to make a copy of the game and around $2 to freight ship it around the world. And so that's an ongoing cost. And we also have ongoing royalties to the designer Elizabeth Hargrave and to the solo company, the company that makes the solo automo.
+
+Unit Economics (13:09)
+Yeah, the topic of art is so fascinating. It makes such a difference in gameplay. At least I feel that it does. When you're sourcing games from other designers, does that process you receiving a concept and then building off of it? Is it a fully fledged game? Does the art come alongside or does some concept of the art come alongside a submission? Does the art come later? Like, how does that work?
+
+Jamey Stegmaier (13:34)
+Yeah, that's a great question. it's almost two different answers because the art is the responsibility of the publisher. I love when a designer comes to me and has maybe a vision for what they hope the art will be, whether it's a world building or even in a game like Wingspan, we had a lot of different versions of birds that we could have presented in the game. We went with a very kind of Audubon natural feel for the birds. So I love when the designers have a vision for that. And I often ask our designers if they do have a vision for it. But it is our responsibility to find the artist, to pay the artist. ⁓ also with the graphic design. As for the, how much of the game is ready when it is submitted to us, like I mentioned earlier, I have plenty of ideas. think a lot of people have a lot of ideas for games. I'm interested in execution. So if someone submits a game to us, I am looking for what they think is a fully complete game. And then usually I come in as a developer and try to make it even more fun, even more intuitive, even more balanced, even more functional. a game that the designer had perceived to be a ready to go game. So I'm definitely not looking just for like a concept or an idea. I'm looking for something that they have playtested, they have iterated that they think is good to go.
+
+Unit Economics (14:39)
+Where do you where do find artists?
+
+Jamey Stegmaier (14:44)
+definitely early on I was looking at places like Art Station Art Station. I don't know how I found this website, but it's you know, if you search for art online, you might some more part upon Art Station. At this point, I am mostly looking at ⁓ other games. I'm looking for artists who have already worked on a game.
+
+Unit Economics (14:42)
+and that changed over time? I'm
+
+Jamey Stegmaier (15:01)
+I try not to limit myself to that because there are lots of great artists who haven't already made art for a game. But I think it is a great industry for an art artist to get into. And that is often where I'm going to. And at this point also, I maintain a list of around 200, it's probably grown beyond 250 at this point, of artists that I'd like to work with someday. I keep it publicly in case anyone ever wants to look at this list. So that list has just grown over the years from the combination of published artist and ⁓ ArtStation style artist that I've just stumbled upon.
+
+Unit Economics (15:33)
+Yeah.
+
+Jamey Stegmaier (15:31)
+Instagram too. Actually that's one big one that's in my
+
+Unit Economics (15:34)
+How has your day-to-day changed over the last 13 or so years?
+
+Jamey Stegmaier (15:39)
+Yeah, it's ⁓ so around five years ago, I started hiring people up until then it was it was essentially just me, my coworker, Alan, or my co founder, Alan, he does a little bit here and there. ⁓ But for most it was just me and I was working around I was working seven days a week around 80 hours a week. And that felt right at the time I was enjoying almost every minute of it. But It really the tipping point came when I was struggling to keep like, basically I like to have inbox zero every day. I like to get through everything in my inbox and I wasn't doing that. I was reaching the point where I could not do that anymore. So I felt like I wasn't serving our customers as I best could. So I added ⁓ Joe, who became a customer service representative, our communications director. And then I added Alex to handle distributors and logistics. And so kind of one by one, as I realized that I cannot serve our customers as well as I hoped based on my time limitations and my talent limitations. I try to find other people who are who are able to do that and able to do it better than I could. And that's how we've grown to the seven and a half people, which is probably the max that I want. I don't I to me that is a lot of people, especially from going from working around 10 years where it was essentially just me. Yeah.
+
+Unit Economics (16:51)
+Yeah. Yeah,
+
+Jamey Stegmaier (16:54)
+⁓ and your question,
+
+Unit Economics (16:55)
+how do you?
+
+Jamey Stegmaier (16:56)
+my day to day has largely stayed the same. I still work around seven days a week and I work around 70 hours a week and that is still feels good to me. It's just maybe a little bit more relaxed than it once was. Yeah.
+
+Unit Economics (17:05)
+Yeah, that makes sense. It's interesting. a lot of people would hear a seven person company and think, that's a fairly small operation. But when you're in the day to day and you go from one to seven, that's a massive increase. Relatively speaking. How are you? How are you thinking about scaling in general? How do you think about fundraising, if at all? And ⁓ how do you think about growing the business from here?
+
+Jamey Stegmaier (17:18)
+It is. Yeah. Well, yeah, that's an interesting way to put it because I don't think much about growth. I think more about how can we continue to serve our customers and to improve on how we can better serve our customers. I'm not focused on more. I'm not focused on more games. ⁓ I'm not even really focused on more customers. We have a lot of customers. I think I could spend the next 10 years serving the customers that we have. And I be I think the one way that I think about growth a little bit is that there probably are people out there, in fact I know there are people out there who I think could find joy in our games, who have no idea that we exist and potentially no idea that our games exist, one of the two or both. And so I've been working over the last few years to try to reach those people better. ⁓ But it's a tough audience to reach. think, you know, until you try that first modern game,
+
+Unit Economics (18:16)
+Yeah.
+
+Jamey Stegmaier (18:18)
+You may not know that you enjoy modern games or not. Was Wingspan that game for you or was there a game that came before that opened that door for you?
+
+Unit Economics (18:25)
+If you would consider Catan a modern game, Catan was like really eye opening to me and really propelled me into the world of board games. ⁓ But the only other game that I hold in that regard is Wingspan. yeah, I know exactly what you're talking about, right? You go from, I think people have an idea about like board games in general and you think about like the board games you play as a kid often. And I think it's like, there's some sort of like wall you need to break down in the way you perceive board games generally as an adult.
+
+Jamey Stegmaier (18:27)
+yeah. Yeah, yeah, so we're constantly trying to break down that door and work with partners who break that down, break down that door better than we do, like game stores. ⁓ think they do, ⁓ local game stores, I think do a fantastic job of doing that.
+
+Unit Economics (19:02)
+Mm. How do you work with local game
+
+Jamey Stegmaier (19:09)
+Well, one of the people that I added over the years is a retailer relationship manager. My coworker, Susanna, whose almost her entire job is just to communicate with retailers, to make sure that their needs are being met and that we're making products that serve them. ⁓ And also a big part of it, one thing we talked about a little bit earlier was crowdfunding. Moving away from crowdfunding, a big reason to do that is so that we could better serve retailers, so we could improve those relationships and put them first, ⁓ or at least on the same level as serving our direct customers.
+
+Unit Economics (19:18)
+Mm.
+
+Jamey Stegmaier (19:38)
+⁓ Whereas we didn't feel like we were doing that on Kickstarter. that had that I think that choice that's that has resulted in so much more than we ever thought possible from crowdfunding. I looked at the numbers and on over four years on crowdfunding, we raised around three point two million on on Kickstarter two years later. So even before Wingspan two years later. Thanks to us, think largely due to us moving off of crowdfunding and focusing on distribution and retailers and also maintaining direct sales, our revenue was already at 10 million with no crowdfunding at all. It was really surprising. I didn't even remember it being that high without wingspan in our portfolio, but I think it really made a big difference for us to tell retailers, hey, we just want to work with you. Let's make this happen and not just rely on crowdfunding anymore.
+
+Unit Economics (20:21)
+Yeah. Yeah, that's fascinating. Do you have a sense of what percent of your orders today are coming from repeat buyers and how do you think about maintaining the balance?
+
+Jamey Stegmaier (20:35)
+I would say, I mean, this is a rough guess, but I would say around at least 80 % of our web store sales are from repeat customers. perhaps overly high too. I'd love to continually invite some new people into the web store as well. However, two years ago, we took control of our Amazon account basically, rather than selling to a distributor who sold to Amazon as a retailer.
+
+Unit Economics (20:44)
+Wow, high.
+
+Jamey Stegmaier (20:59)
+I hired someone, the last hire, Erica, who pretty much only handles our Amazon accounts. We now sell directly on Amazon. And I think Amazon, I mean, I would guess that it's almost entirely the opposite, I would say, is probably maybe 20 % existing customers and 80 % people who are buying a Stomar game for the first time on Amazon.
+
+Unit Economics (21:18)
+Interesting. Do you know what the breakdown is for? I mean, I know you do, but offhand, do you know what the breakdown looks like for percent of sales that are coming from in-person sales versus the web store versus Amazon?
+
+Jamey Stegmaier (21:32)
+Off the top of my head, and this does change year to year, I might have these off by a few percentage points, but last year was when we took full control of Amazon, our Amazon account, and I think our sales were only around 8 % or 8 % of our overall revenue came from Amazon, which was a little bit low. I think it was higher in previous years, but that was our first year ramping up to covering that account. Retailers and distribution was around, ooh.
+
+Unit Economics (21:35)
+Sure. Sure, sure.
+
+Jamey Stegmaier (21:56)
+I to get this right. ⁓ I might look it up while we're talking, but I believe it was around 25 % and our web store I think was around 22%. But I'm missing some big percentages in there. is. Yeah.
+
+Unit Economics (22:06)
+those additional do you find the other percentages in that equation? What am I missing?
+
+Jamey Stegmaier (22:09)
+Yeah, here we go. So was was right on Web Store. Web Store was 22 percent distribution, which includes local retailers was 48 percent. ⁓ But direct hobby retailers, which is a newer thing for us. So if a retailer isn't getting what they need from a distributor, maybe a distributor wants them to spend a certain maybe they want to they want the retailer to spend like a thousand dollars on an order. But a retailer only really has the budget spend one hundred dollars. They can buy directly from us. That was at seven percent, which is It doesn't sound like much, but that is much higher than I think it is for most companies and for us in previous years. And then our localization partners was 13 % in 2024. So that's like the Spanish version of our games or the German version of our games. That's all handled by localization partners and that was around 13%. Yeah.
+
+Unit Economics (22:39)
+Yeah. interesting. caught it, that's fascinating What's something that you've changed your mind about over the last 13 or so years?
+
+Jamey Stegmaier (23:00)
+I love this question because I do change my mind about things. It's actually it's gotten harder I think for me to change my mind about things even as I try to listen more to people. ⁓ Amazon is one of them. We for a long time it was just easier for us to sell to a distributor who sold to Amazon. Getting over that hump of saying okay I need to actually hire a person to do so was a big thing for me to change my mind about. But that was one. Two there was a period of time where I wasn't actively seeking company to acquire Stonemaier Games. whenever a company reached out to us to say they were interested, I would engage them. would consider the possibility. I would talk to our shareholders about it. ⁓ And one even came a little close to actually happening. And after it didn't happen, I felt such a sense of relief, largely because I knew that we could continue to serve our customers on our own terms instead of on someone else's terms, it would be incredibly hard to consider that again in the future. And the last is a little thing, but I released a game this year that I've worked on, the game that I spent eight years designing, it a game called Vantage. And I worked on it for eight years knowing that I did not want any digital aspect in this game. I wanted printed story books in this game in particular. And then about a week after it released, I realized that it could actually really benefit from having the option of digital storybooks. And so while I've really tried to keep the digital world separate from our analog world, ⁓ there's a ⁓ guy that I work with here in St. Louis who runs a company called Rule Pop that makes online rules, online storybooks, things like that. And it's been a real gift for Vantage in particular. It's kind of opened my eyes to offering that option in the future. Probably not a game that would rely on that, but putting that option out there.
+
+Unit Economics (24:39)
+Yeah, how did you come to that realization, especially at that point in time?
+
+Jamey Stegmaier (24:43)
+Yeah, yeah, it wasn't it was not the best timing I think to for it to happen, especially since it wasn't it isn't the printed rule book. So no one knows about it unless I tell you about There's two things really. One was that people kept asking for it. And if people ask me enough for something, I will often come to agree with with the reasons that they're giving me. And two, we started to find a few mistakes in the rule books. There's over 300,000 words in Vantur. There's a lot of words. We tried to eliminate all mistakes, but there are a few typos that were meaningful in the gameplay of the game. And we could fix it in real time on the app. We can't fix it in real time on the storybooks. So it opened that door and made that possible.
+
+Unit Economics (25:24)
+Hmm, that's so interesting. I think that whole answer though just speaks to the importance of being nimble and being open-minded and just being flexible a founder, as an I love that answer. I think.
+
+Jamey Stegmaier (25:34)
+Yeah, that's one of the other benefits of not answering to another make a big decision on any given day and I often will run it by my coworkers and shareholders, but we can make that decision really quickly and move forward with it.
+
+Unit Economics (25:45)
+Right, absolutely. Yeah, the importance retaining control, I think, is huge in a business like this. think we have time for one more question. do you see Stonemaier going three to five years from now? What's your the future?
+
+Jamey Stegmaier (25:49)
+Yeah. I mean, there are two ways that I look at this. One is kind of our roadmap for what we're releasing over the next few years. And I roughly have the next three years planned out, not month to month, but I know what games we have in the works, what expansions we have in the works. Yeah.
+
+Unit Economics (26:07)
+wow. sorry to interrupt. If you have the next three years planned out, how often shuffle when you're thinking about a three-year plan?
+
+Jamey Stegmaier (26:19)
+Yeah, even though I had that roadmap roughly planned out, I think things still change all the What's a recent example of this? example is we released a game called Origin Story a couple, almost a couple of weeks ago, and it actually did better than we were expecting and continues to do better than we were expecting. And so if it had not done well, then we wouldn't have tried to add more content to the game. But because it's done well and there is like one specific area of the game that I think is very easy to expand, we're working on an expansion. So, release next year. So that wasn't on the roadmap at all, but it was kind of a possibility of something happening. So those are the types of things that we often add. If a product does a little better or a little worse than we expected, we might shift gears.
+
+Unit Economics (26:57)
+Sure. And does that, how much of an impact does that make on the timeline for a different game that you were set to introduce or a different expansion that you were set to introduce?
+
+Jamey Stegmaier (27:06)
+in this case, not much of, not much of an impact, but, ⁓ one thing I've tried to keep my eye on, especially after a very busy 2025 is now that we have a team of seven and half people, we can produce more if we want to. and I don't want to fall down that hole because we did a little bit this past year where we had, we released a lot more than we usually do in a year. And it felt like a lot. think it felt like a lot for us. And it also felt like a lot for retailers and for our customers. And it was kind of ⁓ a moment where we realized we were trying to do too much. Where we could do, we could do that much, but it wasn't actually benefiting anyone to do that much. And so while it's very easy to add like a little expansion to a game like Origin Story, I try to look at that roadmap in a way that is palatable to the budgets of our retailers and our customers in a way that maybe I didn't do as well in 2025. Yeah.
+
+Unit Economics (27:59)
+Okay, so I know I derailed us. Three years out, you've got a vision for what things might look like.
+
+Jamey Stegmaier (28:05)
+beyond that, beyond the actual releases, goal on any given day, week, month, and five years into the future is to serve my customers, to serve our customers, to hopefully serve some new customers too, and to serve my coworkers. And so there isn't any like vision for the future. It's just like, can I continue to do that every day and hopefully do it a little bit better tomorrow than I did yesterday? might sound
+
+Unit Economics (28:06)
+Yeah.
+
+Jamey Stegmaier (28:28)
+I don't know, a little hokey, but I have found that to be, I found that focus to be really, really helpful when I'm trying to make tough decisions on a daily basis. Okay. Yeah.
+
+Unit Economics (28:36)
+Yeah. I don't think it sounds hokey at all if it's taken you this far. You know, not stick with it? Jamie, thank you so much for taking the time. a pleasure. I'm such a big fan. you want to tell listeners where they can find your games, please feel free to do so.
+
+Jamey Stegmaier (28:50)
+Yeah, I think the best way to find anything related to Stonemaier Games, whether it's our games or the ⁓ marketing entrepreneurship blog, my YouTube channel is about game design. It's all at stonemaiergames.com. And you can also just kind of follow me on Instagram where I talk about a bunch of different games that I love, hoping to share them with more people who I think might love them as well.
+
+Unit Economics (29:09)
+Yeah, I highly recommend following. Jamie, thank you so much.
+
+Jamey Stegmaier (29:10)
+Thank you. Thanks.

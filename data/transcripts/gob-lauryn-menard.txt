@@ -1,0 +1,239 @@
+Unit Economics (00:04)
+Lauren, thank you so much for taking the time to speak with me today. If you don't mind just giving a brief background on yourself to start, that would be great.
+
+Lauryn (00:11)
+So stoked to be here. All right, so I'm Lauren. I'm from the Adirondack Mountains, but I live in the Bay Area in California, My background is kind of a winding road. I started in the world of fashion, pivoted to footwear, then furniture, but have kind of always stayed in the realms of healthier materials and industrial design. And I'm a brand freak. So all those things combined, you know, started at a brand myself and have never felt more comfortable, but also uncomfortable. But yeah, my kind of my, we'll call it my special sauce is taking new and innovative materials and applying them for things we use every day to, I'm on a mission to make them part of the mainstream basically.
+
+Unit Economics (00:59)
+Before we get into Gob, are there any other examples of work you've done that you can speak to in that regard?
+
+Lauryn (01:06)
+Yeah, so I, before starting Gob, I co-founded an industrial design firm called Prowl Studio. And we're doing just that. Our whole ethos was begin with the end. So designing a product's end of life while you're designing the concept of the thing. And man, so many cool projects we did. Just heavy NDA. But I would say one of the last ones I had a chance to work on
+
+Unit Economics (01:12)
+Mm-hmm.
+
+Lauryn (01:33)
+was a concept for a company called Air Company they tasked us with coming up with a design for the skinning of this giant machine they have that basically digests carbon dioxide into ethanol and they're like, hey, no one, everyone looks at our machine and their eyes glaze over. So we would like for you to make a concept for that and we were like, well. Air is in their brand name and it's also their main ingredient in their process. So we created this really cool inflatable air-filled skin for the machine that kind of had some ambient movement and could be rolled up and moved around and deployed really quickly. So it's just one of my favorite concepts that we worked on, but We also went to Milan Design Week a few times and presented concepts that my co-founder Bailey and I were dreaming up on our own. And one of them was called the Peel Chair. And I think that was the most prowl project ever because we were like, what's a crazy idea that even some people wouldn't like, proves the begin with the end concept. And we created a compostable chair that was made entirely out of hemp. So we used hemp plastics, hemp filling for the cushion, and we also worked with someone who helped us develop a hemp leather that encased that filling. So when you walked into the show in Milan, you saw the chair decomposing in dirt before you saw the chair itself. we like freaking people out like that.
+
+Unit Economics (02:48)
+Cool. Yeah, that's so cool. When you design with the end in mind, what are some constraints that listeners might not think exist? Like yeah, I guess let's just say, let's leave it broad. Like what are some surprising constraints?
+
+Lauryn (03:22)
+Hmm, that's a really good question. The one that comes up the most probably is that the word biodegradable means almost nothing. So you never want to shoot for biodegradable. You always want to shoot for home compostable because biodegradable has no timestamp to it. Basically, you can call something biodegradable if it will break down eventually, which could mean 500 years. But the word compostable There are two different kinds. There's industrial and then there's home compostable. Materials that are home compostable will biodegrade in soil within, I think it's something under six months. So it's a very short timeframe. And then industrial compostable is within a facility under certain environmental constraints. So. That is just something that I think more people need to understand in order to be able to design for that. You always want to shoot for home compostable no matter what. That should always be the goal. But I think what people forget is when you have products that are a little bit complex or highly complex, in order for different materials to join, you need glue, you need hardware, you need to heat transfer things onto it. onto each other and when you do that sometimes you're making things impossible to take apart and that ruins the design intent for end of life completely. So how things come together is really important and that's why also like the goal there is usually can you do everything with one type of material most of the time that's not possible you know. But it's the North Star, if that makes sense.
+
+Unit Economics (05:04)
+Yeah, totally. So I know that that's also the ethos around Gob. And I think that leads me into my next line of questioning, which is, tell me about Gob. How did you come up with the idea to start? What was going on, I guess, either in your life or at work? What was the inflection point that led you to think, okay, it's time to start this. It's time to do this now.
+
+Lauryn (05:24)
+Well, so man, there was quite this, had quite the summer 2024. Gob was something that I was kind of, Bailey, myself and another person were just side hustling. We're like, yeah, we can just start this brand on the side. And it's a proof point for our design agency. And number of things happened. One. Well, the idea came up in 2023, so was a year before. I didn't do anything about it really for like six months, but the idea came while at a spin class in New York City. It was very loud. Vanessa Carlton, of all things, was blasting. That's my favorite part of the story. I was just like, oh yeah, I use these little things all the time. They're pretty bad for the environment, right? Then I felt guilty and was like, I can fix this. Spent a year kind of finding the material that would fix the problem. Once we had the and they were very scrappy prototypes. They were not nice looking. They were in like random white match boxes and like kind of shedding material. It was like not quite there yet. I knew that I could have more impact as a business owner and just the type of person that I am. kind of a control freak and creatively, meaning running an agency, you build these beautiful things and then you have to let them go. It's like setting a bird free and you hope they go the right direction, but like sometimes they don't. And I was just so sick of watching that happen with such great projects, even though we had world-class clients. And I just wanted to build, give it a try and build a world out that proved that biomaterials can be mainstream and part of our everyday lives.
+
+Unit Economics (07:06)
+did you have any idea how large scale an issue, know, single use earplugs actually are? in doing research, it seems like there's like 40 billion units produced and disposed of a year, which to me is unfathomable. I don't even think like the human brain can conceive of a number that big in reality. Like that's absolutely insane, right? Did you, did you have any idea like the scale of the issue that you were walking into or did that come in time?
+
+Lauryn (07:33)
+That was the first data point I looked up. So, well, no, that was the second data point I looked up. I left the spin class. I'm talking like a matter of 10 minutes. I'm walking in freezing New York City, no gloves on, typing into my phone. What are foam earplugs made out of? PVC, polyurethane, okay, pure PFAS basically. Okay. How many are produced in a year? How big is the market? When I saw the 40 billion number, which is more than plastic straws, I think. Don't like, can fact check me, I'm not sure. But I saw that number and I was like, surely this can't be right. I kept finding the same number and then I just, why hasn't no one done anything about this? There are a million different options of reusables, but not everyone likes those when they're not. great for every use case. it's just this giant gap, you know? And that number's, yeah. I think if I did the math once, like early days, and it wraps, if you lined them up end to end, it would wrap around the earth a few times. It's like, what?
+
+Unit Economics (08:34)
+I mean, it's unbelievable. also to help frame the issue for listeners too, you know, I understand offhand why like ingesting PFAS, you know, why that's bad, like if I'm drinking it in my water, right? But I guess in what way is it bad to have like a little piece of plastic in your ear? Because intuitively to me, I wouldn't have actually thought that that was...
+
+Lauryn (08:37)
+It's unbelievable.
+
+Unit Economics (08:58)
+you know, doing any damage to my body, but clearly that's not clearly that's not the case, right? Like there's some sort of shedding going on. So can you explain that as well?
+
+Lauryn (09:05)
+Yeah, so VOCs are gases that, you know, it's exactly what off-gas is when you buy a new foam mattress, for example, that's not pure latex. Anything that is off-gassing, that's a plastic, it's VOCs entering the air. Those also seep into your skin because your skin is, it seems like a strong barrier, but there's not much between the outside world and your inside world. And basically skin contact, especially long-term contact, for some folks it causes irritation. So that's like the smallest problem I would say. Although for some people it's very much like they can't even use them. We hear that a lot from customers actually. And just any skin contact with that type of foam, polyurethane, exposes you to those VOC gases. So you're breathing it in, it's in your house, because that's where they are, it's touching your skin. So although it's small, it's still in a very porous part of your body. So it would be like wearing foam against any other part of your body, right? It's going to have an effect.
+
+Unit Economics (10:16)
+So horrible for the planet, bad for your health, clearly an issue. What are the next steps after you realize, okay, there's something here
+
+Lauryn (10:18)
+Mm-hmm. Mm-hmm. Mm-hmm. Yeah, so this is how our design process goes for all the other products we're working on too. It always starts with what are the, what's the criteria we're going to hold this product to? And so the criteria was it had to be home compostable, like I mentioned, plastic free. That was probably the hardest part actually. And it had to be naturally sound dampening and comfortable. more comfortable than what came before was also the goal. Because a lot of people, including myself, hate how memory foam expands. So we had a lot, we had access to this massive global material library because of our studio, still do. We had a bunch of experts at our disposal and we just started going to town, finding every material that could maybe meet at least three out of four of those criteria, right? No. ⁓
+
+Unit Economics (11:19)
+So you didn't start with mycelium. You're agnostic to the material.
+
+Lauryn (11:23)
+Mycelium was in the mix, right? And were looking at latexes, which come from rubber trees. We were looking at foams that came from Kytosan, which comes from shrimp shells and things like that. We were looking at everything and we tried, I think we tested 60 something materials, but Equivative, who we work with, the Mycelium company, they were the first email I sent. And it was because I had seen at this conference called BioFabricate, I had seen a foam prototype sample there like years ago. It just kind of like jogged my memory. And I was like, hey, Ecovative, I remember seeing this. Is this available? They didn't email me for eight months. Because it wasn't until they emailed me. So it was a journey because we actually almost gave up.
+
+Unit Economics (12:12)
+Wow.
+
+Lauryn (12:18)
+because the only options that we found other than that in that eight month period were really promising, but they were still stuck in this like lab zone where the material was still being tested, still proven out and wasn't ready for like real world action. So I almost gave up. was like, I was like on the brink.
+
+Unit Economics (12:44)
+Yeah, that's unbelievable. So they get back to you, yeah, that's crazy. guess what happens next? get the product in hand, is it like an immediate hit or is there still more refinement that needs to be done from there?
+
+Lauryn (12:46)
+I'm crazy. It was hilarious. We got this giant sheet of mycelium that looked like focaccia bread. And we're like, what do we do with this? We hand put some cylinders and we shoved them in our ears. We're like, can you hear me? ⁓ That's how it started. Not going to give some like, we went to a lab and we manufactured. No, no, no. We were like drilling stuff and we were trying to put heat knives to it because that's how you cut foam. mycelium is crazy and this material in particular it's grown it's bioengineered by their team to grow into these massive fluffy clouds that are nothing but mycelium and it's hard to even fathom what that means like how are those roots right
+
+Unit Economics (13:40)
+Yeah. Can you also really quickly explain what mycelium is for listeners who might not be aware?
+
+Lauryn (13:45)
+Of course. So mycelium is the root structure of a mushroom. So it's not the fruiting body, which is the mushroom. It's everything that's underground. And sometimes you can see it out in nature without a mushroom and it looks like this like white powdery looking substance. And in the biological world, it's labeled as neither plant nor animal. However, the FDA and the USDA label it as a plant. So we say plant based because we have to, even though I know a lot of people listening to this would be like, it's not a plant. It's not my choice of words. It's theirs. But it's this magical substance that can also be designed with. And a lot of folks have made packaging out of it. They've made leathers out of it. And Ecovated figured out how to make foam with it. So we received this foam. It has incredible naturally sound dampening properties. It's the softest thing you've ever felt. It grows to its full thickness of a few inches in seven days. It is edible. They even make it into bacon. the list goes on. It's hypoallergenic. And when you're done with it, You can squish it down into these little tiny, basically nothing balls. And can throw it in the soil and it'll be gone in about two to three weeks. You can't beat that.
+
+Unit Economics (15:07)
+No, it's like a miracle substance. It's incredible.
+
+Lauryn (15:10)
+It truly is, And it can't be used for everything, right? It's truly single use. And we don't mind that because I believe that this kind of thing should be anyway. You don't want bacteria, right? It's more hygienic.
+
+Unit Economics (15:18)
+Right. Yeah, absolutely. Were the sound dampening properties immediately what you were looking for? understanding is that when you were looking fine tune the degree of sound dampening you were looking for, want create something that would have a muffled effect the way a lot of existing products do on the market. So did this just check that box right away or was there iteration needed?
+
+Lauryn (15:47)
+So many different types of products undergo really crazy lab tests that have to meet certain criteria for the FDA. Earplugs, it's as if it's like, it's so old school. They basically take, where they're tested, we tested with Penn State University. They're one of the only testing facilities in the US. They take an earplug, they put it into someone's ear. They play a sound. There's a cord attached to it. play a sound, sounds at different decibel ratings. And the person says, I heard that sound. I heard that. They don't signal when they don't hear it, but that's how it works. And it took a little while for us to understand exactly how the sound dampening was functioning because when you wear them, you're having a very different experience from a normal like conventional PU foam earplug because it doesn't muffle. But what it's doing is and the data shows that it's knocking most of the frequencies down equally. like 3M, for example, their foam knocks the high frequencies down. And so that's why you can't hear voices at shows and things like that. But that's why they're great for using a jackhammer. at first we didn't know if they were working very well because we could still hear clearly certain music and things like that. And then once we tested them, we understood that, it's actually working very well, except it's allowing for clarity of sound at lower, lower levels, we had to do it several times to make sure what we were seeing was correct. You know, like, is this actually real?
+
+Unit Economics (17:24)
+okay. So everything's, everything's working. how do you, how do you immediately think about distributing the product?
+
+Lauryn (17:31)
+Well, I came up with the name kind of in a weird way. I was like, what's something that's a dose? It sounds like a dose, a squishy word and all that. And I wanted the brand to help form something that was more than just earplugs. I knew I wanted to do more than just earplugs, but that was our wedge, the product wedge into the world of single use. And so the brand was a big portion of that moment in time where We were still judging that and trying to figure out who our consumers would be because the reason why that number 40 billion is so high is because the use cases are endless, 20 % of Americans use them for sleep. there are factories that go through a hundred thousand a day. Construction, airlines, hotels, people use them for like sensory sensitivities and it's just endless. And you try to wrap your head around it and you cannot address everyone. So I would say early days, 2024, before launching the brand, my gut was in the space of we're probably going to be minimum 50 percent B2B and sell to venues. 50 percent D2C and Amazon. That was my gut. And we pressure tested that. We didn't even run ads until this September. We kept things super organic and built out the brand. And we did so with the saying like, live loud and worked with AEG at a few venues. And although that is going very, very well and we love our partners at Bowery Presents and we love having that cultural touch point as an option. feel like a lot of CPG brands would kill to be relevant in those spaces, right? We kept hearing from organic customers, people we sent samples to, that they love the product, and then they would sometimes say, but I prefer them for sleep. Mind you, during this time, I'm using them every night to sleep, not questioning it. but my husband's in a hardcore band, so I'm always using them at shows and stuff, and honestly while he's playing at home through his amp. And I had this awakening kind of end of the summer where our distribution, we did a few tests in venues in New York City. One of them we sold. bars, the bar tops and concessions was under the K Bridge in Brooklyn. The other one was Forest Hill Stadium in Queens, and we had gob green vending machines there. And so the venue sales, we were running tests, which one works better. We learned the EDM space and the type of people who play under the K are our demographic, much more than Forest Hills, but also concession sales like killed. We did so well. And so we know it's a proven model, but in order to really, really get that mass distribution, we needed to kind of peel back a little bit and say, it's actually time to build a foundation, prove ourselves as a solid health and wellness company, serve those people who love us for sleep, because that's the majority customer saying they prefer that, and use these. spaces as cultural touch points for relevancy, right? Show up to the Coachella's of the world, but not have that be our business model is now how we're moving forward. Yeah.
+
+Unit Economics (20:58)
+Yeah. Yeah, that makes total sense. How do you think about pricing? I think this is one of the most fascinating aspects of this story. know, you're selling your units at I think a couple of dollars per unit on average, is that right? And the incumbent, correct me if that's wrong, but the incumbent earplug sells for, I don't know, a few cents an earplug. And I'm somebody who would gladly pay excess in order to purchase, you know, something that's like obviously far better for the planet. But I feel like this is the same issue that companies like, you know, impossible or beyond meat face where you have plenty of people out there who are happy to do something for the sake of the planet for, you know, environmental purposes, but plenty of people who just care about price for,
+
+Lauryn (21:32)
+Mm-hmm.
+
+Unit Economics (21:49)
+any number of understandable reasons. so how do you think about pricing and how do you try to combat that issue that just feels like a massive boulder, at least to me.
+
+Lauryn (21:59)
+Yeah, my God, I love this question. I think most founders and operators don't spend enough time thinking about pricing, but it's what my COO Marlin and I talk about the most, actually. And we have the benefit of being a high margin product. We are currently very high margin, even at the scale we're at. But. our material, we're the first commercialized product out of our material. That won't be the case with mainly like any other product we do in the future because the things we're working on right now or like the materials are very, very ubiquitous and much more affordable. But the thing is, is I don't want to try and compete with 3M because what we're offering. It's its own category. It's neither a reusable like loop where it looks like jewelry and you're only using those like at concerts. Some people use them in day to day, but that's such a niche group of people who are using those instead of AirPods. But, we're not that and we're definitely not 3M because their product, their materials are coming from, it's a byproduct of the oil industry. And basically they're skimming off the top of that process of refining oil and then turning it into things like earplugs. So at first I thought I was competing with the 3M's and I was like, God damn it, our pricing is way too high. This is never going to work. And now what I understand is you're the type of customer that we love to work with and who loves our product because although we are more expensive, the other things on our customers, let's say like bathroom counter, they're investing in their health, right? Covered in supplements and healthy beauty products, skin care. And so they're prioritizing their health over anything. And that is always going to include materials. And so that's where we say our product is premium. And it's the first premium product in what is a commoditized category. And we're bringing in that new version of that. a company that I look at who I think has done this flawlessly is Fishwife. Fishwife can tuna tend fish. Before Fishwife, it was like a very niche market. Mostly you went into grocery stores and I think they started that like tinned fish craze because their branding was so good. But before then it was a commodity. Right. And people used it for just in America tuna sandwiches. And then they brought this premium product that you can use in like 100 different ways for 100 different uses. That's I think what we're building is more along those lines. So. as we scale. And as our margins get significantly higher, I'm not going to run a business with a 90 % margin without reducing my prices. So once we reach that point, we will reduce our prices, but I'd rather do that than have to raise them.
+
+Unit Economics (24:49)
+Yeah, absolutely. That's such a great parallel too. I love asking founders what other companies they draw inspiration from, particularly those outside of the space that they're operating in. so, yeah, I appreciate you answering that question in advance. As you sort of frame yourself within the health and wellness space, How important does the subscription business become? How much emphasis do you place on driving more subscriptions? And if you're comfortable sharing roughly what percent of your customers are subscribing customers?
+
+Lauryn (25:22)
+We just launched subscription, I think it was November is when that went live, early November. And right now it's nearly a third of our customer base.
+
+Unit Economics (25:32)
+That seems incredibly quick
+
+Lauryn (25:34)
+Yeah, We're doing pretty well because again, that's where you get that LTV is in the sleep space. You're not going to get that in people who go to concerts. Right. And so the people who really, really love our product, the people who use it every day and they go through them really quickly and we're seeing it really working. And that's actually informing how I would say to answer your question, just point blank. Subscription is our business model moving forward. We will be in retail spaces, but those will be used as discovery channels primarily in the early days and then they'll move volume eventually. But right now it's all about people learning about us for daily use. So the way I see Gob is we are the single use personal care company. that delivers all the things straight to your doorstep instead of having to trudge your way through Target, CVS, Walgreens, one of those awfully lit, terrible spaces that, I forgot Q-tips. Whoops, gotta go grab them. That's the kind of product that people always have in their cabinet. And subscriptions are an easy way for people to set it and forget it. I'm even, I even subscribe to toilet paper now. I know that there was a lot of subscription fatigue for a while and I do think it's back in a big way because after the pandemic, people are back to being busier than ever. And it just brings this ease of not having to remember everything on your list.
+
+Unit Economics (27:06)
+yeah, absolutely. When thinking about improving margins, it makes me wonder how expensive is it to source the mycelium that you're sourcing? obviously it's gonna be way more expensive than like, you know, some of the incumbent materials would be, but I'm curious, yeah, I guess like.
+
+Lauryn (27:17)
+Mmm.
+
+Unit Economics (27:26)
+how much pressure that puts on the business in itself.
+
+Lauryn (27:28)
+Mycelium is expensive, relatively, of course, relative to other foams, relative to basically any other material, but it gets significantly cheaper with scale. So maybe even higher discounts than other sources because of our relationship with our vendor. Moving forward, price is definitely... a main driver for our product development, where there are ways that we can have a reciprocal relationship with our material suppliers because we are unique in a way where we actually want to highlight our material suppliers. And so we offer, we're almost a marketing vehicle in a way. So a lot of people have discovered forager foam because of the press we've gotten through Fast Company, Time Magazine, yada yada, we always mention Forager. And that relationship has allowed us to be able to have a little bit of negotiation power. I don't expect our material suppliers to cheapen their materials for us just because we're using them for single use. So there is a certain level of respect where I won't make them ever do that, but... just like our company, these material companies are all scaling themselves, right? So we're kind of scaling alongside them and as they are trying to make their material cheaper, it makes our product cheaper. So it's kind of this like interesting thing that's happening in the biomaterial space with those who have been able to survive.
+
+Unit Economics (28:58)
+if demand just skyrocketed overnight, how much of a bottleneck would there be in the supply chain? quickly can you ramp up production if you need to?
+
+Lauryn (29:10)
+Good question. So to paint a picture for you, the spaces in which this material is grown, and it's grown for all those use cases I mentioned earlier, leather, bacon, it's all like a slight tweak to the material growth, but generally the same. You wouldn't be able to tell by looking at it on the rack, but it's grown in vertical farms in these racks of something like seven tall. They're about five meters wide. and 25 meters long. And to give you a sense, we get 400 units, 400 plugs per square foot. Sorry, that's meters and feet mixed, but just putting that into your brain, it's like millions of earplugs. And that grows in seven days and it is harvested. So we can ramp very quickly, but we do not want to put that pressure on our suppliers to be like,
+
+Unit Economics (29:53)
+That's incredible.
+
+Lauryn (30:03)
+my God, we just went live on XYZ and it created this huge bump. Like we need 10,000 square feet by tomorrow, right? We try to keep a good connection, but there's only so much planning you can do. The supply exists. It can ramp very quickly. And they are actually working on expanding into more farms because how they scale is not by running more machines or anything like that. It's by just having more space. And how we ramp our it's a patented process. It's an automated way of producing our product. Our machines are very small. And so how we scale up is by having more machines, not a bigger machine. So it's not like injection molding where you have a mold with like, you go from a mold of like five pieces. of plastic to like a hundred, you buy more machines and put them next to each other and you get them churning like a print farm, if you're familiar.
+
+Unit Economics (31:00)
+Yeah,
+
+Lauryn (31:01)
+it's not, our manufacturing is also made from like off the shelf tools. It's not like, the part is in how we cut and what we cut with. So it's like a customized off the shelf process.
+
+Unit Economics (31:01)
+⁓ Another Wow, interesting. I assume you just brought some level of expertise around how to do that from your prior work. How much of a lift was it to, I guess, to get that up and running?
+
+Lauryn (31:23)
+Well mycelium humbled us, it dulls blades. It doesn't let you cut with heat. Basically any way that you cut foam, won't allow, so it was humbling. But I think that we came with an added advantage of, we kind of have an idea of how to work with this. So we weren't afraid of the challenge.
+
+Unit Economics (31:41)
+Yeah, certainly easier than if I were to try to start a company like, like, something I don't know, doubtful. Something else that you that you, touched on earlier was, certain certifications. So my understanding is that you are USDA bio based certified. that correct?
+
+Lauryn (31:46)
+I don't know. You wouldn't be really good at it. Yep, 100 % bio-based, yep.
+
+Unit Economics (32:01)
+So, I guess quickly for listeners, what does that entail? How expensive was it to get that certification? How do you think about getting more certifications if there are any more to get? like, my understanding is that it is actually a decent amount of work and a decent cost to get certified, by case, obviously, but... I don't know, how do you weigh that? That's not something I've talked with anybody about on the show and I'm curious how you think about like certifications in general and like what that does for the business as a result. Because like I might see Gob out in the wild and I would have no idea what that means and I don't think it would have much influence on me as a consumer. So I'm curious how you weigh that know, is it necessary in a way that I might not even.
+
+Lauryn (32:40)
+That's such a good question. And the world of certifications, especially in the sustainability world and the FDA, it's the wild west. It's like so it's actually the FDA is extraordinarily corrupt. And I can get into that later. But basically for for bio based on the sustainability front, we'll start there. What's nice about working with some of these incredibly innovative material companies is they've already done those tests to the materials. And because we're not changing the properties of the material at all, that gets passed on to us. So because they tested the material and we've kept it the same, we get to take on that badge as well. But if we were to have added a coating or something like that, change the color, we would have had to do it There are certain certifications that we would be able to easily pass. with flying colors that I won't do. If you're familiar with LCA's life cycle analysis, there's a whole world of agencies that do that. They measure your carbon footprint. Carbon footprints mean nothing to me. was invented by oil industries. It was invented by basically the plastic corporations passing the responsibility onto the consumer to recycle.
+
+Unit Economics (33:42)
+fake, you?
+
+Lauryn (33:59)
+and measure. ⁓
+
+Unit Economics (33:59)
+Is this sort of the corruption that you were alluding to?
+
+Lauryn (34:01)
+The corruption is in most of the certification labels. B Corporation, think, is one of the only ones that holds like a high standard and is worthwhile. Being able to meet B Corp certification is very, very impressive. It takes a long time. You have to look at part of your business as much as the environmental. I have so much respect for that organization. We haven't had the bandwidth to do it yet. We'll probably eventually do it. But I'm not going to go out and get like a compostability certification right now because our product is 100 % bio based, right? So there's all these things we could do. With the FDA, There's a book I read many years ago that opened my eyes, started to open my eyes to this and I've watched it over my career just really show its colors and it was called Buying Your Way to Safety. So basically, especially in the United States, we have all these testing for example, in the furniture world, there is a whole world of testing that it tests for whether something can catch fire. whether it can like abrasion testing, weight testing, constraints are unbelievable to the point where a product like a natural product, so a wood chair would never be able to meet those requirements. That's why we've ended up with fire retardants and all these moving parts and over engineered everything because we're trying to, more far away into these certifications and testing. It's backwards. But at the same time, with health standards, with compostability standards, they have been set so high that even some natural materials can't actually meet the requirement. So it's like you have to put accelerants into them to be able to prove that, right? Because, for example, wood takes a long time to break down. So you can't label wood as compostable. just a blank, very simple example. And I'm kind of bouncing between health and sustainability, but they go hand in hand. And the whole world of that, that whole world of certifications is so silly. And every time I consider getting a new certification for I try to understand what's the bare minimum. and what's going to actually gain trust, right? And as long as we know that our product is plastic free and doing the right thing, like that's what I care about.
+
+Unit Economics (36:22)
+Yeah. such an interesting thing to have to weigh because as a consumer, I would like to think that I'm, you know, totally uninfluenced by these certifications, but I've got to be influenced by them, you know, subconsciously to a certain degree. And so it's just such an interesting thing to have to weigh.
+
+Lauryn (36:43)
+Mm-hmm.
+
+Unit Economics (36:47)
+don't know what any of these certifications actually mean. They just like look nice on a package to me. So I don't know. Very, very interesting topic.
+
+Lauryn (36:52)
+Yeah.
+
+Unit Economics (36:53)
+yeah, at what point did you realize, okay, it's time to raise some capital and now that you're raising more, what is the most immediate need for that capital?
+
+Lauryn (37:00)
+Hmm. We were doing a lot of the research just without payment. You can do research for free most of the time unless you need access to databases or anything like that. But we had, we already had access to that through the design studio. But, I mean, I was running a design firm. You don't make millions doing that, right? And I don't come from a well-off family, come from a hard-working family. ⁓ They're all like volunteer firefighters and such. like self-funding or funding through family and nepotism not happening. So in the biomaterial world, if you want to do anything, you have R &D costs. And it was when we found we had narrowed it down to a couple possible materials. We hadn't yet discovered the mycelium. And that had happened and we were making progress. We could see a world in which we were able to get somewhere right before we were had that giving up feeling mixed with I won't mention her name, but a very famous artist touring crew got wind of our company and I had them testing our product and they were loving it. And I was like, this is going to be way bigger than I intended. And originally This is probably going to be the rest of my career. I don't know. That's when I decided to take on friends and family capital and then VC capital eventually. But I raised about 400 K with friends and family and that was like 10 K here, 10 K there. It wasn't like one person, right? I just have a really awesome network that was passionate about it. But we aren't going to use capital to just purely market. We're going to use capital that we're raising now in our seed round to really boost our distribution because that's the name of the game, right? But also to launch our new products. We're going to get into a cadence of new product every four to six months. And that takes capital and time and a team, but we keep the team small. That's the goal. So we're not going to be spending a bunch on marketing and hiring. It's mostly the back end. But raising capital is very hard. It's probably the hardest part of my job.
+
+Unit Economics (39:07)
+Interesting. How so?
+
+Lauryn (39:09)
+CPG has been bad word in VC since the time of Casper mattresses, O-way luggage, these people, Glossier, they all raised hundreds of millions, blew through it because VC put them under this hockey stick, like you have to grow at this rate, and then they never saw the return. And the world took some readjusting. And now CPG is coming back because companies like Touchland, Rd, Poppy have all sold for nine to ten figures. And that is very appealing to VCs. But I will be remiss if I don't mention the fact that 2 % of VC capital goes to women. It's true. Like, no matter how much I impress someone, they're still pattern matching in the back of their brain of what they've seen in the world. Right.
+
+Unit Economics (39:57)
+Absolutely.
+
+Lauryn (39:57)
+So I will brag and say that more than half my cap table is women. That's also it's like not heard of. So I'm to do everything I can. It's like already fighting the battle of raising capital and making sure that I don't have any assholes on my cap table. And then the third component is how many women and people of color can I get into my cap table who
+
+Unit Economics (40:03)
+That's amazing. Yeah.
+
+Lauryn (40:21)
+are good people and know the business. And ⁓ so far so good.
+
+Unit Economics (40:26)
+Amazing. What's something that you've changed your mind about since starting Gob?
+
+Lauryn (40:30)
+that's a good question. so many things. I'm the kind of person that changes my mind pretty often. I'm always willing to be proven wrong. But I think that I set out building this company with the idea that a brand had to be fully cooked from the beginning. And now in practice, I see brands as these like amorphous, ever evolving personalities or worlds They're like people, right? People change with the times. And I now, think I've been proven wrong. I was holding the GAW brand, what it was in the early days, like very close to my heart, not wanting anything to feel any way, quote unquote, off brand. And now I'm like much more flexible with it and I actually think it's beneficial because we have gone from being just about loud, just loud and sarcastic and curse words. We're never going to get rid of the curse words, but we are going to get rid of just the idea that we can only be one thing.
+
+Unit Economics (41:32)
+That's a great answer. I think we have time for one more question. Where do you see Gob going from here? If you think three to five years out from now, what does Gob look like in an ideal world?
+
+Lauryn (41:41)
+Hmm. In an ideal world. I live in the ideal world. I would say my vision for Gob, you know, it's the new year. I'm in big picture thinking mode right now, and I'm also closing a fundraise and that forces you to think big picture because you're pitching the big picture. will be The one company that actually builds a category out of these single use personal care products been innovated upon in decades, if ever, since their invention. Foam earplugs were invented in 1972 kind of by accident, and they have not changed since. Not at all. Not even shape. neither have any of the other products that we have that we have on in the roadmap. And so I want to continue to build that world and be the household name for single use. That doesn't suck. That's the goal. there are a lot of brands that I admire who have built out categories that are net new. I love Ilya Beauty. consider them a new category. love Blueland, who has really reduced my personal environmental impact and health impact in my home. And I just want to make sure that we're building something that's healthy, doesn't take itself too seriously.
+
+Unit Economics (43:05)
+Yeah, amazing. Thank you so much for the time today, Lauren. If you want to share with listeners where they can find Gob, please feel free to do so.
+
+Lauryn (43:09)
+Good. Yeah, we're at gob.earth is both our URL and our Instagram.
+
+Unit Economics (43:18)
+Thank you so much.
+
+Lauryn (43:19)
+Thank you, that was fun.

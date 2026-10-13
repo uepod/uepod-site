@@ -1,10 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const SPEAKER_LINE = /^(.+?) \((\d{1,2}:\d{2})\)$/;
+const SPEAKER_LINE = /^(.+?) \((\d{1,3}:\d{2}(?::\d{2})?)\)$/;
 
 // Proper names the recording clearly got wrong. Everything else stays as heard.
-const NAME_FIXES = [["Union Economics", "Unit Economics"]];
+const NAME_FIXES = [
+  ["Union Economics", "Unit Economics"],
+  ["Craig Hill", "Craighill"],
+];
 
 function applyNameFixes(text) {
   return NAME_FIXES.reduce(

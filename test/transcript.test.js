@@ -2,6 +2,12 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const { parseTranscript, loadEpisodeTranscript } = require("../src/lib/transcript");
 
+test("hour timestamps still start a new turn", () => {
+  const turns = parseTranscript("Josh (1:00:11)\nEverybody go.\n\nGuest (1:00:20)\nAbsolutely.\n");
+  assert.equal(turns.length, 2);
+  assert.equal(turns[1].speaker, "Guest");
+});
+
 test("speaker turns join wrapped lines and drop timestamps", () => {
   const turns = parseTranscript(
     [

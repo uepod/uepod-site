@@ -1,0 +1,179 @@
+Unit Economics (00:04)
+Adam, thank you so much for taking the time to do this today. If you wouldn't mind just jumping in with a brief background on yourself, that would be great.
+
+Adam Gillman (00:11)
+Of excited to be here. Thank you so much for having me. I'm really excited for the conversation we're gonna have today. My name's Adam Gilman. I was born and lived most of my childhood in the New Jersey, New York area with a brief stint in Chicago, which is where my father moved when I was in high school. I went to college in Los Angeles and then spent a lot of my adult life going back and forth between LA and New York. before ultimately laying roots in Florida a few years after I had my children, which is where I live now. I've been an entrepreneur pretty much my entire adult life, working in a wide range of industries, ranging from mobile technology to digital marketing to multi-site retail, and ultimately into consumer, which is obviously where I am today.
+
+Unit Economics (00:58)
+Yeah, so walk me through the months, the weeks, the days leading up saying, okay, we're going to start a children's vitamin company. What did that look like? You didn't have a background in the healthcare space. So I'm curious what led you to that point in time and to this specific industry and this specific product.
+
+Adam Gillman (01:20)
+Great question. So at the time I was already a parent, I was actively buying kids vitamins and feeling really uneasy about what I was giving my kids. And it was a very similar parallel path to my close friend and co-founder Darren, who faced basically the identical issue just on his own journey, serendipitously to me at the same time. And... when we got together and he initially explained his vision for a new type of children's vitamin and children's wellness company, immediately resonated with me. Professionally, I'd had experience building consumer brands and also navigating regulated categories, but this was obviously something more deeply personal. In the time period leading up to launch, the guiding question for us was always pretty simple. Is this something that I would want to give my kids every day? And although we did not have direct experience in the industry, in the health industry really at all, we had access to the internet, we had access to experts. who could help guide us and advise us on what the common scientific understanding was at that time. And it's evolved quite a bit just over the past five years around children's nutrition and children's health. So we had a lot of early conviction that came from frustration and eventually inspiration, realizing that the category just needed an overhaul.
+
+Unit Economics (02:52)
+Yeah, you mentioned that this idea immediately resonated with you. What were you seeing in the market? What were the specific gaps that you were seeing that led you to that feeling?
+
+Adam Gillman (03:02)
+Great question. There were a few main areas that we saw as being really big opportunities and really big problems that needed to be solved. So the first and most obvious was we felt like the category was optimized for compliance around getting the kid to take the product, which basically meant covering it in sugar and fillers rather than what was healthiest. And that... Parents were basically forced between the decision of choosing vitamins that kids wanted, but they weren't necessarily proud of their kid taking, or vitamins that parents trusted that kids wouldn't take. And we were basically obsessed with solving for that problem. And it wasn't easy, especially for two guys with a very limited background in the industry, but. When it comes to entrepreneurship in general, I'm a big believer in perseverance and persistence, and we were just obsessed with solving the problem. And over the course of a little over a year, we developed the first iteration of our product.
+
+Unit Economics (04:04)
+What did the first year look like? So you and Darren decide we're going to start this company. What are the immediate next steps from there? How did, how did you go about formulation? How did you what manufacturing partners to work with? did you go immediately?
+
+Adam Gillman (04:17)
+When I look back at it, I look at it as very much a blessing rather than a curse in that we weren't operating within the paradigm, right? We didn't have to accept a lot of defaults We didn't see the trade-off as being nutrition versus taste. We saw it more about as a problem of short-term appeal versus long-term habit. And that's really how we framed everything the earlier days. Does that answer your question?
+
+Unit Economics (04:46)
+Yeah, yeah, that makes sense. I guess though, how did you go about getting the first batch in hand? Yeah. The formulation piece specifically, because if I, know, If I were to have come up with this idea, I would have had zero clue where to go to actually like create a product like this.
+
+Adam Gillman (05:02)
+So to take one step back before answering that question, we, like I said before, didn't have knowledge of all the defaults, right? So we questioned a lot of the industry norms around sugar levels and gummy formats and synthetic fillers and things like that. And the way that I often frame it when... I tell this story to different people or we're getting interviewed on different podcasts is experts within a field kind of optimize within systems and outsiders can redesign the system altogether because they don't necessarily have knowledge of it. So the formulation really just became iterative process of us finding a co-manufacturing partner that believed in our vision and believed in us as operators. And then working with a network of pediatricians, nutritionists, and parents that we had developed in order to fine tune the active ingredient mix as well as the natural ingredients that we were adding to make the product palatable to kids.
+
+Unit Economics (06:07)
+So my understanding is that you've only been a direct to consumer company a clear sort of differentiation tactic the way you're describing from the start? How did you think about distribution early on? And did you know that that was going to be a benefit down the line?
+
+Adam Gillman (06:24)
+Darren and I were and still are big believers in the subscription business model obvious reasons, right? We don't even need to go through those. And. One of the problems that a lot of companies fall into is they try and put a subscription layer on everything rather than making sure that it makes sense for a subscription layer to be added. So it's all about having the fact that it's on a recurring schedule and a recurring billing schedule as well being about convenience rather than being forced to pay, right? And that to get the ultimate strategy around owning our distribution channel and owning our conversation with our customers. although you can obviously set up subscriptions on platforms like Amazon, it's a lot more challenging because you don't get that feedback loop around what's working and what's not. So we really put a stake in the ground around focusing on having that direct consumer relationship so that we could facilitate a subscription, excuse me, focused business model. But more importantly, be able to talk to customers around what their experience was with our products our general customer experience.
+
+Unit Economics (07:38)
+That makes complete sense. What did the very early days post launch look like and specifically did your retention numbers look like? Did you struggle with high churn rates early on or have things been sort of smooth sailing in that regard from the onset?
+
+Adam Gillman (07:55)
+So we launched in March, 2020. And arrears, yes, at the time it was terrifying. We thought the entire world was falling apart. And we were very focused on being proper stewards of...
+
+Unit Economics (07:59)
+Perfect timing.
+
+Adam Gillman (08:12)
+I mean, it was effectively our own capital, right? And making sure that we were really smart about what it was that we were spending money on and trying to get an understanding of what creative messaging and what strategies around marketing were going to resonate with parents. And that was really where our largest focus was in the early days. It took us several months to find our stride. What we saw from the get-go was for the people that did opt into the product, the satisfaction rate was quite high. And when you're dealing with children as your consumer, not your customer, the customer is the parent in our business, but as your consumer, you can't find 100 % of kids that like anything, right? Like there's kids that don't like ice cream, there's kids that don't like pizza. And our retention rates were really solid. I'm not gonna speak to exact number specifics, but our retention numbers were solid from the get-go. Us being, and me in particular, being the operationally focused numbers and data oriented person. We started a journey of getting a deep understanding of for the kids and the families that felt like the product didn't work for them, what were the reasons? And we use that to optimize the products that we make, the experience that we created for our customers. We're now on, I believe it's the... eighth iteration of our original multivitamin in terms of making adjustments we made a lot of adjustments to our customer experience as well.
+
+Unit Economics (09:42)
+What were some of feedback you got from customers that really stuck? Are there any examples that stick out? What sort of feedback did you implement? How did you iterate based on that feedback?
+
+Adam Gillman (09:54)
+Awesome question. So on the positive side, we got really great feedback out the gate around the quality of our product and how it really stood out, especially in the context of something that kids were actually willing to take. There were really clean options on the market at the time, but they just weren't palatable to most children. And that was a big thing that we were obviously looking to solve. Additionally, really positive feedback on the experience that we created, right? So I'm not sure if you've ever ordered or received a package from Haya, but we made a really strong attempt to create a brand aesthetic that would resonate with both parents and children. Again, the parents are really important because they're the ones ultimately making the purchase decision. And we came up with this idea for... making that unboxing experience and the initial interaction with the product being really interactive in that it was a blank canvas, if you will, that kids got to decorate with their own stickers. And that also became a bonding experience between the parent and child with a shared kind of theme of help. and health, right? Your parent is helping you, they're guiding you through it, and you're doing this creative endeavor all under the common denominator of health as the reason why you're doing it. a negative standpoint, for the people that did not renew, their kids still didn't like the product. And that's where we got a lot of feedback around optimizations we can make to the flavor profile, as well as kids that liked a specific flavor of the vitamin. but not other flavors. initially we sent everything as a multi-pack and later on down the line, this didn't happen until I want to say about seven or eight months in, we made the decision that we were going to offer customization to our products. So a parent could text into our customer service team and say, my son really loves the green ones, but doesn't like the yellow and the red. No problem, we'll give you just green ones. Or my kid eats the green ones four days a week and the yellow ones three days a week and doesn't like the red. No problem, we'll give you four sevenths green and three sevenths yellow.
+
+Unit Economics (12:10)
+Did that create any material operational complexity for you? Did that raise costs in any way or was it pretty simple to try to introduce that level of flexibility and customizability?
+
+Adam Gillman (12:23)
+It did raise costs slightly it's still something that we offer to this day. But once we saw it, we saw it as a big competitive advantage because we were up against multi-billion dollar conglomerates that were offering competitive products and that's something that they could never do and we liked that. And in terms of, it create a tangible lift? Yes, it did. A tangible lift in both. retention and just consumer sentiment around the brand. Like look at the level of service that they provide.
+
+Unit Economics (12:51)
+I do really want to touch on something you spoke to a minute or so ago around appealing to both parents and children. I think you've done a phenomenal job with your branding. It's like so immediately clear to me that it hits at both, And I'm wondering if you worked with a brand partner early on, if you and Darren or somebody else internally develop the brand yourselves, what that looked like, and I guess how you tried to strike that balance.
+
+Adam Gillman (13:19)
+So we did it all internally and the only other person on our team at the time that we launched was our brilliant creative director Abe. We worked together to paint a high level vision of what we wanted, but he's the one that brought that vision into existence.
+
+Unit Economics (13:37)
+have there been any surprises or noteworthy learnings in trying to appeal to both parents and children? Anything more universally applicable,
+
+Adam Gillman (13:47)
+You know, nothing comes to mind besides the fact that it was obviously the right strategy, right? It's really great to have a package that has SpongeBob SquarePants on it or something along those lines, right? It's a whole other level when the parent looks at it and says, I want to Instagram this. I want to put it on my kitchen counter because it's pretty.
+
+Unit Economics (14:13)
+How did you initially set your price points? Because your product is more expensive than other multivitamins out there, but there's obvious nutritional benefits. And so I'm curious how you went about setting your price point initially and trying to strike the right balance of costs while also being accessible to as wide a demographic as possible.
+
+Adam Gillman (14:36)
+I could probably speak for an hour just on this singular question, so I'll try and keep it succinct.
+
+Unit Economics (14:42)
+We can spend an hour talking about it. I'm a big pricing guy, so we can talk about it as long as you want.
+
+Adam Gillman (14:47)
+So it was a combination of factors and decision points. So the first was We were and still are big believers that price, the overwhelming majority of the time is a signal of quality. It's not necessarily a true signal of quality, but it's a perceived signal of quality. And we wanted to make sure that our pricing reflected that. Now at the same time, we wanted it to be something that the overwhelming majority of people could afford. When you look at luxury brands as an example, right, in terms of units that they move the most of, it's oftentimes the fragrances, the key chains, the things that can be sold in both Macy's as well as their flagship retail store on Fifth Avenue in New York. The term we've used internally for it is approachable luxury, right? So it's a premium product. that is priced at a premium level above other ⁓ competitive offerings, but still low enough where people can afford it. And that's another major factor that we took into account. And besides that, right, it was kind of, we got to take our best guess at. what we think the market is going to respond to knowing that we might need to test adjusting it. And our pricing has never changed from one. We offer 50 % off the first month, which is something we've offered since day one. And at this point, obviously we've tested a lot of different iterations to that and this has been the highest performer. So. There was a little bit of luck involved in it as well in that we really hit the bullseye from the gecko, but we were very thoughtful around where we were aiming.
+
+Unit Economics (16:30)
+Have your costs increased substantially over the last five years? I have to imagine they have. How have you been able to maintain your price for five years?
+
+Adam Gillman (16:37)
+Yeah, our costs increased quite a bit. One of the advantages we had is with a more expensive supply chain, especially during COVID, We also had increased volume. So we were able to use that leverage to keep our costs somewhat controlled, although our costs are higher than the day which we launched. We've made up for that by growing our business, improving our retention, offering additional products. So more than 50 % of our customers purchase more than one Haya product for their family on a monthly basis.
+
+Unit Economics (17:11)
+Yeah, that tees up my next question perfectly, which was talk me through the introduction of your second product line. At what point did you know it was time to green light another product and yeah, what did you launch and how did you go about deciding everything that went into it?
+
+Adam Gillman (17:25)
+We were really careful. was, I can't remember exactly, around two and a half years post launch before we brought our second product to market. Not because we didn't have faith, we had a lot of faith, but we wanted to be really sure about what it was that we were putting out there. So again, this is the value of being a direct to consumer company. And most particularly the way that we handled interacting with our customers, the level of customer service that we provide. Every parent, when they get a subscription, receives a text message from somebody in our team, letting them know to reach out with any questions. So we had one-to-one conversations effectively with every single customer that had ever signed out to customers directly, as well as utilizing a lot of different survey tools, we... asked parents what it was that they wanted to solve. next and for us it ended up being a probiotic oriented product and that's the same strategy that we've continued to follow and we've always said it really allows us to kind of stack the deck in our favor and that we have a lot of validation around a product that we're going to launch before we even start formulation.
+
+Unit Economics (18:36)
+There's so many directions I could go in from here. roughly two and a half years in. What's the biggest issue you're facing at this point? What's keeping you up at night in 2022, 2023?
+
+Adam Gillman (18:52)
+We were a bootstrapped company and although we were growing very well when dealing with subscription products and particularly one where that first month is 50 % off, the more that we grew the further into the negative that we went as our cohort of retained customers continued to grow over time. So It was at that timeframe that we had to get really aggressive and really creative around what our sources of funds were going to be. And luckily along the way, we came across a lot of different debt partners, some of which were horrific, some of which were really supportive of our business. And we had to hold our breath underwater for a long time before we were able to come back up to breathe. But we were absolutely convinced that we were on the right path and all of the underlying data was pointing in the right direction so we knew it was just a matter of time.
+
+Unit Economics (19:44)
+So you're unique in that you are to date the only founder that I've spoken with on the show that has successfully exited, that's successfully been acquired. And I'd love to talk about what that experience was like. what point in time did that actually occur? What was going on internally? Were you actively looking for a buyer? Did they approach you? Just walk me through what that looked like.
+
+Adam Gillman (20:07)
+So at the time that we started to explore that process, we were running into a lot of scaling issues based on the size that we had reached. We had not yet become number one in the category, but we were on the precipice of it. And we knew that there was a lot more that we wanted to do, different categories that we wanted to enter, all within children's wellness, international expansion. there were a lot of operational efficiencies that we knew we didn't know, right? So we had acute awareness of there was a lot that we didn't know and getting the right partners aligned would be an accelerator for us. And the way that we looked at it, was we were looking at partners that had both aligned values and aligned incentives with us. And for those people listening that have had an exit or at least gone through the process attempting to exit, it's really time consuming and really painful and overwhelming and you have to kiss a lot of frogs before you find your prince, if you even do. Ultimately, when we met Usana, we knew after the second meeting that they were the best partner that we could have asked for. And that came down to the fact that number one, They were much larger and really operationally wise, but the way in which they approached their business was very different to ours. They are a 30 plus year old MLM oriented company based out of Utah. And over 90 % of their business is international. So we knew there was gonna be a lot of yin and yang there. And the other benefit of that is it was really important to us to maintain control and not for ego reasons, but because we felt that we were still the best possible stewards of the company's mission. And when you go through this process, everybody is going to tell you what you want to hear, but it's a whole other story when you know that one of the reasons that they're interested in you is because you do the things that they can't do. And we felt really confident that that was going to put us in a place where we'd be able to continue to operate the company pretty much unencumbered, which is what the experience has been like.
+
+Unit Economics (22:24)
+Yeah, I was going to ask because your day to day changed much since being acquired.
+
+Adam Gillman (22:28)
+Not really, just a few more phone calls per week. A little bit more financial discipline than we had previously in terms of developing projections and things of that sort, but it's been a really great experience.
+
+Unit Economics (22:40)
+I'm really curious to talk about the sort of evolution in, I guess, just the health space in general, namely in children's health and the trends and how things have changed over the last five years. You mentioned this earlier. I'm curious if you could speak to that in a bit more detail about what you've seen change over the last several years and also how stay disciplined in not chasing whatever the next trend might be.
+
+Adam Gillman (23:06)
+So I think we're at a really interesting time in history really, and that applies to the wellness and health industries as well. Technology has been this amazing accelerant to the way of life that we have today. And I know there's a lot of darkness out there in the world right now, but when we all take a step back, Overall, people are substantially better off than they were 20 years ago as a result of these technological developments. Now, the cost of that has been we're really inundated with information and everybody's nervous system is shot because we get, you know, 100 notifications per hour across all the different apps that we have and emails that come in and things of that sort. But as it relates to health in particular, the past 60 or so years have been largely dictated by corporations setting the agenda. And we're finally at the point for a lot of reasons where majority of the American public, I think COVID unfortunately accelerated this even more because it increased distrust of authority around this. But everybody is questioning what we saw as a status quo, right? That pharmaceutical companies really do only care about the health of the people that they're selling products to, and that the government and government organizations that are in charge of this industry really do know what's best. And it's been this kind of groundswell moment of people bringing it back to the basics around all of these incredible evolutions that have occurred in food. It's made things cheaper and easier to produce and has created all of these options. And when I say food, I medicine as well. It's come at a cost, right? There's chemicals that have been developed that we put in our bodies that we now know aren't good for us, that the trade-off has not been worth it. And all of that awareness has created a moment where people are looking for brands that they can trust. And how do you build a brand that people can trust? Well, you do that by being very clear about what your mission is and ultimately walking that talk, not just putting it as slide on your website, but the actions that you take as a company support that. And one thing that has never wavered at our company was the lens that we always look at things through is, this the best possible product that I could give my kids? And That's still how we approach everything today.
+
+Unit Economics (25:44)
+OK, I'm going to lead you on maybe a series of questions. We'll see how this goes. So if we go back to the very beginning of the story, and you think about the space you were operating in, there any incumbents that you were going up against, or did you have what you felt like was a true first mover advantage in the space?
+
+Adam Gillman (26:05)
+There were incumbents and there were other companies trying to attack the problem in similar ways to us.
+
+Unit Economics (26:13)
+so then question is what specifically is there like one key thing you feel you did that set you apart from all the other incumbents in the space at that time? Are there,
+
+Adam Gillman (26:25)
+Yes. educating, right? So when you have a different solution to a problem that's existed for a long time, getting people to understand why your solution is better than others is the most important thing that you can do. And making sure that our marketing strategy focused on educating our target audience, our target customers around what made us different and what made us special. And more importantly, providing them information that oftentimes had nothing to do with what it was that we were trying to sell. customers look to us as an expert advisor as well as a brand that they bought from. And that's something that... Big companies have a hard time doing generally. Unilever doesn't do the best job at that. Procter & Gamble doesn't do the best job at that. because that was our focus, it made a sizable impact.
+
+Unit Economics (27:19)
+what did that look like in practice? What did educating your customers tactically look like?
+
+Adam Gillman (27:24)
+Most of our communication was through social media and email, right? So doing explainers on different active ingredients, both ones that we use ones that we don't use and why. Speaking to customers about common issues that we all face as parents. around trying our best to make the best decisions for our children and providing information around what our viewpoint is on it. It sounds really complicated, but it's quite simple when you break it down like that.
+
+Unit Economics (27:56)
+Did you find that it was resonating more with existing customers or those who were already sort of potentially interested in trying your product? Did you see either one of those segments resonate more with that tactic?
+
+Adam Gillman (28:10)
+I can't say I have enough confidence to say it worked equally well, but my gut would say it did. It resonated with everybody.
+
+Unit Economics (28:17)
+When you think back again along the way, are there any moments, any particular inflection points where one specific decision or one specific piece of advice or something serendipitous occurred that completely altered the trajectory of the company? I found that in interviewing number of founders now across a bunch of different industries. This seems to be a pretty common thread. And I think it's sort of a fun thing to try to tease out in each of these episodes now.
+
+Adam Gillman (28:47)
+Yeah, a few that come to mind in no particular order. making the decision that we were gonna be 100 % subscription. And again, we did that because... It was both advantageous to our business model and provided ease of mind to the parents. And in order for it to work, both need to be true. The second was our branding strategy. We knew that there were not brands that were speaking to the millennial parent. And the millennial parent is a really interesting segment in that they're kind of the first generation that came up, particularly in their teens and into their 20s and early 30s, with a different approach to your wellness and health. And we believe that they were going to pass those values onto their children, and they were looking for companies that would help them to do so. And a big part of that, right, is the brand aesthetic that you choose. It makes it a lot easier when somebody's eyes are drawn to your beautiful packaging in addition to the mission and message that you're putting out into the world. another one which is no longer the case today, but we made the decision to insource all of our fulfillment. That's what enabled us to do that customization that I mentioned earlier in the interview. And at least at the time, was... more cost efficient for us and it just gave us a really direct understanding of everything that we were putting out into the world. It sounds kind of hokey, but the more that you can touch that your customers end up touching, the better. Eventually we got to a size and scale where it no longer made sense for us to... handle all of our fulfillment and logistics. We still handle a portion of it, but the majority of it is outsourced because then you end up being in like the warehouse business, right? And that's a whole other business. But those are the three main ones that come to mind.
+
+Unit Economics (30:44)
+What's something that you have changed your mind about since starting Haya?
+
+Adam Gillman (30:48)
+That's a tough one. The reason it's tough is because... We made several decisions early on that just proved to be the right ones. particularly around really staying true to our mission and not cutting corners. I would say one of the biggest learnings I had is because of the size and scale that HIA became, it's been around the importance of building a rockstar team. And if you want a rockstar team, you need to be a rockstar leader. So the biggest areas where I feel like I've grown and I've learned is in scaling a team and... a really good leader that people want to get behind. And what's great about the culture that we built at Haya is... we all share common values and not just around the problem that we're solving, but common values around work in general. We don't micromanage. We work very hard to hire people that are the absolute best in whatever discipline that they're gonna be leading. And besides that, just constantly reinforcing the mission and giving them a chance to shine. And as a result of that, We've lost maybe two employees over the course of our entire existence. And those learnings are the most invaluable to me.
+
+Unit Economics (32:02)
+is there a singular piece of advice that you would give somebody founding a company today? Not necessarily in the health space, just, just broadly in today's world. Is there anything that you would, that you would recommend in particular?
+
+Adam Gillman (32:15)
+Yeah, if I had to pick one, and this isn't necessarily the most important one, it's just one of the most important ones. It's the importance of... time and compounding. And what I mean by that is, and I think this applies to life, this isn't just a business topic. Who you are a year from now is a result of the tiny things that you do on a daily basis today, right? And in business, making sure that you do the right thing every day, you're not gonna see the impact in a tangible way in a short period of time. but you will see it in tangible way over a substantial period of time. So taking time to let your efforts grow and not just planting seeds and moving on and forgetting to water them, but taking the time to give them a chance to sprout, if you will, is one of the most important lessons that I've learned in... this journey as well as my life journey.
+
+Unit Economics (33:12)
+Yeah, incredible advice. think we have time for one more question. Where do you see Haya three to five years from now? And on the topic of trends in children's health and the direction you see that going in, where do you see the space moving over that period of time as well?
+
+Adam Gillman (33:15)
+Okay. So we see Haya as the most trusted kids wellness ecosystem. And that can enter a lot of different areas and categories and functions that we serve for our customers and our audience. I won't speak to exact details of the different problems that we're now looking to solve, but. There are a fair amount, and we're really excited about our approach to how we're gonna solve them. We do believe that the best expansion happens through depth, not sprawl. So for the things that we know are working, how can we figure out more ways to meet the customer where their needs are? And eventually, as your brand continues to grow and get larger and larger, you do end up sprawling. But the focus should be on get depth as you possibly can before you start to go horizontal. I believe that, and this is the case for brands in most categories. Having a tight integration between products, education, and impact is something that everybody is looking for today. Advertising used to be something that people relied on as a source of information and a source of truth, arguably. Now people look at it kind of the opposite. So making sure that we approach things in a way where we're not trying to sell you something, we're just trying to help. And if that means that you end up buying, great. If it means that I don't buy products from HIA, but I love the information that they put out there and what they stand for, that's great We see simplicity in messaging and trust as being the biggest mode that any brand can build today.
+
+Unit Economics (35:11)
+Adam, thank you so much for taking the time to do this today. I learned so much. just had such a great time speaking with you. you want share with listeners where they can find Haya, please feel free to do so.
+
+Adam Gillman (35:22)
+Of course, and this was an awesome conversation. Thank you so much for having me. You can find out more about HIA by visiting our website, H-I-Y-A-H-E-A-L-T-H.com.
+
+Unit Economics (35:37)
+Thank you so much.
+
+Adam Gillman (35:38)
+Thank you so much.

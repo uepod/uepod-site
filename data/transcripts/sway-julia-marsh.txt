@@ -1,0 +1,242 @@
+Unit Economics (00:00)
+Julia, thank you so much for taking the time to do this today. I'm going to start today's conversation off slightly differently than I might normally start one of these conversations off. I'd love to first hear about the problem you're trying to solve in two sentences or less.
+
+Julia (00:18)
+Plastic is so bad, it's killing everything in its path. It is destructive at the source and it's destructive at the end. We need better solutions and seaweed is one of them.
+
+Unit Economics (00:29)
+So you answered the next question, was what is sway doing to help combat this issue?
+
+Julia (00:32)
+Yeah. Flexible packaging is particularly problematic. It's everywhere. There are five trillion plastic bags, wrappers, and pouches produced every year, but less than 2 % of them are recycled, which means the vast majority end up in our ecosystems and in our own bodies as microplastics. So Sway is specifically focused on flexible films, and we use seaweed as our hero ingredient to create compostable alternatives.
+
+Unit Economics (01:03)
+So let's go back and let's talk about your background not only what your background looked like, but what was going on in the month, week, days leading up to formally launching Sway.
+
+Julia (01:16)
+Prior to starting this company, I was a designer working in packaging and brand, and I loved making beautiful systems, but I felt like I wasn't creating work of consequence. And the way I define that is maybe through a traditional lens, it should be gorgeous and everyone should love it, but through a more holistic lens, it's does this have purpose and will it make the world a better place? And so I went to grad school and started exploring specifically this problem with plastics. Where were the gaps and where could a designer play a significant role in creating a solution? And it was compostables. Compostables are not very sexy. You think of like the compostable cups that you might get at an event or you think of when you're at the checkout area or like in the grocery store. I was like, compostables need, we need better feedstocks and we need a better system and we need better storytelling around this category of packaging that's so important. So that was kind of where my head space was at. was in grad school, I was thinking this vertical of compostable packaging and what is the designer's role in finding solutions.
+
+Unit Economics (02:31)
+And what were you studying?
+
+Julia (02:33)
+design specifically focused on packaging.
+
+Unit Economics (02:37)
+what led you to Seaweed? Walk me through what, and maybe it wasn't even Seaweed when you first formally launched Sway. I'm curious what it looked like to decide I'm going to launch this company. I'm also eager to hear about, what it was that you actually launched with.
+
+Julia (02:57)
+I definitely didn't start with the mindset of I want to start a company. I started with the lens of I want to solve this problem that I'm personally impacted by as a designer trying to pitch brands on alternatives to plastic and being told no. So it was very much exploratory and I quickly realized reusable solutions, there's tons of options. solutions, paper, aluminum, glass, plenty of options. Like again, just became obsessed with compostables, but more so than that, why is it that there are such limited feedstocks for this category? And wouldn't it be so cool if when I was pitching a brand on new packaging, it wasn't just compostable, it actually was like making the planet a better place. And so that's how I fell in love with this idea of regeneration, which is materials that actually improve the planet just by growing. or just like alleviate waste. there's agricultural waste, there's mycelium, shout out to all the mushroom gals. There's microbes, like the fermentation strategy. There's coconut husks and pea protein and coffee waste, like all kinds of things. And there's seaweed. And seaweed is just the coolest. So it was kind of, yeah, just this infatuation with the idea of regeneration that led me to seaweed. And then unfortunately, once that happened, I had start the company. I didn't really have a choice.
+
+Unit Economics (04:25)
+When you say feedstock, what does that mean for listeners who might not be familiar with the term?
+
+Julia (04:30)
+input for packaging. So wood is feedstock for paper.
+
+Unit Economics (04:36)
+And what were you hearing specifically when pitching? Why were folks saying no? What was the biggest pushback you were getting?
+
+Julia (04:46)
+I think there's a perception that compostable packaging just doesn't work. I think we've all had that experience where the bag in our compost bin breaks and it's gross. There's also this concern around cost, which is fair. Biobased materials do cost more because they're not as scaled as the petroleum-based alternatives. then the final one actually, surprisingly but thankfully, was this eye towards resource use, where brands are saying, why would I switch to corn if it's actually a food source? Or why would I switch to sugar cane if it uses so much water and land and it's polluting itself? So that made it really clear where I needed to focus my attention and thankfully, C-Weed checks all those boxes.
+
+Unit Economics (05:31)
+So you have this infatuation with all these bio-based materials, with these regenerative materials, and you land on seaweed potentially being the answer to this problem. Where do you go from there? What are the immediate next steps?
+
+Julia (05:46)
+Well, I had to start with the supply chain. Actually, I think a logical person would start with the science, but I started with the supply chain, which is the designer mind of, if we were to rely on seaweed in a big way to replace a large portion of plastics, what would happen to the planet? And I became infatuated with visiting seaweed farms all over the world. My co-founder and husband, ⁓ who are the same person, I said that weird, my co-founder, who is my husband, and I traveled to Indonesia. to visit seaweed farms for the first time in 2018, which was so cool. And if you haven't visited a seaweed farm, really Bali in particular, because the water is warm and it's shallow and it's crystal clear. And when you get in the water and you visit a seaweed farm, you see how simple it is. It's just the seaweed being tied to string. with more string and it grows like hair and every two weeks you give it a haircut and it doesn't need land and it doesn't need fresh water and it doesn't need pesticides, it just needs the sunlight. And so being in the water at that farm in 2018 was the first aha moment that was like, the world needs more of this. We live on a blue planet. The majority of the planet is ocean. There's endless space to be growing more seaweed. We definitely could do this at scale. And then we got into the science after that.
+
+Unit Economics (07:18)
+Yeah, talk to me about what that looked like.
+
+Julia (07:20)
+Well, it involved me being very comfortable not having all the answers and being wrong or sounding dumb a lot. I reached out to every scientist and every material innovator I could. I reached out to material startups that were in adjacent spaces. And I also talked to seaweed scientists, psychologists about everything to do with the science of seaweed. What I learned is seaweed contains natural polymers. The same durable, pliable, abrasion resistant, all the qualities that we really like about plastic exist in seaweed because over the last nearly billion years, seaweed's been growing underwater with no gravity to bend and flow to the ocean tide. That's exactly what you want from a plastic. It turns out there's this underwater industry that no one's talking about that extracts those natural polymers and uses them as thickening or gelling agents in all kinds of everyday products like your skincare or your donut glaze or your agar petri dish or your toothpaste. So. Plastic-like quality, commercially available market, known properties, but not used yet in a big way for plastic replacements.
+
+Unit Economics (08:43)
+Did you initially think maybe there's some sort of polymer byproduct here that I can use or did you initially think I'm going to need to use the entire plant? And what did that look like? Because I think the sort of mechanics based on the direction you went in would fundamentally alter how you were sourcing and the next set of decisions looked like.
+
+Julia (09:06)
+I think honestly the first challenge was what species do I use? There are 10,000 plus species to choose from. Turns out there's only a few that are commercially produced so that narrowed the field. Then it was what properties are we looking for and is this going to be available year round? And we learned quickly. that every different seaweed extract, every different species has very different properties. Some are water soluble, some are really, you know, stretchy. So we had to like play with all these different species and explore them and evaluate them. That was kind of the first entry point to seaweed.
+
+Unit Economics (09:49)
+So what did it look like then to figure out, this is the right species to start working with. How many suppliers exist for that particular species? And guess what were the immediate next steps in terms of maybe sourcing at scale? Walk me through what that looked like.
+
+Julia (10:08)
+Well, in the early days, and to answer your earlier question, I did envision that we were going to use the whole plant, and I wanted to use as much of the seaweed as possible. So we were going directly to the farmers. And seaweed farmers don't have fancy webpages. So this is like chatting to a friend of a friend. There's a guy in Chile who knows a guy in Argentina whose WhatsApp you might be able to get. And there's no standard specs and the industry is not designed packaging materials. It's designed for So there's a lot of translation and like just searching the globe for what we needed or what we thought we needed in the early Hindsight's 2020 probably would have been a lot easier to just order seaweed off the shelf. from the big powers that be, the cargills and ingredients of the world. But in the beginning, it was so much about the purity of working directly with the farmer that we actually learned so much more about the supply chain that ultimately informed today's strategy where we have really great suppliers all around the world who are at commercial scale to also embody the qualities that support farmers the best. So yeah, the early days was a lot of trial and error, trying tons of different species, learning really quickly, and then narrowing focus based on the performance and the availability of the seaweed that we wanted.
+
+Unit Economics (11:34)
+I guess how long from sourcing your first batches of seaweed that would be viable for what you were trying to build to actually getting the first bag in hand that was actually like production ready or like at the point at which you could actually go out into the market and sell it. Like how long did that process actually take?
+
+Julia (11:58)
+Something like three, four years, hundreds of formulations. More to do with working with traditional plastic infrastructure rather than identifying the correct species of seaweed. It was this process of working really closely with legacy industry and legacy equipment and making sure that what we were building wasn't disrupting the existing flow because otherwise we wouldn't have no shot at scale.
+
+Unit Economics (12:29)
+to me a bit more about the infrastructure involved. Actually, let's take a step back. Walk me through what it looks like to break down the seaweed and transform it into poly Like what does the actual process look like? And then I'd love to get into the actual infrastructure required to do that, because I think the decision you made early on around utilizing existing infrastructure was obviously very
+
+Julia (12:44)
+Mm-hmm.
+
+Unit Economics (12:57)
+critical.
+
+Julia (12:58)
+Yeah, from day one, we said we want to build for scale. We're not trying to create materials that only serve the limited few. We want this to be for everyone. We want our materials to be manufactured on any machine in the world. And for flexible films, that's a really high bar to clear. I love how it's made video, so we'll start at the very beginning and imagine, visualize you're underwater. There's an ocean farm. Seaweed is growing. It's so happy. It's on a farm to be clear. We are not ripping this out of wild beds. The seaweed is grown underwater. It's harvested basically again by giving it a haircut. It dries on the beach. Then it's brought to a processing facility that's usually very close to the ocean. And the seaweed basically goes through a bath. and you separate the natural polymers from the biomass. The waste biomass is used as a fertilizer, oftentimes for nearby rice paddies, which is so cool. And then the natural polymer gets shipped to the United States, where we use traditional plastic manufacturing equipment to basically blend all of our ingredients together. into pellets. That's the way that normal plastic is produced, is through pellets. So we create these blended seed compostable pellets or special sauces all in there and then they go to the blown film exterior. Blown film, if you can imagine, like you're blowing a bubble of chewing gum that is, you know, five to ten feet wide and five stories tall. That's how we have engineered our material to flow through exactly the same system used by traditional plastics. Your bag, your wrapper, your pouch that you get, that's how it's made. that giant bubble blows up, hot, hot, hot, cools down, is pressed into a film, slit and converted into bags through heat and printing and cutting out the hole and all that. So yeah, it's a fairly complex process, but ultimately it's all cohesive with what already exists.
+
+Unit Economics (15:08)
+So. big plastic own these manufacturing plants or are they completely separate? And I ask because if they do, you're effectively operating within the system you are trying to disrupt. If they are separate, then if I own a plant, who cares? In fact, I I care because I care about the environment, like, hypothetically speaking, who cares about what's actually being produced? But I'm curious to hear if there was... from the plastic industry around even just utilizing the resources that would otherwise go to, and maybe they're not operating at a hundred percent capacity, but utilizing the resources that they need in order to produce their materials.
+
+Julia (15:50)
+In the beginning, absolutely yes, because this is such a tight margin business. is such a literally well-oiled machine. Any downtime is costly. To cycle out the plastic and cycle in soy materials is time intensive. So yeah, in the beginning, really hard for us to get the attention of these behemoths. To answer your question really clearly though, yeah, we're working with big plastic. And for the most part today, Sway has partnered with plastic manufacturers who believe in a better future and want to be a part of this transition towards new materials and have been amazing partners in getting our material on the lines and seeing it work and getting to bring them all that value of Yeah, not polluting our planet and being a part of the future. that's been probably one of the most inspiring parts of this work. Once we got over that hump of folks being resistant to change, it's now so rewarding to have these amazing partners who otherwise would just be running traditional plastic.
+
+Unit Economics (17:02)
+Yeah, what do you think convinced them? Was it just a matter of finding the right partners?
+
+Julia (17:06)
+there are, I think, really strong internal mandates. This coming generation want to live on a thriving planet. And there's so much negative perception around traditional plastics that I think offering new materials is actually like just a great talent scouting strategy or talent retention strategy. It's also a huge differentiation point in a sea of plastics. Having a material that's made from seaweed and that composts after use serves a huge market and does shine a spotlight. And we have a lot of buy-in from the top, all of the partners that we work with, these traditional plastic manufacturers and distributors. We have buy-in from the CEO or the president saying, this matters to me, to future generations. have to remain relevant. This is how we do it.
+
+Unit Economics (17:59)
+sense. there a financial, I guess, what is the financial gain for them to be involved here? Beyond just letting you use the plants. me frame it this way. say I get a box in the mail and there's a shirt inside and it came wrapped in a sway bag. my immediate reaction would be a positive one and it would be directed at the company that chose to use one of your bags as opposed to plastic. And I would have no idea that there was anything to do big plastic in the supply chain at all. So there to gain them in a financial sense?
+
+Julia (18:38)
+Such a good point, which is, we interact with so much plastic all the time and packaging in general and we don't know where it comes from or who made So absolutely, there's such associated with this industry. The first piece is that we pay these manufacturers to manufacture the material. So there is like a toll relationship, which for every pound of product they produce, there's a certain fee that we pay. So that's the most direct case. But I think the other is that there is a significant customer demographic that wants to purchase this kind of material and they're going to go to the manufacturers who make it available to them. So it's just, it's a new business opportunity. And it represents a new demographic that might not otherwise be accessible.
+
+Unit Economics (19:23)
+Makes sense.
+
+Julia (19:24)
+These manufacturers, again, see the writing on the wall. They want to be a part of the future. They're investing in making Sway happen. And we're one of their big bets of the compostables category. They want to see seaweed win. They want to see Sway win. They want compostables to be successful. They want to get toxins out of packaging, especially when it's coming into contact with food or with children. So. business opportunity, new customer segments, and also, just again, we need to remain relevant. plastics are like a bipartisan issue and yeah, so many factors.
+
+Unit Economics (20:00)
+Yeah. Yeah, it makes, it makes complete sense. Before we get into the demand side, I do have some more questions on the supply side of things. I've read that you also had a pretty disciplined sourcing framework. even from the onset, what did that look like? What, what matters to you when sourcing both from an ethical standpoint and in terms of, let's say a quality standpoint. Because I'm curious to hear a bit about how standardize the output, the bags in a world where... there's probably a good amount of variation naturally from batch to batch that you might be receiving on the supply side.
+
+Julia (20:47)
+Yeah, sourcing matters so much to me personally and to the whole company because our success is so closely intertwined with the success of the whole seaweed industry. That's why we want to solve this issue of plastics, but we also really want to see a booming blue economy. Like that is the vision. So. It has to be that our sourcing strategy is built around diversity of supply, both in terms of the types of CV that we're working with, as well as the regions that we're sourcing it from. So actually from the beginning, we work with lots of different types of CV in our materials on purpose for performance reasons, but also for resilience reasons. And then we don't just source from one region. We have relationships and redundancy around the world. Unfortunately, the types of sea that we work with grow all over the place. kind of built into the model. Then we also vet very closely what's happening underwater. How are we contributing to biodiversity and water, like healthy water chemistry and coastal jobs? And are those communities being well taken care of? And is the sea being processed in a responsible way? So there's all that kind of criteria built in from the impact. standpoint. And then there's the quality aspect too, which is fortunately fairly well established. Again, natural polymers being sourced from seaweed, commercial industry, like it exists, it's available already. The new thing is that we're using this material for but checks for CV polymers are already set to a high standard because they're designed for an industry like pharmaceuticals or skincare that actually surpasses what we even need in packaging. So we're gonna get the same material every time based on how the seed is processed.
+
+Unit Economics (22:35)
+Have you been impacted by tariffs at all?
+
+Julia (22:37)
+not yet. fortunately, a lot of our suppliers have safeguarded or kind of built contingencies into their stock.
+
+Unit Economics (22:47)
+to whatever degree you're comfortable sharing, what does it look like to defend against the potential for tariffs?
+
+Julia (22:55)
+I think the high level We're able to forecast fairly far into the future how much seaweed and any other ingredients we need year by year. And so we're able to purchase large quantities of material far in advance. And then we also work with suppliers that embedded redundancy or contingency into their warehousing so that we can source from different regions, including domestically.
+
+Unit Economics (23:20)
+So let's say interyear, there's a massive spike in demand. What breaks first in the system on the supply side?
+
+Julia (23:30)
+We do source seaweed from overseas and we want it to come by ocean rather than by plane. that would be, yeah, just it's a huge time sack to order seaweed by ship. I think that's the first, just the timeline, lead time.
+
+Unit Economics (23:47)
+Yeah, that makes sense. when you were building and developing the product, were you already in talks with potential customers or at what point did you actually go out into the market? to try to find your first set of customers. I'm just curious to hear what that looked like in the earliest days.
+
+Julia (24:09)
+In the beginning, we were very public and very visible. We've always been very visible. And the logic behind that was we want to design materials with public input and we want to create products that people really love and desire. And the way that you get that feedback and that sense of community is by, yeah, like being on Instagram or having like a website that allows people to engage with us really clearly. And so... not sure, I'm not 100 % sure I would do this again, but from the beginning we were so visible, so accessible before we had a fully fledged product that we accrued a ton of demand and a ton of interest. And we had a wait list that was enormous, disproportionate to the stage of the product and our readiness to actually serve those customers. We've never had a problem with much more so the issue has been creating the product and getting it to scale. So yeah, in the early days, lots of mission-driven brands who had products that were already responsibly designed, who wanted their packaging to reflect that story. Now it's a much more general audience where there's all kinds of folks who come to us just wanting better packaging.
+
+Unit Economics (25:26)
+Yeah, I'm really interested to dig into that a bit Your site lists a number of, I would say, more mission-driven brands that are customers of yours. Burton Snowboards, Alex Crane, Graf Lance. I actually don't know if that's how you pronounce name. I own their coasters, but I assume it's Graf Lance. And I love their coasters. But anyway, some huge names that I would...
+
+Julia (25:46)
+you
+
+Unit Economics (25:52)
+assume are more mission driven. And so there's a clear.
+
+Julia (25:54)
+Mm-hmm.
+
+Unit Economics (25:56)
+through line there for me where if I'm just a mission-driven brand, I'm likely going to be much more comfortable eating the cost of a more expensive packaging material because I care about these things. versus this sort of next set of customers that you've brought in. I'm really interested to hear about what they're looking for and why they're open to the idea of... margin degradation. as a result of introducing better packaging that is better for the planet, do they care about this from an ethical standpoint, or is it like a perceived sort of quality play for them? Talk to me about what that evolution looked like.
+
+Julia (26:36)
+We have received demand from every industry that exists. So fashion and outdoor are really our focus today with our poly bags and our retail bags. But every single industry is expressed interest. Pet, electronics, furniture, home goods, personal care, grocery. Auto, like every industry is looking for alternatives to plastic, which is so amazing. And so the reasons that they're seeking solutions varies really significantly. The reason our current customers work with us typically has to do with what their customers want. So when you receive that gorgeous sweater from... you name the and you paid $200 for it, and it arrives in plastic. It's your first impression of that brand experience, and it feels gross. And it's like, why did you send me this trash? So actually, yeah, the most common reason that brands come to us is my customers don't want this. I need a better solution. The next best alternative is usually paper. There are a number of paper-based alternatives for bags and for shipping mailers and all kinds of things. But a lot of times they just don't work. And so most brands come to us second for performance, which is our customers want an alternative but paper doesn't work. And that's where we're really designed to fit in. It's a strong material. You can ship a garment from Thailand to the United States and the garment's not going to be damaged. Puncture resistance, moisture resistance, grease resistance, all those performance attributes. And then the third reason is ease, which is if you're already using plastic and you know you want an alternative, how easy is it for me to switch to something else? Well, is like very easy to switch to. then finally, it's all the glow. It's the sway glow is what we call it, which you're much more likely to get a marketing campaign live if your packaging is actively replenishing the ocean ecosystems. Oprah is more likely to care about this collab if you have this like really innovative, totally new material that's packaging your products. It's something to talk And it's real, we can trace the impact of every single bag and how it impacts carbon, how it improves ocean health, and how it supports ⁓ coastal employment and protected acres of diversity. that's kind of the ranking order.
+
+Unit Economics (29:13)
+really pleasantly surprised to hear about how much demand there is. If you're comfortable sharing roughly, maybe even on a per bag basis, how much more these customers spending on average for a sway bag compared to the traditional plastic bags that they've been using for decades?
+
+Julia (29:32)
+Yeah. The focus for us is chipping away at this area where compostables are not doing the job, where a paper-based solution is not doing the job. So while ultimately we want to be competitive with plastic, what we're focused on is just being the same as the next best thing, while bringing way more impact, way more performance, way more efficiency, et cetera, et cetera. So compared to another compostable alternative, we're at parity. Compared to plastic, we cost more. There's more value. And we're earlier in our trajectory. But we'll ultimately be able to get there probably within the next two years just through scale.
+
+Unit Economics (30:11)
+Wow, that's remarkable shocking.
+
+Julia (30:14)
+Well, we won't get to bottom of the barrel plastics. That's hard to beat. That's fairly impossible.
+
+Unit Economics (30:20)
+Even so, that seems, mean, I thought you were gonna say 20 years. I mean, that seems like a really accelerated timeline to me.
+
+Julia (30:30)
+It's attainable and really it comes from deep partnership with the industry and again, being able to run our material anywhere in the world. definitely, it will definitely be hard, but we have a really good plan to get it done.
+
+Unit Economics (30:47)
+Yeah, that's amazing to hear. one of the longer-term goals for the company is being able to replace food packaging. And so I'm curious what is necessary in order to do that. Given. all of the complexities around food sales and, and, certifications, manufacturing setups, regulatory issues to work through. seems like a more complex problem to solve given it's touching something that people are ingesting. What needs to happen in order for you to be able to achieve that goal longer term?
+
+Julia (31:23)
+When we started the company, it was to replace something like a Snickers bar wrapper or something like a Clif bar wrapper. Like these super ubiquitous, annoying plastics for products that realistically could never have a recyclable or reusable solution. yeah, the performance bar, as you rightly point out, is just higher because... I think that most of us would eat a Snickers bar wrapper if it had been on the shelf for like over a year. It's kind of gross when you think about it. But yeah, just the bar for shelf life and... protection of the product is higher. So we're starting with really a lot simpler use cases to start, like a bag for apples or a bag for, I don't know, yeah, just like kind of these fresh produce perishables where actually our material makes a lot of sense. then over time, iteratively, we'll be able to create products that can provide the barrier properties needed to protect other, know, higher or more complex. food products. And that may include combining our material with other materials like paper. Maybe suede is a laminate material on paper. I don't want to go too into detail because I'm guessing there aren't that many packaging nerds on listening to the podcast.
+
+Unit Economics (32:39)
+You never know. You can
+
+Julia (32:41)
+Yeah, but I'm really excited to play with the material in more ways than one. We want to really nail these first categories, just the most ubiquitous formats, polybags, retail bags, they're everywhere. There's billions of them produced every year. And then we get to start going into these more niche applications.
+
+Unit Economics (33:00)
+How do you think about legislation and lobbying? Is that something you want to be involved in at all? Because I do think... Naturally, you're up against this incumbent monstrosity of an industry. And there's so much lobbying that big plastic has out there.
+
+Julia (33:18)
+you
+
+Unit Economics (33:24)
+maybe this is a really pessimistic and depressing take, but I question, and again, it's so encouraging to me to hear about how many... brands are already interested in using these materials today. But I question when you think about just the sheer amount of plastic that's out there and how cheap it is to produce, just, question we will get there organically in a timely enough fashion to ideally rescue the planet. So I'm curious how you think about the role of legislation and lobbying. longer term.
+
+Julia (34:00)
+The best way to curb plastic pollution is by turning off the tap. And we need to just dramatically cut plastic production and plastic usage to begin with. So I would never suggest that compostables are the single answer to solving this. I would hope that... much tighter regulation emerges, making it economically less feasible to use plastics in the first place, which thankfully is happening. Extended producer responsibility has become widespread in the United States and Canada. In the EU, we have the single use plastics directive, which also punishes the use of traditional plastics and labels them more clearly. we need more of is incentives for brands to work with biomaterials. And it is so confusing. Even people who are legislating around these topics get confused about which bin do I put this And there is such an easy argument to be made of let's just invest in recycling. Let's keep materials in use. When you just hear that headline, it sounds so obvious. Of course we should keep the materials in use. it doesn't solve the issue of pollution because the system is imperfect. And even if we were to dramatically increase recycling behavior, we would still have much more plastic than we know what to do with. We have to invest in multiple waste solutions at the same time. The problem layered on top of that is that industrial composting isn't designed for packaging. It's designed to create compost that is sold as a product to farms. So when compostable packaging was originally designed, it wasn't designed through the lens of turning into a product, which means it usually doesn't contain nutrient value and it usually isn't desired by composters. And now legislation is being developed that basically blocks new materials from entering compost because of this outdated thinking. So it's fairly complicated. I don't know how much detail you really want, but it's a little bit the Wild West right now. And what we're hoping is that like SLEI can meet really high bars for compostability, which we do. We're certified by TUV for both home and industrial compost. Composters will accept and embrace our material and we'll be able to divest a substantial amount of waste while also increasing composting behavior. And my final point to break it up. I love composting. Composting should be so normalized. There's so much biomass and organic waste going to landfill and it is creating so much pollution. It is intuitive and natural that everyone should be composting and part of the way we increase composting behavior is by adopting compostable materials. So that's my soapbox. I really want composting to happen.
+
+Unit Economics (37:05)
+I completely agree, everybody should be composting. What does the competitive landscape look like today? And I'm particularly interested in this, given your comments about how demand has just been insatiable, where there is demand, there is supply. And so I'm curious what the competitive landscape looks like and what you see as most defensible aspect, what your moat looks like
+
+Julia (37:32)
+Thankfully, there's been a lot of innovation activity in the seaweed space as of late. There are companies springing up all over the world using seaweed as a key material in all kinds of packaging products, from your clamshell to your disposable cutlery, your straw. seaweed paper now, there's seaweed coatings for your boxes, there's all kinds of seaweed activity. There's not a lot of seaweed activity to replace flexible films. So Sway is the most commercialized, most mature, scaled up, CME based compostable solution on the market. And we also have really amazing partners who are enabling that scale. I would say that's the biggest piece. We're plug and play, no new equipment, no downtime, no retooling, super scalable and we're the furthest along. In the more broad sense, there's lots of compostable materials out there made from corn or potato or sugarcane, much more commercialized, much more widely available. The differentiation point for Sway is performance. great. Resource use. CV doesn't need lots of resources. And then true compostability. We're certified for both home and industrial compost.
+
+Unit Economics (38:51)
+Yeah, the designation around home versus industrial composting is really important. And for anybody interested in that designation, I recommend, I also interviewed Lauren Menard, who is the founder of Gob. I highly recommend checking that episode out if you want to learn more about the distinction between composting industrial composting that looks like. You've been in the news a bit lately, in a very good way. Namely, had some excellent coverage from Oprah. You mentioned Oprah earlier in the conversation, and I'd love to hear about how that came to be and what that's done now for both demand and visibility generally.
+
+Julia (39:33)
+I love when people really care about the seaweed story and last year and this year have been especially good press cycles for sway. We got that feature in Oprah Daily, which is so cool. And we're one step closer to achieving my dream of Oprah giving our bags away to like all of her favorite people. We were also a time best invention of 2025. We were featured on the cover. We were featured in a Netflix documentary that just came out called The Plastic Detox, which really illuminates the microplastics in our lives, but also the solutions that are on their way. We're in a documentary narrated by Forrest Whitaker called Seaweed Stories. So there's like a lot of increased mainstream attention going towards innovative materials and I think that's because people crave stories of hope and Seaweed is a really helpful story. It brings us a lot of increased demand, ⁓ but it also increases our sense of community. So when we're going into conversations about legislation or increased consumer awareness or on compost, we have a lot of allies who can support us in that story time. I think at a time when the world's on fire and people are just feeling like the good people aren't doing the good work, anytime that Sway gets a very public win, my hope is that it inspires other people to keep doing the good work and hopefully it serves as a reminder that small action taken within a startup or a large corporation adds up. And yeah, there's a lot of reasons to be hopeful. The change is coming. Just can't give
+
+Unit Economics (41:12)
+that topic, what are some other brands that you look to for inspiration that you think are doing the good work?
+
+Julia (41:20)
+One of my most regular sources of inspiration is the storytelling platform Imagine Five, who uplift and showcase environmentalists, activists, but also just companies that are doing good by the planet, who have embedded environmental stewardship into their business models. I'm really inspired by... all of the material innovation that's happening. We're part of a much larger movement of younger startups that have embedded goodness into their business model and are already available at scale. Material innovation companies that I really love and have been following on closely with include Shellworks, who uses microbes to create compostable bottles and tubes. There's a company called Woola that's based out of Estonia. They use waste wool to replace bubble wrap. So cool.
+
+Unit Economics (42:13)
+That's so cool, yeah.
+
+Julia (42:14)
+There's a company called Ponda based out of the UK that works with regenerative cattail fluff. So the cattails are growing, restoring the wetlands, and then they're harvesting the fluff and replacing the synthetic down in the jackets. There's a company here in the Bay Area called GaiaStar that uses local clay, 3D prints it into cups that replace disposable cups at cafes. so many inspiring innovators in this space that just give me so much hope. And I'm trying to think of large scale examples. I really love when large public figures are willing to put their names behind causes with intention. We were part of something called the Tom Ford Plastic Innovation Prize, which was organized by this amazing ocean nonprofit called Lonely Whale. But it was Tom Ford himself who actually backed the prize and put his very glamorous identity. together with all the organizers and it got so much attention as a result. And so when we won, we were this little startup, but Tom Ford says, see me, it's cool. And Tom Ford says, you should care. And then all of a sudden Leonardo DiCaprio is posting about us. And it was just kind of this ripple effect. That makes me really hopeful. think oftentimes when we see celebrities speaking to social or environmental causes, it feels like it might be empty. And this was a case where He really, Tom Ford, really poured resources towards seeing solutions for plastic actually come into the world. I didn't shout out Gob. Gob's my favorite. I love the whole, yeah, it's obvious, but I think that mycelium has so much potential in so many places and my favorite use for it so far is earplugs. So shout out to Gob. Gives me a lot of hope.
+
+Unit Economics (43:52)
+It goes without saying. Yeah. I completely agree. A huge shout out to Gob and a huge shout out to Lauren as What's something that you changed your mind about since starting Sway?
+
+Julia (44:06)
+Hahaha. I think I had a very purist view when I began the company and I've learned through deep partnership that it is much better to start from a place of imperfection and make more and more progress than to block yourself with perfection from the outset. I think I would have saved a lot of time actually if I'd had a less purist view from the beginning. And I think at a time when we're so polarized, sitting in the gray area or being willing to embrace nuance can get really hard. But it's now like my biggest skill set running this company is we know where our North Star is, we know we'll get to perfection, it will take time. But I would much rather work within reality and be imperfect on that trajectory. And yeah, I think that's been super empowering, but it's been a huge shift in mindset.
+
+Unit Economics (45:13)
+Yeah, that's a great answer. I think we have time for one more question. Where do you see sway three to five years from now?
+
+Julia (45:21)
+Ubiquity. Got to be in the corner bodega. It's, the bag that you get your groceries with. It's got to be, you know, every e-commerce order you make off at Amazon. I hope it comes, if it's got to come in a bag, I hope it comes in a slave bag. Sway is very much around being accessible to everyone. It's one of our biggest pillars. We don't think that this kind of innovation should be contained to the limited few. It should be for everyone. So ubiquity is the north star. And if ubiquity happens, it means... So many acres of habitat protected, biodiversity supported, water purity, carbon sequester, so many benefits are just baked into our scale and our success in addition to moving away from plastic. So ocean benefit, human benefit, soil benefit, all of
+
+Unit Economics (46:16)
+I have never been rooting harder for ubiquity, so I hope to see it happen. ⁓ Julia, thank you so much for the time. I learned so much, which as I mentioned before, we hopped on the call is always my goal. you want to share with listeners they can find Sway, please feel free to do so.
+
+Julia (46:19)
+Yeah. ⁓ swaythefuture.com. You can find us on all socials at Sway the Future, though we're most active on Instagram, and we love to build new friendships, so please come hang out with us. We'll be talking about seaweed, but also all kinds of other cool initiatives. Yeah, thank you.
+
+Unit Economics (46:49)
+Thank you so much.

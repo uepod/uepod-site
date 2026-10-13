@@ -1,0 +1,215 @@
+Unit Economics (00:29)
+and how they've managed to get their equipment onto vessels across the US with plans to be on roughly 25 by the end of the year.
+
+Unit Economics (00:36)
+We get into how they work with phishing partners, why the machines are deployed for free, and where they actually make money in the system. And lastly, we get into what it takes to run this business successfully, from buying a processing plant to working with distributors and restaurants. to getting into retailers like Wegmans and Arowan, and how all of that ties back to controlling quality from the moment the fish is caught. I truly cannot believe how much I learned during my conversation with SAFE, and I hope you enjoy it as much as I did.
+
+Unit Economics (01:07)
+Safe, thank you so much for taking the time to do this today. If you wouldn't mind just starting with a brief background on yourself, that would be great.
+
+Saif ("SAFE") (01:13)
+Sure, and first of all, Josh, thank you so much for having me. Very excited, big fan of yours. My name is Saif, I'm the founder and CEO of Shinke Systems, the technology company and CeremoniFish. The story of both starts way back when I was a kid. I grew up fishing with my dad, matching sailor tattoos with my granddad. I moved to the US when I was 18 for college and went to grad school right after. One of my early mornings there, there was this essay in the newspaper called If Fish Could Scream. It written by this vegan activist called Peter Singer. It was all about how because fish don't have vocal cords, they can express just the pain that they feel, and in turn we give them less empathy than we do to terrestrial animals like cows and chickens, right? And that idea, the kind of lack of empathy given... most fish that we eat today are flopping around on the deck. That sparked a little bit of curiosity in my mind and I went down on YouTube, rabbit hole and found the techniques we started with automating today, which is somewhat closer to a like kosher slaughter or halal slaughter for cows, but for fish. Which is a Japanese traditional technique that pierces the fish in the brain immediately, cuts the gills, makes fish last longer, tastes better. and so Shinkai builds robots that does that scale. Today we're now, you know, like a much larger company, we're working on multiple projects, and we built this idea that we call a ceremony grade, which we say is a new standard and philosophy for the very best fish. And so basically redesigning the seafood supply chain with a combination of like artisanal methodology and technology. at every single segment. So production, processing, packing, distribution, to ultimately have a better product at at least similar, if not eventually cheaper prices for consumers.
+
+Unit Economics (03:04)
+I'd to hear more about the hardware development in the earliest
+
+Saif ("SAFE") (03:08)
+Mm-hmm.
+
+Unit Economics (03:08)
+days. Did you have any hardware experience going into building this? And I'm curious what the first couple iterations of the product looked like and how long it took to actually go from prototype to device on ship.
+
+Saif ("SAFE") (03:21)
+Yeah. It took years is the overall summary. It started with literally a 3D printer or the nail stuck on the end of it and like plastic fish. And I had little to no training as a formal engineer. I took some prototyping classes. I was intending to get my grad degree in human computer interaction and long and short of it basically had to hire. an amazing team around me, including my co-founder, Reid, who was at SpaceX for about five years. you know, phenomenal technical mind. So we went through a couple of different phases. So the first one was small R &D prototyping, first with plastic fish, then with dead fish, and then eventually when we had mechanism designed well enough with live fish. We went through a couple of different types of technology from water jets ultrasound cutters, and eventually landed at a traditional mechanical system that does the technique today.
+
+Unit Economics (04:14)
+what did it look like to actually get the devices on ships? And for listeners who might not be aware of what the commercial fishing industry and model sort of looks like or looked like previously. If you could explain that as well, that would be great.
+
+Saif ("SAFE") (04:30)
+So before the ceremony, the model was very much a commodities agriculture model where it was a natural resource that was extracted by the fishermen catching fish. It was sold to commodities traders anywhere from at the dock to in distribution houses. And then there was a market clearing function that would sell that to chefs, to retailers. But there is no signifier of quality, no sense of grading outside of the size, which is stereotypical of commodities markets. So the way that we went into the market was rather than selling the technology, We knew that the initial process and then all the other processes we've now built around it improved shelf life, incredible amounts, improved the flavor and the texture, incredible amounts. And ultimately we're more sustainable and more unit economic efficient to trade. so, give this technology to fishermen today for free. structures and operating these, the machines are not super expensive to make relative to, especially with the amount of time and R &D it took to them. And then we operate as almost at market clearing function where we have the control of the fish, we sell that under our label, ceremony grade, and that's wholesale to restaurant distributors or directly to retailers and ultimately consumers. see that as signified by the ceremony grade mark.
+
+Unit Economics (05:58)
+Was there resistance in the market when you first went out to phishing operations or did people just sort of get it right away? And I'm curious too, how you went about finding the first contacts to even reach out to? Like what did it look like to even customers? I don't even know if you should call them customers, right? Because you're deploying the machines on the boats for free, right? So they're partners, yeah.
+
+Saif ("SAFE") (06:20)
+They're partners. Yeah. So to answer the question directly, there was friction on the market. And that's kind of where the thesis evolved. I knew that the value of what we did accrues further down the supply chain that you go. So retailers care more about shelf life than fishermen would. Chefs care more about flavor and texture than fishermen would. And so I'd rather have the transaction happen there and then take on a little bit more capital markets risk, especially in modern day and age where capital markets are a little more flexible, and then partner the fishermen to execute on that. so that was actually always the thesis. and I literally did this by hand. would drive up from Manhattan to Martha's Vineyard every day and back and pick up fish. delivered to restaurants myself the next day at the up at 1 a.m. scaling and gutting them and then dropping them off at restaurants at 5.30, 6. was intense, but it gave me the full spectrum of understanding. I even got to work for a couple of weeks as a deckhand to fully experience doing the technique by hand and seeing every little bit. And so... We decided not to do that route for mainly two reasons. The first one is it does require a lot of capital investment initially. then two, it's not something that at the pre-agency stage really resonated with investors because of the intimidation factor and there's just so much risk associated with it, right? This is a high reward, but a high risk model. Ultimately, we got convinced. to do what would look better to a traditional software investor, which was sell the technology on a recurring revenue or as a use per use case model. And we saw the value that we were accruing to each machine was literally a fraction of what we were, or what we are now able to extract. And so the, End game now is just continuing to do that model of going back to partnering with producers and selling the fish.
+
+Unit Economics (08:12)
+Are fishermen actually giving up anything in the process? is this truly upside? Where's the risk for the fishermen? Because it sounds a little too good to be true.
+
+Saif ("SAFE") (08:21)
+Well, it's too good to be true because they have really hard jobs. we, you know, it's almost like, I don't want to say like we were, you know, like the only hand that they could grab to pull themselves out the water. But, you know, there's deflating fish prices, inflationary cost of production with gas, repairs, labor costs, all that stuff, right? And so our opportunity was, you know, coming in with this type of model. where we do pay them the premium, that results in at least a 25 % improvement in net income. Sometimes it can be 50, 75, even more. And separately, then the risk is offload to them. They're caught in tropical storms. There's like 10, 20, sometimes even 30 foot swells, create like 30 miles an hour wind in the most extreme cases. there's many accounts of people flying off boats, boats even being sunk, people passing away. And in that context, for them to sit there and like hand spike, hand cut, hand scan every single fish and the volume of like 20, 25,000 pounds a week as an example is a very heavy ask. And so that's where we understood, okay, this needs to be very simple, very easy to understand, helps them get a better bottom line, but it's done in a way where their downside is protected and we take on more of the risk, but ultimately then because we're making the effort, we get more of the upside.
+
+Unit Economics (09:48)
+How many machines do you have in production today? If you're comfortable sharing that number.
+
+Saif ("SAFE") (09:54)
+Yeah, I can tell you that this year we're expecting to have about 25 vessels outfitted with our technology. And that'll be across the country. So, Alaska down to California, from Texas up to Boston. many different vessels, many different species, many different stereotypes.
+
+Unit Economics (10:09)
+What do you look for when finding a new partner? I'm curious to hear about what that sort of vetting process looks like. My understanding is you have quite a bit of inbound demand now. so I'm curious what the vetting process looks like, what you look for in a partner. And ultimately at this point, where you'd like to see things go and how many ships you'd like to be deployed on.
+
+Saif ("SAFE") (10:29)
+Great question. We have a long backlog. fishermen understand the model now that it's not high-risk model. It's a lot, you know, we've never had a fisherman say no. We have had fishermen say come back later. And the great thing about having done that is we can go and come back. Six months later, it a substantially better product with more credibility, deploying on much larger vessels, and so on and so on. And so the ball is starting to roll down the hill. Fishmen are asking for it. Fishmen are looking for alternatives. There's been a lot of consolidation in the industry. people want other angle where they can get a little bit more. They're not getting squeezed dry. There are some great amazing partners, even some large stock side buyers that we are working with, there are, as is there would be in any industry bad actors. And so when we then look to fishermen, we're also trying to assess if they're a part of the bad actor group. You know, are they a good person to work with? Are they going to hold true to the ceremony grade standard? Are they going to follow the handling protocol? Are they going to try and, you know, pull a fast one on us? All these things we're trying to assess as intangibles as part of it. Then on the quantitative side, how much fish are they pulling out of the water? Is the gear type appropriate enough for the volume that we need for the machine to have these break even? Is there a story to tell that's unique from the species? What's the end commercial standpoint? We have to figure out where we're going to sell the fish if it's a new species that we're going to be bringing on. So all those things are part and parcel of the initial scouting phase before we deploy the technology.
+
+Unit Economics (11:58)
+Yeah, that's a fascinating component. hadn't really considered what is the inventory forecasting look like for you? And when you think about trying to introduce a new species to market, what sort of feedback are you considering from restaurant partners, from retail partners? And how do you make a decision like that to actually go after a new species of fish?
+
+Saif ("SAFE") (12:20)
+Great question. So as a recap, we have two go-to-market motions. The first, as I mentioned, wholesale to distributors that would sell to like 50 restaurants in one metropolitan area. the other one is directly to a retailer, which would be like Arowan, which we have just launched with a couple of days ago. And so The fish are sold in two different ways. The first one is fresh, cyclones frozen. Within those they have their subcategories, different skews. It's almost like, I actually run the analogy to mining very often. I mentioned, you know, it's a natural resource. The cost that you're looking at is not really cost of production, it's cost of extraction. know, Mother Nature is replenishing all the time, but. the same way that ore has be refined down into something ready for consumption, whether that's a gold ingot or lithium for some electronics, fish have to be broken down, ready for consumers to eat. So that's taking the heads off, removing the guts, removing the scales, filleting it down, eventually even putting some sauce on it, cooking it, right? And so all those parts are transformation functions on the natural resource. So because of the way that the model is designed, it's not always predictable how often we can get certain types of fish, or whatever have you. But we can't predict it very far out. So for frozen fish, we even have a shelf life extension on that as well. And that can go from 10 months, 12 months, obviously depending on species, to 18 months, 24 months. very long extensions, right? And so in that context, have a lot of foresight and to be able to close on different customers. We can even get revolvers for working capital. So there's a lot of different flavors. For fresh, it's a little more complicated. That's more ad hoc. But over time, I imagine the fresh portion that we'd be doing of the sales will be a smaller percentage of the total volume as we anticipate most of the volume to be where it is today of being consumed further. Depending on the customer, they'll put the orders out two weeks in advance. We'll go catch the fish send it to the fresh or We'll have an inbound harvest. We'll talk to the distributors and let them know. Hey, we've caught five metric tons of fish with this one boat It's this species. This is the size distribution breakdown Do you want this size on that size? Whatever have you?
+
+Unit Economics (14:30)
+Can you also briefly explain for listeners what about this specific process enables longer shelf life and better tasting meat?
+
+Saif ("SAFE") (14:44)
+So when you walk into a mass market retailer, most of the fish that you buy, they're brought onto the deck of the boat and they're flopping around and they're suffocating. And then they basically go until they lose consciousness. That processes a huge incidence of stress on the fish and it makes them release cortisol, lactic acid, adrenaline, all these things, biochemical actors and enzymes that eventually trigger... decomposition, right? First, the meat's more acidic, the bacteria that are existing grow faster, the blood that's diffused in the meat will help it spread very quickly, and in turn, the fish goes bad. In contrast to that, we have a few different processes and technologies from picking less stressful gear types to ensure the fish don't get crushed, that they're brought on alive, to the harvest method, brain immediately, which stops the production the stress hormones, the muscles go limp. and then we cut the gills. And I mentioned the kosher and slaughter as an analogy to what we do because it was very similar if you think of in the Middle East, they did have refrigeration way back when. They'd remove the blood, make sure the cow was killed immediately, and that almost starved the bacteria out because the environment was less acidic and the blood was drained. So. After the harvest method, we then have specific pack methods, specific ways in which we teach the fishermen to handle the fish to drain the blood out quicker. And that in turn leads to a fish that is less acidic, has minimal blood inside, and it's cooled down very quickly. That... is the delta in the initial product that makes the shelf life extension eventually last that much longer, take a commodity black cod, five, six, seven days of real useful shelf life, our process is like 14 days, 16 days, sometimes even longer, especially if you want to cook it instead of consume it raw. Then there's the texture component, which is the fish is frozen, when it's frozen and it's died a stressful death, the muscles are tensed. and that water in the cells expands and tears the cell membrane, which when thawed, releases all this water weight that ultimately leads in bad texture fish. The flavor is better because you don't have any of the iron in the blood anymore. Some people say that the enzyme action will almost like ripen the fish in a way. know, I had this analogy of the same way that fruit has to ripen, meat has to ripen as well. And you don't want to consume too early, late. This really just extends and deepens that time. If you consider cows, I know we're jumping around here, but if you consider cows, there's grass-fed and grain-fed. Ultimately, the cows taste like what they eat. And so even a lot of the high-end Japanese cow production, they're fed grass most of their life, but at the end they're fed a lot of grain because that final taste is a flavor that you taste from the meat. In the same way, fish have, especially wild fish, have such varied diets of like krill and algae and crab and all that can come out in a much more impactful way when the fish is allowed to rest for longer and there's no blood tainting that taste. And so that's where you have that really magical ceremony grade taste, which is true for other people who do the Japanese method and also have all their process. but we know that our inspired process can draw some of benefits.
+
+Unit Economics (17:50)
+I'd like to shift gears slightly and talk about the ceremony brand now, because I think
+
+Saif ("SAFE") (17:55)
+Sure.
+
+Unit Economics (17:55)
+that's also a really fascinating part of the story. Was the idea, I want to make sure I understand this correctly, was the idea for the ceremony brand and the idea of a ceremony grade fish part of the thesis from the absolute onset or did that evolve over time?
+
+Saif ("SAFE") (18:11)
+The idea of a vertically integrated brand was part of the core thesis, how it came about in terms of the ceremony grade, dignifier, the role of starting with high end restaurants, getting into more volume retailers, and eventually the hope to be in big box club rosers. That all came a little bit later. We just started doing more in the industry, talking to all the different stakeholders, just keeping it open-minded.
+
+Unit Economics (18:42)
+what assumptions that you had in the earliest days around the vertical integration in that regard were challenged first or were there any noteworthy moments of some assumptions being made that were challenged that ultimately really shaped where you are today?
+
+Saif ("SAFE") (18:55)
+American fish are purely graded on size, not on quality, versus in EU, they're starting to develop methods. In Japan, obviously, there's so knowledge disseminated about what makes great fish. The challenge that I thought initially wasn't true, that I now know to be true, that... that was a blocker to people understanding quality, but a lot of stakeholders don't want things to change. They're comfortable. There's often stacked opacities from the lack of transparency in every different segment. And this was an industry that, 100 years ago, swashbuckling pirates doing God knows what out on the ocean. so a lot of that culture, while it's not called that, explicitly exists in remnants here and there today. And so. We don't see this all the time. A lot of people want to do what's cutting edge, what's new. They want to do better by the industry, but a lot of other people don't. understand or even want to understand how this could be different or that there is something like a ceremony grade option available. So we continue to face that as a challenge and we know now the tide's starting to turn. We're launching in these great retailers. We have many great launches outside of the Arowan, one We're excited to be in Arowan as one of the launch retailers because of the level of craftsmanship and quality that all the other products that they have in the store required to be a part of inventory.
+
+Unit Economics (20:20)
+really interested to hear about what it looked like to land your first wholesale contract and subsequently, let's say the first really notable restaurant that your fish is sold in because heard a quote from you that your fish is now sold in. almost every single Michelin recognized restaurant that serves fish, is absolutely astounding to me. Yeah. Pretty, pretty crazy.
+
+Saif ("SAFE") (20:45)
+Pretty crazy, right? So, yeah. we don't always have clarity. Frankly, most of the time don't have clarity into which restaurants are using it on a week to week basis. What we do know is that our restaurants we partner with through our distributors from a lot of the big names and you see them on our website. at least generally heard of the process and ceremony grid. I don't make assumptions, but. You know, our first distributor was actually someone who helped push me to start the company. Back in 2021, I was ringing distributors and different partners and stakeholder supply chain to learn about the process and if this is something worthwhile taking full time. And I called this guy, his name is Nobu in Yamasea food. They serve some of the best restaurants in the country, like Perse, LeBernadin, Atomics, and... Every single day for a week I called his office and no one wanted to give me time to date because I said, oh, I'm a college student and this and that. And eventually someone ratted me to him and he took the call, he answered it and I pitched him on the idea. I was like, hey, I have this process I want work on and curious what your take is. And I remember him saying very explicitly that that would change the industry. He was the first distributor to take a bet on us. He's continued to be a great partner with some amazing Mission Star restaurants in New and. We've used him as part of marketing and collaborating events and Separately, we got introduced through someone who... helped us with the core brand identity for a ceremony to Dan Barber at Blue House Stone Barns. And that was one of the very first shafts I pitched. Dan, unprompted by us after a fortune reached out, kind to say that our black cod was the platonic ideal of a black cod should be. That was really what gave me extra gassing on the fire. then, you know, if it's reaching someone like that, which is like one of the best restaurants in the world, know, Dan is a true artist and genius when it comes to food. know, Roast Seven has a great example. it was clear to me that we had something really special. was unclear to me is how deeply that specialness could penetrate. And so. that we've had someone like that really give us some credibility, it's been easy for our distributors to pass us along to all these different chefs, even through their normal sales channel. If the chefs don't want to try it out, they'll just sneak a sample in, and this is in the box on Xtra, and maybe we'll just walk into the door. I remember, know, in the very early days, I used to be walking into doors and giving boxes out, and claiming that I had a meeting with a chef.
+
+Unit Economics (23:14)
+So I recently ate at Cove in New York. Incredible experience. And I know that your fish is served there. I'm not sure if it was served there at the time. But I don't remember seeing it explicitly stated on the menu. And I've had this, not this exact conversation, but I've spoken about this topic with other guests the idea of getting a product explicitly labeled on a restaurant menu. And so I'm curious if you've had success in doing that, if that's something you're trying to do and how you go about that, if so, because I think about brands like Impossible that went out to restaurants as their their first distribution method. And that's where I was first introduced to Impossible as a brand, for example, was seeing it on a menu and then actually seeking out a restaurant to go try Impossible
+
+Saif ("SAFE") (24:03)
+Yeah.
+
+Unit Economics (24:03)
+burger. And so I'm curious if you think about that, that tactic at all and what that looks like for you.
+
+Saif ("SAFE") (24:08)
+Yeah, We want to do the brand building the right way, where it's authentic, it's organic, it's natural, and yes, we've had very explosive growth, but it's been because the product's great, not because we're forcing down anyone's throats or paying for revenue, things like that, So in that context, we have many, designations across the entire country, with Michelin star restaurants to retailers, whatever have you. At any of those points, we do not pay. We do not ask generally, know, like for anything formal. It's more like a side mention of, hey, Chef, we've had really great success with other partners who labeled our product as ceremony-grade, black cod, ceremony-grade, vermilion, rockfish, so on and so we'd appreciate if you did You know, it will help. really push your brand also as a signifier of we are at the cutting edge. But that's really the extent to which we push it. So when you do walk into a restaurant and they'll say our name, it's because the chef has chosen to, not because we've paid them to or something.
+
+Unit Economics (25:11)
+What does ceremony grade mean in practice? Can you break that down? Like what does that actually entail?
+
+Saif ("SAFE") (25:18)
+Yeah, great question. We have to take a look at the entire supply chain, which is production or extraction. There's processing, distribution, and then find the execution of the counter. And so in the production portion, it means stressless harvests or minimizing stress, which is our methods of capture are traps, which let the fish. metabolize lactic acid, cortisol, things like that that have been caught by sitting in these cages for about 12 to 24 hours before they're pulled out of the water. The other one that we use generally is longline, which is like a mile long line. The fish get caught, they're brought up. It's like an industrial version of hook and line. And those are about two of the three or four big industrial methods. We don't work with trawl fisheries today. The fish are pulled out alive. They're put into the machine directly. We have time limits to how long the fishermen can... put the fish into the machine and then they're processed and put into half-ice, half-boiled slurry where the heart, which is still pumping, will help push the blood out of the meat and... make it last longer. next steps from there is after about 20 to 30 minutes, depending on the species and the handling protocols, they're then put into ice totes brought to our processing plant now where we can pack the fish appropriately. We use Japanese inspired packaging in a similar way. And then ultimately you're products there straight through traditional 3PL. We don't always have control. in retail and we basically don't have control on the last month of the service, but we work with within every region, the top distributors generally. And that's helped maintain that quality because the distributors want to do right by the brand the same way that we're doing right by them. So all those steps, there's obviously more details and more numbers and. over time we actually expect it to get better with more technology and all that goes into ceremony grade.
+
+Unit Economics (27:04)
+If someone else were to try replicate or do something similar to what you're doing and label their product as ceremony grade as well, would you view that? you be defensive of the brand or would you welcome the sort of like ceremony grade label as a more ubiquitous term?
+
+Saif ("SAFE") (27:24)
+We're excited to be the new standard for the very best fish. We want there to be a analog to that for grass-fed and pasture-raised, and we believe that our process at the scale that we're going to operate will be the differential factor that will really finally that delineation of quality at the retail counter. That said, today we're operating as a fully vertically integrated company. We own the trademark, we the patents for the technology, whatever have All that is in the vein of really trying to make sure that when this type of produce is first introduced to the market, that is by quality that we can stand for. I'm not opposed to over the next year, two years, three years, even longer licensing it out, eventually giving it back to the public in that way of being able to democratize access. That's ultimately our mission, is democratizing access to artisanal seafood. But we want to make sure it's done the right way and where we have slow control over the different processes. Fishermen today do this process either by hand, you know, local or in Japan. You know, there's been some implementation of other practices at scale, but not really at the quality differential we're talking about. The hard thing is it's normally smaller hook and line fishermen. They do the same volume that we do in a day, in a month. And so it's very hard to compare and contrast that to what we're trying to do. We're not saying that our process is better than theirs at all. It's more a context of this is something that is available right now to most premium grocers and eventually to the masses. And... that accomplishes our mission. We're not trying to compete at that super luxury, know, one fisherman does a couple of restaurants scenario.
+
+Unit Economics (29:05)
+In that same vein, to me today to see a ceremony grade product, it invokes a sort of sense of luxury and a sort of sense of scarcity. And I think that's, I think
+
+Saif ("SAFE") (29:15)
+Mm.
+
+Unit Economics (29:15)
+that's a, a factor of where you are in your, in your company's life cycle, probably more than, more than anything. But I'm curious to hear about how you think about the pace at which you scale, not, not necessarily from a, resource standpoint but from from a brand standpoint, is that something you think about? Is that something you want to preserve or are you not thinking about that?
+
+Saif ("SAFE") (29:39)
+Our mission is to democratize, right? And democratize implies scale, affordability, and access. know, having the volume, having the right price point, having the distribution to be able to reach middle-income Americans. And we don't have all three of those today, especially the capacity we're talking about. But the end state is the one that you're talking about. That's what we're working towards. So then the question becomes, how does that become possible and all that The way that I delineate segments is really in three ways. It's the commodity or the baseline. It's the luxury and then right in between is premium. And over the past year and a half or so we've been selling fish. We have very much been at the luxury segment where people are paying for not only significantly better quality but also some associated prestige, some brand, some guarantee, maybe even some social recognition. Premium is different. Premium is paying for additional utility for dollar. So the total aggregate price is higher, but the utility per dollar is also higher. When we talk about the economic benefits of doing our process, it's not just... quality and taste and aesthetics, shelf life, is weight retention, all these things that ultimately impact the retailer bottom line. And so we're making a transition right now with the launch of some of these retailers to be able to show that that's real and run those yield improvements. Okay, great. We have four or five extra days, a week longer with our fish. What does that mean practically for us to be able to reduce our shrink? Right? It's not going to go down with zero. If it was going to be fish, we can't sell. if you can have it for a much longer time, it's probably going to get closer. And I think that final stage will really help us get the momentum into snowball, into building the infrastructure, and eventually hit baseline prices. And then that's when we hope to work with existing producers or do our own production to be able to pass that on to the middle American household.
+
+Unit Economics (31:41)
+The theme of vertical integration has come up a number of times in this
+
+Saif ("SAFE") (31:45)
+Yeah.
+
+Unit Economics (31:46)
+conversation recently opened a processing plant in Washington state, am Walk me through what that looked like and why you decided to do that. I'm curious what you saw in that part of the supply chain and that part of the stack that made you think
+
+Saif ("SAFE") (32:03)
+Mm.
+
+Unit Economics (32:03)
+we should actually own this part of the process.
+
+Saif ("SAFE") (32:07)
+In between the fisherman and the distributor or retailer, the only other third party was the processor outside of us. Every time we touch fish, we know we're affecting it in some way, and if it's not us touching the fish, it always will pose a risk. that company doesn't always have our best intentions in mind, we don't know what they're doing with it, and so on and so on. And so for the most part, we work with third parties and we'll continue to work with third parties. We've had good experience and there's only been a few bad actors that have come in and affected operations, but minimal exposure doesn't really impact most chefs at all. plan was really about control and prioritization So. When you're working with a third party, our fish are normally the last to get processed, the last to get shipped, last to be told. And so, if it's our own plant, it's the opposite. We're the first for all three. So we saw that opportunity as very much gap in ensuring that ceremony grade is upheld. And now, first setting up the operations over the next couple of months to eventually adding in new technologies to make the process even better. We actually hope to not only increase the volume, but also improve the quality for every unit pound that we sell. And especially, people assume that what is a good requires scarcity, right? And... I think this is very much counter thesis to that. it's underpinned by the fact that technology is inherently deflationary because it makes things more productive, which in turn, is the motion and the thesis behind which we're developing the company.
+
+Unit Economics (33:35)
+is the demand that's out there enough to hit full capacity? And hypothetically, in a scenario where you you hit full capacity, What would break first in the system and what would you need to go fix?
+
+Saif ("SAFE") (33:50)
+The scale at which we're talking about for the full plant there's a lot of economies of scale. And so with those economies of scale and the pricing, there'd be plenty of demand, especially for the value prop that we're talking about. The question then is, is it going to be the robot production, the robot reliability, or ultimately, fishermen demand? really, right now, we can't build robots fast enough. We're looking for great engineers. If there's a great engineer listening to this podcast, they should apply. They should reach out to me or to all the season starts, we'll have lot of underpinnings for getting to capacitization of the plant.
+
+Unit Economics (34:26)
+Do you think about integrating vertically even further done?
+
+Saif ("SAFE") (34:31)
+The model of wholesale to distributors allows us to have the largest spread of volume and the quickest ramp up. And we found that wild fishing is very stochastic. And so it's harder for us to really be predictable. We don't know all the great fishing spots, whatever have you. And so this model we may replicate in other geographies, but ultimately we're not expecting to. move past what we have now because we're as close to the production portion as we can and we've hit the real sweet spot for the commercial model.
+
+Unit Economics (35:05)
+On the topic of other geographies, my understanding is you are selling into some markets in Japan and Tokyo, is that correct?
+
+Saif ("SAFE") (35:12)
+Mm-hmm. That's correct,
+
+Unit Economics (35:15)
+What did it look like to crack into that market? Because I think it's notoriously a really difficult fish market to crack into as an outsider, if I'm not mistaken. What did that look like?
+
+Saif ("SAFE") (35:25)
+Something like 61 % of all American Black Hod landings go straight to Japan. It may go to other countries after that, but they go straight to Tokyo. yeah. So think of like Miso, Black Hod, or Rabi. But
+
+Unit Economics (35:31)
+wow. wow, did not know that. Okay, so I was wildly off. Okay. Yeah.
+
+Saif ("SAFE") (35:39)
+I want to set the expectation that it's all commodity frozen, know, flopping around on the deck. You know, maybe there's some improvement in like frozen at sea. We know a great vessel that we're partnering with that does a little bit higher end, J cuts that are frozen at sea. It's all great, but. For the most part, it's just basically your standard product where there's not much destination and quality. And the reason is because they're putting it in miso paste or letting it sit for a couple of days and then they're cooking it. And you can't taste anything because you just taste miso. So what we were able to take advantage of was the fact that there was some inbound to Tokyo. It was not through the luxury portion of the auction house, but it was going through to Tokyo. And we were presenting. customers that spanned the luxury, the premium, the commodity segment as well. And for them to be able to both understand the volume game and the high-end, high-quality game, it was very easy for us to step in, and one fresh importer who... ultimately had such a big rally cry around the product because it was so unique, so different, was Japanese inspired. And so we able to get it into the auction house, we able to, you know, in some cases when the fish has been particularly beautiful, charge multiples on the commodity price.
+
+Unit Economics (36:56)
+Are there other brands, that have sort of upended a legacy system, let's call it, that you look to for inspiration in what you're building at both Shinkei and with Ceremony?
+
+Saif ("SAFE") (37:09)
+yeah. There's a couple of ones that come to mind. I think... Oishi has done phenomenal job of taking a traditional luxury product and using technology from the vertical farm environment and robotics and automation to scale the cost down to produce as well as being able to produce it in different geography. And from something that would basically only be sold in Japan, it like $50 strawberries to can walk into Whole Foods and buy a pack of a couple bucks more than your Driscolls. It's a really phenomenal value prop. I only anticipate them doing better and better. Separately, Existing PR, notwithstanding, think Vital Farms and Horizon Milk done very similar motions, where they've taken something that is traditionally. blocked off from like, you know, because of price or scarcity of volume and used economies of scale, vertical integration to be able to produce something at a much cheaper price. past raised eggs were basically only at, you know, pre-Amazon Whole Foods, you know, and I'm sure it was like, I know, like eight, nine bucks for 12. Now you can find that in, you know, lot of the big Brocks grocery stores. you can walk into a stop and shop and you can buy grass-fed and finished product. Not that much more, you know? And so our hope. We see Ceremony as the company to do the same thing where you can buy grass-fed beef, you can buy pass-phrase chicken, all these box grocery stores, Why can't you buy Ceremony great fish too?
+
+Unit Economics (38:37)
+What's something you've changed your mind about since this journey began?
+
+Saif ("SAFE") (38:42)
+You know, I was very firm on the model of partnering with wild fishing boats being the only way in which we do things. And part of that was, you know, I wasn't convinced that you could replicate in a farm environment the quality of produce. And I think for certain species or certain volumes, that's not true. You have very high quality Let's take New Zealand King Salmon, an example, where that salmon can sometimes sell for 20, 22, 25 bucks a pound wholesale price. Some chefs are paying for the really high-end luxury stuff, like 200 bucks a pound. So it's phenomenal, the level of quality you can, but that comes from iteration cycles and optimizing genetics and improving the right inputs. We don't have short-term or even medium-term plans to partner with any farm, so it's not really the context of me bringing it up. As more, I did change my mind about that. And I respect a lot of what many farms are doing.
+
+Unit Economics (39:46)
+think we have time for one more question.
+
+Saif ("SAFE") (39:48)
+Sure.
+
+Unit Economics (39:48)
+Where do you see ceremony Anshin Kei three to five years from now?
+
+Saif ("SAFE") (39:53)
+the same way you have a grass-fed beef aisle or a pass-phrased chicken aisle, we want there to be at a big box or club store, a ceremony-grade fish aisle, you can walk into where you're paying if not the same, more than standard commodity fish. But now your fish lasts longer, tastes better, retains more of its weight, handles more humanely.
+
+Unit Economics (40:13)
+Safe, thank you so much for the time.
+
+Saif ("SAFE") (40:16)
+Thank you, Josh.
+
+Unit Economics (40:17)
+am so appreciative of you coming on the show. If you want to share with listeners where they can find ceremony, please feel free to do so.
+
+Saif ("SAFE") (40:24)
+For sure, you can find ceremony-grade fish in retailers and restaurants across the country, and even in other countries. Most notably, we're in Wegmans in New York City, we're in Arowan across the LA area, many other small retailers, FreshDirect, this is a tri-state area, Ceremony.com. S-E-R-E-M-O-N-I.com.
+
+Unit Economics (40:47)
+Thank you so much, Saif. This was awesome.
+
+Saif ("SAFE") (40:49)
+All right, thank you Josh. Cheers.

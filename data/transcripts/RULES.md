@@ -22,7 +22,9 @@ Remove show intros, sponsor or ad reads, outro sign-offs, and music cues. The tr
 
 Remove every place the guest or host asks to retake, redo, cut, remove, strike, go off the record, or keep something out of the episode. Remove the request and the passage it refers to, including a false start. Keep the final clean take.
 
-Search for retake, redo, start over, take that again, say that again, cut that, edit that out, remove that, scratch that, strike that, off the record, don't use that, don't include that, let me rephrase, from the top, and the same idea in other words. Then read the surrounding turns. A business sentence such as "we had to start over with the recipe" or "don't use as much salt" stays.
+Search for retake, redo, start over, take that again, say that again, cut that, edit that out, remove that, scratch that, strike that, off the record, off air, don't use that, don't include that, let me rephrase, from the top, and the same idea in other words. Then read the surrounding turns. A business sentence such as "we had to start over with the recipe" or "don't use as much salt" stays. So does rhetorical emphasis ("just to say that again") and ordinary wording such as "strike that balance" or "from the top down".
+
+An offer to edit something out, when the guest keeps the story, drops only the offer. A suggestion to take a story off air drops only that suggestion. "Off the record" followed by an aside drops the aside through "back on the record", or through the next clean question when the resume is unmarked. Production interruptions (a notification, "codes in post", a declined "I can do that again") drop the interruption and leave the interview.
 
 When the request does not make the span obvious, remove the larger span and mark it uncertain in `CHANGES.md`. The log records the episode, the approximate timestamp, and a short reason. It does not include the removed words.
 
