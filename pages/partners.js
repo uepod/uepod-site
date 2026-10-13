@@ -35,7 +35,13 @@ export default function PartnersPage() {
           <ul className="partners-list">
             {partners.map((partner) => (
               <li key={partner.id}>
-                <h2 className="partners-name episode-terms-label">{partner.name}</h2>
+                {partner.logo ? (
+                  <a className="partners-logo" href={partner.href}>
+                    <img src={partner.logo} alt={partner.name} width="409" height="182" />
+                  </a>
+                ) : (
+                  <h2 className="partners-name episode-terms-label">{partner.name}</h2>
+                )}
                 <p className="partners-copy">{partner.description}</p>
                 <p className="partners-copy">{partner.offer}</p>
                 <a className="partners-link" href={partner.href}>
