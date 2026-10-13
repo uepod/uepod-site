@@ -567,7 +567,8 @@ a {
   margin-top: 28px;
 }
 
-.episode-website {
+.episode-website,
+.partners-link {
   display: inline-block;
   margin-top: 10px;
   font-family: "Space Grotesk", sans-serif;
@@ -579,7 +580,8 @@ a {
   transition: color 0.2s, border-color 0.2s;
 }
 
-.episode-website:hover {
+.episode-website:hover,
+.partners-link:hover {
   color: #fff;
   border-bottom-color: rgba(255, 255, 255, 0.7);
 }
@@ -600,7 +602,8 @@ a {
   margin-top: 40px;
 }
 
-.episode-description p {
+.episode-description p,
+.partners-copy {
   font-family: "Space Grotesk", sans-serif;
   font-size: 15px;
   line-height: 1.75;
@@ -867,6 +870,12 @@ a {
   }
 }
 
+.footer-links {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
 .footer-glossary {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -902,7 +911,8 @@ a {
   margin-bottom: 14px;
 }
 
-.glossary-page h1 {
+.glossary-page h1,
+.partners-page h1 {
   font-family: "AkkuratLLWeb-Bold", sans-serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 400;
@@ -977,7 +987,8 @@ a {
   color: #fff;
 }
 
-.glossary-aliases {
+.glossary-aliases,
+.partners-disclosure {
   margin-top: 6px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -1042,6 +1053,57 @@ a {
   color: #fff;
 }
 
+.partners-page {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 48px 40px 80px;
+}
+
+.partners-intro {
+  margin-bottom: 40px;
+}
+
+.partners-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.partners-list li + li {
+  margin-top: 48px;
+}
+
+.partners-name {
+  display: block;
+  margin: 0 0 14px;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.55;
+}
+
+.partners-logo {
+  display: block;
+  width: fit-content;
+  margin: 0 0 14px;
+  line-height: 0;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.partners-logo img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.partners-link {
+  margin-top: 0;
+}
+
+.partners-disclosure {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .footer-bar {
     flex-direction: column;
@@ -1049,8 +1111,13 @@ a {
     gap: 10px;
   }
 
-  .glossary-page {
+  .glossary-page,
+  .partners-page {
     padding: 32px 20px 72px;
+  }
+
+  .partners-logo img {
+    height: 22px;
   }
 
   .glossary-letters {

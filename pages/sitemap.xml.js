@@ -27,6 +27,11 @@ function generateSiteMap(episodes) {
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>${SITE_URL}/partners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
   ];
 
   for (const episode of episodes) {

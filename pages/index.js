@@ -1633,9 +1633,14 @@ export default function Home({ episodes, posts }) {
             </div>
 
             <div className="footer-bar">
-              <a className="footer-glossary" href="/glossary">
-                Glossary
-              </a>
+              <div className="footer-links">
+                <a className="footer-glossary" href="/glossary">
+                  Glossary
+                </a>
+                <a className="footer-glossary" href="/partners">
+                  Partners
+                </a>
+              </div>
               <div
                 className="footer-copyright"
                 style={{
