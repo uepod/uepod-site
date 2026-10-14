@@ -8,6 +8,7 @@ import { categoryPath } from "../src/lib/categories";
 import { trackListenClick } from "../src/lib/listenTracking";
 import { SHOW_URLS, podcastSeriesJsonLdScript } from "../src/lib/site";
 import { spaceGrotesk } from "../src/fonts";
+import TopLink from "../src/components/TopLink";
 
 const aboutBodyFont = `${spaceGrotesk.style.fontFamily.split(",")[0].trim()}, "Space Grotesk About Fallback", sans-serif`;
 
@@ -902,6 +903,7 @@ export default function Home({ episodes, posts }) {
         {/* ===== CONTENT ===== */}
         <div
           ref={contentRef}
+          className="home-scroll"
           style={{
             flex: 1,
             overflow: "auto",
@@ -1269,6 +1271,7 @@ export default function Home({ episodes, posts }) {
                   No episodes found. Try a different search or category.
                 </div>
               )}
+              <TopLink />
             </div>
           )}
 
@@ -1320,7 +1323,7 @@ export default function Home({ episodes, posts }) {
                     minWidth: 0,
                   }}
                 >
-                  A weekly newsletter on what I'm learning — from the
+                  A newsletter on what I'm learning — from the
                   founders I interview, and from building the show itself.
                 </div>
 
