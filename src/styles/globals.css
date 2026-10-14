@@ -861,10 +861,11 @@ a {
   position: relative;
 }
 
-/* Sit left of the episode date/duration column (content pad 40px +
-   ~84px date col) with ~1.25rem breathing room. Glossary keeps 40px. */
+/* Left edge lines up with the footer Follow icons (left edge 274px from the
+   right at desktop), leaving ~110px before the episode date column.
+   Glossary keeps 40px. */
 .home-episodes-shell .glossary-top-slot {
-  padding-right: calc(40px + 84px + 1.25rem);
+  padding-right: 234px;
 }
 
 .glossary-top-slot {
