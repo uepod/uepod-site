@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
 
+// Only use the container if it actually scrolls; the homepage's .home-scroll
+// grows to its content, so the window does the scrolling there.
 function getScroller() {
-  return document.querySelector(".site-scroll, .home-scroll");
+  const el = document.querySelector(".site-scroll, .home-scroll");
+  return el && el.scrollHeight > el.clientHeight + 1 ? el : null;
 }
 
 export default function TopLink() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const scroller = getScroller();
-    const target = scroller || window;
+    const container = document.querySelector(".site-scroll, .home-scroll");
     const update = () => {
+      const scroller = getScroller();
       const phone = window.matchMedia("(max-width: 768px)").matches;
       const top = scroller ? scroller.scrollTop : window.scrollY;
       const height = scroller ? scroller.clientHeight : window.innerHeight;
       setVisible(!phone && top >= height * 1.5);
     };
     update();
-    target.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("scroll", update, { passive: true });
+    if (container) container.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
     return () => {
-      target.removeEventListener("scroll", update);
+      window.removeEventListener("scroll", update);
+      if (container) container.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
     };
   }, []);
