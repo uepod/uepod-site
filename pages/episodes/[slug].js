@@ -152,7 +152,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
           style={{
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
             paddingTop: "4px",
             letterSpacing: "0.05em",
           }}
@@ -207,7 +207,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: "15px",
-                color: "rgba(255,255,255,0.65)",
+                color: "rgba(255,255,255,0.75)",
                 fontWeight: 400,
                 lineHeight: 1.35,
               }}
@@ -229,7 +229,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
               marginTop: "10px",
               fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "11px",
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(255,255,255,0.6)",
             }}
           >
             {episode.date ? <span>{episode.date}</span> : null}
@@ -242,7 +242,7 @@ function RelatedRow({ episode, fromPath, fromName }) {
           style={{
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
             textAlign: "right",
             whiteSpace: "nowrap",
             paddingTop: "4px",
@@ -340,7 +340,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                 style={{
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontSize: "18px",
-                  color: "rgba(255,255,255,0.65)",
+                  color: "rgba(255,255,255,0.75)",
                   marginTop: "10px",
                   fontWeight: 400,
                 }}
@@ -386,7 +386,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                   marginTop: "16px",
                   fontFamily: "var(--font-jetbrains-mono), monospace",
                   fontSize: "12px",
-                  color: "rgba(255,255,255,0.5)",
+                  color: "rgba(255,255,255,0.6)",
                   letterSpacing: "0.04em",
                 }}
               >

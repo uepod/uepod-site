@@ -30,7 +30,7 @@ export default function NotFound() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: "15px",
               lineHeight: 1.75,
-              color: "rgba(255,255,255,0.65)",
+              color: "rgba(255,255,255,0.75)",
               marginBottom: "28px",
             }}
           >

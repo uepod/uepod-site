@@ -166,7 +166,7 @@ function HoverLink({
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        color: hovered ? hoverColor : "rgba(255,255,255,0.5)",
+        color: hovered ? hoverColor : "rgba(255,255,255,0.6)",
         transition: "color 0.2s",
         textDecoration: "none",
         lineHeight: 0,
@@ -206,7 +206,7 @@ function EpisodeCard({ ep, index }) {
         style={{
           fontFamily: "var(--font-jetbrains-mono), monospace",
           fontSize: "12px",
-          color: "rgba(255,255,255,0.5)",
+          color: "rgba(255,255,255,0.6)",
           paddingTop: "4px",
           letterSpacing: "0.05em",
         }}
@@ -266,7 +266,7 @@ function EpisodeCard({ ep, index }) {
           style={{
             fontFamily: "var(--font-space-grotesk), sans-serif",
             fontSize: "15px",
-            color: "rgba(255,255,255,0.65)",
+            color: "rgba(255,255,255,0.75)",
             marginBottom: "10px",
             fontWeight: 400,
           }}
@@ -278,7 +278,7 @@ function EpisodeCard({ ep, index }) {
           style={{
             fontFamily: "var(--font-space-grotesk), sans-serif",
             fontSize: "14px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
             lineHeight: 1.6,
             maxWidth: "640px",
           }}
@@ -295,7 +295,7 @@ function EpisodeCard({ ep, index }) {
             marginTop: "10px",
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "11px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
           }}
         >
           <span>{ep.date}</span>
@@ -361,7 +361,7 @@ function EpisodeCard({ ep, index }) {
         style={{
           fontFamily: "var(--font-jetbrains-mono), monospace",
           fontSize: "12px",
-          color: "rgba(255,255,255,0.5)",
+          color: "rgba(255,255,255,0.6)",
           textAlign: "right",
           whiteSpace: "nowrap",
           paddingTop: "4px",
@@ -414,7 +414,7 @@ function PostCard({ post, index, total }) {
           style={{
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
             paddingTop: "4px",
             letterSpacing: "0.05em",
           }}
@@ -444,7 +444,7 @@ function PostCard({ post, index, total }) {
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: "14px",
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(255,255,255,0.6)",
                 lineHeight: 1.6,
                 maxWidth: "640px",
               }}
@@ -462,7 +462,7 @@ function PostCard({ post, index, total }) {
               marginTop: "10px",
               fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "11px",
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(255,255,255,0.6)",
             }}
           >
             <span>{post.date}</span>
@@ -476,7 +476,7 @@ function PostCard({ post, index, total }) {
           style={{
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: "12px",
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(255,255,255,0.6)",
             textAlign: "right",
             whiteSpace: "nowrap",
             paddingTop: "4px",
@@ -506,7 +506,7 @@ function NavButton({ label, active, onClick }) {
           ? "#fff"
           : hovered
             ? "rgba(255,255,255,0.9)"
-            : "rgba(255,255,255,0.65)",
+            : "rgba(255,255,255,0.75)",
         fontFamily: "var(--font-jetbrains-mono), monospace",
         fontSize: "12px",
         fontWeight: 400,
@@ -516,7 +516,7 @@ function NavButton({ label, active, onClick }) {
         transition: "color 0.2s",
         padding: "4px 0",
         borderBottom: active
-          ? "1px solid rgba(255,255,255,0.5)"
+          ? "1px solid rgba(255,255,255,0.6)"
           : "1px solid transparent",
       }}
     >
@@ -1059,7 +1059,7 @@ export default function Home({ episodes, posts }) {
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       color:
-                        "rgba(255,255,255,0.5)",
+                        "rgba(255,255,255,0.6)",
                     }}
                   >
                     Latest Episodes
@@ -1154,7 +1154,7 @@ export default function Home({ episodes, posts }) {
                       transform:
                         "translateY(-50%)",
                       color:
-                        "rgba(255,255,255,0.5)",
+                        "rgba(255,255,255,0.6)",
                       lineHeight: 0,
                       pointerEvents: "none",
                     }}
@@ -1234,7 +1234,7 @@ export default function Home({ episodes, posts }) {
                     "var(--font-jetbrains-mono), monospace",
                   fontSize: "12px",
                   color:
-                    "rgba(255,255,255,0.5)",
+                    "rgba(255,255,255,0.6)",
                   marginBottom: "16px",
                 }}
               >
@@ -1262,7 +1262,7 @@ export default function Home({ episodes, posts }) {
                       "var(--font-space-grotesk), sans-serif",
                     fontSize: "15px",
                     color:
-                      "rgba(255,255,255,0.5)",
+                      "rgba(255,255,255,0.6)",
                     padding: "40px 0",
                   }}
                 >
@@ -1315,7 +1315,7 @@ export default function Home({ episodes, posts }) {
                     fontSize: "15px",
                     lineHeight: 1.75,
                     color:
-                      "rgba(255,255,255,0.65)",
+                      "rgba(255,255,255,0.75)",
                     flex: "1 1 520px",
                     minWidth: 0,
                   }}
@@ -1350,7 +1350,7 @@ export default function Home({ episodes, posts }) {
                       "var(--font-jetbrains-mono), monospace",
                     fontSize: "12px",
                     color:
-                      "rgba(255,255,255,0.5)",
+                      "rgba(255,255,255,0.6)",
                     marginBottom: "16px",
                   }}
                 >
@@ -1377,7 +1377,7 @@ export default function Home({ episodes, posts }) {
                       "var(--font-space-grotesk), sans-serif",
                     fontSize: "15px",
                     color:
-                      "rgba(255,255,255,0.5)",
+                      "rgba(255,255,255,0.6)",
                     padding: "40px 0",
                   }}
                 >
@@ -1466,7 +1466,7 @@ export default function Home({ episodes, posts }) {
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
-                        "rgba(255,255,255,0.65)",
+                        "rgba(255,255,255,0.75)",
                       marginBottom: "40px",
                     }}
                   >
@@ -1484,7 +1484,7 @@ export default function Home({ episodes, posts }) {
                       fontSize: "15px",
                       lineHeight: 1.75,
                       color:
-                        "rgba(255,255,255,0.65)",
+                        "rgba(255,255,255,0.75)",
                     }}
                   >
                     New episodes every week. Available on Spotify, Apple
@@ -1664,7 +1664,7 @@ export default function Home({ episodes, posts }) {
                     "var(--font-jetbrains-mono), monospace",
                   fontSize: "11px",
                   color:
-                    "rgba(255,255,255,0.5)",
+                    "rgba(255,255,255,0.6)",
                   letterSpacing: "0.04em",
                   textAlign: "right",
                 }}
@@ -1702,7 +1702,7 @@ function FilterButton({ label, active, onClick }) {
           ? "#000"
           : hovered
             ? "rgba(255,255,255,0.6)"
-            : "rgba(255,255,255,0.65)",
+            : "rgba(255,255,255,0.75)",
         border: active
           ? "1px solid #fff"
           : "1px solid rgba(255,255,255,0.12)",
