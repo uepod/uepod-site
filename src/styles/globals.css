@@ -101,7 +101,7 @@ a {
   padding: 6px 10px;
   background: #000;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.04em;
@@ -168,7 +168,7 @@ a {
 .mobile-menu button {
   background: none;
   border: none;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.7);
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 18px;
   font-weight: 400;
@@ -331,14 +331,14 @@ a {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .episode-kicker .episode-category {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 11px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   text-decoration: none;
@@ -350,7 +350,7 @@ a {
 }
 
 .category-label {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
@@ -390,7 +390,7 @@ a {
 
 .episode-topics a,
 .episode-topics-sep {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
@@ -403,7 +403,7 @@ a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 13px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .episode-terms-label {
@@ -412,12 +412,12 @@ a {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .episode-terms a,
 .episode-terms-sep {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
 
@@ -468,7 +468,7 @@ a {
   margin-bottom: 5px;
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.05em;
 }
 
@@ -504,7 +504,7 @@ a {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .listing-card .listing-clamp {
@@ -534,7 +534,7 @@ a {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   line-height: 1.3;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
   white-space: nowrap;
 }
 
@@ -580,7 +580,7 @@ a {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -603,9 +603,9 @@ a {
   margin-top: 10px;
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 1px;
   transition: color 0.2s, border-color 0.2s;
 }
@@ -637,7 +637,7 @@ a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 16px;
 }
 
@@ -654,7 +654,7 @@ a {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 14px;
 }
 
@@ -667,7 +667,7 @@ a {
 
 .listen-tab {
   background: transparent;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 6px 14px;
   font-family: var(--font-space-grotesk), sans-serif;
@@ -686,7 +686,7 @@ a {
 
 .listen-tab:hover:not([aria-selected="true"]) {
   background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .listen-frame {
@@ -730,7 +730,7 @@ a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -877,7 +877,7 @@ a {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   background: transparent;
   opacity: 0;
@@ -911,7 +911,7 @@ a {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -934,7 +934,7 @@ a {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .glossary-kicker {
@@ -958,7 +958,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .glossary-letters {
@@ -984,7 +984,7 @@ a {
 }
 
 .glossary-letters a {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .glossary-letters a:hover {
@@ -992,7 +992,7 @@ a {
 }
 
 .glossary-letters span {
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .glossary-group {
@@ -1023,7 +1023,7 @@ a {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .glossary-definition {
@@ -1032,7 +1032,7 @@ a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .glossary-related {
@@ -1049,13 +1049,13 @@ a {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .glossary-related a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
 }
 
@@ -1075,7 +1075,7 @@ a {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
 
