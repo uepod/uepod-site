@@ -71,7 +71,7 @@ function NavAnchor({ href, children }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        color: hovered ? "rgba(255,255,255,0.75)" : "rgba(255,255,255,0.4)",
+        color: hovered ? "rgba(255,255,255,0.75)" : "rgba(255,255,255,0.6)",
         fontFamily: "var(--font-jetbrains-mono), monospace",
         fontSize: "12px",
         fontWeight: 400,
@@ -97,7 +97,7 @@ function HoverLink({ href, hoverColor, children, onClick }) {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        color: hovered ? hoverColor : "rgba(255,255,255,0.3)",
+        color: hovered ? hoverColor : "rgba(255,255,255,0.6)",
         transition: "color 0.2s",
         textDecoration: "none",
         lineHeight: 0,
@@ -201,7 +201,7 @@ export default function SiteChrome({ children }) {
             href={href}
             onClick={() => setMenuOpen(false)}
             style={{
-              color: "rgba(255,255,255,0.6)",
+              color: "rgba(255,255,255,0.75)",
               fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: "18px",
               fontWeight: 400,
@@ -278,7 +278,7 @@ export default function SiteChrome({ children }) {
               style={{
                 fontFamily: "var(--font-jetbrains-mono), monospace",
                 fontSize: "11px",
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(255,255,255,0.6)",
                 letterSpacing: "0.04em",
                 textAlign: "right",
               }}
