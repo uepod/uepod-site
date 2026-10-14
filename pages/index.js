@@ -780,7 +780,9 @@ export default function Home({ episodes, posts }) {
           color: "#fff",
           minHeight: "100vh",
           fontFamily: "var(--font-space-grotesk), sans-serif",
-          overflow: "hidden",
+          // clip, not hidden: hidden makes this a scroll container, which
+          // would trap the sticky Top link.
+          overflow: "clip",
           display: "flex",
           flexDirection: "column",
         }}
@@ -906,7 +908,9 @@ export default function Home({ episodes, posts }) {
           className="home-scroll"
           style={{
             flex: 1,
-            overflow: "auto",
+            // clip (not auto/hidden) so it is not a scroll container and
+            // the Top link can stick to the window.
+            overflow: "clip",
             scrollBehavior: "smooth",
           }}
         >
@@ -1107,6 +1111,7 @@ export default function Home({ episodes, posts }) {
 
           {/* ===== EPISODES ===== */}
           {section === "episodes" && (
+            <div className="home-episodes-shell">
             <div
               className="content-section"
               style={{
@@ -1271,6 +1276,7 @@ export default function Home({ episodes, posts }) {
                   No episodes found. Try a different search or category.
                 </div>
               )}
+            </div>
               <TopLink />
             </div>
           )}

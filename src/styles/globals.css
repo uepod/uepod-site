@@ -857,6 +857,10 @@ a {
   position: relative;
 }
 
+.home-episodes-shell {
+  position: relative;
+}
+
 .glossary-top-slot {
   position: sticky;
   bottom: 24px;
