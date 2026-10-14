@@ -911,6 +911,14 @@ a {
   }
 }
 
+/* Homepage only: hide when the window is too narrow for the Top link to keep
+   at least as much room on its left (episode text) as on its right (dates). */
+@media (max-width: 1249px) {
+  .home-episodes-shell .glossary-top-slot {
+    display: none;
+  }
+}
+
 .footer-links {
   display: flex;
   align-items: baseline;
