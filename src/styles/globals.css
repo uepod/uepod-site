@@ -861,6 +861,12 @@ a {
   position: relative;
 }
 
+/* Sit left of the episode date/duration column (content pad 40px +
+   ~84px date col) with ~1.25rem breathing room. Glossary keeps 40px. */
+.home-episodes-shell .glossary-top-slot {
+  padding-right: calc(40px + 84px + 1.25rem);
+}
+
 .glossary-top-slot {
   position: sticky;
   bottom: 24px;
