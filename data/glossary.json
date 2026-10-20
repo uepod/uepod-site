@@ -126,6 +126,14 @@
     ]
   },
   {
+    "term": "AOV (average order value)",
+    "aliases": [],
+    "definition": "AOV (average order value) is the average amount a customer spends each time they place an order. A store that brings in $10,000 from 200 orders has an AOV of $50.",
+    "category": "finance",
+    "related": [],
+    "episodes": []
+  },
+  {
     "term": "B2B (business-to-business)",
     "aliases": [],
     "definition": "B2B (business-to-business) means selling to other businesses rather than to individual consumers.",
@@ -1042,7 +1050,7 @@
     "aliases": [
       "diligence"
     ],
-    "definition": "The research an investor or buyer does on a company before investing in it or buying it.",
+    "definition": "The research a buyer, investor, or retailer does before committing to a deal, such as checking a company's finances, contracts, and claims.",
     "category": "finance",
     "related": [
       "Exit",
@@ -1675,7 +1683,7 @@
     "aliases": [
       "pre-seed round"
     ],
-    "definition": "The earliest formal round of outside money, often used to build a first product or test an idea.",
+    "definition": "The earliest round of outside money a company raises, often before it has much revenue, to build a first product or test the idea. It usually comes before a seed round.",
     "category": "fundraising",
     "related": [
       "Seed round",
@@ -1709,7 +1717,7 @@
     "aliases": [
       "store brand"
     ],
-    "definition": "Products made by one company and sold under another company's brand name, such as a store's own brand.",
+    "definition": "Products sold under a store's own name, like Kirkland at Costco or 365 at Whole Foods, often made for the store by an outside manufacturer.",
     "category": "CPG/retail",
     "related": [
       "Co-packer (co-man)"
