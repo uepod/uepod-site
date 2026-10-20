@@ -123,10 +123,10 @@ test("related names link to glossary anchors and empty aliases stay off the term
 test("committed glossary has a term, definition, and episode links", () => {
   const file = path.join(__dirname, "../data/glossary.json");
   const data = JSON.parse(fs.readFileSync(file, "utf8"));
-  assert.equal(data.length, 61);
+  assert.equal(data.length, 62);
 
   const prepared = prepareGlossary(expandGlossary(data, []));
-  assert.equal(prepared.terms.length, 61);
+  assert.equal(prepared.terms.length, 62);
   assert.deepEqual(
     prepared.letters,
     prepared.groups.map((group) => group.letter)
@@ -136,7 +136,7 @@ test("committed glossary has a term, definition, and episode links", () => {
     assert.ok(term.term);
     assert.ok(term.definition);
     assert.equal(term.episode_count, term.episodes.length);
-    assert.ok(term.episodes.length >= 1 && term.episodes.length <= 3);
+    assert.ok(term.episodes.length <= 3);
     assert.ok(Array.isArray(term.aliases));
     assert.ok(Array.isArray(term.related));
     for (const item of term.related) {
@@ -148,6 +148,31 @@ test("committed glossary has a term, definition, and episode links", () => {
       assert.match(heardInLabel(episode), /^E\. \d+/);
     }
   }
+  const byName = new Map(prepared.terms.map((term) => [term.term, term]));
+  const names = prepared.terms.map((term) => term.term);
+  const aovIndex = names.indexOf("AOV (average order value)");
+  assert.equal(names[aovIndex - 1], "Angel investor");
+  assert.equal(names[aovIndex + 1], "B2B (business-to-business)");
+  assert.equal(
+    byName.get("AOV (average order value)").definition,
+    "AOV (average order value) is the average amount a customer spends each time they place an order. A store that brings in $10,000 from 200 orders has an AOV of $50."
+  );
+  assert.deepEqual(byName.get("AOV (average order value)").aliases, []);
+  assert.deepEqual(byName.get("AOV (average order value)").episodes, []);
+  assert.equal(
+    byName.get("Due diligence").definition,
+    "The research a buyer, investor, or retailer does before committing to a deal, such as checking a company's finances, contracts, and claims."
+  );
+  assert.equal(
+    byName.get("Pre-seed").definition,
+    "The earliest round of outside money a company raises, often before it has much revenue, to build a first product or test the idea. It usually comes before a seed round."
+  );
+  assert.equal(
+    byName.get("Private label").definition,
+    "Products sold under a store's own name, like Kirkland at Costco or 365 at Whole Foods, often made for the store by an outside manufacturer."
+  );
+  assert.deepEqual(byName.get("Private label").aliases, ["store brand"]);
+
   const ld = glossaryJsonLd(prepared.terms);
   assert.equal(ld["@type"], "DefinedTermSet");
   assert.equal(ld.hasDefinedTerm.length, prepared.terms.length);
