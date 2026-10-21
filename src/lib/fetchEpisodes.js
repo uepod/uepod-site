@@ -4,6 +4,7 @@ const path = require("path");
 const Parser = require("rss-parser");
 const episodeOverrides = require("./episodeOverrides");
 const { fetchSheetData } = require("./fetchSheetData");
+const { stripSponsorBlocks, stripSponsorText } = require("./sponsorRead");
 const {
   parseTakeaways,
   resolveEpisodeImage,
@@ -166,16 +167,16 @@ function toPublicEpisode(episode) {
 function sheetOnlyEpisode(slug, row) {
   const guest = row.guest || "";
   const linkedin = linkedinProfileUrl(row.linkedin);
-  const descriptionBlocks = row.desc
-    ? linkGuestName([[{ text: row.desc }]], guest, linkedin)
-    : [];
+  const descriptionBlocks = stripSponsorBlocks(
+    row.desc ? linkGuestName([[{ text: row.desc }]], guest, linkedin) : []
+  );
   return {
     id: null,
     title: row.title || row.brand || slug,
     slug,
     brand: row.brand || row.title || slug,
     guest,
-    desc: row.desc || "",
+    desc: stripSponsorText(row.desc || ""),
     category: row.category || "",
     duration: "",
     durationIso: null,
@@ -296,7 +297,9 @@ async function actuallyLoad() {
       const rawBlocks = htmlToBlocks(item.content || item.contentSnippet || "");
       const linkedin =
         linkedinProfileUrl(override?.linkedin) || linkedinFromBlocks(rawBlocks);
-      const descriptionBlocks = linkGuestName(rawBlocks, guest, linkedin);
+      const descriptionBlocks = stripSponsorBlocks(
+        linkGuestName(rawBlocks, guest, linkedin)
+      );
 
       return {
         id: feed.items.length - index,
@@ -304,9 +307,10 @@ async function actuallyLoad() {
         slug,
         brand: override?.brand || rssBrand,
         guest,
-        desc:
+        desc: stripSponsorText(
           override?.desc ||
-          truncateDesc(item.contentSnippet || item.content || ""),
+            truncateDesc(item.contentSnippet || item.content || "")
+        ),
         category: override?.category || "Uncategorized",
         duration: formatDuration(rawDuration),
         durationIso: toIsoDuration(rawDuration),

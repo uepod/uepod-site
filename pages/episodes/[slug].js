@@ -22,7 +22,9 @@ import { shortTermName, termsForEpisode } from "../../src/lib/glossary";
 import { categoryPath } from "../../src/lib/categories";
 import { withFrom } from "../../src/lib/fromLink";
 import BackLink from "../../src/components/BackLink";
+import SponsorRead from "../../src/components/SponsorRead";
 import { trackListenClick } from "../../src/lib/listenTracking";
+import { descriptionBlocksForPage } from "../../src/lib/sponsorRead";
 
 const REVALIDATE_SECONDS = 900;
 
@@ -264,13 +266,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
   const canonical = canonicalUrl(episode.slug);
   const image = shareImage(episode);
   const alt = artworkAlt(episode);
-  const blocks = episode.descriptionBlocks?.length
-    ? episode.descriptionBlocks
-    : episode.descriptionParagraphs?.length
-      ? episode.descriptionParagraphs.map((paragraph) => [{ text: paragraph }])
-      : episode.desc
-        ? [[{ text: episode.desc }]]
-        : [];
+  const blocks = descriptionBlocksForPage(episode);
   const websiteHref = normalizeWebsite(episode.website);
   const siteLabel = websiteLabel(episode.website);
   const episodeNumber = formatEpisodeNumber(episode.id);
@@ -423,30 +419,29 @@ export default function EpisodePage({ episode, related, terms = [] }) {
 
           <ListenSection episode={episode} />
 
-          {blocks.length ? (
-            <div className="episode-description">
-              <h2>About</h2>
-              {blocks.map((parts, index) => (
-                <p key={index}>
-                  {parts.map((part, partIndex) =>
-                    part.href ? (
-                      <a
-                        key={partIndex}
-                        className="episode-guest-link"
-                        href={part.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {part.text}
-                      </a>
-                    ) : (
-                      <span key={partIndex}>{part.text}</span>
-                    )
-                  )}
-                </p>
-              ))}
-            </div>
-          ) : null}
+          <div className="episode-description">
+            <h2>About</h2>
+            {blocks.map((parts, index) => (
+              <p key={index}>
+                {parts.map((part, partIndex) =>
+                  part.href ? (
+                    <a
+                      key={partIndex}
+                      className="episode-guest-link"
+                      href={part.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {part.text}
+                    </a>
+                  ) : (
+                    <span key={partIndex}>{part.text}</span>
+                  )
+                )}
+              </p>
+            ))}
+            <SponsorRead />
+          </div>
 
           {episode.takeaways?.length ? (
             <section className="episode-takeaways">
