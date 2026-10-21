@@ -15,6 +15,7 @@ const {
   linkedinFromBlocks,
   linkGuestName,
   toIsoDuration,
+  assignEpisodeNumbers,
 } = require("./episodePage");
 
 const { RSS_URL, SHOW_URLS } = require("./site");
@@ -302,7 +303,7 @@ async function actuallyLoad() {
       );
 
       return {
-        id: feed.items.length - index,
+        id: null,
         title: item.title || "",
         slug,
         brand: override?.brand || rssBrand,
@@ -345,7 +346,12 @@ async function actuallyLoad() {
     .filter(([slug]) => slug && !seen.has(slug))
     .map(([slug, row]) => sheetOnlyEpisode(slug, row));
 
-  return published.concat(drafts);
+  const episodes = published.concat(drafts);
+  const numbers = assignEpisodeNumbers(episodes, Object.keys(sheetData));
+  for (const episode of episodes) {
+    if (numbers.has(episode.slug)) episode.id = numbers.get(episode.slug);
+  }
+  return episodes;
 }
 
 async function loadDetailed() {

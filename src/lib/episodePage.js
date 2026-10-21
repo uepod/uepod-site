@@ -243,6 +243,64 @@ function formatEpisodeNumber(id) {
   return `E. ${n}`;
 }
 
+function episodeTimestamp(value) {
+  const time = Date.parse(value || "");
+  return Number.isFinite(time) ? time : null;
+}
+
+/**
+ * Oldest episode is 1.
+ * Sheet order (newest first) is the show's order, including an episode the
+ * RSS no longer carries. An RSS episode that has no sheet row yet is placed
+ * by publish date, so a new episode gets the next number without renumbering
+ * the episodes already in the sheet.
+ */
+function assignEpisodeNumbers(episodes, sheetSlugsNewestFirst) {
+  const bySlug = new Map();
+  for (const episode of episodes || []) {
+    if (!episode || !episode.slug || bySlug.has(episode.slug)) continue;
+    bySlug.set(episode.slug, episode);
+  }
+
+  const ordered = [];
+  const seen = new Set();
+  for (const slug of sheetSlugsNewestFirst || []) {
+    if (!slug || seen.has(slug) || !bySlug.has(slug)) continue;
+    ordered.push(slug);
+    seen.add(slug);
+  }
+
+  const extras = [...bySlug.keys()].filter((slug) => !seen.has(slug));
+  extras.sort((a, b) => {
+    const left = episodeTimestamp(bySlug.get(a).rawDate);
+    const right = episodeTimestamp(bySlug.get(b).rawDate);
+    if (left == null && right == null) return 0;
+    if (left == null) return 1;
+    if (right == null) return -1;
+    return right - left;
+  });
+
+  for (const slug of extras) {
+    const time = episodeTimestamp(bySlug.get(slug).rawDate);
+    let index = ordered.length;
+    if (time != null) {
+      const found = ordered.findIndex((other) => {
+        const otherTime = episodeTimestamp(bySlug.get(other).rawDate);
+        return otherTime != null && time > otherTime;
+      });
+      if (found !== -1) index = found;
+    }
+    ordered.splice(index, 0, slug);
+  }
+
+  const total = ordered.length;
+  const numbers = new Map();
+  ordered.forEach((slug, index) => {
+    numbers.set(slug, total - index);
+  });
+  return numbers;
+}
+
 function artworkAlt(episode) {
   const brand = (episode?.brand || episode?.title || "").trim();
   const guest = (episode?.guest || "").trim();
@@ -703,6 +761,7 @@ module.exports = {
   normalizeWebsite,
   websiteLabel,
   formatEpisodeNumber,
+  assignEpisodeNumbers,
   artworkAlt,
   relatedEpisodes,
   pageTitle,
