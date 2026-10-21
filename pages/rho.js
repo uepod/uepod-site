@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 
-const DESTINATION = "https://www.rho.co/partner/unit-economics";
+const DESTINATION = "https://www.rho.co/partner/uniteconomics";
 const MAX_WAIT_MS = 800;
 
 function trackingDisabled() {
