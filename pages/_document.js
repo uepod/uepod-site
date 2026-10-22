@@ -2,13 +2,15 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import { HOMEPAGE_DESCRIPTION } from "../src/lib/site";
 
 export default function MyDocument({ pathname }) {
-  // Episode pages and the 404 supply their own title, canonical, and social tags.
+  // Episode, topic, category, glossary, partners, and 404 pages supply their own
+  // title, canonical, and social tags.
   const omitDefaultSeo =
     (pathname || "").startsWith("/episodes") ||
     (pathname || "").startsWith("/topics") ||
     (pathname || "").startsWith("/category") ||
     pathname === "/404" ||
-    pathname === "/glossary";
+    pathname === "/glossary" ||
+    pathname === "/partners";
 
   return (
     <Html lang="en">
