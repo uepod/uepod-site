@@ -1750,7 +1750,7 @@ export async function getStaticProps() {
       }),
       fetchPosts().catch((err) => {
         console.error(
-          "Substack RSS fetch failed, using empty array:",
+          "Substack post fetch failed, using empty array:",
           err.message
         );
         return [];
