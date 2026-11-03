@@ -6,6 +6,7 @@
 
 const { SITE_URL, SUBSTACK_URL } = require("./site");
 const FALLBACK_SHARE_IMAGE = `${SITE_URL}/og-image.png`;
+const FALLBACK_TWITTER_IMAGE = `${SITE_URL}/twitter-image.png`;
 
 /**
  * Optional `takeaways` cell from the Episode Metadata sheet.
@@ -683,10 +684,15 @@ function canonicalUrl(slug) {
 
 /**
  * Share images stay full color. Prefer the episode (or show) artwork.
- * The designed site card is only a last resort when the feed has no image.
+ * The site card is only a last resort when the feed has no image:
+ * the square logo for og:image, the wide logo for twitter:image.
  */
 function shareImage(episode) {
   return episode?.image || FALLBACK_SHARE_IMAGE;
+}
+
+function shareTwitterImage(episode) {
+  return episode?.image || FALLBACK_TWITTER_IMAGE;
 }
 
 function descriptionText(episode) {
@@ -744,6 +750,7 @@ module.exports = {
   SITE_URL,
   SUBSTACK_URL,
   FALLBACK_SHARE_IMAGE,
+  FALLBACK_TWITTER_IMAGE,
   parseTakeaways,
   asImageUrl,
   resolveEpisodeImage,
@@ -769,6 +776,7 @@ module.exports = {
   episodePath,
   canonicalUrl,
   shareImage,
+  shareTwitterImage,
   buildEpisodeJsonLd,
   jsonLdScript,
 };

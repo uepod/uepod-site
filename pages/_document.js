@@ -48,6 +48,9 @@ export default function MyDocument({ pathname }) {
             />
             <meta property="og:url" content="https://uepod.com" />
             <meta property="og:image" content="https://uepod.com/og-image.png" />
+            <meta property="og:image:width" content="630" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:type" content="image/png" />
             <meta property="og:site_name" content="Unit Economics" />
 
             {/* Twitter Card */}
@@ -60,7 +63,7 @@ export default function MyDocument({ pathname }) {
               name="twitter:description"
               content="Conversations with founders, operators, and investors about the decisions, economics, constraints, and tradeoffs behind the scenes."
             />
-            <meta name="twitter:image" content="https://uepod.com/og-image.png" />
+            <meta name="twitter:image" content="https://uepod.com/twitter-image.png" />
           </>
         )}
       </Head>
