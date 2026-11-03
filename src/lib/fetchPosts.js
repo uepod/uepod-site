@@ -15,7 +15,11 @@ const BROWSER_UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36";
 
 /**
- * Format date from RSS pubDate to "Mon DD, YYYY"
+ * Format a Substack timestamp as "Mon D, YYYY".
+ * Substack's own byline is the UTC calendar day (`<time>` on the post).
+ * Pacific time shifts posts published after midnight UTC back a day
+ * ("On Public Relations." is Aug 10 there, not Aug 9). Episode dates use
+ * their own formatter and are left alone.
  */
 function formatDate(dateStr) {
   if (!dateStr) return "";
@@ -25,7 +29,7 @@ function formatDate(dateStr) {
     month: "short",
     day: "numeric",
     year: "numeric",
-    timeZone: "America/Los_Angeles",
+    timeZone: "UTC",
   });
 }
 

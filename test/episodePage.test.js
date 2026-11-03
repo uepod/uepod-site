@@ -20,8 +20,10 @@ const {
   artworkAlt,
   buildEpisodeJsonLd,
   shareImage,
+  shareTwitterImage,
   formatEpisodeNumber,
   FALLBACK_SHARE_IMAGE,
+  FALLBACK_TWITTER_IMAGE,
 } = require("../src/lib/episodePage");
 
 test("episode numbers read E. 65 with no leading zero", () => {
@@ -430,6 +432,8 @@ test("JSON-LD uses the full-color artwork, guest, and series", () => {
   assert.equal(artworkAlt(episode), "Episode artwork for Mikey's Pies with Mikey Deegan");
   assert.equal(shareImage(episode), image);
   assert.equal(shareImage({}), FALLBACK_SHARE_IMAGE);
+  assert.equal(shareTwitterImage(episode), image);
+  assert.equal(shareTwitterImage({}), FALLBACK_TWITTER_IMAGE);
 
   const json = buildEpisodeJsonLd(episode);
   assert.equal(json["@type"], "PodcastEpisode");

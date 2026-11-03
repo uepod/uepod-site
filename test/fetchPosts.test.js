@@ -335,6 +335,50 @@ test("keeps archive posts when a later page fails", async () => {
   assert.equal(posts[0].readingTime, "1 min read");
 });
 
+test("Read tab dates use the UTC calendar day Substack prints", async () => {
+  const samples = [
+    ["2026-08-10T00:30:23.554Z", "On Public Relations.", "Aug 10, 2026"],
+    [
+      "2026-08-03T04:20:37.611Z",
+      "On external validation, Food Paint, and outbounding.",
+      "Aug 3, 2026",
+    ],
+    [
+      "2026-07-27T02:23:08.364Z",
+      "A few things I learned this week.",
+      "Jul 27, 2026",
+    ],
+    ["2026-09-07T01:45:07.763Z", "Standing out on shelf. ", "Sep 7, 2026"],
+    ["2026-11-01T20:45:34.673Z", "A Year in Review", "Nov 1, 2026"],
+    ["2026-08-16T21:33:33.735Z", "On conviction, cookies, and changing your mind.", "Aug 16, 2026"],
+  ];
+  const posts = await fetchPosts({
+    async getArchivePage(offset) {
+      if (offset !== 0) return [];
+      return samples.map(([date, title], index) =>
+        archiveItem({
+          id: index + 1,
+          title,
+          date,
+          slug: `date-${index}`,
+        })
+      );
+    },
+    async getPostBody() {
+      return "";
+    },
+    async getRssItems() {
+      throw new Error("RSS should not be used");
+    },
+  });
+
+  const byTitle = new Map(posts.map((post) => [post.title, post.date]));
+  assert.deepEqual(
+    samples.map(([, title]) => byTitle.get(title)),
+    samples.map(([, , date]) => date)
+  );
+});
+
 test("trims a long summary on a word boundary", async () => {
   const description = `${"alpha ".repeat(40)}omega ending that should be cut`;
   const posts = await fetchPosts({

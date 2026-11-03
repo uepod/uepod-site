@@ -14,6 +14,8 @@ import {
   metaDescription,
   canonicalUrl,
   shareImage,
+  shareTwitterImage,
+  FALLBACK_SHARE_IMAGE,
   jsonLdScript,
   episodePath,
 } from "../../src/lib/episodePage";
@@ -265,6 +267,7 @@ export default function EpisodePage({ episode, related, terms = [] }) {
   const description = metaDescription(episode);
   const canonical = canonicalUrl(episode.slug);
   const image = shareImage(episode);
+  const twitterImage = shareTwitterImage(episode);
   const alt = artworkAlt(episode);
   const blocks = descriptionBlocksForPage(episode);
   const websiteHref = normalizeWebsite(episode.website);
@@ -290,12 +293,19 @@ export default function EpisodePage({ episode, related, terms = [] }) {
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={image} />
         <meta property="og:image:alt" content={alt} />
+        {image === FALLBACK_SHARE_IMAGE && (
+          <>
+            <meta property="og:image:width" content="630" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:type" content="image/png" />
+          </>
+        )}
         <meta property="og:site_name" content="Unit Economics" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={twitterImage} />
         <meta name="twitter:image:alt" content={alt} />
 
         <script
