@@ -30,7 +30,7 @@ export default function PartnersPage() {
         <meta property="og:description" content={DESCRIPTION} />
         <meta property="og:url" content={CANONICAL} />
         <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
-        <meta property="og:image:width" content="630" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:site_name" content="Unit Economics" />
