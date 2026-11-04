@@ -89,12 +89,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const slug = params?.slug || "";
-  let directory = [];
-  try {
-    directory = await fetchEpisodeDirectory();
-  } catch (err) {
-    console.error("Category episode lookup failed:", err.message);
-  }
+  // A throw keeps the last good page. Swallowing it cached an empty category.
+  const directory = await fetchEpisodeDirectory();
 
   const episodes = directory
     .filter((episode) => categorySlug(episode.category) === slug)

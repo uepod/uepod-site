@@ -228,12 +228,9 @@ export default function GlossaryPage({ groups, letters, terms }) {
 }
 
 export async function getStaticProps() {
-  let directory = [];
-  try {
-    directory = await fetchEpisodeDirectory();
-  } catch (err) {
-    console.error("Glossary episode lookup failed:", err.message);
-  }
+  // A throw keeps the last good page instead of caching a glossary
+  // whose episode links were wiped by a failed sheet fetch.
+  const directory = await fetchEpisodeDirectory();
 
   const prepared = prepareGlossary(expandGlossary(glossarySource, directory));
   return {

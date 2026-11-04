@@ -1742,6 +1742,7 @@ export async function getStaticProps() {
   const [episodes, posts] =
     await Promise.all([
       fetchEpisodes().catch((err) => {
+        if (err.sheetUnavailable) throw err;
         console.error(
           "Episode RSS fetch failed, using empty array:",
           err.message

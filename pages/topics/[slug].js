@@ -78,12 +78,8 @@ export async function getStaticProps({ params }) {
   const topic = topicBySlug(params?.slug);
   if (!topic) return { notFound: true };
 
-  let directory = [];
-  try {
-    directory = await fetchEpisodeDirectory();
-  } catch (err) {
-    console.error("Topic episode lookup failed:", err.message);
-  }
+  // A throw keeps the last good page instead of caching an empty topic.
+  const directory = await fetchEpisodeDirectory();
 
   const wanted = new Set(topic.episodeSlugs);
   const episodes = directory

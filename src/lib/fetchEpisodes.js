@@ -402,6 +402,7 @@ async function fetchEpisodes() {
     const episodes = await loadDetailed();
     return episodes.filter((episode) => episode.published).map(toPublicEpisode);
   } catch (err) {
+    if (err.sheetUnavailable) throw err;
     console.error("Failed to fetch episodes:", err.message);
     return [];
   }
