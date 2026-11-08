@@ -522,6 +522,8 @@ export async function getStaticProps({ params }) {
   const episodes = await fetchEpisodeDirectory();
   const episode = episodes.find((item) => item.slug === slug);
 
+  // The directory omits a sheet row until Spotify, YouTube, or Apple is set,
+  // so an unreleased slug 404s and is checked again after the revalidate window.
   if (!episode) {
     return { notFound: true, revalidate: REVALIDATE_SECONDS };
   }
