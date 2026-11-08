@@ -166,30 +166,17 @@ function toPublicEpisode(episode) {
 }
 
 /**
- * A listen cell counts only when it has a URL. Blank and whitespace do not.
- * The guest website column is not a listen link and is not checked here.
- */
-function hasListenLink(value) {
-  return typeof value === "string" && value.trim().length > 0;
-}
-
-/**
- * Public episodes are the ones that are already live.
+ * Public episodes are the ones already in the podcast RSS feed.
  *
- * An RSS item is live even when its sheet listen cells are still empty:
- * the feed merge fills those with the show URL (Rotten is the current
- * case). A sheet row that is not in the feed yet is live only after
- * Spotify, YouTube, or Apple is filled in. Until then the row can stay
- * in the sheet for prep, and it still takes part in episode numbering,
- * but it is not a public page.
+ * `published` is set only when an RSS item was merged in. A sheet row
+ * can hold title, description, guest, website, and Spotify / YouTube /
+ * Apple URLs before release. None of those cells publish the page.
+ * The row still takes part in episode numbering. Sheet metadata joins
+ * the page once the feed item exists, including when the listen cells
+ * are still empty and the feed merge fills the show URL.
  */
 function isPublicEpisode(episode) {
-  if (!episode) return false;
-  return (
-    hasListenLink(episode.spotify) ||
-    hasListenLink(episode.youtube) ||
-    hasListenLink(episode.apple)
-  );
+  return Boolean(episode && episode.published === true);
 }
 
 function sheetOnlyEpisode(slug, row) {
@@ -429,9 +416,7 @@ async function loadDetailed() {
 async function fetchEpisodes() {
   try {
     const episodes = await loadDetailed();
-    return episodes
-      .filter((episode) => episode.published && isPublicEpisode(episode))
-      .map(toPublicEpisode);
+    return episodes.filter(isPublicEpisode).map(toPublicEpisode);
   } catch (err) {
     if (err.sheetUnavailable) throw err;
     console.error("Failed to fetch episodes:", err.message);
@@ -441,9 +426,9 @@ async function fetchEpisodes() {
 
 /**
  * Public episode pages, listings, sitemap, and llms.txt.
- * RSS episodes, plus a sheet row that already has a Spotify, YouTube, or
- * Apple link. A metadata row with none of those is omitted until the
- * episode is live. Numbers were already assigned on the full list.
+ * Only RSS episodes. A sheet row with no feed item is omitted even when
+ * its listen links are already filled in. Numbers were already assigned
+ * on the full list.
  */
 async function fetchEpisodeDirectory() {
   const episodes = await loadDetailed();
