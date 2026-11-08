@@ -30,7 +30,7 @@ function episodeTime(episode) {
   return Number.isFinite(time) ? time : null;
 }
 
-/** Same episode set the sitemap lists: every row with a slug, newest first. */
+/** Same episode set the sitemap lists: public episodes, newest first. */
 function episodesForLlms(episodes) {
   return (episodes || [])
     .filter((episode) => episode && episode.slug)

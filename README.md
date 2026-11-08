@@ -36,13 +36,13 @@ Every episode has a page at `/episodes/<slug>`. The slug is the same one the she
 
 Pages are generated from the RSS feed joined with the Episode Metadata sheet. No separate list of episodes is maintained in the repo.
 
-- At build, known slugs are prerendered.
-- `fallback: "blocking"` renders a slug that was not in that build as soon as the feed or the sheet has it.
+- At build, known live slugs are prerendered.
+- `fallback: "blocking"` renders a slug that was not in that build as soon as the feed has it, or the sheet row has a Spotify, YouTube, or Apple link.
 - Each page sets `revalidate: 900`, so a request serves the cached page and regenerates it in the background at most every 15 minutes.
-- A slug that is in neither source returns a 404. That 404 is cached for the same 15 minutes, then checked again.
-- The Vercel cron (`vercel.json`) calls `/api/revalidate` twice a day. That route revalidates `/` and every `/episodes/<slug>`.
+- A slug with no feed item and no listen link returns a 404. That 404 is cached for the same 15 minutes, then checked again.
+- The Vercel cron (`vercel.json`) calls `/api/revalidate` twice a day. That route revalidates `/` and every public `/episodes/<slug>`.
 
-A new RSS item is enough for a page. Sheet fields (description, guest, links, category, website) fill in on the next regeneration once the row’s `slug` matches. A sheet row with no RSS item yet still gets a page, using only the cells that are filled in.
+A new RSS item is enough for a page. Sheet fields (description, guest, links, category, website) fill in on the next regeneration once the row’s `slug` matches. A sheet row can be added before release. It does not get a page, and it stays off the homepage, category lists, sitemap, and `/llms.txt`, until Spotify, YouTube, or Apple is filled in. The `website` column is the guest’s own site, not a publish flag. Episode numbers still count that row, so publishing it later does not renumber the episodes already on the site.
 
 Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
 
