@@ -3,8 +3,13 @@ const sharp = require("sharp");
 const SHARE_WIDTH = 1200;
 const SHARE_HEIGHT = 630;
 const COVER_SIZE = 570;
-const BLUR_SIGMA = 40;
-const BACKGROUND_BRIGHTNESS = 0.85;
+// sharp's blur() takes a Gaussian sigma. 100 matches a radius of about 100
+// and, with the 300px downscale, keeps type from smearing into blotches.
+const BLUR_SIGMA = 100;
+const BACKGROUND_BRIGHTNESS = 0.9;
+const MEDIAN_BLEND = 0.6;
+const SOFT_SIZE = 300;
+const MEDIAN_SAMPLE = 50;
 
 /**
  * Where the sharp 570×570 cover sits on the 1200×630 card.
@@ -20,6 +25,31 @@ function coverPlacement(
     left: Math.round((canvasWidth - coverSize) / 2),
     top: Math.round((canvasHeight - coverSize) / 2),
   };
+}
+
+function median(values) {
+  const sorted = values.slice().sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  if (!sorted.length) return 0;
+  if (sorted.length % 2) return sorted[mid];
+  return Math.round((sorted[mid - 1] + sorted[mid]) / 2);
+}
+
+/**
+ * Median color of a raw RGB or RGBA buffer. Each channel is taken separately.
+ */
+function medianColor(raw, width, height, channels = 3) {
+  const reds = [];
+  const greens = [];
+  const blues = [];
+  const count = width * height;
+  for (let i = 0; i < count; i++) {
+    const offset = i * channels;
+    reds.push(raw[offset]);
+    greens.push(raw[offset + 1]);
+    blues.push(raw[offset + 2]);
+  }
+  return { r: median(reds), g: median(greens), b: median(blues) };
 }
 
 /**
@@ -63,13 +93,42 @@ async function composeShareCard(input) {
     throw new Error("Artwork has no dimensions");
   }
 
+  const sample = await sharp(oriented)
+    .resize(MEDIAN_SAMPLE, MEDIAN_SAMPLE, { fit: "cover", position: "centre" })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const fill = medianColor(
+    sample.data,
+    sample.info.width,
+    sample.info.height,
+    sample.info.channels
+  );
+
   const cropTop = Math.round((SHARE_WIDTH - SHARE_HEIGHT) / 2);
-  const background = await sharp(oriented)
-    .resize(SHARE_WIDTH, SHARE_WIDTH, { fit: "cover", position: "centre" })
+  const softened = await sharp(oriented)
+    .resize(SOFT_SIZE, SOFT_SIZE, { fit: "cover", position: "centre" })
+    .resize(SHARE_WIDTH, SHARE_WIDTH)
     .extract({ left: 0, top: cropTop, width: SHARE_WIDTH, height: SHARE_HEIGHT })
     .blur(BLUR_SIGMA)
-    // Multiply RGB by 0.85. sharp's modulate({ brightness }) shifts hue.
+    // Multiply RGB by 0.9. sharp's modulate({ brightness }) shifts hue.
     .linear(BACKGROUND_BRIGHTNESS, 0)
+    .toBuffer();
+
+  const tint = await sharp({
+    create: {
+      width: SHARE_WIDTH,
+      height: SHARE_HEIGHT,
+      channels: 4,
+      background: { ...fill, alpha: MEDIAN_BLEND },
+    },
+  })
+    .png()
+    .toBuffer();
+
+  const background = await sharp(softened)
+    .composite([{ input: tint, blend: "over" }])
+    .removeAlpha()
     .toBuffer();
 
   const place = coverPlacement();
@@ -89,6 +148,8 @@ module.exports = {
   COVER_SIZE,
   BLUR_SIGMA,
   BACKGROUND_BRIGHTNESS,
+  MEDIAN_BLEND,
+  medianColor,
   coverPlacement,
   artworkUrlForPublicEpisode,
   isFetchableImageUrl,
