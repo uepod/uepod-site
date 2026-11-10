@@ -8,6 +8,8 @@ const {
   COVER_SIZE,
   BLUR_SIGMA,
   BACKGROUND_BRIGHTNESS,
+  MEDIAN_BLEND,
+  medianColor,
   coverPlacement,
   artworkUrlForPublicEpisode,
   isFetchableImageUrl,
@@ -19,8 +21,9 @@ test("the sharp cover sits centered at 570×570", () => {
   assert.equal(SHARE_WIDTH, 1200);
   assert.equal(SHARE_HEIGHT, 630);
   assert.equal(COVER_SIZE, 570);
-  assert.equal(BLUR_SIGMA, 40);
-  assert.equal(BACKGROUND_BRIGHTNESS, 0.85);
+  assert.equal(BLUR_SIGMA, 100);
+  assert.equal(BACKGROUND_BRIGHTNESS, 0.9);
+  assert.equal(MEDIAN_BLEND, 0.6);
   assert.deepEqual(place, { width: 570, height: 570, left: 315, top: 30 });
 });
 
@@ -56,6 +59,15 @@ test("only public https artwork URLs are fetched", () => {
   assert.equal(isFetchableImageUrl("not a url"), false);
 });
 
+test("median color is taken per channel", () => {
+  const raw = Buffer.from([
+    10, 0, 0,
+    30, 0, 0,
+    20, 5, 9,
+  ]);
+  assert.deepEqual(medianColor(raw, 3, 1, 3), { r: 20, g: 0, b: 0 });
+});
+
 test("the card blurs and darkens the background and keeps a sharp cover", async () => {
   const source = await sharp({
     create: {
@@ -80,11 +92,47 @@ test("the card blurs and darkens the background and keeps a sharp cover", async 
     return [data[index], data[index + 1], data[index + 2]];
   };
   const original = [200, 40, 20];
-  const darkened = original.map((channel) => Math.round(channel * BACKGROUND_BRIGHTNESS));
+  const blended = original.map((channel) =>
+    Math.round(channel * BACKGROUND_BRIGHTNESS * (1 - MEDIAN_BLEND) + channel * MEDIAN_BLEND)
+  );
   const side = pixel(10, 315);
   const center = pixel(600, 315);
   for (let channel = 0; channel < 3; channel++) {
     assert.ok(Math.abs(center[channel] - original[channel]) < 12);
-    assert.ok(Math.abs(side[channel] - darkened[channel]) < 12);
+    assert.ok(Math.abs(side[channel] - blended[channel]) < 12);
   }
+});
+
+test("a black mark on a bold cover does not stay a dark blotch", async () => {
+  const orange = { r: 255, g: 90, b: 0 };
+  const base = await sharp({
+    create: { width: 400, height: 400, channels: 3, background: orange },
+  })
+    .png()
+    .toBuffer();
+  const marked = await sharp(base)
+    .composite([
+      {
+        input: await sharp({
+          create: { width: 80, height: 80, channels: 3, background: { r: 0, g: 0, b: 0 } },
+        })
+          .png()
+          .toBuffer(),
+        left: 160,
+        top: 40,
+      },
+    ])
+    .jpeg()
+    .toBuffer();
+
+  const card = await composeShareCard(marked);
+  const { data, info } = await sharp(card).raw().toBuffer({ resolveWithObject: true });
+  const pixel = (x, y) => {
+    const index = (y * info.width + x) * info.channels;
+    return [data[index], data[index + 1], data[index + 2]];
+  };
+  const side = pixel(20, 40);
+  assert.ok(side[0] > 180, `side red ${side[0]}`);
+  assert.ok(side[1] < 140, `side green ${side[1]}`);
+  assert.ok(side[2] < 40, `side blue ${side[2]}`);
 });
