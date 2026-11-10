@@ -705,7 +705,8 @@ function shareCardUrl(episode) {
 }
 
 /**
- * Link previews use a 1200×630 card that contains the full episode artwork.
+ * Link previews use a 1200×630 card: the full cover centered on a blurred,
+ * slightly darkened crop of that same artwork.
  * The square cover is only the last resort, and only when the feed has no image.
  */
 function shareImage(episode) {

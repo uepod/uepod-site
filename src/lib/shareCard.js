@@ -2,61 +2,24 @@ const sharp = require("sharp");
 
 const SHARE_WIDTH = 1200;
 const SHARE_HEIGHT = 630;
+const COVER_SIZE = 570;
+const BLUR_SIGMA = 40;
+const BACKGROUND_BRIGHTNESS = 0.85;
 
 /**
- * Fit the source inside the share frame. A square cover becomes 630×630,
- * centered, so the wide card shows the whole artwork.
+ * Where the sharp 570×570 cover sits on the 1200×630 card.
  */
-function containRect(
-  srcWidth,
-  srcHeight,
+function coverPlacement(
   canvasWidth = SHARE_WIDTH,
-  canvasHeight = SHARE_HEIGHT
+  canvasHeight = SHARE_HEIGHT,
+  coverSize = COVER_SIZE
 ) {
-  const widthIn = Number(srcWidth);
-  const heightIn = Number(srcHeight);
-  if (!widthIn || !heightIn) {
-    return { width: 0, height: 0, left: 0, top: 0, canvasWidth, canvasHeight };
-  }
-  const scale = Math.min(canvasWidth / widthIn, canvasHeight / heightIn);
-  const width = Math.max(1, Math.round(widthIn * scale));
-  const height = Math.max(1, Math.round(heightIn * scale));
   return {
-    width,
-    height,
-    left: Math.round((canvasWidth - width) / 2),
-    top: Math.round((canvasHeight - height) / 2),
-    canvasWidth,
-    canvasHeight,
+    width: coverSize,
+    height: coverSize,
+    left: Math.round((canvasWidth - coverSize) / 2),
+    top: Math.round((canvasHeight - coverSize) / 2),
   };
-}
-
-function median(values) {
-  const sorted = values.slice().sort((a, b) => a - b);
-  const mid = Math.floor(sorted.length / 2);
-  if (!sorted.length) return 0;
-  if (sorted.length % 2) return sorted[mid];
-  return Math.round((sorted[mid - 1] + sorted[mid]) / 2);
-}
-
-/**
- * Color of the side bars. The left and right edges of these covers are the
- * flat background, so extending that color keeps the card continuous.
- */
-function edgeColor(rgba, width, height, channels = 4) {
-  const reds = [];
-  const greens = [];
-  const blues = [];
-  const step = Math.max(1, Math.floor(height / 48));
-  for (let y = 0; y < height; y += step) {
-    for (const x of [0, width - 1]) {
-      const index = (y * width + x) * channels;
-      reds.push(rgba[index]);
-      greens.push(rgba[index + 1]);
-      blues.push(rgba[index + 2]);
-    }
-  }
-  return { r: median(reds), g: median(greens), b: median(blues) };
 }
 
 /**
@@ -94,40 +57,28 @@ function isFetchableImageUrl(value) {
 }
 
 async function composeShareCard(input) {
-  const oriented = sharp(input, { failOn: "none" }).rotate();
-  const meta = await oriented.metadata();
-  const layout = containRect(meta.width, meta.height);
-  if (!layout.width || !layout.height) {
+  const oriented = await sharp(input, { failOn: "none" }).rotate().toBuffer();
+  const meta = await sharp(oriented).metadata();
+  if (!meta.width || !meta.height) {
     throw new Error("Artwork has no dimensions");
   }
 
-  const sample = await sharp(input, { failOn: "none" })
-    .rotate()
-    .resize(64, 64, { fit: "fill" })
-    .ensureAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
-  const background = edgeColor(
-    sample.data,
-    sample.info.width,
-    sample.info.height,
-    sample.info.channels
-  );
-
-  const resized = await sharp(input, { failOn: "none" })
-    .rotate()
-    .resize(layout.width, layout.height, { fit: "fill" })
+  const cropTop = Math.round((SHARE_WIDTH - SHARE_HEIGHT) / 2);
+  const background = await sharp(oriented)
+    .resize(SHARE_WIDTH, SHARE_WIDTH, { fit: "cover", position: "centre" })
+    .extract({ left: 0, top: cropTop, width: SHARE_WIDTH, height: SHARE_HEIGHT })
+    .blur(BLUR_SIGMA)
+    // Multiply RGB by 0.85. sharp's modulate({ brightness }) shifts hue.
+    .linear(BACKGROUND_BRIGHTNESS, 0)
     .toBuffer();
 
-  return sharp({
-    create: {
-      width: SHARE_WIDTH,
-      height: SHARE_HEIGHT,
-      channels: 3,
-      background,
-    },
-  })
-    .composite([{ input: resized, left: layout.left, top: layout.top }])
+  const place = coverPlacement();
+  const cover = await sharp(oriented)
+    .resize(place.width, place.height, { fit: "cover", position: "centre" })
+    .toBuffer();
+
+  return sharp(background)
+    .composite([{ input: cover, left: place.left, top: place.top }])
     .jpeg({ quality: 90, mozjpeg: true })
     .toBuffer();
 }
@@ -135,8 +86,10 @@ async function composeShareCard(input) {
 module.exports = {
   SHARE_WIDTH,
   SHARE_HEIGHT,
-  containRect,
-  edgeColor,
+  COVER_SIZE,
+  BLUR_SIGMA,
+  BACKGROUND_BRIGHTNESS,
+  coverPlacement,
   artworkUrlForPublicEpisode,
   isFetchableImageUrl,
   composeShareCard,

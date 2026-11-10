@@ -5,31 +5,23 @@ const sharp = require("sharp");
 const {
   SHARE_WIDTH,
   SHARE_HEIGHT,
-  containRect,
-  edgeColor,
+  COVER_SIZE,
+  BLUR_SIGMA,
+  BACKGROUND_BRIGHTNESS,
+  coverPlacement,
   artworkUrlForPublicEpisode,
   isFetchableImageUrl,
   composeShareCard,
 } = require("../src/lib/shareCard");
 
-test("a square cover is contained, not cropped, in the wide card", () => {
-  const box = containRect(3000, 3000);
-  assert.equal(box.canvasWidth, SHARE_WIDTH);
-  assert.equal(box.canvasHeight, SHARE_HEIGHT);
-  assert.equal(box.width, 630);
-  assert.equal(box.height, 630);
-  assert.equal(box.left, 285);
-  assert.equal(box.top, 0);
-});
-
-test("side bars use the color at the left and right edges", () => {
-  const width = 4;
-  const height = 2;
-  const rgba = Buffer.from([
-    10, 20, 30, 255, 0, 0, 0, 255, 0, 0, 0, 255, 10, 20, 30, 255,
-    12, 22, 32, 255, 0, 0, 0, 255, 0, 0, 0, 255, 12, 22, 32, 255,
-  ]);
-  assert.deepEqual(edgeColor(rgba, width, height, 4), { r: 11, g: 21, b: 31 });
+test("the sharp cover sits centered at 570×570", () => {
+  const place = coverPlacement();
+  assert.equal(SHARE_WIDTH, 1200);
+  assert.equal(SHARE_HEIGHT, 630);
+  assert.equal(COVER_SIZE, 570);
+  assert.equal(BLUR_SIGMA, 40);
+  assert.equal(BACKGROUND_BRIGHTNESS, 0.85);
+  assert.deepEqual(place, { width: 570, height: 570, left: 315, top: 30 });
 });
 
 test("a sheet row with listen links and no RSS item has no share artwork", () => {
@@ -64,11 +56,11 @@ test("only public https artwork URLs are fetched", () => {
   assert.equal(isFetchableImageUrl("not a url"), false);
 });
 
-test("the composed card is 1200x630 and keeps the full square", async () => {
+test("the card blurs and darkens the background and keeps a sharp cover", async () => {
   const source = await sharp({
     create: {
-      width: 200,
-      height: 200,
+      width: 400,
+      height: 400,
       channels: 3,
       background: { r: 200, g: 40, b: 20 },
     },
@@ -87,10 +79,12 @@ test("the composed card is 1200x630 and keeps the full square", async () => {
     const index = (y * info.width + x) * info.channels;
     return [data[index], data[index + 1], data[index + 2]];
   };
+  const original = [200, 40, 20];
+  const darkened = original.map((channel) => Math.round(channel * BACKGROUND_BRIGHTNESS));
   const side = pixel(10, 315);
   const center = pixel(600, 315);
-  for (const channel of [0, 1, 2]) {
-    assert.ok(Math.abs(side[channel] - [200, 40, 20][channel]) < 8);
-    assert.ok(Math.abs(center[channel] - [200, 40, 20][channel]) < 8);
+  for (let channel = 0; channel < 3; channel++) {
+    assert.ok(Math.abs(center[channel] - original[channel]) < 12);
+    assert.ok(Math.abs(side[channel] - darkened[channel]) < 12);
   }
 });
