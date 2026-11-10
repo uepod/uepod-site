@@ -44,7 +44,7 @@ Pages are generated from the RSS feed joined with the Episode Metadata sheet. No
 
 A new RSS item is enough for a page. Sheet fields (description, guest, links, category, website) fill in on the next regeneration once the row’s `slug` matches. A sheet row can be added before release, and its Spotify, YouTube, and Apple cells can be filled in early. That does not publish the page. The row stays off the homepage, category lists, sitemap, and `/llms.txt` until the episode is in the podcast RSS. The `website` column is the guest’s own site, not a publish flag. Episode numbers still count that row, so publishing it later does not renumber the episodes already on the site.
 
-Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the Open Graph image, the Twitter card image, and the `PodcastEpisode` JSON-LD `image`. It is not shown on the page.
+Episode artwork from the RSS `itunes:image` (or the show artwork if the item has none) is the `PodcastEpisode` JSON-LD `image`. It is not shown on the page. Link previews use a 1200×630 card that contains that full square artwork, so wide cards do not crop the top and bottom. A page with no artwork falls back to the site card.
 
 Each episode page shows three related episodes. They are chosen when the page is built or revalidated, in this order:
 

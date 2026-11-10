@@ -21,6 +21,7 @@ const {
   buildEpisodeJsonLd,
   shareImage,
   shareTwitterImage,
+  shareImageMeta,
   formatEpisodeNumber,
   FALLBACK_SHARE_IMAGE,
   FALLBACK_TWITTER_IMAGE,
@@ -430,10 +431,22 @@ test("JSON-LD uses the full-color artwork, guest, and series", () => {
   };
 
   assert.equal(artworkAlt(episode), "Episode artwork for Mikey's Pies with Mikey Deegan");
-  assert.equal(shareImage(episode), image);
+  const card = `https://uepod.com/api/og/${episode.slug}?v=`;
+  assert.equal(shareImage(episode).startsWith(card), true);
+  assert.equal(shareTwitterImage(episode), shareImage(episode));
   assert.equal(shareImage({}), FALLBACK_SHARE_IMAGE);
-  assert.equal(shareTwitterImage(episode), image);
   assert.equal(shareTwitterImage({}), FALLBACK_TWITTER_IMAGE);
+  const meta = shareImageMeta(episode);
+  assert.equal(meta.url, shareImage(episode));
+  assert.equal(meta.width, 1200);
+  assert.equal(meta.height, 630);
+  assert.equal(meta.type, "image/jpeg");
+  assert.deepEqual(shareImageMeta({}), {
+    url: FALLBACK_SHARE_IMAGE,
+    width: 2400,
+    height: 1260,
+    type: "image/png",
+  });
 
   const json = buildEpisodeJsonLd(episode);
   assert.equal(json["@type"], "PodcastEpisode");
