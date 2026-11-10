@@ -7,6 +7,7 @@ import {
   TikTokIcon,
   LinkedInIcon,
   SubstackIcon,
+  XIcon,
 } from "./icons";
 import { SHOW_URLS } from "../lib/site";
 
@@ -54,6 +55,12 @@ const SOCIAL_LINKS = {
     hc: "#FF6719",
     icon: SubstackIcon,
   },
+  x: {
+    url: "https://x.com/u_e_pod",
+    hc: "#FFFFFF",
+    icon: XIcon,
+    label: "X",
+  },
 };
 
 function trackEvent(eventName, params = {}) {
@@ -88,7 +95,7 @@ function NavAnchor({ href, children }) {
   );
 }
 
-function HoverLink({ href, hoverColor, children, onClick }) {
+function HoverLink({ href, hoverColor, children, onClick, label }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -96,6 +103,7 @@ function HoverLink({ href, hoverColor, children, onClick }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={label}
       style={{
         color: hovered ? hoverColor : "rgba(255,255,255,0.6)",
         transition: "color 0.2s",
@@ -248,11 +256,12 @@ export default function SiteChrome({ children }) {
 
             <div style={{ display: "flex", gap: "18px", alignItems: "center" }}>
               {Object.entries(SOCIAL_LINKS).map(
-                ([key, { url, hc, icon: Icon }]) => (
+                ([key, { url, hc, icon: Icon, label }]) => (
                   <HoverLink
                     key={key}
                     href={url}
                     hoverColor={hc}
+                    label={label}
                     onClick={() =>
                       trackEvent("footer_social_click", { platform: key })
                     }
