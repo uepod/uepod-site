@@ -2,7 +2,9 @@ const sharp = require("sharp");
 
 const SHARE_WIDTH = 1200;
 const SHARE_HEIGHT = 630;
-const COVER_SIZE = 570;
+// ~63% of the 630px card, leaving margin so Reddit's crop and bottom title
+// bar do not cut off the Unit Economics wordmark.
+const COVER_SIZE = 400;
 // sharp's blur() takes a Gaussian sigma. 100 matches a radius of about 100
 // and, with the 300px downscale, keeps type from smearing into blotches.
 const BLUR_SIGMA = 100;
@@ -10,20 +12,32 @@ const BACKGROUND_BRIGHTNESS = 0.9;
 const MEDIAN_BLEND = 0.6;
 const SOFT_SIZE = 300;
 const MEDIAN_SAMPLE = 50;
+const SHADOW_PAD = 24;
+const SHADOW_BLUR = 16;
+const SHADOW_OFFSET_Y = 6;
+const SHADOW_ALPHA = 0.28;
 
 /**
- * Where the sharp 570×570 cover sits on the 1200×630 card.
+ * Where the sharp 400×400 cover sits on the 1200×630 card.
+ * Horizontally centered. Vertically, prefer the canvas center, but raise
+ * the cover if needed so it stays in the band Reddit leaves visible: a
+ * center crop to 500px with the bottom 20% covered by a title bar.
  */
 function coverPlacement(
   canvasWidth = SHARE_WIDTH,
   canvasHeight = SHARE_HEIGHT,
   coverSize = COVER_SIZE
 ) {
+  const left = Math.round((canvasWidth - coverSize) / 2);
+  const centeredTop = Math.round((canvasHeight - coverSize) / 2);
+  const redditCropTop = Math.round((canvasHeight - 500) / 2);
+  const redditBarTop = redditCropTop + 400;
+  const top = Math.min(centeredTop, Math.max(redditCropTop, redditBarTop - coverSize));
   return {
     width: coverSize,
     height: coverSize,
-    left: Math.round((canvasWidth - coverSize) / 2),
-    top: Math.round((canvasHeight - coverSize) / 2),
+    left,
+    top,
   };
 }
 
@@ -136,8 +150,44 @@ async function composeShareCard(input) {
     .resize(place.width, place.height, { fit: "cover", position: "centre" })
     .toBuffer();
 
+  const shadowBlock = await sharp({
+    create: {
+      width: place.width,
+      height: place.height,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: SHADOW_ALPHA },
+    },
+  })
+    .png()
+    .toBuffer();
+  const shadow = await sharp({
+    create: {
+      width: place.width + SHADOW_PAD * 2,
+      height: place.height + SHADOW_PAD * 2,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
+  })
+    .composite([
+      {
+        input: shadowBlock,
+        left: SHADOW_PAD,
+        top: SHADOW_PAD + SHADOW_OFFSET_Y,
+      },
+    ])
+    .blur(SHADOW_BLUR)
+    .png()
+    .toBuffer();
+
   return sharp(background)
-    .composite([{ input: cover, left: place.left, top: place.top }])
+    .composite([
+      {
+        input: shadow,
+        left: place.left - SHADOW_PAD,
+        top: place.top - SHADOW_PAD,
+      },
+      { input: cover, left: place.left, top: place.top },
+    ])
     .jpeg({ quality: 90, mozjpeg: true })
     .toBuffer();
 }

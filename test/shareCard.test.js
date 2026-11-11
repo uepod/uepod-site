@@ -16,15 +16,25 @@ const {
   composeShareCard,
 } = require("../src/lib/shareCard");
 
-test("the sharp cover sits centered at 570×570", () => {
+test("the sharp cover sits at 400×400 inside Reddit's visible band", () => {
   const place = coverPlacement();
   assert.equal(SHARE_WIDTH, 1200);
   assert.equal(SHARE_HEIGHT, 630);
-  assert.equal(COVER_SIZE, 570);
+  assert.equal(COVER_SIZE, 400);
   assert.equal(BLUR_SIGMA, 100);
   assert.equal(BACKGROUND_BRIGHTNESS, 0.9);
   assert.equal(MEDIAN_BLEND, 0.6);
-  assert.deepEqual(place, { width: 570, height: 570, left: 315, top: 30 });
+  assert.ok(COVER_SIZE / SHARE_HEIGHT >= 0.62);
+  assert.ok(COVER_SIZE / SHARE_HEIGHT <= 0.65);
+  // A 400px cover cannot be canvas-centered and still clear Reddit's title
+  // bar, so it is raised to the top of the visible 500px crop (top = 65).
+  assert.deepEqual(place, { width: 400, height: 400, left: 400, top: 65 });
+  const cropTop = Math.round((SHARE_HEIGHT - 500) / 2);
+  const barTop = cropTop + 400;
+  assert.equal(cropTop, 65);
+  assert.equal(barTop, 465);
+  assert.ok(place.top >= cropTop, "cover starts below the cropped top edge");
+  assert.ok(place.top + place.height <= barTop, "the whole cover stays above Reddit's title bar");
 });
 
 test("a sheet row with listen links and no RSS item has no share artwork", () => {

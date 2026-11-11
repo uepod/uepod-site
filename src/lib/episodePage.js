@@ -684,14 +684,16 @@ function canonicalUrl(slug) {
 
 const SHARE_CARD_WIDTH = 1200;
 const SHARE_CARD_HEIGHT = 630;
+// Bump when the share-card composition changes so crawlers refetch.
+const SHARE_CARD_REVISION = "2";
 
 /**
- * Short cache-buster so a new artwork URL gets a new share URL.
+ * Short cache-buster so a new artwork URL or card layout gets a new share URL.
  * Client-safe: episode pages call this while rendering.
  */
 function shareCardVersion(imageUrl) {
   let hash = 2166136261;
-  const text = String(imageUrl);
+  const text = `${SHARE_CARD_REVISION}\0${String(imageUrl)}`;
   for (let i = 0; i < text.length; i++) {
     hash ^= text.charCodeAt(i);
     hash = Math.imul(hash, 16777619);
@@ -705,8 +707,8 @@ function shareCardUrl(episode) {
 }
 
 /**
- * Link previews use a 1200×630 card: the full cover centered on a soft,
- * slightly darkened field made from that same artwork.
+ * Link previews use a 1200×630 card: the cover in a Reddit-safe zone on a
+ * soft, slightly darkened field made from that same artwork.
  * The square cover is only the last resort, and only when the feed has no image.
  */
 function shareImage(episode) {
@@ -818,6 +820,7 @@ module.exports = {
   canonicalUrl,
   SHARE_CARD_WIDTH,
   SHARE_CARD_HEIGHT,
+  SHARE_CARD_REVISION,
   shareImage,
   shareTwitterImage,
   shareImageMeta,

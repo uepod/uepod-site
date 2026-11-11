@@ -19,6 +19,7 @@ const {
   relatedEpisodes,
   artworkAlt,
   buildEpisodeJsonLd,
+  SHARE_CARD_REVISION,
   shareImage,
   shareTwitterImage,
   shareImageMeta,
@@ -433,6 +434,15 @@ test("JSON-LD uses the full-color artwork, guest, and series", () => {
   assert.equal(artworkAlt(episode), "Episode artwork for Mikey's Pies with Mikey Deegan");
   const card = `https://uepod.com/api/og/${episode.slug}?v=`;
   assert.equal(shareImage(episode).startsWith(card), true);
+  assert.equal(SHARE_CARD_REVISION, "2");
+  const version = new URL(shareImage(episode)).searchParams.get("v");
+  let imageOnlyHash = 2166136261;
+  const imageText = String(image);
+  for (let i = 0; i < imageText.length; i++) {
+    imageOnlyHash ^= imageText.charCodeAt(i);
+    imageOnlyHash = Math.imul(imageOnlyHash, 16777619);
+  }
+  assert.notEqual(version, (imageOnlyHash >>> 0).toString(16));
   assert.equal(shareTwitterImage(episode), shareImage(episode));
   assert.equal(shareImage({}), FALLBACK_SHARE_IMAGE);
   assert.equal(shareTwitterImage({}), FALLBACK_TWITTER_IMAGE);
