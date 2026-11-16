@@ -137,8 +137,11 @@ async function mapPool(items, limit, fn) {
   return out;
 }
 
-async function defaultGetArchivePage(offset, limit) {
-  const url = `${SUBSTACK_ARCHIVE}?sort=new&limit=${limit}&offset=${offset}`;
+async function defaultGetArchivePage(cursor, limit) {
+  // Substack now pages the archive with an opaque cursor and rejects `offset`.
+  const params = new URLSearchParams({ sort: "new", limit: String(limit) });
+  if (cursor) params.set("cursor", cursor);
+  const url = `${SUBSTACK_ARCHIVE}?${params.toString()}`;
   const res = await fetch(url, {
     headers: {
       "User-Agent": BROWSER_UA,
@@ -149,11 +152,19 @@ async function defaultGetArchivePage(offset, limit) {
   if (!res.ok) {
     throw new Error(`Substack archive responded ${res.status}`);
   }
-  const data = await res.json();
-  if (!Array.isArray(data)) {
-    throw new Error("Substack archive returned an unexpected payload");
+  return normalizeArchivePage(await res.json());
+}
+
+/**
+ * Accept both archive shapes: the older bare array and the newer
+ * `{ posts, nextCursor }` object. Returns `{ items, nextCursor }`.
+ */
+function normalizeArchivePage(data) {
+  if (Array.isArray(data)) return { items: data, nextCursor: null };
+  if (data && Array.isArray(data.posts)) {
+    return { items: data.posts, nextCursor: data.nextCursor || null };
   }
-  return data;
+  throw new Error("Substack archive returned an unexpected payload");
 }
 
 async function defaultGetPostBody(slug) {
@@ -184,19 +195,21 @@ async function defaultGetRssItems() {
 }
 
 /**
- * Walk archive pages until Substack has nothing newer left to give. A short
- * page is not the end: the first response is smaller than `limit` even when
- * older posts exist. Advance by the number of items actually returned.
+ * Walk archive pages until Substack has nothing older left to give.
+ * Substack pages with an opaque `nextCursor`; stop when it is missing or a
+ * page adds nothing new. A test double may still return a bare array, in
+ * which case paging continues by item count.
  */
 async function fetchArchiveItems(getArchivePage) {
   const items = [];
   const seen = new Set();
-  let offset = 0;
+  let cursor = null;
+  let count = 0;
 
   for (let page = 0; page < ARCHIVE_MAX_PAGES; page++) {
-    let batch;
+    let result;
     try {
-      batch = await getArchivePage(offset, ARCHIVE_PAGE_LIMIT);
+      result = await getArchivePage(cursor ?? count, ARCHIVE_PAGE_LIMIT);
     } catch (err) {
       if (items.length === 0) throw err;
       console.error(
@@ -205,6 +218,10 @@ async function fetchArchiveItems(getArchivePage) {
       );
       break;
     }
+
+    const { items: batch, nextCursor } = Array.isArray(result)
+      ? { items: result, nextCursor: undefined }
+      : result || {};
 
     if (!Array.isArray(batch) || batch.length === 0) break;
 
@@ -217,7 +234,9 @@ async function fetchArchiveItems(getArchivePage) {
       added++;
     }
     if (added === 0) break;
-    offset += batch.length;
+    count += batch.length;
+    if (nextCursor === null) break;
+    cursor = nextCursor === undefined ? count : nextCursor;
   }
 
   return items;
@@ -298,5 +317,6 @@ module.exports = {
   fetchPosts,
   isPodcastEpisode,
   isWrittenArchiveItem,
+  normalizeArchivePage,
   ARCHIVE_PAGE_LIMIT,
 };
