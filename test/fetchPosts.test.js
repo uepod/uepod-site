@@ -409,3 +409,23 @@ test("trims a long summary on a word boundary", async () => {
   assert.ok(posts[0].excerpt.length <= 221);
   assert.equal(posts[0].excerpt.includes("omega"), false);
 });
+
+test("fetchPosts follows Substack's nextCursor archive pages", async () => {
+  const { fetchPosts } = require("../src/lib/fetchPosts");
+  const pages = {
+    first: { posts: [{ id: 1, type: "newsletter", title: "A", slug: "a", post_date: "2026-11-15T00:00:00Z" }, { id: 2, type: "podcast", title: "Ep", slug: "ep", post_date: "2026-11-14T00:00:00Z" }], nextCursor: "c2" },
+    c2: { posts: [{ id: 3, type: "newsletter", title: "B", slug: "b", post_date: "2026-11-01T00:00:00Z" }], nextCursor: null },
+  };
+  const { normalizeArchivePage } = require("../src/lib/fetchPosts");
+  const calls = [];
+  const posts = await fetchPosts({
+    async getArchivePage(cursor) {
+      calls.push(cursor);
+      return normalizeArchivePage(pages[cursor || "first"]);
+    },
+    async getPostBody() { return ""; },
+    async getRssItems() { throw new Error("should not fall back"); },
+  });
+  require("node:assert").deepStrictEqual(calls, [0, "c2"]);
+  require("node:assert").deepStrictEqual(posts.map((p) => p.title), ["A", "B"]);
+});
