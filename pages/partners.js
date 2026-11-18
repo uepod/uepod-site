@@ -16,6 +16,20 @@ function trackPartnerClick(partner, link) {
   }
 }
 
+function PartnerOffer({ offer, offerCode }) {
+  if (!offerCode || !offer.includes(offerCode)) {
+    return <p className="partners-copy">{offer}</p>;
+  }
+  const idx = offer.indexOf(offerCode);
+  return (
+    <p className="partners-copy">
+      {offer.slice(0, idx)}
+      <strong>{offerCode}</strong>
+      {offer.slice(idx + offerCode.length)}
+    </p>
+  );
+}
+
 export default function PartnersPage() {
   return (
     <>
@@ -53,13 +67,13 @@ export default function PartnersPage() {
                     href={partner.href}
                     onClick={() => trackPartnerClick(partner, "logo")}
                   >
-                    <img src={partner.logo} alt={partner.name} width="409" height="182" />
+                    <img src={partner.logo} alt={partner.name} width={partner.logoWidth || 409} height={partner.logoHeight || 182} />
                   </a>
                 ) : (
                   <h2 className="partners-name episode-terms-label">{partner.name}</h2>
                 )}
                 <p className="partners-copy">{partner.description}</p>
-                <p className="partners-copy">{partner.offer}</p>
+                <PartnerOffer offer={partner.offer} offerCode={partner.offerCode} />
                 <a
                   className="partners-link"
                   href={partner.href}
