@@ -8,5 +8,18 @@
     "href": "/rho",
     "linkLabel": "Learn more",
     "disclosure": "Paid partner. Unit Economics may earn a commission when you sign up through this link."
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "logo": "/partners/runway.svg",
+    "logoWidth": 929,
+    "logoHeight": 182,
+    "description": "Runway is a leading AI platform for generating and editing video, used by creators and teams of all sizes across a wide range of industries.",
+    "offer": "New subscribers get 25% off any Runway plan with code uepod25.",
+    "offerCode": "uepod25",
+    "href": "https://runwayml.com",
+    "linkLabel": "Learn more",
+    "disclosure": "Paid partner. Unit Economics may earn a commission when you subscribe with this code."
   }
 ]
