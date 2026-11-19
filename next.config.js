@@ -17,6 +17,10 @@ const nextConfig = {
     // Password-encrypted analytics dashboard (static file; only ciphertext is committed).
     return [{ source: '/dash', destination: '/dash/index.html' }];
   },
+  async redirects() {
+    // Runway has no dedicated landing page or tracked link; send the vanity URL to the partners page.
+    return ['/runway', '/Runway', '/RUNWAY'].map((source) => ({ source, destination: '/partners', permanent: false }));
+  },
   async headers() {
     return [
       {
