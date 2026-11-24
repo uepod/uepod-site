@@ -23,7 +23,6 @@ import { shortTermName, termsForEpisode } from "../../src/lib/glossary";
 import { categoryPath } from "../../src/lib/categories";
 import { withFrom } from "../../src/lib/fromLink";
 import BackLink from "../../src/components/BackLink";
-import SponsorRead from "../../src/components/SponsorRead";
 import { trackListenClick } from "../../src/lib/listenTracking";
 import { descriptionBlocksForPage } from "../../src/lib/sponsorRead";
 
@@ -445,7 +444,6 @@ export default function EpisodePage({ episode, related, terms = [] }) {
                 )}
               </p>
             ))}
-            <SponsorRead />
           </div>
 
           {episode.takeaways?.length ? (

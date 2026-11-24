@@ -314,9 +314,10 @@ async function actuallyLoad() {
       const rawBlocks = htmlToBlocks(item.content || item.contentSnippet || "");
       const linkedin =
         linkedinProfileUrl(override?.linkedin) || linkedinFromBlocks(rawBlocks);
-      const descriptionBlocks = stripSponsorBlocks(
-        linkGuestName(rawBlocks, guest, linkedin)
-      );
+      // About renders this RSS HTML. Do not drop links, reorder sponsor
+      // paragraphs, or swap in other copy. Guest LinkedIn from the sheet
+      // still links the name in the header, not a word the feed left plain.
+      const descriptionBlocks = rawBlocks;
 
       return {
         id: null,

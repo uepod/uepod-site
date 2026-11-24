@@ -1,25 +1,8 @@
 /**
- * The Rho sponsor read shown on every episode page.
- * Josh pastes a version of this into platform descriptions, and the wording
- * changes. Those paragraphs are removed and this copy is the one the site shows.
+ * Sponsor paragraphs stay in the episode About text, copied from the RSS item.
+ * These helpers only keep that boilerplate out of the short card blurb and
+ * out of related-episode matching, where the same read would drown the notes.
  */
-
-const RHO_URL = "https://rho.co";
-const OFFER_URL = "https://uepod.com/rho";
-
-const SPONSOR_READ = [
-  { text: "This episode is brought to you in part by " },
-  { text: "Rho", href: RHO_URL },
-  {
-    text: ", a paid partner of the show. Rho is the modern banking platform built for the AI era. Startups and growth-stage companies can open accounts in minutes, issue cards, manage expenses, pay bills, and close the books, all in one connected platform, backed by real human support that founders love. Right now, qualified Unit Economics listeners can get $100 when they open and fund an account at ",
-  },
-  { text: "uepod.com/rho", href: OFFER_URL },
-  { text: ". Terms apply." },
-];
-
-function sponsorReadPlainText() {
-  return SPONSOR_READ.map((part) => part.text).join("");
-}
 
 /**
  * A paragraph is the pasted read when it mentions Rho or the offer URL.
@@ -53,25 +36,19 @@ function stripSponsorText(text) {
 }
 
 /**
- * Show-notes blocks the episode page renders. Sheet short copy is the last
- * fallback, same as the page used before the sponsor read.
+ * Show-notes blocks the episode page renders, in RSS order, links included.
+ * Sheet short copy is only the fallback when the feed item has no notes.
  */
 function descriptionBlocksForPage(episode) {
-  const raw = episode?.descriptionBlocks?.length
-    ? episode.descriptionBlocks
-    : episode?.descriptionParagraphs?.length
-      ? episode.descriptionParagraphs.map((paragraph) => [{ text: paragraph }])
-      : episode?.desc
-        ? [[{ text: episode.desc }]]
-        : [];
-  return stripSponsorBlocks(raw);
+  if (episode?.descriptionBlocks?.length) return episode.descriptionBlocks;
+  if (episode?.descriptionParagraphs?.length) {
+    return episode.descriptionParagraphs.map((paragraph) => [{ text: paragraph }]);
+  }
+  if (episode?.desc) return [[{ text: episode.desc }]];
+  return [];
 }
 
 module.exports = {
-  RHO_URL,
-  OFFER_URL,
-  SPONSOR_READ,
-  sponsorReadPlainText,
   paragraphMentionsSponsor,
   stripSponsorBlocks,
   stripSponsorText,
