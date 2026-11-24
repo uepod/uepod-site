@@ -768,6 +768,7 @@ export default function Home({ episodes, posts }) {
 
   const seriesJsonLd = (
     <Head>
+      <title>Unit Economics</title>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: podcastSeriesJsonLdScript() }}
@@ -782,9 +783,6 @@ export default function Home({ episodes, posts }) {
   return (
     <>
       {seriesJsonLd}
-      <Head>
-        <title>Unit Economics — How Businesses Work.</title>
-      </Head>
 
       <div
         style={{

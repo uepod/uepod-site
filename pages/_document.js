@@ -40,7 +40,7 @@ export default function MyDocument({ pathname }) {
             <meta property="og:type" content="website" />
             <meta
               property="og:title"
-              content="Unit Economics — How businesses actually work."
+              content="Unit Economics Podcast: How Businesses Actually Work"
             />
             <meta
               property="og:description"
@@ -57,7 +57,7 @@ export default function MyDocument({ pathname }) {
             <meta name="twitter:card" content="summary_large_image" />
             <meta
               name="twitter:title"
-              content="Unit Economics — How businesses actually work."
+              content="Unit Economics Podcast: How Businesses Actually Work"
             />
             <meta
               name="twitter:description"
