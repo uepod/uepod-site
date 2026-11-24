@@ -397,8 +397,15 @@ test("linkedin profile urls are kept and placeholders are dropped", () => {
   );
   assert.equal(blocks[0][1].href, "https://www.linkedin.com/in/jane-doe");
   assert.equal(blocks[0][1].text, "Jane Doe");
-  assert.equal(blocks[0].some((part) => part.href && part.href.includes("example.com")), false);
+  assert.equal(blocks[0][3].href, "https://example.com");
+  assert.equal(blocks[0][3].text, "Example");
   assert.equal(blocksToParagraphs(blocks)[1], "Second paragraph.");
+
+  const placeholder = htmlToBlocks(
+    '<p>I sit down with <a href="https://www.linkedin.com/feed/#"><strong>Saif</strong></a>.</p>'
+  );
+  assert.equal(placeholder[0][1].href, "https://www.linkedin.com/feed/#");
+  assert.equal(linkedinProfileUrl(placeholder[0][1].href), null);
 
   const fromSheet = linkGuestName(
     htmlToBlocks("<p>I sit down with Jane Doe, founder.</p>"),
@@ -410,6 +417,59 @@ test("linkedin profile urls are kept and placeholders are dropped", () => {
 
   const untouched = linkGuestName(blocks, "Jane Doe", "https://www.linkedin.com/in/other");
   assert.equal(untouched[0][1].href, "https://www.linkedin.com/in/jane-doe");
+});
+
+test("show notes keep brand and sponsor links in RSS order", () => {
+  const html = [
+    "<p>Today's episode is a bit more personal than the average.</p>",
+    '<p>In it, I sit down with my uncle, <a href="https://www.linkedin.com/in/daveackert"><strong>Dave Ackert</strong></a>, founder of <a href="https://maplecraftfoods.com/"><strong>Maple Craft Foods</strong></a>.</p>',
+    "<p><br></p>",
+    '<p>This episode is brought to you in part by <a href="https://www.rho.co/"><strong>Rho</strong></a>, a paid partner of the show. Open an account at <a href="https://uepod.com/rho"><strong>uepod.com/rho</strong></a>. Terms apply.</p>',
+    '<p>This episode is also brought to you in part by <a href="https://runway.com/"><strong>Runway</strong></a>. Go to <a href="https://uepod.com/runway"><strong>uepod.com/runway</strong></a>. Terms apply.</p>',
+  ].join("");
+  const blocks = htmlToBlocks(html);
+  assert.equal(blocks.length, 4);
+  assert.deepEqual(
+    blocks[1].filter((part) => part.href).map((part) => [part.text, part.href]),
+    [
+      ["Dave Ackert", "https://www.linkedin.com/in/daveackert"],
+      ["Maple Craft Foods", "https://maplecraftfoods.com/"],
+    ]
+  );
+  assert.deepEqual(
+    blocks[2].filter((part) => part.href).map((part) => [part.text, part.href]),
+    [
+      ["Rho", "https://www.rho.co/"],
+      ["uepod.com/rho", "https://uepod.com/rho"],
+    ]
+  );
+  assert.deepEqual(
+    blocks[3].filter((part) => part.href).map((part) => [part.text, part.href]),
+    [
+      ["Runway", "https://runway.com/"],
+      ["uepod.com/runway", "https://uepod.com/runway"],
+    ]
+  );
+  assert.match(blocksToParagraphs(blocks)[2], /^This episode is brought to you in part by Rho/);
+  assert.match(blocksToParagraphs(blocks)[3], /^This episode is also brought to you/);
+});
+
+test("scheme-less show-note links gain https and unsafe hrefs are dropped", () => {
+  const blocks = htmlToBlocks(
+    [
+      '<p>Co-founder of <a href="wa-chaa.com/"><strong>Wa-Chaa!</strong></a> and <a href="runway.com" target="_blank" rel="noopener noreferer"><strong>Runway</strong></a>.</p>',
+      '<p>Also <a href="http://gob.earth/">GOB</a>, <a href="javascript:alert(1)">nope</a>, and <a href="">Yardsale</a>.</p>',
+    ].join("")
+  );
+  assert.deepEqual(
+    blocks[0].filter((part) => part.href).map((part) => part.href),
+    ["https://wa-chaa.com/", "https://runway.com"]
+  );
+  assert.equal(blocks[1].find((part) => part.text === "GOB").href, "http://gob.earth/");
+  assert.equal(blocks[1].find((part) => part.text === "nope").href, undefined);
+  assert.equal(blocks[1].find((part) => part.text === "Yardsale").href, undefined);
+  assert.match(blocksToParagraphs(blocks)[1], /nope/);
+  assert.match(blocksToParagraphs(blocks)[1], /Yardsale/);
 });
 
 test("JSON-LD uses the full-color artwork, guest, and series", () => {

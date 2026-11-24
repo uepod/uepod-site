@@ -5,6 +5,7 @@
  */
 
 const { SITE_URL, SUBSTACK_URL } = require("./site");
+const { stripSponsorText } = require("./sponsorRead");
 const FALLBACK_SHARE_IMAGE = `${SITE_URL}/og-image.png`;
 const FALLBACK_TWITTER_IMAGE = `${SITE_URL}/twitter-image.png`;
 
@@ -317,8 +318,10 @@ const STOPWORDS = new Set(
 );
 
 function episodeText(episode) {
+  // Related episodes match on the conversation, not the repeated sponsor read.
+  // The About section still shows that read, unchanged, from the RSS item.
   const notes = Array.isArray(episode?.descriptionParagraphs)
-    ? episode.descriptionParagraphs.join(" ")
+    ? stripSponsorText(episode.descriptionParagraphs.join("\n\n"))
     : "";
   return [episode?.title, episode?.brand, episode?.category, episode?.desc, notes]
     .filter(Boolean)
@@ -538,7 +541,44 @@ function linkedinProfileUrl(value) {
 }
 
 /**
- * Show notes stay plain text, except a LinkedIn profile anchor is kept.
+ * http(s) hrefs are kept exactly. A scheme-less hostname such as rho.co
+ * would otherwise resolve as a path on uepod.com, so it gets an https://
+ * prefix and nothing else (no www added or removed, no trailing slash).
+ * javascript:, data:, and empty hrefs are not links. The anchor text stays.
+ */
+function safeDescriptionHref(value) {
+  if (!value || typeof value !== "string") return null;
+  const href = decodeEntities(value).trim();
+  if (!href || /[\u0000-\u001F\u007F\s]/.test(href)) return null;
+  const lower = href.toLowerCase();
+  if (
+    lower.startsWith("javascript:") ||
+    lower.startsWith("data:") ||
+    lower.startsWith("vbscript:")
+  ) {
+    return null;
+  }
+  if (/^https?:\/\//i.test(href)) {
+    try {
+      const url = new URL(href);
+      if (url.protocol !== "http:" && url.protocol !== "https:") return null;
+    } catch {
+      return null;
+    }
+    return href;
+  }
+  if (
+    /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+(?:[/?#][^\s]*)?$/i.test(
+      href
+    )
+  ) {
+    return `https://${href}`;
+  }
+  return null;
+}
+
+/**
+ * Show notes stay text, with each safe link kept in its original paragraph.
  */
 function htmlToBlocks(html) {
   if (!html || typeof html !== "string") return [];
@@ -558,7 +598,7 @@ function htmlToBlocks(html) {
     pieces.push({ raw: withBreaks.slice(last, match.index), href: null });
     const href = match[1] || match[2] || match[3] || "";
     const inner = match[4].replace(/<[^>]+>/g, "");
-    pieces.push({ raw: inner, href: linkedinProfileUrl(href) });
+    pieces.push({ raw: inner, href: safeDescriptionHref(href) });
     last = match.index + match[0].length;
   }
   pieces.push({ raw: withBreaks.slice(last), href: null });
@@ -797,6 +837,7 @@ module.exports = {
   resolveEpisodeImage,
   htmlToParagraphs,
   htmlToBlocks,
+  safeDescriptionHref,
   blocksToParagraphs,
   linkedinProfileUrl,
   linkedinFromBlocks,
