@@ -16,8 +16,14 @@ const PRODUCT = {
   ],
 };
 
+const PHOTOS = [
+  { src: "/shop/hat-front.jpg", label: "Front", alt: "Unit Economics Dad Cap in black, front view with white embroidered logo" },
+  { src: "/shop/hat-back.jpg", label: "Back", alt: "Unit Economics Dad Cap in black, back view with brass buckle strap" },
+];
+
 export default function ShopPage() {
   const [qty, setQty] = useState(1);
+  const [photo, setPhoto] = useState(0);
   return (
     <>
       <Head>
@@ -33,7 +39,20 @@ export default function ShopPage() {
 
           <section className="shop-product">
             <div className="shop-photo">
-              <img src="/shop/hat-placeholder.svg" alt="Unit Economics Dad Cap in black" />
+              <img src={PHOTOS[photo].src} alt={PHOTOS[photo].alt} />
+              <div className="shop-thumbs">
+                {PHOTOS.map((p, i) => (
+                  <button
+                    key={p.src}
+                    type="button"
+                    className={i === photo ? "active" : ""}
+                    onClick={() => setPhoto(i)}
+                    aria-label={p.label}
+                  >
+                    <img src={p.src} alt="" />
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="shop-info">
@@ -47,6 +66,10 @@ export default function ShopPage() {
                   <li key={d}>{d}</li>
                 ))}
               </ul>
+
+              <p className="shop-note">
+                Each hat is embroidered individually, so stitching may vary slightly from the photos.
+              </p>
 
               <div className="shop-buy-row">
                 <div className="shop-qty" aria-label="Quantity">
