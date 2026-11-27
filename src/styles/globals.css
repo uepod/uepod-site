@@ -1193,3 +1193,118 @@ a {
     padding-top: 64px;
   }
 }
+
+/* ---- Shop (mockup) ---- */
+.shop-product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  max-width: 1100px;
+}
+.shop-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.shop-kicker {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 14px;
+}
+.shop-name {
+  font-family: "AkkuratLLWeb-Bold", sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+.shop-color {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px;
+}
+.shop-price {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.shop-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.shop-details li {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.shop-buy-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+.shop-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.shop-qty button {
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 16px;
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+}
+.shop-qty span {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 14px;
+  min-width: 24px;
+  text-align: center;
+}
+.shop-buy {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: #fff;
+  color: #000;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.shop-buy:hover {
+  opacity: 0.85;
+}
+.shop-soon {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: 1100px;
+}
+@media (max-width: 768px) {
+  .shop-product {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

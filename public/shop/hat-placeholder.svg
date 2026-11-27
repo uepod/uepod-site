@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <rect width="1000" height="1000" fill="#0d0d0d"/>
+  <rect x="24" y="24" width="952" height="952" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-dasharray="10 10"/>
+  <g fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 560 C300 400 390 330 500 330 C610 330 700 400 700 560 Z"/>
+    <path d="M300 560 C420 545 600 545 700 560 C780 572 840 600 860 630 C760 640 620 620 540 600"/>
+    <circle cx="500" cy="322" r="10"/>
+  </g>
+  <text x="500" y="760" text-anchor="middle" font-family="monospace" font-size="30" letter-spacing="3" fill="rgba(255,255,255,0.6)">PLACEHOLDER</text>
+  <text x="500" y="805" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="1" fill="rgba(255,255,255,0.45)">Real photo of the black Dad Cap goes here</text>
+</svg>
