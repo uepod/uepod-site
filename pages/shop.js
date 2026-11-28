@@ -35,7 +35,16 @@ export default function ShopPage() {
         <article className="partners-page shop-page">
           <h1>Shop</h1>
           <p className="partners-intro partners-copy">
-            A small run of hats for the show. When they're gone, they're gone.
+            A small run of hats for the show, printed on{" "}
+            <a
+              className="shop-copy-link"
+              href="https://www.byopenhouse.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Openhouse
+            </a>{" "}
+            blanks.
           </p>
 
           <section className="shop-product">
@@ -82,6 +91,12 @@ export default function ShopPage() {
                   Buy · ${PRODUCT.price * qty}
                 </a>
               </div>
+
+              <p className="shop-note shop-reach">
+                Feel free to{" "}
+                <a href="mailto:hello@uepod.com">reach out</a>
+                {" "}directly to place an order as well.
+              </p>
 
               <p className="partners-disclosure">
                 Secure checkout with Stripe. Flat-rate US shipping, ships within 3 business days.
