@@ -1339,12 +1339,6 @@ a {
 .shop-buy:hover {
   opacity: 0.85;
 }
-.shop-soon {
-  margin-top: 64px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  max-width: none;
-}
 .shop-info .partners-disclosure {
   margin-top: 0;
 }

@@ -100,11 +100,6 @@ export default function ShopPage() {
               </p>
             </div>
           </section>
-
-          <section className="shop-soon">
-            <p className="shop-kicker">Coming soon</p>
-            <p className="partners-copy">Nylon Dad Cap, black. Also 25 made.</p>
-          </section>
         </article>
       </SiteChrome>
     </>

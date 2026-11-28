@@ -504,34 +504,50 @@ function PostCard({ post, index, total }) {
 }
 
 /* ===== NAV LINK WITH HOVER ===== */
-function NavButton({ label, active, onClick }) {
+function NavButton({ label, active, onClick, href }) {
   const [hovered, setHovered] = useState(false);
+
+  const style = {
+    background: "none",
+    border: "none",
+    color: active
+      ? "#fff"
+      : hovered
+        ? "rgba(255,255,255,0.9)"
+        : "rgba(255,255,255,0.75)",
+    fontFamily: "var(--font-jetbrains-mono), monospace",
+    fontSize: "12px",
+    fontWeight: 400,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    cursor: "pointer",
+    transition: "color 0.2s",
+    padding: "4px 0",
+    borderBottom: active
+      ? "1px solid rgba(255,255,255,0.6)"
+      : "1px solid transparent",
+    textDecoration: "none",
+  };
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={style}
+      >
+        {label}
+      </a>
+    );
+  }
 
   return (
     <button
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={{
-        background: "none",
-        border: "none",
-        color: active
-          ? "#fff"
-          : hovered
-            ? "rgba(255,255,255,0.9)"
-            : "rgba(255,255,255,0.75)",
-        fontFamily: "var(--font-jetbrains-mono), monospace",
-        fontSize: "12px",
-        fontWeight: 400,
-        letterSpacing: "0.08em",
-        textTransform: "uppercase",
-        cursor: "pointer",
-        transition: "color 0.2s",
-        padding: "4px 0",
-        borderBottom: active
-          ? "1px solid rgba(255,255,255,0.6)"
-          : "1px solid transparent",
-      }}
+      style={style}
     >
       {label}
     </button>
@@ -865,12 +881,14 @@ export default function Home({ episodes, posts }) {
               { key: "posts", label: "Read" },
               { key: "about", label: "About" },
               { key: "contact", label: "Contact" },
-            ].map(({ key, label }) => (
+              { key: "shop", label: "Shop", href: "/shop" },
+            ].map(({ key, label, href }) => (
               <NavButton
                 key={key}
                 label={label}
-                active={section === key}
+                active={!href && section === key}
                 onClick={() => navigate(key)}
+                href={href}
               />
             ))}
           </div>
@@ -899,16 +917,41 @@ export default function Home({ episodes, posts }) {
             { key: "posts", label: "Read" },
             { key: "about", label: "About" },
             { key: "contact", label: "Contact" },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              className={
-                section === key ? "active" : ""
-              }
-              onClick={() => navigate(key)}
-            >
-              {label}
-            </button>
+            { key: "shop", label: "Shop", href: "/shop" },
+          ].map(({ key, label, href }) => (
+            href ? (
+              <a
+                key={key}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "rgba(255,255,255,0.75)",
+                  fontFamily: "var(--font-jetbrains-mono), monospace",
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  transition: "color 0.2s",
+                  padding: "8px 0",
+                  textDecoration: "none",
+                }}
+              >
+                {label}
+              </a>
+            ) : (
+              <button
+                key={key}
+                className={
+                  section === key ? "active" : ""
+                }
+                onClick={() => navigate(key)}
+              >
+                {label}
+              </button>
+            )
           ))}
         </div>
 
