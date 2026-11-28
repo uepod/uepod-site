@@ -30,7 +30,7 @@ export default function ShopPage() {
         <meta name="robots" content="noindex" />
       </Head>
       <SiteChrome>
-        <article className="partners-page shop-page shop-layout-a">
+        <article className="partners-page shop-page shop-layout-b">
           <h1>Shop</h1>
           <p className="partners-intro partners-copy">
             A small run of hats for the show, printed on{" "}
