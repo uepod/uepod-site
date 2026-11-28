@@ -2,7 +2,9 @@ import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../src/components/SiteChrome";
 
-// Local shop-mockup. BUY is not wired yet: no live Stripe account is connected to this session.
+// Local shop-mockup. BUY points at the live Stripe Payment Link.
+// Not pushed, deployed, or opened as a PR.
+const PAYMENT_LINK = "https://buy.stripe.com/8x24gr0WpbMf0mW9qgcZa00";
 const PRODUCT = {
   name: "Unit Economics Dad Cap",
   color: "Black",
@@ -82,7 +84,7 @@ export default function ShopPage() {
               </p>
 
               <div className="shop-buy-row">
-                <a className="shop-buy" href="#">
+                <a className="shop-buy" href={PAYMENT_LINK}>
                   Buy · ${PRODUCT.price}
                 </a>
               </div>
