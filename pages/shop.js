@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../src/components/SiteChrome";
 
@@ -18,13 +17,7 @@ const PRODUCT = {
   ],
 };
 
-const PHOTOS = [
-  { src: "/shop/hat-front.png", label: "Front", alt: "Unit Economics Dad Cap in black, three-quarter front view with white embroidered logo" },
-  { src: "/shop/hat-front-straight.png", label: "Front, straight on", alt: "Unit Economics Dad Cap in black, straight-on front view with white embroidered logo" },
-];
-
 export default function ShopPage() {
-  const [photo, setPhoto] = useState(0);
   return (
     <>
       <Head>
@@ -49,21 +42,10 @@ export default function ShopPage() {
 
           <section className="shop-product">
             <div className="shop-photo">
-              <img src={PHOTOS[photo].src} alt={PHOTOS[photo].alt} />
-            </div>
-
-            <div className="shop-thumbs">
-              {PHOTOS.map((p, i) => (
-                <button
-                  key={p.src}
-                  type="button"
-                  className={i === photo ? "active" : ""}
-                  onClick={() => setPhoto(i)}
-                  aria-label={p.label}
-                >
-                  <img src={p.src} alt="" />
-                </button>
-              ))}
+              <img
+                src="/shop/hat-front.png"
+                alt="Unit Economics Dad Cap in black, three-quarter front view with white embroidered logo"
+              />
             </div>
 
             <div className="shop-info">
