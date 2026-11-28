@@ -16,8 +16,8 @@ const NAV = [
   { href: "/#episodes", label: "Listen" },
   { href: "/#posts", label: "Read" },
   { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
   { href: "/shop", label: "Shop" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const SOCIAL_LINKS = {
