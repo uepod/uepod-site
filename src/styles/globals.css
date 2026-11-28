@@ -1208,6 +1208,7 @@ a {
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  background: #000;
 }
 .shop-photo {
   display: grid;

@@ -17,8 +17,8 @@ const PRODUCT = {
 };
 
 const PHOTOS = [
-  { src: "/shop/hat-front.jpg", label: "Front", alt: "Unit Economics Dad Cap in black, three-quarter front view with white embroidered logo" },
-  { src: "/shop/hat-front-straight.jpg", label: "Front, straight on", alt: "Unit Economics Dad Cap in black, straight-on front view with white embroidered logo" },
+  { src: "/shop/hat-front.png", label: "Front", alt: "Unit Economics Dad Cap in black, three-quarter front view with white embroidered logo" },
+  { src: "/shop/hat-front-straight.png", label: "Front, straight on", alt: "Unit Economics Dad Cap in black, straight-on front view with white embroidered logo" },
 ];
 
 export default function ShopPage() {
