@@ -2,7 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import SiteChrome from "../src/components/SiteChrome";
 
-// MOCKUP ONLY. Not wired to Stripe. Buy button would point at a Stripe Payment Link.
+// Local shop-mockup. BUY is not wired yet: no live Stripe account is connected to this session.
 const PRODUCT = {
   name: "Unit Economics Dad Cap",
   color: "Black",
@@ -94,7 +94,7 @@ export default function ShopPage() {
               </p>
 
               <p className="partners-disclosure">
-                Secure checkout with Stripe. Flat-rate US shipping, ships within 3 business days.
+                Secure checkout with Stripe. Free US shipping, ships within 3 business days.
               </p>
             </div>
           </section>
