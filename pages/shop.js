@@ -96,7 +96,7 @@ export default function ShopPage() {
               </p>
 
               <p className="partners-disclosure">
-                Secure checkout with Stripe. Free US shipping, ships within 3 business days.
+                Secure checkout with Stripe. Free shipping in the continental US, ships within 3 business days.
               </p>
             </div>
           </section>
