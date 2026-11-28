@@ -880,8 +880,8 @@ export default function Home({ episodes, posts }) {
               { key: "episodes", label: "Listen" },
               { key: "posts", label: "Read" },
               { key: "about", label: "About" },
-              { key: "contact", label: "Contact" },
               { key: "shop", label: "Shop", href: "/shop" },
+              { key: "contact", label: "Contact" },
             ].map(({ key, label, href }) => (
               <NavButton
                 key={key}
@@ -916,8 +916,8 @@ export default function Home({ episodes, posts }) {
             { key: "episodes", label: "Listen" },
             { key: "posts", label: "Read" },
             { key: "about", label: "About" },
-            { key: "contact", label: "Contact" },
             { key: "shop", label: "Shop", href: "/shop" },
+            { key: "contact", label: "Contact" },
           ].map(({ key, label, href }) => (
             href ? (
               <a
