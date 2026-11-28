@@ -1196,11 +1196,21 @@ a {
 
 /* ---- Shop (mockup) ---- */
 .shop-product {
+  container-type: inline-size;
+  container-name: shop;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  grid-template-rows: auto auto;
+  column-gap: 72px;
+  row-gap: 12px;
   align-items: start;
-  max-width: 1100px;
+  width: 100%;
+  max-width: none;
+}
+.shop-photo {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
 }
 .shop-photo > img {
   display: block;
@@ -1210,12 +1220,9 @@ a {
   object-fit: cover;
   background: #000;
 }
-.shop-photo {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
 .shop-thumbs {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   gap: 8px;
 }
@@ -1240,13 +1247,29 @@ a {
   height: 100%;
   object-fit: cover;
 }
+.shop-info {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+/* A: title sits at the visible hat crown, not the top of the faded tile */
+.shop-layout-a .shop-info {
+  align-self: start;
+  padding-top: clamp(48px, calc((100cqw - 72px - 24rem) * 0.20), 220px);
+}
+/* B: the whole text block is vertically centered on the photo */
+.shop-layout-b .shop-info {
+  align-self: center;
+  padding-top: 0;
+}
+
 .shop-note {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.02em;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
-  margin: -16px 0 28px;
+  margin: 0 0 28px;
 }
 .shop-kicker {
   font-family: var(--font-jetbrains-mono), monospace;
@@ -1254,7 +1277,7 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 }
 .shop-name {
   font-family: "AkkuratLLWeb-Bold", sans-serif;
@@ -1269,18 +1292,21 @@ a {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 .shop-price {
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: 22px;
   color: #fff;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
+}
+.shop-limit {
+  margin: 0 0 28px;
 }
 .shop-details {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px;
+  margin: 0 0 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 .shop-details li {
@@ -1292,36 +1318,14 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .shop-buy-row {
-  display: flex;
-  gap: 12px;
-  align-items: stretch;
-}
-.shop-qty {
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-.shop-qty button {
-  background: none;
-  border: 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-family: var(--font-jetbrains-mono), monospace;
-  font-size: 16px;
-  width: 40px;
-  height: 100%;
-  cursor: pointer;
-}
-.shop-qty span {
-  font-family: var(--font-jetbrains-mono), monospace;
-  font-size: 14px;
-  min-width: 24px;
-  text-align: center;
+  display: block;
+  margin: 0 0 20px;
 }
 .shop-buy {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 16px 24px;
   background: #fff;
   color: #000;
@@ -1339,12 +1343,33 @@ a {
   margin-top: 64px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  max-width: 1100px;
+  max-width: none;
+}
+.shop-info .partners-disclosure {
+  margin-top: 0;
 }
 @media (max-width: 768px) {
   .shop-product {
     grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-rows: auto auto auto;
+    column-gap: 0;
+    row-gap: 12px;
+  }
+  .shop-photo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .shop-thumbs {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .shop-info,
+  .shop-layout-a .shop-info,
+  .shop-layout-b .shop-info {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    padding-top: 16px;
   }
 }
 
@@ -1362,5 +1387,6 @@ a {
   border-bottom-color: rgba(255, 255, 255, 0.75);
 }
 .shop-reach {
-  margin: 16px 0 0;
+  margin: 0 0 8px;
 }
+

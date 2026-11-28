@@ -22,7 +22,6 @@ const PHOTOS = [
 ];
 
 export default function ShopPage() {
-  const [qty, setQty] = useState(1);
   const [photo, setPhoto] = useState(0);
   return (
     <>
@@ -31,7 +30,7 @@ export default function ShopPage() {
         <meta name="robots" content="noindex" />
       </Head>
       <SiteChrome>
-        <article className="partners-page shop-page">
+        <article className="partners-page shop-page shop-layout-a">
           <h1>Shop</h1>
           <p className="partners-intro partners-copy">
             A small run of hats for the show, printed on{" "}
@@ -49,26 +48,28 @@ export default function ShopPage() {
           <section className="shop-product">
             <div className="shop-photo">
               <img src={PHOTOS[photo].src} alt={PHOTOS[photo].alt} />
-              <div className="shop-thumbs">
-                {PHOTOS.map((p, i) => (
-                  <button
-                    key={p.src}
-                    type="button"
-                    className={i === photo ? "active" : ""}
-                    onClick={() => setPhoto(i)}
-                    aria-label={p.label}
-                  >
-                    <img src={p.src} alt="" />
-                  </button>
-                ))}
-              </div>
+            </div>
+
+            <div className="shop-thumbs">
+              {PHOTOS.map((p, i) => (
+                <button
+                  key={p.src}
+                  type="button"
+                  className={i === photo ? "active" : ""}
+                  onClick={() => setPhoto(i)}
+                  aria-label={p.label}
+                >
+                  <img src={p.src} alt="" />
+                </button>
+              ))}
             </div>
 
             <div className="shop-info">
               <p className="shop-kicker">Limited run · {PRODUCT.madeCount} made</p>
-              <h2 className="shop-name">{PRODUCT.name}</h2>
+              <h2 className="shop-name">Unit Economics<br />Dad Cap</h2>
               <p className="shop-color">{PRODUCT.color}</p>
               <p className="shop-price">${PRODUCT.price}</p>
+              <p className="shop-note shop-limit">Limit one per customer.</p>
 
               <ul className="shop-details">
                 {PRODUCT.details.map((d) => (
@@ -81,13 +82,8 @@ export default function ShopPage() {
               </p>
 
               <div className="shop-buy-row">
-                <div className="shop-qty" aria-label="Quantity">
-                  <button type="button" onClick={() => setQty(Math.max(1, qty - 1))} aria-label="Decrease">−</button>
-                  <span>{qty}</span>
-                  <button type="button" onClick={() => setQty(Math.min(3, qty + 1))} aria-label="Increase">+</button>
-                </div>
                 <a className="shop-buy" href="#">
-                  Buy · ${PRODUCT.price * qty}
+                  Buy · ${PRODUCT.price}
                 </a>
               </div>
 
